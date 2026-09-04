@@ -1,0 +1,584 @@
+{
+  "accession": "P00734",
+  "organism": "Homo sapiens",
+  "protein_name": "Prothrombin",
+  "sequence_length": 622,
+  "properties": {
+    "sequence_length": 622,
+    "analyzed_length": 622,
+    "molecular_weight": 70036.11,
+    "isoelectric_point": 5.64,
+    "aromaticity": 0.09,
+    "instability_index": 40.88,
+    "is_stable": false,
+    "gravy": -0.539,
+    "secondary_structure_fraction": {
+      "helix": 0.2926,
+      "turn": 0.2894,
+      "sheet": 0.3248
+    },
+    "amino_acid_percentages": {
+      "A": 6.752,
+      "C": 4.18,
+      "D": 5.627,
+      "E": 8.199,
+      "F": 3.376,
+      "G": 7.878,
+      "H": 2.09,
+      "I": 3.537,
+      "K": 4.662,
+      "L": 8.199,
+      "M": 1.447,
+      "N": 4.019,
+      "P": 5.305,
+      "Q": 4.18,
+      "R": 7.074,
+      "S": 6.109,
+      "T": 5.788,
+      "V": 5.949,
+      "W": 2.251,
+      "Y": 3.376
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 13.83,
+      "negatively_charged_percent": 13.83,
+      "hydrophobic_percent": 31.51,
+      "aromatic_percent": 9.0
+    }
+  },
+  "motifs_found": {
+    "n_glycosylation": 4,
+    "signal_peptide": 0,
+    "pkc_phosphorylation": 10
+  },
+  "domains": [],
+  "blast_top5": [],
+  "structure_source": "Experimental (RCSB PDB)",
+  "structure_best_file": "4ud9.pdb",
+  "structure_rmsd_angstroms": 36.815,
+  "validation": {
+    "ramachandran": {
+      "total_evaluated_residues": 284,
+      "favored_count": 281,
+      "favored_percent": 98.94,
+      "allowed_count": 2,
+      "allowed_percent": 0.7,
+      "outlier_count": 1,
+      "outlier_percent": 0.35
+    },
+    "ca_cb_bond_pass_rate": 100.0,
+    "burial": {
+      "total_ca_evaluated": 293,
+      "buried_count": 17,
+      "buried_percent": 5.8,
+      "partial_count": 201,
+      "partial_percent": 68.6,
+      "surface_count": 75,
+      "surface_percent": 25.6
+    }
+  },
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "49",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "50",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "57",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "59",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "62",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "63",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "68",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "69",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "72",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "75",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "121",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "143",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "416",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "60-65",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "90-103",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "108-186",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "129-169",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "157-181",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "213-291",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "234-274",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "262-286",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "336-482",
+      "residue": null,
+      "description": "Interchain (between light and heavy chains)"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "391-407",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "536-550",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "564-594",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ppi_partners": [
+    {
+      "partner_a": "SERPIND1",
+      "partner_b": "F2",
+      "preferred_partner_name": "SERPIND1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.946,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.865
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "FGA",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.997,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.957
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "FGG",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.993,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.936
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "F2",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.836
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "FGA",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.966,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.886
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "F5",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.926,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.886
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "SERPINC1",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.977,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.98
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "FGG",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.821
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "F10",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.93,
+      "dscore_database": 0.75,
+      "tscore_textmining": 0.972
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "THBD",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.967,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.927
+    }
+  ],
+  "ml_features": {
+    "feature_count": 42,
+    "clusters": [
+      {
+        "identifier": "P00734",
+        "category": "Query",
+        "cluster": 0
+      },
+      {
+        "identifier": "P00734_var1",
+        "category": "Variant_1",
+        "cluster": 0
+      },
+      {
+        "identifier": "P00734_var2",
+        "category": "Variant_2",
+        "cluster": 1
+      },
+      {
+        "identifier": "P00734_var3",
+        "category": "Variant_3",
+        "cluster": 1
+      },
+      {
+        "identifier": "P00734_var4",
+        "category": "Variant_4",
+        "cluster": 2
+      }
+    ],
+    "top_features": {
+      "aa_P_pct": 0.1429,
+      "instability_index": 0.0982,
+      "helix_fraction": 0.0862,
+      "sheet_fraction": 0.0826,
+      "nonpolar_total_pct": 0.0688,
+      "hydrophobic_pct": 0.0681,
+      "turn_fraction": 0.0575,
+      "aliphatic_pct": 0.0525,
+      "tiny_pct": 0.0513,
+      "small_pct": 0.0457,
+      "aa_A_pct": 0.0454,
+      "molecular_weight": 0.038,
+      "aa_T_pct": 0.0369,
+      "aa_V_pct": 0.0255,
+      "isoelectric_point": 0.0238
+    }
+  },
+  "ngs_summary": {
+    "ngs_data_detected": false,
+    "input_directory": "./input/ngs",
+    "fastq_files": [],
+    "bam_files": [],
+    "vcf_files": []
+  },
+  "run_metadata": {
+    "pipeline_version": "1.0.0",
+    "execution_duration_seconds": 16.41,
+    "output_directory": "C:\\Users\\Sree Ganesh\\Dropbox\\computational_protein_pipeline\\output\\P00734"
+  },
+  "sequence": "MAHVRGLQLPGCLALAALCSLVHSQHVFLAPQQARSLLQRVRRANTFLEEVRKGNLERECVEETCSYEEAFEALESSTATDVFWAKYTACETARTPRDKLAACLEGNCAEGLGTNYRGHVNITRSGIECQLWRSRYPHKPEINSTTHPGADLQENFCRNPDSSTTGPWCYTTDPTVRRQECSIPVCGQDQVTVAMTPRSEGSSVNLSPPLEQCVPDRGQQYQGRLAVTTHGLPCLAWASAQAKALSKHQDFNSAVQLVENFCRNPDGDEEGVWCYVAGKPGDFGYCDLNYCEEAVEEETGDGLDEDSDRAIEGRTATSEYQTFFNPRTFGSGEADCGLRPLFEKKSLEDKTERELLESYIDGRIVEGSDAEIGMSPWQVMLFRKSPQELLCGASLISDRWVLTAAHCLLYPPWDKNFTENDLLVRIGKHSRTRYERNIEKISMLEKIYIHPRYNWRENLDRDIALMKLKKPVAFSDYIHPVCLPDRETAASLLQAGYKGRVTGWGNLKETWTANVGKGQPSVLQVVNLPIVERPVCKDSTRIRITDNMFCAGYKPDEGKRGDACEGDSGGPFVMKSPFNNRWYQMGIVSWGEGCDRDGKYGFYTHVFRLKKWIQKVIDQFGE",
+  "environmental_stability": {
+    "sequence_length": 622,
+    "estimated_melting_temperature_celsius": 73.5,
+    "standard_conditions": {
+      "physiological_37c_ph74": {
+        "status_code": "native",
+        "state": "NATIVE",
+        "badge_label": "Native Folded State",
+        "badge_color": "#10b981",
+        "temperature_celsius": 37.0,
+        "ph": 7.4,
+        "net_charge": -16.23,
+        "salt_bridge_retention_percent": 99.9,
+        "fraction_folded_percent": 100.0,
+        "delta_g_folding_kcal_mol": -27.95,
+        "is_degraded": false,
+        "degradation_reasons": [],
+        "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -27.9 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+        "thresholds": {
+          "tm_celsius": 73.5,
+          "temp_min_stable": 15.0,
+          "temp_max_stable": 65.5,
+          "temp_degradation": 83.5,
+          "ph_min_stable": 5.5,
+          "ph_max_stable": 8.5,
+          "ph_acid_degradation": 3.0,
+          "ph_alkaline_degradation": 11.5
+        }
+      },
+      "invitro_25c_ph70": {
+        "status_code": "native",
+        "state": "NATIVE",
+        "badge_label": "Native Folded State",
+        "badge_color": "#10b981",
+        "temperature_celsius": 25.0,
+        "ph": 7.0,
+        "net_charge": -13.35,
+        "salt_bridge_retention_percent": 99.9,
+        "fraction_folded_percent": 100.0,
+        "delta_g_folding_kcal_mol": -34.59,
+        "is_degraded": false,
+        "degradation_reasons": [],
+        "molecular_mechanism": "At physiological/standard conditions (25.0\u00b0C, pH 7.0), the protein resides in its thermodynamic free energy minimum (\u0394G = -34.6 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+        "thresholds": {
+          "tm_celsius": 73.5,
+          "temp_min_stable": 15.0,
+          "temp_max_stable": 65.5,
+          "temp_degradation": 83.5,
+          "ph_min_stable": 5.5,
+          "ph_max_stable": 8.5,
+          "ph_acid_degradation": 3.0,
+          "ph_alkaline_degradation": 11.5
+        }
+      }
+    },
+    "active_evaluation": {
+      "status_code": "native",
+      "state": "NATIVE",
+      "badge_label": "Native Folded State",
+      "badge_color": "#10b981",
+      "temperature_celsius": 37.0,
+      "ph": 7.4,
+      "net_charge": -16.23,
+      "salt_bridge_retention_percent": 99.9,
+      "fraction_folded_percent": 100.0,
+      "delta_g_folding_kcal_mol": -27.95,
+      "is_degraded": false,
+      "degradation_reasons": [],
+      "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -27.9 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+      "thresholds": {
+        "tm_celsius": 73.5,
+        "temp_min_stable": 15.0,
+        "temp_max_stable": 65.5,
+        "temp_degradation": 83.5,
+        "ph_min_stable": 5.5,
+        "ph_max_stable": 8.5,
+        "ph_acid_degradation": 3.0,
+        "ph_alkaline_degradation": 11.5
+      }
+    },
+    "titration_profile": [
+      {
+        "ph": 0.0,
+        "net_charge": 86.98
+      },
+      {
+        "ph": 0.5,
+        "net_charge": 86.95
+      },
+      {
+        "ph": 1.0,
+        "net_charge": 86.85
+      },
+      {
+        "ph": 1.5,
+        "net_charge": 86.54
+      },
+      {
+        "ph": 2.0,
+        "net_charge": 85.63
+      },
+      {
+        "ph": 2.5,
+        "net_charge": 83.2
+      },
+      {
+        "ph": 3.0,
+        "net_charge": 77.05
+      },
+      {
+        "ph": 3.5,
+        "net_charge": 63.82
+      },
+      {
+        "ph": 4.0,
+        "net_charge": 43.34
+      },
+      {
+        "ph": 4.5,
+        "net_charge": 22.29
+      },
+      {
+        "ph": 5.0,
+        "net_charge": 8.0
+      },
+      {
+        "ph": 5.5,
+        "net_charge": 0.03
+      },
+      {
+        "ph": 6.0,
+        "net_charge": -5.63
+      },
+      {
+        "ph": 6.5,
+        "net_charge": -10.08
+      },
+      {
+        "ph": 7.0,
+        "net_charge": -13.35
+      },
+      {
+        "ph": 7.5,
+        "net_charge": -17.15
+      },
+      {
+        "ph": 8.0,
+        "net_charge": -23.49
+      },
+      {
+        "ph": 8.5,
+        "net_charge": -31.42
+      },
+      {
+        "ph": 9.0,
+        "net_charge": -38.23
+      },
+      {
+        "ph": 9.5,
+        "net_charge": -45.18
+      },
+      {
+        "ph": 10.0,
+        "net_charge": -55.69
+      },
+      {
+        "ph": 10.5,
+        "net_charge": -69.51
+      },
+      {
+        "ph": 11.0,
+        "net_charge": -81.78
+      },
+      {
+        "ph": 11.5,
+        "net_charge": -90.58
+      },
+      {
+        "ph": 12.0,
+        "net_charge": -99.74
+      },
+      {
+        "ph": 12.5,
+        "net_charge": -112.12
+      },
+      {
+        "ph": 13.0,
+        "net_charge": -123.67
+      },
+      {
+        "ph": 13.5,
+        "net_charge": -130.13
+      },
+      {
+        "ph": 14.0,
+        "net_charge": -132.7
+      }
+    ],
+    "biophysical_reference": "Alberts et al., Molecular Biology of the Cell (4th ed.), Chapter 3: NBK26830"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pdb_file": "7z8o.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 198,
+    "favored_count": 197,
+    "favored_percent": 99.49,
+    "allowed_count": 1,
+    "allowed_percent": 0.51,
+    "outlier_count": 0,
+    "outlier_percent": 0.0
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 188,
+    "violations_count": 0,
+    "pass_rate_percent": 100.0,
+    "violations": []
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 204,
+    "buried_count": 4,
+    "buried_percent": 1.96,
+    "partial_count": 136,
+    "partial_percent": 66.67,
+    "surface_count": 64,
+    "surface_percent": 31.37
+  },
+  "ramachandran_plot_path": "./output\\P0DTC2\\figures\\ramachandran.png"
+}

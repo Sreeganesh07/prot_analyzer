@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P00734
+Protein Name    : Prothrombin
+Organism        : Homo sapiens
+Sequence Length : 622 amino acids
+Execution Time  : 16.41 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 70036.11 Da
+  Isoelectric Point (pI): 5.64
+  Instability Index     : 40.88 (Unstable)
+  GRAVY Hydropathicity  : -0.539
+  Aromaticity           : 0.09
+  Secondary Structure   : Helix: 29.3%, Sheet: 32.5%, Turn: 28.9%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 98.94%
+  Ramachandran Allowed  : 0.7%
+  Ramachandran Outliers : 0.35%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 73.5°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -16.23 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -27.95 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 25
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 0
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P00734
+======================================================================

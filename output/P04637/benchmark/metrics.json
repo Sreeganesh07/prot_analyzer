@@ -1,0 +1,68 @@
+{
+  "accuracy": 0.8772,
+  "precision": 0.9048,
+  "recall": 0.9268,
+  "f1_score": 0.9157,
+  "auroc": 0.9162,
+  "confusion_matrix": {
+    "true_negatives": 12,
+    "false_positives": 4,
+    "false_negatives": 3,
+    "true_positives": 38
+  },
+  "classification_report": {
+    "benign": {
+      "precision": 0.8,
+      "recall": 0.75,
+      "f1-score": 0.7741935483870968,
+      "support": 16.0
+    },
+    "pathogenic": {
+      "precision": 0.9047619047619048,
+      "recall": 0.926829268292683,
+      "f1-score": 0.9156626506024096,
+      "support": 41.0
+    },
+    "accuracy": 0.8771929824561403,
+    "macro avg": {
+      "precision": 0.8523809523809525,
+      "recall": 0.8384146341463414,
+      "f1-score": 0.8449280994947532,
+      "support": 57.0
+    },
+    "weighted avg": {
+      "precision": 0.8753550543024228,
+      "recall": 0.8771929824561403,
+      "f1-score": 0.8759520254191638,
+      "support": 57.0
+    }
+  },
+  "cv_5fold_auroc_mean": 0.8789,
+  "cv_5fold_auroc_std": 0.0415,
+  "train_samples": 226,
+  "test_samples": 57,
+  "n_features": 60,
+  "top_features": {
+    "relative_position": 0.1598,
+    "min_ptm_distance": 0.0977,
+    "grantham_distance": 0.0932,
+    "n_ptms_within_5": 0.0832,
+    "blosum62_score": 0.0648,
+    "size_delta": 0.0537,
+    "delta_molecular_weight": 0.0497,
+    "delta_instability_index": 0.0477,
+    "hydrophobicity_delta": 0.0458,
+    "delta_gravy": 0.0438,
+    "delta_isoelectric_point": 0.02,
+    "delta_sheet_fraction": 0.0183,
+    "charge_change": 0.0169,
+    "delta_basic_total_pct": 0.0152,
+    "delta_nonpolar_total_pct": 0.0145,
+    "delta_small_pct": 0.014,
+    "delta_charged_pos_pct": 0.0132,
+    "delta_turn_fraction": 0.0119,
+    "delta_aromatic_pct": 0.0089,
+    "delta_aa_P_pct": 0.0086
+  },
+  "model_path": "./data/models\\tp53_pathogenicity_rf.joblib"
+}

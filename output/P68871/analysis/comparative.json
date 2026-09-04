@@ -1,0 +1,203 @@
+{
+  "accession": "P68871",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P68871\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "2",
+      "residue": "V",
+      "description": "N-acetylvaline"
+    },
+    {
+      "type": "modified residue",
+      "position": "2",
+      "residue": "V",
+      "description": "N-pyruvate 2-iminyl-valine; in Hb A1b"
+    },
+    {
+      "type": "modified residue",
+      "position": "10",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "13",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "45",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "51",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "60",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "83",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "88",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "94",
+      "residue": "C",
+      "description": "S-nitrosocysteine"
+    },
+    {
+      "type": "modified residue",
+      "position": "145",
+      "residue": "K",
+      "description": "N6-acetyllysine; alternate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "2",
+      "residue": "V",
+      "description": "N-linked (Glc) (glycation) valine; in Hb A1c"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "9",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "18",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "67",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "121",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "145",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine; alternate"
+    }
+  ],
+  "ptm_count": 17,
+  "ppi_interactions": [
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBA1",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.499
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.998,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.9
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.973,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.903
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HP",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.997,
+      "escore_experiments": 0.951,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.843
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBD",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.997,
+      "escore_experiments": 0.987,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.429
+    },
+    {
+      "partner_a": "HBZ",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HBZ",
+      "combined_score": 0.997,
+      "escore_experiments": 0.99,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.487
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HBD",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.997,
+      "escore_experiments": 0.973,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.425
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "AHSP",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.995,
+      "escore_experiments": 0.962,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.508
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HP",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.995,
+      "escore_experiments": 0.942,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.73
+    },
+    {
+      "partner_a": "HP",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HP",
+      "combined_score": 0.995,
+      "escore_experiments": 0.956,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.627
+    }
+  ],
+  "ppi_partner_count": 10
+}

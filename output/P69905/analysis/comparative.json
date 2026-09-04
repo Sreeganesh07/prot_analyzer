@@ -1,0 +1,227 @@
+{
+  "accession": "P69905",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P69905\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "4",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "8",
+      "residue": "K",
+      "description": "N6-succinyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "9",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "12",
+      "residue": "K",
+      "description": "N6-succinyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "17",
+      "residue": "K",
+      "description": "N6-acetyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "17",
+      "residue": "K",
+      "description": "N6-succinyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "25",
+      "residue": "Y",
+      "description": "Phosphotyrosine"
+    },
+    {
+      "type": "modified residue",
+      "position": "36",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "41",
+      "residue": "K",
+      "description": "N6-succinyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "50",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "103",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "109",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "125",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "132",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "135",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "138",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "139",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "8",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine; alternate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "17",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine; alternate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "41",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine; alternate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "62",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine"
+    }
+  ],
+  "ptm_count": 21,
+  "ppi_interactions": [
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBA1",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.499
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.998,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.9
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HBB",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.973,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.903
+    },
+    {
+      "partner_a": "RPS26",
+      "partner_b": "RPS6",
+      "preferred_partner_name": "RPS26",
+      "combined_score": 0.999,
+      "escore_experiments": 0.995,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.594
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HP",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.997,
+      "escore_experiments": 0.951,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.843
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBD",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.997,
+      "escore_experiments": 0.987,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.429
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HBD",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.997,
+      "escore_experiments": 0.973,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.425
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "HBE1",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.996,
+      "escore_experiments": 0.984,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.477
+    },
+    {
+      "partner_a": "HBA2",
+      "partner_b": "AHSP",
+      "preferred_partner_name": "HBA2",
+      "combined_score": 0.995,
+      "escore_experiments": 0.962,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.508
+    },
+    {
+      "partner_a": "HBA1",
+      "partner_b": "HP",
+      "preferred_partner_name": "HBA1",
+      "combined_score": 0.995,
+      "escore_experiments": 0.942,
+      "dscore_database": 0.72,
+      "tscore_textmining": 0.73
+    }
+  ],
+  "ppi_partner_count": 10
+}

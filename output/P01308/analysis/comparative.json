@@ -1,0 +1,119 @@
+{
+  "accession": "P01308",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P01308\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "disulfide bond",
+      "position": "31-96",
+      "residue": null,
+      "description": "Interchain (between B and A chains)"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "43-109",
+      "residue": null,
+      "description": "Interchain (between B and A chains)"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "95-100",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ptm_count": 3,
+  "ppi_interactions": [
+    {
+      "partner_a": "IDE",
+      "partner_b": "INS",
+      "preferred_partner_name": "IDE",
+      "combined_score": 0.999,
+      "escore_experiments": 0.971,
+      "dscore_database": 0.75,
+      "tscore_textmining": 0.967
+    },
+    {
+      "partner_a": "ALB",
+      "partner_b": "INS",
+      "preferred_partner_name": "ALB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "INSR",
+      "partner_b": "IRS1",
+      "preferred_partner_name": "INSR",
+      "combined_score": 0.999,
+      "escore_experiments": 0.99,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.991
+    },
+    {
+      "partner_a": "INSR",
+      "partner_b": "IRS2",
+      "preferred_partner_name": "INSR",
+      "combined_score": 0.999,
+      "escore_experiments": 0.965,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.903
+    },
+    {
+      "partner_a": "INSR",
+      "partner_b": "INS",
+      "preferred_partner_name": "INSR",
+      "combined_score": 0.999,
+      "escore_experiments": 0.983,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "INSR",
+      "partner_b": "IGF1",
+      "preferred_partner_name": "INSR",
+      "combined_score": 0.999,
+      "escore_experiments": 0.966,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.995
+    },
+    {
+      "partner_a": "IRS1",
+      "partner_b": "INS",
+      "preferred_partner_name": "IRS1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "IRS1",
+      "partner_b": "IGF1R",
+      "preferred_partner_name": "IRS1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.986,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "IGF1",
+      "partner_b": "IGF1R",
+      "preferred_partner_name": "IGF1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.983,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "IGF1",
+      "partner_b": "INS",
+      "preferred_partner_name": "IGF1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    }
+  ],
+  "ppi_partner_count": 10
+}

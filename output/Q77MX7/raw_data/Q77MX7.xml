@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="no" ?>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/docs/uniprot.xsd">
+<entry dataset="TrEMBL" created="2004-07-05" modified="2026-06-10" version="77" xmlns="http://uniprot.org/uniprot">
+  <accession>Q77MX7</accession>
+  <name>Q77MX7_HBV</name>
+  <protein>
+    <recommendedName>
+      <fullName evidence="1">Capsid protein</fullName>
+    </recommendedName>
+    <alternativeName>
+      <fullName evidence="1">Core antigen</fullName>
+    </alternativeName>
+    <alternativeName>
+      <fullName evidence="1">Core protein</fullName>
+    </alternativeName>
+    <alternativeName>
+      <fullName evidence="1">HBcAg</fullName>
+    </alternativeName>
+    <alternativeName>
+      <fullName evidence="1">p21.5</fullName>
+    </alternativeName>
+  </protein>
+  <gene>
+    <name evidence="4" type="primary">core</name>
+    <name evidence="1" type="synonym">C</name>
+  </gene>
+  <organism evidence="3">
+    <name type="scientific">Hepatitis B virus</name>
+    <name type="common">HBV</name>
+    <dbReference type="NCBI Taxonomy" id="10407"/>
+    <lineage>
+      <taxon>Viruses</taxon>
+      <taxon>Riboviria</taxon>
+      <taxon>Pararnavirae</taxon>
+      <taxon>Artverviricota</taxon>
+      <taxon>Revtraviricetes</taxon>
+      <taxon>Blubervirales</taxon>
+      <taxon>Hepadnaviridae</taxon>
+      <taxon>Orthohepadnavirus</taxon>
+      <taxon>Orthohepadnavirus hominoidei</taxon>
+    </lineage>
+  </organism>
+  <organismHost>
+    <name type="scientific">Homo sapiens</name>
+    <name type="common">Human</name>
+    <dbReference type="NCBI Taxonomy" id="9606"/>
+  </organismHost>
+  <organismHost>
+    <name type="scientific">Pan troglodytes</name>
+    <name type="common">Chimpanzee</name>
+    <dbReference type="NCBI Taxonomy" id="9598"/>
+  </organismHost>
+  <reference evidence="3" key="1">
+    <citation type="journal article" date="2000" name="J. Virol." volume="74" first="4253" last="4257">
+      <title>Detection of hepatitis B virus infection in wild-born chimpanzees (Pan troglodytes verus): phylogenetic relationships with human and other primate genotypes.</title>
+      <authorList>
+        <person name="MacDonald D.M."/>
+        <person name="Holmes E.C."/>
+        <person name="Lewis J.C."/>
+        <person name="Simmonds P."/>
+      </authorList>
+      <dbReference type="PubMed" id="10756039"/>
+      <dbReference type="DOI" id="10.1128/JVI.74.9.4253-4257.2000"/>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]</scope>
+  </reference>
+  <reference evidence="4" key="2">
+    <citation type="journal article" date="2007" name="J. Gen. Virol." volume="88" first="2679" last="2685">
+      <title>Complete-genome analysis of hepatitis B virus from wild-born chimpanzees in central Africa demonstrates a strain-specific geographical cluster.</title>
+      <authorList>
+        <person name="Makuwa M."/>
+        <person name="Souquiere S."/>
+        <person name="Bourry O."/>
+        <person name="Rouquet P."/>
+        <person name="Telfer P."/>
+        <person name="Mauclere P."/>
+        <person name="Kazanji M."/>
+        <person name="Roques P."/>
+        <person name="Simon F."/>
+      </authorList>
+      <dbReference type="PubMed" id="17872519"/>
+      <dbReference type="DOI" id="10.1099/vir.0.82992-0"/>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]</scope>
+    <source>
+      <strain evidence="4">CHIMP_ED</strain>
+      <tissue evidence="4">Blood</tissue>
+    </source>
+  </reference>
+  <comment type="function">
+    <text evidence="1">Self assembles to form an icosahedral capsid. Most capsids appear to be large particles with an icosahedral symmetry of T=4 and consist of 240 copies of capsid protein, though a fraction forms smaller T=3 particles consisting of 180 capsid proteins. Entering capsids are transported along microtubules to the nucleus. Phosphorylation of the capsid is thought to induce exposure of nuclear localization signal in the C-terminal portion of the capsid protein that allows binding to the nuclear pore complex via the importin (karyopherin-) alpha and beta. Capsids are imported in intact form through the nuclear pore into the nuclear basket, where it probably binds NUP153. Only capsids that contain the mature viral genome can release the viral DNA and capsid protein into the nucleoplasm. Immature capsids get stuck in the basket. Capsids encapsulate the pre-genomic RNA and the P protein. Pre-genomic RNA is reverse-transcribed into DNA while the capsid is still in the cytoplasm. The capsid can then either be directed to the nucleus, providing more genomes for transcription, or bud through the endoplasmic reticulum to provide new virions.</text>
+  </comment>
+  <comment type="subunit">
+    <text evidence="1">Homodimerizes, then multimerizes. Interacts with cytosol exposed regions of viral L glycoprotein present in the reticulum-to-Golgi compartment. Interacts with human FLNB. Phosphorylated form interacts with host importin alpha; this interaction depends on the exposure of the NLS, which itself depends upon genome maturation and/or phosphorylation of the capsid protein. Interacts with host NUP153.</text>
+  </comment>
+  <comment type="subcellular location">
+    <subcellularLocation>
+      <location evidence="1">Virion</location>
+    </subcellularLocation>
+    <subcellularLocation>
+      <location evidence="1">Host cytoplasm</location>
+    </subcellularLocation>
+  </comment>
+  <comment type="PTM">
+    <text evidence="1">Phosphorylated by host SRPK1, SRPK2, and maybe protein kinase C or GAPDH. Phosphorylation is critical for pregenomic RNA packaging. Protein kinase C phosphorylation is stimulated by HBx protein and may play a role in transport of the viral genome to the nucleus at the late step during the viral replication cycle.</text>
+  </comment>
+  <comment type="similarity">
+    <text evidence="1">Belongs to the orthohepadnavirus core antigen family.</text>
+  </comment>
+  <dbReference type="EMBL" id="AF242586">
+    <property type="protein sequence ID" value="AAF87692.1"/>
+    <property type="molecule type" value="Genomic_DNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="AM117397">
+    <property type="protein sequence ID" value="CAJ41005.1"/>
+    <property type="molecule type" value="Genomic_DNA"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0043657">
+    <property type="term" value="C:host cell"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="GOC"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0030430">
+    <property type="term" value="C:host cell cytoplasm"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-SubCell"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0039619">
+    <property type="term" value="C:T=4 icosahedral viral capsid"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0003677">
+    <property type="term" value="F:DNA binding"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0003723">
+    <property type="term" value="F:RNA binding"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0005198">
+    <property type="term" value="F:structural molecule activity"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0075521">
+    <property type="term" value="P:microtubule-dependent intracellular transport of viral material towards nucleus"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0046718">
+    <property type="term" value="P:symbiont entry into host cell"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0075732">
+    <property type="term" value="P:viral penetration into host nucleus"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-UniRule"/>
+  </dbReference>
+  <dbReference type="FunFam" id="1.10.4090.10:FF:000001">
+    <property type="entry name" value="Capsid protein"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="Gene3D" id="1.10.4090.10">
+    <property type="entry name" value="Viral capsid, core domain supefamily, Hepatitis B virus"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="HAMAP" id="MF_04076">
+    <property type="entry name" value="HBV_HBEAG"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR002006">
+    <property type="entry name" value="Hepatitis_core"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR036459">
+    <property type="entry name" value="Viral_capsid_core_dom_sf_HBV"/>
+  </dbReference>
+  <dbReference type="Pfam" id="PF00906">
+    <property type="entry name" value="Hepatitis_core"/>
+    <property type="match status" value="2"/>
+  </dbReference>
+  <dbReference type="SUPFAM" id="SSF47852">
+    <property type="entry name" value="Hepatitis B viral capsid (hbcag)"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <proteinExistence type="inferred from homology"/>
+  <keyword evidence="1" id="KW-0167">Capsid protein</keyword>
+  <keyword evidence="1" id="KW-1176">Cytoplasmic inwards viral transport</keyword>
+  <keyword evidence="1" id="KW-0238">DNA-binding</keyword>
+  <keyword evidence="1" id="KW-1035">Host cytoplasm</keyword>
+  <keyword evidence="1" id="KW-0945">Host-virus interaction</keyword>
+  <keyword evidence="1" id="KW-1177">Microtubular inwards viral transport</keyword>
+  <keyword evidence="1" id="KW-0597">Phosphoprotein</keyword>
+  <keyword evidence="1" id="KW-0677">Repeat</keyword>
+  <keyword evidence="1" id="KW-0694">RNA-binding</keyword>
+  <keyword evidence="1" id="KW-1144">T=4 icosahedral capsid protein</keyword>
+  <keyword evidence="1" id="KW-1163">Viral penetration into host nucleus</keyword>
+  <keyword evidence="1" id="KW-0946">Virion</keyword>
+  <keyword evidence="1" id="KW-1160">Virus entry into host cell</keyword>
+  <feature type="region of interest" description="Disordered" evidence="2">
+    <location>
+      <begin position="136"/>
+      <end position="183"/>
+    </location>
+  </feature>
+  <feature type="region of interest" description="RNA binding" evidence="1">
+    <location>
+      <begin position="177"/>
+      <end position="183"/>
+    </location>
+  </feature>
+  <feature type="short sequence motif" description="Bipartite nuclear localization signal" evidence="1">
+    <location>
+      <begin position="158"/>
+      <end position="175"/>
+    </location>
+  </feature>
+  <feature type="compositionally biased region" description="Basic residues" evidence="2">
+    <location>
+      <begin position="149"/>
+      <end position="176"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine; by host" evidence="1">
+    <location>
+      <position position="155"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine; by host" evidence="1">
+    <location>
+      <position position="162"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine; by host" evidence="1">
+    <location>
+      <position position="170"/>
+    </location>
+  </feature>
+  <evidence type="ECO:0000256" key="1">
+    <source>
+      <dbReference type="HAMAP-Rule" id="MF_04076"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000256" key="2">
+    <source>
+      <dbReference type="SAM" id="MobiDB-lite"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000313" key="3">
+    <source>
+      <dbReference type="EMBL" id="AAF87692.1"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000313" key="4">
+    <source>
+      <dbReference type="EMBL" id="CAJ41005.1"/>
+    </source>
+  </evidence>
+  <sequence length="183" mass="20999" checksum="923DCB94A33FC0E8" modified="2004-07-05" version="1">MDIDPYKEFGATVELLSFLPSDFFPSVRDLLDTASALYREALESPEHCSPNHTALRQAILCWGELMTLASWVGNNLEDPASREQVVNYVNTNMGLKIRQLLWFHISCLTFGRETVLEYLVSFGVWIRTPPAYRPPNAPILSTLPETTVVRRRGRSPRRRTPSPRRRRSQSPRRRRSQSPASQC</sequence>
+</entry>
+<copyright>
+Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms Distributed under the Creative Commons Attribution (CC BY 4.0) License
+</copyright>
+</uniprot>

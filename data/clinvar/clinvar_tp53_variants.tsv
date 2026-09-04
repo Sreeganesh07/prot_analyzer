@@ -1,0 +1,284 @@
+position	ref_aa	alt_aa	mutation	hgvs	label	clinvar_id	clinical_significance	review_stars
+4	P	L	P4L	NM_000546.6(TP53):c.11C>T (p.Pro4Leu)	benign	237941	Likely benign	3
+7	D	E	D7E	NM_000546.6(TP53):c.21T>A (p.Asp7Glu)	benign	140782	Likely benign	3
+8	P	L	P8L	NM_000546.6(TP53):c.23C>T (p.Pro8Leu)	benign	231868	Likely benign	1
+10	V	I	V10I	NM_000546.6(TP53):c.28G>A (p.Val10Ile)	benign	127806	Benign	3
+10	V	L	V10L	NM_000546.6(TP53):c.28G>C (p.Val10Leu)	benign	231387	Likely benign	3
+29	N	D	N29D	NM_000546.6(TP53):c.85A>G (p.Asn29Asp)	benign	822586	Likely benign	1
+35	L	F	L35F	NM_000546.6(TP53):c.105G>C (p.Leu35Phe)	benign	142562	Likely benign	3
+36	P	Q	P36Q	NM_000546.6(TP53):c.107C>A (p.Pro36Gln)	benign	141597	Benign	3
+47	P	S	P47S	NM_000546.6(TP53):c.139C>T (p.Pro47Ser)	benign	43588	Benign	3
+48	D	E	D48E	NM_000546.6(TP53):c.144C>A (p.Asp48Glu)	benign	141056	Likely benign	3
+49	D	N	D49N	NM_000546.6(TP53):c.145G>A (p.Asp49Asn)	benign	186363	Benign	3
+49	D	H	D49H	NM_000546.6(TP53):c.145G>C (p.Asp49His)	benign	135948	Benign	3
+50	I	T	I50T	NM_000546.6(TP53):c.149T>C (p.Ile50Thr)	benign	216464	Likely benign	3
+59	G	D	G59D	NM_000546.6(TP53):c.176G>A (p.Gly59Asp)	benign	820048	Likely benign	1
+63	A	T	A63T	NM_000546.6(TP53):c.187G>A (p.Ala63Thr)	benign	231015	Likely benign	1
+63	A	V	A63V	NM_000546.6(TP53):c.188C>T (p.Ala63Val)	benign	182922	Benign	3
+63	A	G	A63G	NM_000546.6(TP53):c.188C>G (p.Ala63Gly)	benign	229693	Likely benign	3
+72	P	A	P72A	NM_000546.6(TP53):c.214C>G (p.Pro72Ala)	benign	142854	Likely benign	3
+72	P	R	P72R	NM_000546.6(TP53):c.215C>G (p.Pro72Arg)	benign	12351	Benign	3
+72	P	H	P72H	NM_000546.6(TP53):c.215C>A (p.Pro72His)	benign	185120	Benign	3
+73	V	M	V73M	NM_000546.6(TP53):c.217G>A (p.Val73Met)	benign	142386	Benign	3
+74	A	V	A74V	NM_000546.6(TP53):c.221C>T (p.Ala74Val)	benign	141547	Likely benign	3
+82	P	L	P82L	NM_000546.6(TP53):c.245C>T (p.Pro82Leu)	benign	182946	Likely benign	3
+83	A	V	A83V	NM_000546.6(TP53):c.248C>T (p.Ala83Val)	benign	127805	Benign/Likely benign	2
+84	A	T	A84T	NM_000546.6(TP53):c.250G>A (p.Ala84Thr)	benign	140833	Likely benign	3
+105	G	S	G105S	NM_000546.6(TP53):c.313G>A (p.Gly105Ser)	pathogenic	428884	Pathogenic/Likely pathogenic	2
+105	G	R	G105R	NM_000546.6(TP53):c.313G>C (p.Gly105Arg)	pathogenic	406574	Pathogenic/Likely pathogenic	2
+106	S	R	S106R	NM_000546.6(TP53):c.318C>G (p.Ser106Arg)	pathogenic	492752	Pathogenic	3
+107	Y	H	Y107H	NM_000546.5(TP53):c.319T>C (p.Tyr107His)	benign	140786	Benign	3
+108	G	S	G108S	NM_000546.6(TP53):c.322G>A (p.Gly108Ser)	benign	142431	Likely benign	3
+109	F	C	F109C	NM_000546.6(TP53):c.326T>G (p.Phe109Cys)	pathogenic	634784	Likely pathogenic	1
+110	R	H	R110H	NM_000546.6(TP53):c.329G>A (p.Arg110His)	benign	127808	Likely benign	3
+110	R	L	R110L	NM_000546.6(TP53):c.329G>T (p.Arg110Leu)	pathogenic	406597	Pathogenic	3
+110	R	G	R110G	NM_000546.6(TP53):c.328C>G (p.Arg110Gly)	pathogenic	823452	Likely pathogenic	3
+110	R	P	R110P	NM_000546.6(TP53):c.329G>C (p.Arg110Pro)	pathogenic	233627	Pathogenic	3
+111	L	P	L111P	NM_000546.6(TP53):c.332T>C (p.Leu111Pro)	pathogenic	376630	Pathogenic	3
+111	L	Q	L111Q	NM_000546.6(TP53):c.332T>A (p.Leu111Gln)	pathogenic	376632	Pathogenic	3
+111	L	R	L111R	NM_000546.6(TP53):c.332T>G (p.Leu111Arg)	pathogenic	376631	Pathogenic	3
+113	F	S	F113S	NM_000546.6(TP53):c.338T>C (p.Phe113Ser)	pathogenic	823709	Pathogenic/Likely pathogenic	2
+113	F	C	F113C	NM_000546.6(TP53):c.338T>G (p.Phe113Cys)	pathogenic	634690	Pathogenic	1
+113	F	V	F113V	NM_000546.6(TP53):c.337T>G (p.Phe113Val)	pathogenic	141302	Pathogenic/Likely pathogenic	2
+115	H	R	H115R	NM_000546.6(TP53):c.344A>G (p.His115Arg)	benign	182925	Likely benign	3
+118	T	I	T118I	NM_000546.6(TP53):c.353C>T (p.Thr118Ile)	benign	419837	Likely benign	3
+122	V	M	V122M	NM_000546.6(TP53):c.364G>A (p.Val122Met)	benign	141101	Likely benign	3
+124	C	S	C124S	NM_000546.6(TP53):c.370T>A (p.Cys124Ser)	benign	182926	Likely benign	3
+125	T	K	T125K	NM_000546.6(TP53):c.374C>A (p.Thr125Lys)	pathogenic	216465	Pathogenic	2
+125	T	R	T125R	NM_000546.6(TP53):c.374C>G (p.Thr125Arg)	pathogenic	376667	Pathogenic/Likely pathogenic	2
+126	Y	D	Y126D	NM_000546.6(TP53):c.376T>G (p.Tyr126Asp)	pathogenic	265333	Pathogenic/Likely pathogenic	2
+127	S	C	S127C	NM_000546.6(TP53):c.380C>G (p.Ser127Cys)	pathogenic	219532	Likely pathogenic	3
+127	S	Y	S127Y	NM_000546.6(TP53):c.380C>A (p.Ser127Tyr)	pathogenic	656751	Pathogenic	3
+127	S	F	S127F	NM_000546.6(TP53):c.380C>T (p.Ser127Phe)	pathogenic	182928	Pathogenic/Likely pathogenic	2
+127	S	T	S127T	NM_000546.6(TP53):c.379T>A (p.Ser127Thr)	pathogenic	824232	Likely pathogenic	3
+127	S	P	S127P	NM_000546.6(TP53):c.379T>C (p.Ser127Pro)	pathogenic	934410	Likely pathogenic	3
+130	L	P	L130P	NM_000546.6(TP53):c.389T>C (p.Leu130Pro)	pathogenic	428873	Pathogenic	2
+130	L	H	L130H	NM_000546.6(TP53):c.389T>A (p.Leu130His)	pathogenic	824351	Pathogenic	1
+131	N	I	N131I	NM_000546.6(TP53):c.392A>T (p.Asn131Ile)	pathogenic	428902	Pathogenic/Likely pathogenic	2
+132	K	R	K132R	NM_000546.6(TP53):c.395A>G (p.Lys132Arg)	pathogenic	376625	Pathogenic/Likely pathogenic	2
+132	K	N	K132N	NM_000546.6(TP53):c.396G>C (p.Lys132Asn)	pathogenic	376624	Likely pathogenic	3
+133	M	T	M133T	NM_000546.6(TP53):c.398T>C (p.Met133Thr)	pathogenic	12357	Pathogenic	2
+134	F	C	F134C	NM_000546.6(TP53):c.401T>G (p.Phe134Cys)	pathogenic	230477	Likely pathogenic	2
+135	C	R	C135R	NM_000546.6(TP53):c.403T>C (p.Cys135Arg)	pathogenic	376560	Pathogenic/Likely pathogenic	2
+135	C	G	C135G	NM_000546.6(TP53):c.403T>G (p.Cys135Gly)	pathogenic	376563	Pathogenic	3
+135	C	F	C135F	NM_000546.6(TP53):c.404G>T (p.Cys135Phe)	pathogenic	376559	Pathogenic/Likely pathogenic	2
+138	A	V	A138V	NM_000546.6(TP53):c.413C>T (p.Ala138Val)	pathogenic	184863	Likely pathogenic	3
+138	A	P	A138P	NM_000546.6(TP53):c.412G>C (p.Ala138Pro)	pathogenic	12376	Likely pathogenic	3
+141	C	Y	C141Y	NM_000546.6(TP53):c.422G>A (p.Cys141Tyr)	pathogenic	140801	Pathogenic/Likely pathogenic	2
+141	C	W	C141W	NM_000546.6(TP53):c.423C>G (p.Cys141Trp)	pathogenic	376564	Pathogenic	2
+143	V	G	V143G	NM_000546.6(TP53):c.428T>G (p.Val143Gly)	pathogenic	486556	Pathogenic/Likely pathogenic	2
+143	V	A	V143A	NM_000546.6(TP53):c.428T>C (p.Val143Ala)	pathogenic	804214	Pathogenic	3
+143	V	M	V143M	NM_000546.6(TP53):c.427G>A (p.Val143Met)	pathogenic	142657	Pathogenic/Likely pathogenic	2
+151	P	R	P151R	NM_000546.6(TP53):c.452C>G (p.Pro151Arg)	pathogenic	376640	Pathogenic/Likely pathogenic	2
+151	P	S	P151S	NM_000546.6(TP53):c.451C>T (p.Pro151Ser)	pathogenic	12370	Pathogenic/Likely pathogenic	2
+151	P	T	P151T	NM_000546.6(TP53):c.451C>A (p.Pro151Thr)	pathogenic	12369	Pathogenic/Likely pathogenic	2
+151	P	A	P151A	NM_000546.6(TP53):c.451C>G (p.Pro151Ala)	pathogenic	376641	Pathogenic	2
+152	P	L	P152L	NM_000546.6(TP53):c.455C>T (p.Pro152Leu)	pathogenic	142766	Pathogenic	3
+152	P	R	P152R	NM_000546.6(TP53):c.455C>G (p.Pro152Arg)	pathogenic	824998	Pathogenic/Likely pathogenic	2
+155	T	N	T155N	NM_000546.6(TP53):c.464C>A (p.Thr155Asn)	pathogenic	406564	Pathogenic/Likely pathogenic	2
+156	R	P	R156P	NM_000546.6(TP53):c.467G>C (p.Arg156Pro)	pathogenic	634768	Pathogenic/Likely pathogenic	2
+157	V	F	V157F	NM_000546.6(TP53):c.469G>T (p.Val157Phe)	pathogenic	12353	Pathogenic/Likely pathogenic	2
+157	V	G	V157G	NM_000546.6(TP53):c.470T>G (p.Val157Gly)	pathogenic	915695	Pathogenic/Likely pathogenic	2
+157	V	I	V157I	NM_000546.6(TP53):c.469G>A (p.Val157Ile)	benign	185404	Likely benign	3
+158	R	G	R158G	NM_000546.6(TP53):c.472C>G (p.Arg158Gly)	pathogenic	856171	Pathogenic	2
+158	R	H	R158H	NM_000546.6(TP53):c.473G>A (p.Arg158His)	pathogenic	141963	Pathogenic/Likely pathogenic	2
+158	R	S	R158S	NM_000546.6(TP53):c.472C>A (p.Arg158Ser)	pathogenic	1067910	Pathogenic	1
+158	R	L	R158L	NM_000546.6(TP53):c.473G>T (p.Arg158Leu)	pathogenic	528248	Pathogenic	3
+158	R	P	R158P	NM_000546.6(TP53):c.473G>C (p.Arg158Pro)	pathogenic	246118	Pathogenic	3
+159	A	V	A159V	NM_000546.6(TP53):c.476C>T (p.Ala159Val)	pathogenic	458545	Pathogenic/Likely pathogenic	2
+159	A	D	A159D	NM_000546.6(TP53):c.476C>A (p.Ala159Asp)	pathogenic	1026335	Pathogenic/Likely pathogenic	2
+160	M	I	M160I	NM_000546.6(TP53):c.480G>A (p.Met160Ile)	benign	230758	Likely benign	3
+161	A	T	A161T	NM_000546.6(TP53):c.481G>A (p.Ala161Thr)	pathogenic	161518	Pathogenic/Likely pathogenic	2
+163	Y	C	Y163C	NM_000546.6(TP53):c.488A>G (p.Tyr163Cys)	pathogenic	127814	Pathogenic	3
+163	Y	H	Y163H	NM_000546.6(TP53):c.487T>C (p.Tyr163His)	pathogenic	376680	Pathogenic	3
+164	K	E	K164E	NM_000546.6(TP53):c.490A>G (p.Lys164Glu)	pathogenic	246416	Pathogenic	3
+170	T	M	T170M	NM_000546.6(TP53):c.509C>T (p.Thr170Met)	benign	184014	Likely benign	3
+171	E	K	E171K	NM_000546.6(TP53):c.511G>A (p.Glu171Lys)	benign	141566	Likely benign	3
+172	V	G	V172G	NM_000546.6(TP53):c.515T>G (p.Val172Gly)	pathogenic	428883	Pathogenic	1
+173	V	M	V173M	NM_000546.6(TP53):c.517G>A (p.Val173Met)	pathogenic	233951	Pathogenic	3
+173	V	A	V173A	NM_000546.6(TP53):c.518T>C (p.Val173Ala)	pathogenic	376017	Pathogenic/Likely pathogenic	2
+173	V	L	V173L	NM_000546.6(TP53):c.517G>T (p.Val173Leu)	pathogenic	376668	Pathogenic/Likely pathogenic	2
+175	R	H	R175H	NM_000546.6(TP53):c.524G>A (p.Arg175His)	pathogenic	12374	Pathogenic	3
+175	R	L	R175L	NM_000546.6(TP53):c.524G>T (p.Arg175Leu)	pathogenic	182963	Likely pathogenic	3
+175	R	G	R175G	NM_000546.6(TP53):c.523C>G (p.Arg175Gly)	pathogenic	376649	Pathogenic	3
+176	C	Y	C176Y	NM_000546.6(TP53):c.527G>A (p.Cys176Tyr)	pathogenic	186451	Pathogenic/Likely pathogenic	2
+176	C	F	C176F	NM_000546.6(TP53):c.527G>T (p.Cys176Phe)	pathogenic	376569	Pathogenic/Likely pathogenic	2
+177	P	R	P177R	NM_000546.6(TP53):c.530C>G (p.Pro177Arg)	pathogenic	458547	Pathogenic/Likely pathogenic	2
+178	H	Q	H178Q	NM_000546.6(TP53):c.534C>A (p.His178Gln)	pathogenic	575702	Pathogenic/Likely pathogenic	2
+178	H	D	H178D	NM_000546.6(TP53):c.532C>G (p.His178Asp)	pathogenic	482223	Pathogenic	3
+179	H	R	H179R	NM_000546.6(TP53):c.536A>G (p.His179Arg)	pathogenic	376606	Pathogenic/Likely pathogenic	2
+179	H	Y	H179Y	NM_000546.6(TP53):c.535C>T (p.His179Tyr)	pathogenic	127815	Pathogenic/Likely pathogenic	2
+179	H	D	H179D	NM_000546.6(TP53):c.535C>G (p.His179Asp)	pathogenic	376610	Pathogenic/Likely pathogenic	2
+179	H	Q	H179Q	NM_000546.6(TP53):c.537T>A (p.His179Gln)	pathogenic	406578	Pathogenic	3
+180	E	K	E180K	NM_000546.6(TP53):c.538G>A (p.Glu180Lys)	pathogenic	245711	Likely pathogenic	3
+181	R	C	R181C	NM_000546.6(TP53):c.541C>T (p.Arg181Cys)	pathogenic	142624	Likely pathogenic	3
+181	R	H	R181H	NM_000546.6(TP53):c.542G>A (p.Arg181His)	pathogenic	142320	Pathogenic/Likely pathogenic	2
+181	R	P	R181P	NM_000546.6(TP53):c.542G>C (p.Arg181Pro)	pathogenic	825729	Pathogenic/Likely pathogenic	2
+185	S	N	S185N	NM_000546.6(TP53):c.554G>A (p.Ser185Asn)	benign	141359	Likely benign	3
+186	D	N	D186N	NM_000546.6(TP53):c.556G>A (p.Asp186Asn)	benign	406601	Likely benign	3
+186	D	E	D186E	NM_000546.6(TP53):c.558T>A (p.Asp186Glu)	benign	230006	Likely benign	2
+190	P	L	P190L	NM_000546.6(TP53):c.569C>T (p.Pro190Leu)	pathogenic	418517	Likely pathogenic	3
+191	P	R	P191R	NM_000546.6(TP53):c.572C>G (p.Pro191Arg)	benign	127816	Likely benign	3
+192	Q	H	Q192H	NM_000546.6(TP53):c.576G>C (p.Gln192His)	benign	988617	Likely benign	1
+193	H	P	H193P	NM_000546.6(TP53):c.578A>C (p.His193Pro)	pathogenic	376612	Pathogenic	3
+193	H	N	H193N	NM_000546.6(TP53):c.577C>A (p.His193Asn)	pathogenic	3460301	Pathogenic/Likely pathogenic	2
+193	H	Y	H193Y	NM_000546.6(TP53):c.577C>T (p.His193Tyr)	pathogenic	230256	Pathogenic/Likely pathogenic	2
+193	H	R	H193R	NM_000546.6(TP53):c.578A>G (p.His193Arg)	pathogenic	184979	Pathogenic/Likely pathogenic	2
+194	L	H	L194H	NM_000546.6(TP53):c.581T>A (p.Leu194His)	pathogenic	376634	Pathogenic/Likely pathogenic	2
+194	L	R	L194R	NM_000546.6(TP53):c.581T>G (p.Leu194Arg)	pathogenic	376633	Pathogenic	3
+194	L	F	L194F	NM_000546.6(TP53):c.580C>T (p.Leu194Phe)	pathogenic	127817	Pathogenic/Likely pathogenic	2
+195	I	T	I195T	NM_000546.6(TP53):c.584T>C (p.Ile195Thr)	pathogenic	216077	Pathogenic	2
+196	R	P	R196P	NM_000546.6(TP53):c.587G>C (p.Arg196Pro)	pathogenic	231165	Pathogenic/Likely pathogenic	2
+197	V	M	V197M	NM_000546.6(TP53):c.589G>A (p.Val197Met)	pathogenic	188060	Likely pathogenic	3
+199	G	V	G199V	NM_000546.6(TP53):c.596G>T (p.Gly199Val)	pathogenic	451799	Likely pathogenic	1
+205	Y	H	Y205H	NM_000546.6(TP53):c.613T>C (p.Tyr205His)	pathogenic	376685	Pathogenic/Likely pathogenic	2
+205	Y	D	Y205D	NM_000546.6(TP53):c.613T>G (p.Tyr205Asp)	pathogenic	376686	Pathogenic/Likely pathogenic	2
+205	Y	C	Y205C	NM_000546.6(TP53):c.614A>G (p.Tyr205Cys)	pathogenic	376681	Pathogenic	2
+209	R	K	R209K	NM_000546.6(TP53):c.626G>A (p.Arg209Lys)	benign	962629	Likely benign	3
+213	R	P	R213P	NM_000546.6(TP53):c.638G>C (p.Arg213Pro)	pathogenic	231214	Pathogenic/Likely pathogenic	2
+213	R	Q	R213Q	NM_000546.6(TP53):c.638G>A (p.Arg213Gln)	pathogenic	135359	Pathogenic/Likely pathogenic	2
+214	H	R	H214R	NM_000546.6(TP53):c.641A>G (p.His214Arg)	pathogenic	376615	Pathogenic	3
+214	H	L	H214L	NM_000546.6(TP53):c.641A>T (p.His214Leu)	pathogenic	376616	Likely pathogenic	3
+215	S	R	S215R	NM_000546.6(TP53):c.643A>C (p.Ser215Arg)	pathogenic	428895	Likely pathogenic	2
+216	V	M	V216M	NM_000546.6(TP53):c.646G>A (p.Val216Met)	pathogenic	182965	Pathogenic/Likely pathogenic	2
+220	Y	H	Y220H	NM_000546.6(TP53):c.658T>C (p.Tyr220His)	pathogenic	376687	Pathogenic/Likely pathogenic	2
+220	Y	C	Y220C	NM_000546.6(TP53):c.659A>G (p.Tyr220Cys)	pathogenic	127819	Pathogenic	3
+220	Y	S	Y220S	NM_000546.6(TP53):c.659A>C (p.Tyr220Ser)	pathogenic	12383	Pathogenic	2
+232	I	T	I232T	NM_000546.6(TP53):c.695T>C (p.Ile232Thr)	pathogenic	141224	Pathogenic/Likely pathogenic	2
+232	I	N	I232N	NM_000546.6(TP53):c.695T>A (p.Ile232Asn)	pathogenic	850008	Pathogenic/Likely pathogenic	2
+232	I	S	I232S	NM_000546.6(TP53):c.695T>G (p.Ile232Ser)	pathogenic	634756	Pathogenic	1
+234	Y	D	Y234D	NM_000546.6(TP53):c.700T>G (p.Tyr234Asp)	pathogenic	219759	Pathogenic/Likely pathogenic	2
+234	Y	C	Y234C	NM_000546.6(TP53):c.701A>G (p.Tyr234Cys)	pathogenic	127820	Pathogenic/Likely pathogenic	2
+234	Y	N	Y234N	NM_000546.6(TP53):c.700T>A (p.Tyr234Asn)	pathogenic	376692	Pathogenic/Likely pathogenic	2
+234	Y	H	Y234H	NM_000546.6(TP53):c.700T>C (p.Tyr234His)	pathogenic	376691	Pathogenic/Likely pathogenic	2
+235	N	S	N235S	NM_000546.6(TP53):c.704A>G (p.Asn235Ser)	benign	127821	Benign	3
+236	Y	H	Y236H	NM_000546.6(TP53):c.706T>C (p.Tyr236His)	pathogenic	216469	Pathogenic/Likely pathogenic	2
+236	Y	C	Y236C	NM_000546.6(TP53):c.707A>G (p.Tyr236Cys)	pathogenic	376693	Pathogenic/Likely pathogenic	2
+237	M	I	M237I	NM_000546.6(TP53):c.711G>A (p.Met237Ile)	pathogenic	142714	Pathogenic	3
+237	M	K	M237K	NM_000546.6(TP53):c.710T>A (p.Met237Lys)	pathogenic	376636	Pathogenic/Likely pathogenic	2
+238	C	Y	C238Y	NM_000546.6(TP53):c.713G>A (p.Cys238Tyr)	pathogenic	182935	Pathogenic/Likely pathogenic	2
+238	C	F	C238F	NM_000546.6(TP53):c.713G>T (p.Cys238Phe)	pathogenic	376574	Pathogenic/Likely pathogenic	2
+238	C	W	C238W	NM_000546.6(TP53):c.714T>G (p.Cys238Trp)	pathogenic	161515	Pathogenic/Likely pathogenic	2
+238	C	S	C238S	NM_000546.6(TP53):c.713G>C (p.Cys238Ser)	pathogenic	376575	Pathogenic/Likely pathogenic	2
+238	C	R	C238R	NM_000546.6(TP53):c.712T>C (p.Cys238Arg)	pathogenic	376576	Pathogenic/Likely pathogenic	2
+238	C	G	C238G	NM_000546.6(TP53):c.712T>G (p.Cys238Gly)	pathogenic	376577	Pathogenic/Likely pathogenic	2
+239	N	S	N239S	NM_000546.6(TP53):c.716A>G (p.Asn239Ser)	pathogenic	376637	Pathogenic/Likely pathogenic	2
+240	S	G	S240G	NM_000546.6(TP53):c.718A>G (p.Ser240Gly)	pathogenic	584921	Pathogenic/Likely pathogenic	2
+241	S	T	S241T	NM_000546.6(TP53):c.721T>A (p.Ser241Thr)	pathogenic	959232	Pathogenic/Likely pathogenic	2
+241	S	F	S241F	NM_000546.6(TP53):c.722C>T (p.Ser241Phe)	pathogenic	12359	Pathogenic/Likely pathogenic	2
+241	S	C	S241C	NM_000546.6(TP53):c.722C>G (p.Ser241Cys)	pathogenic	177791	Pathogenic/Likely pathogenic	2
+241	S	A	S241A	NM_000546.6(TP53):c.721T>G (p.Ser241Ala)	pathogenic	376665	Pathogenic/Likely pathogenic	2
+241	S	Y	S241Y	NM_000546.6(TP53):c.722C>A (p.Ser241Tyr)	pathogenic	376663	Pathogenic/Likely pathogenic	2
+242	C	Y	C242Y	NM_000546.6(TP53):c.725G>A (p.Cys242Tyr)	pathogenic	12354	Pathogenic/Likely pathogenic	2
+242	C	W	C242W	NM_000546.6(TP53):c.726C>G (p.Cys242Trp)	pathogenic	376580	Pathogenic	1
+244	G	V	G244V	NM_000546.6(TP53):c.731G>T (p.Gly244Val)	pathogenic	376601	Likely pathogenic	1
+244	G	D	G244D	NM_000546.6(TP53):c.731G>A (p.Gly244Asp)	pathogenic	372785	Pathogenic/Likely pathogenic	2
+244	G	A	G244A	NM_000546.6(TP53):c.731G>C (p.Gly244Ala)	pathogenic	458560	Pathogenic/Likely pathogenic	2
+244	G	S	G244S	NM_000546.6(TP53):c.730G>A (p.Gly244Ser)	pathogenic	376600	Pathogenic	2
+245	G	S	G245S	NM_000546.6(TP53):c.733G>A (p.Gly245Ser)	pathogenic	12365	Pathogenic	3
+245	G	D	G245D	NM_000546.6(TP53):c.734G>A (p.Gly245Asp)	pathogenic	12355	Pathogenic/Likely pathogenic	2
+245	G	V	G245V	NM_000546.6(TP53):c.734G>T (p.Gly245Val)	pathogenic	376603	Pathogenic	2
+245	G	C	G245C	NM_000546.6(TP53):c.733G>T (p.Gly245Cys)	pathogenic	12349	Pathogenic	2
+246	M	V	M246V	NM_000546.6(TP53):c.736A>G (p.Met246Val)	pathogenic	100815	Pathogenic/Likely pathogenic	2
+246	M	K	M246K	NM_000546.6(TP53):c.737T>A (p.Met246Lys)	pathogenic	480764	Likely pathogenic	2
+246	M	I	M246I	NM_000546.6(TP53):c.738G>A (p.Met246Ile)	pathogenic	480961	Pathogenic/Likely pathogenic	2
+247	N	I	N247I	NM_000546.6(TP53):c.740A>T (p.Asn247Ile)	pathogenic	184882	Pathogenic	2
+248	R	P	R248P	NM_000546.6(TP53):c.743G>C (p.Arg248Pro)	pathogenic	237954	Pathogenic/Likely pathogenic	2
+248	R	W	R248W	NM_000546.6(TP53):c.742C>T (p.Arg248Trp)	pathogenic	12347	Pathogenic	3
+248	R	Q	R248Q	NM_000546.6(TP53):c.743G>A (p.Arg248Gln)	pathogenic	12356	Pathogenic	3
+248	R	L	R248L	NM_000546.6(TP53):c.743G>T (p.Arg248Leu)	pathogenic	230253	Pathogenic	3
+248	R	G	R248G	NM_000546.6(TP53):c.742C>G (p.Arg248Gly)	pathogenic	376652	Pathogenic/Likely pathogenic	2
+249	R	S	R249S	NM_000546.6(TP53):c.747G>T (p.Arg249Ser)	pathogenic	12352	Pathogenic/Likely pathogenic	2
+249	R	T	R249T	NM_000546.6(TP53):c.746G>C (p.Arg249Thr)	pathogenic	376015	Pathogenic/Likely pathogenic	2
+250	P	L	P250L	NM_000546.6(TP53):c.749C>T (p.Pro250Leu)	pathogenic	420136	Pathogenic/Likely pathogenic	2
+251	I	L	I251L	NM_000546.6(TP53):c.751A>C (p.Ile251Leu)	pathogenic	182937	Pathogenic/Likely pathogenic	2
+253	T	A	T253A	NM_000546.6(TP53):c.757A>G (p.Thr253Ala)	pathogenic	827132	Pathogenic/Likely pathogenic	2
+254	I	V	I254V	NM_000546.6(TP53):c.760A>G (p.Ile254Val)	benign	406605	Likely benign	3
+254	I	N	I254N	NM_000546.6(TP53):c.761T>A (p.Ile254Asn)	pathogenic	856299	Pathogenic	3
+258	E	K	E258K	NM_000546.6(TP53):c.772G>A (p.Glu258Lys)	pathogenic	12348	Pathogenic/Likely pathogenic	2
+260	S	Y	S260Y	NM_000546.6(TP53):c.779C>A (p.Ser260Tyr)	benign	231033	Likely benign	3
+262	G	S	G262S	NM_000546.6(TP53):c.784G>A (p.Gly262Ser)	benign	141228	Likely benign	3
+263	N	S	N263S	NM_000546.6(TP53):c.788A>G (p.Asn263Ser)	benign	827313	Likely benign	1
+265	L	P	L265P	NM_000546.6(TP53):c.794T>C (p.Leu265Pro)	pathogenic	245777	Pathogenic/Likely pathogenic	2
+265	L	Q	L265Q	NM_000546.6(TP53):c.794T>A (p.Leu265Gln)	pathogenic	953467	Pathogenic/Likely pathogenic	2
+266	G	E	G266E	NM_000546.6(TP53):c.797G>A (p.Gly266Glu)	pathogenic	161516	Pathogenic/Likely pathogenic	2
+266	G	R	G266R	NM_000546.6(TP53):c.796G>C (p.Gly266Arg)	pathogenic	376605	Pathogenic	2
+267	R	W	R267W	NM_000546.6(TP53):c.799C>T (p.Arg267Trp)	pathogenic	141764	Pathogenic/Likely pathogenic	2
+267	R	P	R267P	NM_000546.6(TP53):c.800G>C (p.Arg267Pro)	pathogenic	428867	Pathogenic	2
+270	F	S	F270S	NM_000546.6(TP53):c.809T>C (p.Phe270Ser)	pathogenic	376594	Pathogenic/Likely pathogenic	2
+270	F	V	F270V	NM_000546.6(TP53):c.808T>G (p.Phe270Val)	pathogenic	376598	Pathogenic	1
+270	F	L	F270L	NM_000546.6(TP53):c.808T>C (p.Phe270Leu)	pathogenic	634778	Pathogenic/Likely pathogenic	2
+272	V	M	V272M	NM_000546.6(TP53):c.814G>A (p.Val272Met)	pathogenic	185814	Pathogenic	3
+272	V	L	V272L	NM_000546.6(TP53):c.814G>T (p.Val272Leu)	pathogenic	12358	Pathogenic/Likely pathogenic	2
+273	R	L	R273L	NM_000546.6(TP53):c.818G>T (p.Arg273Leu)	pathogenic	376655	Pathogenic	2
+273	R	P	R273P	NM_000546.6(TP53):c.818G>C (p.Arg273Pro)	pathogenic	231060	Pathogenic/Likely pathogenic	2
+273	R	C	R273C	NM_000546.6(TP53):c.817C>T (p.Arg273Cys)	pathogenic	43594	Pathogenic/Likely pathogenic	2
+273	R	H	R273H	NM_000546.6(TP53):c.818G>A (p.Arg273His)	pathogenic	12366	Pathogenic	3
+273	R	G	R273G	NM_000546.6(TP53):c.817C>G (p.Arg273Gly)	pathogenic	634682	Pathogenic/Likely pathogenic	2
+273	R	S	R273S	NM_000546.6(TP53):c.817C>A (p.Arg273Ser)	pathogenic	376656	Pathogenic	2
+275	C	F	C275F	NM_000546.6(TP53):c.824G>T (p.Cys275Phe)	pathogenic	376582	Pathogenic	2
+275	C	Y	C275Y	NM_000546.6(TP53):c.824G>A (p.Cys275Tyr)	pathogenic	215997	Pathogenic/Likely pathogenic	2
+276	A	G	A276G	NM_000546.6(TP53):c.827C>G (p.Ala276Gly)	pathogenic	185319	Pathogenic/Likely pathogenic	2
+278	P	T	P278T	NM_000546.6(TP53):c.832C>A (p.Pro278Thr)	pathogenic	376643	Pathogenic/Likely pathogenic	2
+278	P	L	P278L	NM_000546.6(TP53):c.833C>T (p.Pro278Leu)	pathogenic	232497	Pathogenic	2
+278	P	S	P278S	NM_000546.6(TP53):c.832C>T (p.Pro278Ser)	pathogenic	376642	Pathogenic/Likely pathogenic	2
+280	R	S	R280S	NM_000546.6(TP53):c.840A>T (p.Arg280Ser)	pathogenic	988616	Pathogenic	3
+280	R	T	R280T	NM_000546.6(TP53):c.839G>C (p.Arg280Thr)	pathogenic	12368	Pathogenic/Likely pathogenic	2
+281	D	Y	D281Y	NM_000546.6(TP53):c.841G>T (p.Asp281Tyr)	pathogenic	376585	Pathogenic/Likely pathogenic	2
+281	D	V	D281V	NM_000546.6(TP53):c.842A>T (p.Asp281Val)	pathogenic	182968	Pathogenic/Likely pathogenic	2
+281	D	G	D281G	NM_000546.6(TP53):c.842A>G (p.Asp281Gly)	pathogenic	141141	Pathogenic	2
+281	D	E	D281E	NM_000546.6(TP53):c.843C>G (p.Asp281Glu)	pathogenic	376587	Pathogenic/Likely pathogenic	2
+281	D	N	D281N	NM_000546.6(TP53):c.841G>A (p.Asp281Asn)	pathogenic	376586	Pathogenic/Likely pathogenic	2
+281	D	A	D281A	NM_000546.6(TP53):c.842A>C (p.Asp281Ala)	pathogenic	376589	Pathogenic/Likely pathogenic	2
+281	D	H	D281H	NM_000546.6(TP53):c.841G>C (p.Asp281His)	pathogenic	376588	Pathogenic/Likely pathogenic	2
+282	R	P	R282P	NM_000546.6(TP53):c.845G>C (p.Arg282Pro)	pathogenic	376659	Pathogenic/Likely pathogenic	2
+282	R	G	R282G	NM_000546.6(TP53):c.844C>G (p.Arg282Gly)	pathogenic	140821	Pathogenic	2
+282	R	W	R282W	NM_000546.6(TP53):c.844C>T (p.Arg282Trp)	pathogenic	12364	Pathogenic/Likely pathogenic	2
+283	R	P	R283P	NM_000546.6(TP53):c.848G>C (p.Arg283Pro)	pathogenic	486555	Pathogenic	3
+283	R	C	R283C	NM_000546.6(TP53):c.847C>T (p.Arg283Cys)	benign	127824	Likely benign	3
+284	T	I	T284I	NM_000546.6(TP53):c.851C>T (p.Thr284Ile)	benign	216471	Likely benign	3
+285	E	V	E285V	NM_000546.6(TP53):c.854A>T (p.Glu285Val)	pathogenic	12384	Pathogenic	1
+285	E	K	E285K	NM_000546.6(TP53):c.853G>A (p.Glu285Lys)	pathogenic	420133	Pathogenic/Likely pathogenic	2
+286	E	A	E286A	NM_000546.6(TP53):c.857A>C (p.Glu286Ala)	pathogenic	376593	Likely pathogenic	1
+286	E	K	E286K	NM_000546.6(TP53):c.856G>A (p.Glu286Lys)	pathogenic	183752	Pathogenic/Likely pathogenic	2
+290	R	H	R290H	NM_000546.6(TP53):c.869G>A (p.Arg290His)	benign	127825	Benign	3
+290	R	C	R290C	NM_000546.6(TP53):c.868C>T (p.Arg290Cys)	benign	216472	Benign	3
+292	K	R	K292R	NM_000546.6(TP53):c.875A>G (p.Lys292Arg)	benign	406577	Likely benign	3
+293	G	W	G293W	NM_000546.6(TP53):c.877G>T (p.Gly293Trp)	benign	127826	Likely benign	3
+295	P	S	P295S	NM_000546.6(TP53):c.883C>T (p.Pro295Ser)	benign	428862	Likely benign	3
+296	H	Y	H296Y	NM_000546.6(TP53):c.886C>T (p.His296Tyr)	benign	132973	Likely benign	3
+298	E	K	E298K	NM_000546.6(TP53):c.892G>A (p.Glu298Lys)	benign	141483	Benign	3
+303	S	G	S303G	NM_000546.6(TP53):c.907A>G (p.Ser303Gly)	benign	142332	Likely benign	3
+307	A	G	A307G	NM_000546.6(TP53):c.920C>G (p.Ala307Gly)	benign	485027	Likely benign	1
+310	N	K	N310K	NM_000546.6(TP53):c.930C>G (p.Asn310Lys)	benign	428879	Likely benign	1
+312	T	S	T312S	NM_000546.6(TP53):c.935C>G (p.Thr312Ser)	benign	141102	Benign	3
+315	S	T	S315T	NM_000546.6(TP53):c.943T>A (p.Ser315Thr)	benign	185212	Likely benign	3
+316	P	T	P316T	NM_000546.6(TP53):c.946C>A (p.Pro316Thr)	benign	230382	Likely benign	3
+317	Q	K	Q317K	NM_000546.6(TP53):c.949C>A (p.Gln317Lys)	benign	231008	Benign	3
+333	R	H	R333H	NM_000546.6(TP53):c.998G>A (p.Arg333His)	benign	142273	Benign	3
+333	R	C	R333C	NM_000546.6(TP53):c.997C>T (p.Arg333Cys)	benign	184745	Likely benign	3
+334	G	W	G334W	NM_000546.6(TP53):c.1000G>T (p.Gly334Trp)	pathogenic	428876	Likely pathogenic	2
+335	R	C	R335C	NM_000546.6(TP53):c.1003C>T (p.Arg335Cys)	benign	141159	Likely benign	3
+337	R	P	R337P	NM_000546.6(TP53):c.1010G>C (p.Arg337Pro)	pathogenic	177879	Likely pathogenic	3
+337	R	L	R337L	NM_000546.6(TP53):c.1010G>T (p.Arg337Leu)	pathogenic	142828	Likely pathogenic	3
+337	R	G	R337G	NM_000546.6(TP53):c.1009C>G (p.Arg337Gly)	pathogenic	237938	Likely pathogenic	3
+337	R	S	R337S	NM_000546.6(TP53):c.1009C>A (p.Arg337Ser)	pathogenic	1019612	Likely pathogenic	3
+337	R	C	R337C	NM_000546.6(TP53):c.1009C>T (p.Arg337Cys)	pathogenic	142536	Pathogenic	3
+339	E	Q	E339Q	NM_000546.6(TP53):c.1015G>C (p.Glu339Gln)	benign	141893	Likely benign	3
+342	R	Q	R342Q	NM_000546.6(TP53):c.1025G>A (p.Arg342Gln)	benign	233136	Likely benign	3
+342	R	P	R342P	NM_000546.6(TP53):c.1025G>C (p.Arg342Pro)	pathogenic	215996	Pathogenic	3
+344	L	P	L344P	NM_000546.6(TP53):c.1031T>C (p.Leu344Pro)	pathogenic	12375	Likely pathogenic	3
+347	A	D	A347D	NM_000546.6(TP53):c.1040C>A (p.Ala347Asp)	pathogenic	43587	Pathogenic	3
+354	Q	K	Q354K	NM_000546.6(TP53):c.1060C>A (p.Gln354Lys)	benign	231485	Benign	3
+356	G	R	G356R	NM_000546.6(TP53):c.1066G>C (p.Gly356Arg)	benign	234059	Likely benign	3
+360	G	A	G360A	NM_000546.6(TP53):c.1079G>C (p.Gly360Ala)	benign	142003	Benign	3
+365	H	Y	H365Y	NM_000546.6(TP53):c.1093C>T (p.His365Tyr)	benign	80708	Likely benign	3
+366	S	A	S366A	NM_000546.6(TP53):c.1096T>G (p.Ser366Ala)	benign	135360	Benign	3
+374	G	R	G374R	NM_000546.6(TP53):c.1120G>C (p.Gly374Arg)	benign	230269	Benign	3
+379	R	S	R379S	NM_000546.6(TP53):c.1135C>A (p.Arg379Ser)	benign	186762	Likely benign	3
+379	R	L	R379L	NM_000546.6(TP53):c.1136G>T (p.Arg379Leu)	benign	216463	Likely benign	3
+379	R	H	R379H	NM_000546.6(TP53):c.1136G>A (p.Arg379His)	benign	246221	Likely benign	3
+384	M	V	M384V	NM_000546.6(TP53):c.1150A>G (p.Met384Val)	benign	182939	Likely benign	3
+384	M	T	M384T	NM_000546.6(TP53):c.1151T>C (p.Met384Thr)	benign	406575	Benign	3
+385	F	L	F385L	NM_000546.6(TP53):c.1153T>C (p.Phe385Leu)	benign	485029	Likely benign	1
+388	E	A	E388A	NM_000546.6(TP53):c.1163A>C (p.Glu388Ala)	benign	141425	Likely benign	3

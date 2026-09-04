@@ -1,0 +1,251 @@
+{
+  "accession": "P00734",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P00734\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "49",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "50",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "57",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "59",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "62",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "63",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "68",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "69",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "72",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "modified residue",
+      "position": "75",
+      "residue": "E",
+      "description": "4-carboxyglutamate"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "121",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "143",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "416",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "60-65",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "90-103",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "108-186",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "129-169",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "157-181",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "213-291",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "234-274",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "262-286",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "336-482",
+      "residue": null,
+      "description": "Interchain (between light and heavy chains)"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "391-407",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "536-550",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "564-594",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ptm_count": 25,
+  "ppi_interactions": [
+    {
+      "partner_a": "SERPIND1",
+      "partner_b": "F2",
+      "preferred_partner_name": "SERPIND1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.946,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.865
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "FGA",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.997,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.957
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "FGG",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.993,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.936
+    },
+    {
+      "partner_a": "FGB",
+      "partner_b": "F2",
+      "preferred_partner_name": "FGB",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.836
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "FGA",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.966,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.886
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "F5",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.926,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.886
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "SERPINC1",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.977,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.98
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "FGG",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.9,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.821
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "F10",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.93,
+      "dscore_database": 0.75,
+      "tscore_textmining": 0.972
+    },
+    {
+      "partner_a": "F2",
+      "partner_b": "THBD",
+      "preferred_partner_name": "F2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.967,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.927
+    }
+  ],
+  "ppi_partner_count": 10
+}

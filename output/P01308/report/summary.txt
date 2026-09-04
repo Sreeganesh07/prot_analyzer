@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P01308
+Protein Name    : Insulin
+Organism        : Homo sapiens
+Sequence Length : 110 amino acids
+Execution Time  : 14.70 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 11980.79 Da
+  Isoelectric Point (pI): 5.22
+  Instability Index     : 40.33 (Unstable)
+  GRAVY Hydropathicity  : 0.193
+  Aromaticity           : 0.0818
+  Secondary Structure   : Helix: 38.2%, Sheet: 36.4%, Turn: 25.4%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 98.94%
+  Ramachandran Allowed  : 1.06%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 70.2°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -3.79 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -27.3 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 3
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P01308
+======================================================================

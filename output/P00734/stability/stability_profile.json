@@ -1,0 +1,200 @@
+{
+  "sequence_length": 622,
+  "estimated_melting_temperature_celsius": 73.5,
+  "standard_conditions": {
+    "physiological_37c_ph74": {
+      "status_code": "native",
+      "state": "NATIVE",
+      "badge_label": "Native Folded State",
+      "badge_color": "#10b981",
+      "temperature_celsius": 37.0,
+      "ph": 7.4,
+      "net_charge": -16.23,
+      "salt_bridge_retention_percent": 99.9,
+      "fraction_folded_percent": 100.0,
+      "delta_g_folding_kcal_mol": -27.95,
+      "is_degraded": false,
+      "degradation_reasons": [],
+      "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -27.9 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+      "thresholds": {
+        "tm_celsius": 73.5,
+        "temp_min_stable": 15.0,
+        "temp_max_stable": 65.5,
+        "temp_degradation": 83.5,
+        "ph_min_stable": 5.5,
+        "ph_max_stable": 8.5,
+        "ph_acid_degradation": 3.0,
+        "ph_alkaline_degradation": 11.5
+      }
+    },
+    "invitro_25c_ph70": {
+      "status_code": "native",
+      "state": "NATIVE",
+      "badge_label": "Native Folded State",
+      "badge_color": "#10b981",
+      "temperature_celsius": 25.0,
+      "ph": 7.0,
+      "net_charge": -13.35,
+      "salt_bridge_retention_percent": 99.9,
+      "fraction_folded_percent": 100.0,
+      "delta_g_folding_kcal_mol": -34.59,
+      "is_degraded": false,
+      "degradation_reasons": [],
+      "molecular_mechanism": "At physiological/standard conditions (25.0\u00b0C, pH 7.0), the protein resides in its thermodynamic free energy minimum (\u0394G = -34.6 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+      "thresholds": {
+        "tm_celsius": 73.5,
+        "temp_min_stable": 15.0,
+        "temp_max_stable": 65.5,
+        "temp_degradation": 83.5,
+        "ph_min_stable": 5.5,
+        "ph_max_stable": 8.5,
+        "ph_acid_degradation": 3.0,
+        "ph_alkaline_degradation": 11.5
+      }
+    }
+  },
+  "active_evaluation": {
+    "status_code": "native",
+    "state": "NATIVE",
+    "badge_label": "Native Folded State",
+    "badge_color": "#10b981",
+    "temperature_celsius": 37.0,
+    "ph": 7.4,
+    "net_charge": -16.23,
+    "salt_bridge_retention_percent": 99.9,
+    "fraction_folded_percent": 100.0,
+    "delta_g_folding_kcal_mol": -27.95,
+    "is_degraded": false,
+    "degradation_reasons": [],
+    "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -27.9 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+    "thresholds": {
+      "tm_celsius": 73.5,
+      "temp_min_stable": 15.0,
+      "temp_max_stable": 65.5,
+      "temp_degradation": 83.5,
+      "ph_min_stable": 5.5,
+      "ph_max_stable": 8.5,
+      "ph_acid_degradation": 3.0,
+      "ph_alkaline_degradation": 11.5
+    }
+  },
+  "titration_profile": [
+    {
+      "ph": 0.0,
+      "net_charge": 86.98
+    },
+    {
+      "ph": 0.5,
+      "net_charge": 86.95
+    },
+    {
+      "ph": 1.0,
+      "net_charge": 86.85
+    },
+    {
+      "ph": 1.5,
+      "net_charge": 86.54
+    },
+    {
+      "ph": 2.0,
+      "net_charge": 85.63
+    },
+    {
+      "ph": 2.5,
+      "net_charge": 83.2
+    },
+    {
+      "ph": 3.0,
+      "net_charge": 77.05
+    },
+    {
+      "ph": 3.5,
+      "net_charge": 63.82
+    },
+    {
+      "ph": 4.0,
+      "net_charge": 43.34
+    },
+    {
+      "ph": 4.5,
+      "net_charge": 22.29
+    },
+    {
+      "ph": 5.0,
+      "net_charge": 8.0
+    },
+    {
+      "ph": 5.5,
+      "net_charge": 0.03
+    },
+    {
+      "ph": 6.0,
+      "net_charge": -5.63
+    },
+    {
+      "ph": 6.5,
+      "net_charge": -10.08
+    },
+    {
+      "ph": 7.0,
+      "net_charge": -13.35
+    },
+    {
+      "ph": 7.5,
+      "net_charge": -17.15
+    },
+    {
+      "ph": 8.0,
+      "net_charge": -23.49
+    },
+    {
+      "ph": 8.5,
+      "net_charge": -31.42
+    },
+    {
+      "ph": 9.0,
+      "net_charge": -38.23
+    },
+    {
+      "ph": 9.5,
+      "net_charge": -45.18
+    },
+    {
+      "ph": 10.0,
+      "net_charge": -55.69
+    },
+    {
+      "ph": 10.5,
+      "net_charge": -69.51
+    },
+    {
+      "ph": 11.0,
+      "net_charge": -81.78
+    },
+    {
+      "ph": 11.5,
+      "net_charge": -90.58
+    },
+    {
+      "ph": 12.0,
+      "net_charge": -99.74
+    },
+    {
+      "ph": 12.5,
+      "net_charge": -112.12
+    },
+    {
+      "ph": 13.0,
+      "net_charge": -123.67
+    },
+    {
+      "ph": 13.5,
+      "net_charge": -130.13
+    },
+    {
+      "ph": 14.0,
+      "net_charge": -132.7
+    }
+  ],
+  "biophysical_reference": "Alberts et al., Molecular Biology of the Cell (4th ed.), Chapter 3: NBK26830"
+}

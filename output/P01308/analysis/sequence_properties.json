@@ -1,0 +1,62 @@
+{
+  "accession": "P01308",
+  "header": "sp|P01308|INS_HUMAN Insulin OS=Homo sapiens OX=9606 GN=INS PE=1 SV=1",
+  "sequence_length": 110,
+  "physicochemical_properties": {
+    "sequence_length": 110,
+    "analyzed_length": 110,
+    "molecular_weight": 11980.79,
+    "isoelectric_point": 5.22,
+    "aromaticity": 0.0818,
+    "instability_index": 40.33,
+    "is_stable": false,
+    "gravy": 0.193,
+    "secondary_structure_fraction": {
+      "helix": 0.3818,
+      "turn": 0.2545,
+      "sheet": 0.3636
+    },
+    "amino_acid_percentages": {
+      "A": 9.091,
+      "C": 5.455,
+      "D": 1.818,
+      "E": 7.273,
+      "F": 2.727,
+      "G": 10.909,
+      "H": 1.818,
+      "I": 1.818,
+      "K": 1.818,
+      "L": 18.182,
+      "M": 1.818,
+      "N": 2.727,
+      "P": 5.455,
+      "Q": 6.364,
+      "R": 4.545,
+      "S": 4.545,
+      "T": 2.727,
+      "V": 5.455,
+      "W": 1.818,
+      "Y": 3.636
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 8.18,
+      "negatively_charged_percent": 9.09,
+      "hydrophobic_percent": 40.91,
+      "aromatic_percent": 8.18
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 54,
+        "end": 57,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRRE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

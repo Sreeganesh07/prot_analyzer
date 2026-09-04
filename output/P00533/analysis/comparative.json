@@ -1,0 +1,527 @@
+{
+  "accession": "P00533",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P00533\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "229",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "678",
+      "residue": "T",
+      "description": "Phosphothreonine; by PKC and PKD/PRKD1"
+    },
+    {
+      "type": "modified residue",
+      "position": "693",
+      "residue": "T",
+      "description": "Phosphothreonine; by PKD/PRKD1"
+    },
+    {
+      "type": "modified residue",
+      "position": "695",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "745",
+      "residue": "K",
+      "description": "N6-(2-hydroxyisobutyryl)lysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "869",
+      "residue": "Y",
+      "description": "Phosphotyrosine"
+    },
+    {
+      "type": "modified residue",
+      "position": "991",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "995",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "998",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1016",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1026",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1039",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1041",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1042",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1064",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1069",
+      "residue": "Y",
+      "description": "Phosphotyrosine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1070",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1071",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1081",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1092",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1110",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1166",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "1172",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1197",
+      "residue": "Y",
+      "description": "Phosphotyrosine; by autocatalysis"
+    },
+    {
+      "type": "modified residue",
+      "position": "1199",
+      "residue": "R",
+      "description": "Omega-N-methylarginine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "56",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; atypical; partial"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "73",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; atypical"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "128",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "175",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "196",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "352",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "361",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "413",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "444",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "528",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "568",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; partial"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "603",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; partial"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "623",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (high mannose) asparagine"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "31-58",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "157-187",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "190-199",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "194-207",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "215-223",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "219-231",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "232-240",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "236-248",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "251-260",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "264-291",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "295-307",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "311-326",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "329-333",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "337-362",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "470-499",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "506-515",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "510-523",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "526-535",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "539-555",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "558-571",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "562-579",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "582-591",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "595-617",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "620-628",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "624-636",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "cross-link",
+      "position": "716",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "737",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "754",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "757",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "867",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "929",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "960",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "970",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    }
+  ],
+  "ptm_count": 71,
+  "ppi_interactions": [
+    {
+      "partner_a": "DCN",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "DCN",
+      "combined_score": 0.999,
+      "escore_experiments": 0.537,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.986
+    },
+    {
+      "partner_a": "HBEGF",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "HBEGF",
+      "combined_score": 0.999,
+      "escore_experiments": 0.812,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "EREG",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "EREG",
+      "combined_score": 0.999,
+      "escore_experiments": 0.966,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.996
+    },
+    {
+      "partner_a": "CDH1",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "CDH1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.815,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.995
+    },
+    {
+      "partner_a": "GAB1",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "GAB1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.877,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.986
+    },
+    {
+      "partner_a": "PIK3CA",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "PIK3CA",
+      "combined_score": 0.999,
+      "escore_experiments": 0.79,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.976
+    },
+    {
+      "partner_a": "CBL",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "CBL",
+      "combined_score": 0.999,
+      "escore_experiments": 0.996,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.994
+    },
+    {
+      "partner_a": "EGF",
+      "partner_b": "ERBB2",
+      "preferred_partner_name": "EGF",
+      "combined_score": 0.999,
+      "escore_experiments": 0.314,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "EGF",
+      "partner_b": "EGFR",
+      "preferred_partner_name": "EGF",
+      "combined_score": 0.999,
+      "escore_experiments": 0.999,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "EGF",
+      "partner_b": "ERBB3",
+      "preferred_partner_name": "EGF",
+      "combined_score": 0.999,
+      "escore_experiments": 0.314,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.998
+    }
+  ],
+  "ppi_partner_count": 10
+}

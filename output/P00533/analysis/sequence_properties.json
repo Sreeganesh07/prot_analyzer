@@ -1,0 +1,183 @@
+{
+  "accession": "P00533",
+  "header": "sp|P00533|EGFR_HUMAN Epidermal growth factor receptor OS=Homo sapiens OX=9606 GN=EGFR PE=1 SV=2",
+  "sequence_length": 1210,
+  "physicochemical_properties": {
+    "sequence_length": 1210,
+    "analyzed_length": 1210,
+    "molecular_weight": 134276.04,
+    "isoelectric_point": 6.26,
+    "aromaticity": 0.0702,
+    "instability_index": 44.59,
+    "is_stable": false,
+    "gravy": -0.316,
+    "secondary_structure_fraction": {
+      "helix": 0.2901,
+      "turn": 0.3066,
+      "sheet": 0.3298
+    },
+    "amino_acid_percentages": {
+      "A": 5.95,
+      "C": 4.959,
+      "D": 5.041,
+      "E": 6.364,
+      "F": 2.975,
+      "G": 7.025,
+      "H": 2.562,
+      "I": 5.702,
+      "K": 5.455,
+      "L": 9.174,
+      "M": 2.066,
+      "N": 5.455,
+      "P": 6.198,
+      "Q": 4.05,
+      "R": 4.959,
+      "S": 6.942,
+      "T": 5.289,
+      "V": 5.785,
+      "W": 1.074,
+      "Y": 2.975
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 12.98,
+      "negatively_charged_percent": 11.41,
+      "hydrophobic_percent": 32.73,
+      "aromatic_percent": 7.02
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 128,
+        "end": 130,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NKT"
+      },
+      {
+        "start": 175,
+        "end": 177,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NMS"
+      },
+      {
+        "start": 196,
+        "end": 198,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NGS"
+      },
+      {
+        "start": 352,
+        "end": 354,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAT"
+      },
+      {
+        "start": 361,
+        "end": 363,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NCT"
+      },
+      {
+        "start": 413,
+        "end": 415,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NRT"
+      },
+      {
+        "start": 444,
+        "end": 446,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIT"
+      },
+      {
+        "start": 528,
+        "end": 530,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NVS"
+      },
+      {
+        "start": 568,
+        "end": 570,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIT"
+      },
+      {
+        "start": 603,
+        "end": 605,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNT"
+      },
+      {
+        "start": 623,
+        "end": 625,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NCT"
+      },
+      {
+        "start": 1043,
+        "end": 1045,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNS"
+      },
+      {
+        "start": 1044,
+        "end": 1046,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NST"
+      },
+      {
+        "start": 1094,
+        "end": 1096,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NQS"
+      },
+      {
+        "start": 1148,
+        "end": 1150,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NST"
+      }
+    ],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 81,
+        "end": 84,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TIQE"
+      },
+      {
+        "start": 397,
+        "end": 400,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TVKE"
+      },
+      {
+        "start": 452,
+        "end": 455,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SLKE"
+      },
+      {
+        "start": 903,
+        "end": 906,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TVWE"
+      },
+      {
+        "start": 925,
+        "end": 928,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SILE"
+      },
+      {
+        "start": 1190,
+        "end": 1193,
+        "pattern": "[ST]..E",
+        "matched_sequence": "STAE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

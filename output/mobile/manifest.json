@@ -1,0 +1,19 @@
+{
+  "name": "ProteinScope // Biophysics Workstation",
+  "short_name": "ProteinScope",
+  "description": "Biophysical Protein Environmental Stability & Thermodynamic Degradation Simulator (Alberts NBK26830)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "medical", "productivity"]
+}

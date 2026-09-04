@@ -1,0 +1,589 @@
+{
+  "accession": "P0DTC2",
+  "organism": "Severe acute respiratory syndrome coronavirus 2",
+  "protein_name": "Spike glycoprotein",
+  "sequence_length": 1273,
+  "properties": {
+    "sequence_length": 1273,
+    "analyzed_length": 1273,
+    "molecular_weight": 141176.82,
+    "isoelectric_point": 6.24,
+    "aromaticity": 0.1123,
+    "instability_index": 33.01,
+    "is_stable": true,
+    "gravy": -0.079,
+    "secondary_structure_fraction": {
+      "helix": 0.2435,
+      "turn": 0.3056,
+      "sheet": 0.4093
+    },
+    "amino_acid_percentages": {
+      "A": 6.206,
+      "C": 3.142,
+      "D": 4.87,
+      "E": 3.771,
+      "F": 6.049,
+      "G": 6.441,
+      "H": 1.335,
+      "I": 5.97,
+      "K": 4.792,
+      "L": 8.484,
+      "M": 1.1,
+      "N": 6.913,
+      "P": 4.556,
+      "Q": 4.87,
+      "R": 3.299,
+      "S": 7.777,
+      "T": 7.62,
+      "V": 7.62,
+      "W": 0.943,
+      "Y": 4.242
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 9.43,
+      "negatively_charged_percent": 8.64,
+      "hydrophobic_percent": 36.37,
+      "aromatic_percent": 11.23
+    }
+  },
+  "motifs_found": {
+    "n_glycosylation": 22,
+    "signal_peptide": 0,
+    "pkc_phosphorylation": 4
+  },
+  "domains": [],
+  "blast_top5": [],
+  "structure_source": "Experimental (RCSB PDB)",
+  "structure_best_file": "7z8o.pdb",
+  "structure_rmsd_angstroms": 21.204,
+  "validation": {
+    "ramachandran": {
+      "total_evaluated_residues": 198,
+      "favored_count": 197,
+      "favored_percent": 99.49,
+      "allowed_count": 1,
+      "allowed_percent": 0.51,
+      "outlier_count": 0,
+      "outlier_percent": 0.0
+    },
+    "ca_cb_bond_pass_rate": 100.0,
+    "burial": {
+      "total_ca_evaluated": 204,
+      "buried_count": 4,
+      "buried_percent": 1.96,
+      "partial_count": 136,
+      "partial_percent": 66.67,
+      "surface_count": 64,
+      "surface_percent": 31.37
+    }
+  },
+  "ptm_sites": [
+    {
+      "type": "glycosylation site",
+      "position": "17",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "61",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "74",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "122",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "149",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "165",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "234",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (high mannose) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "282",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "323",
+      "residue": "T",
+      "description": "O-linked (GalNAc) threonine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "325",
+      "residue": "S",
+      "description": "O-linked (HexNAc...) serine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "331",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "343",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "603",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "616",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "657",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "676",
+      "residue": "T",
+      "description": "O-linked (GlcNAc...) threonine; by host GALNT1"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "678",
+      "residue": "T",
+      "description": "O-linked (GlcNAc...) threonine; by host GALNT1"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "709",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (high mannose) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "717",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "801",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1074",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1098",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1134",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1158",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1173",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1194",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "15-136",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "131-166",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "291-301",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "336-361",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "379-432",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "391-525",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "480-488",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "538-590",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "617-649",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "662-671",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "738-760",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "743-749",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "840-851",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1032-1043",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1082-1126",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ppi_partners": [],
+  "ml_features": {
+    "feature_count": 42,
+    "clusters": [
+      {
+        "identifier": "P0DTC2",
+        "category": "Query",
+        "cluster": 2
+      },
+      {
+        "identifier": "P0DTC2_var1",
+        "category": "Variant_1",
+        "cluster": 0
+      },
+      {
+        "identifier": "P0DTC2_var2",
+        "category": "Variant_2",
+        "cluster": 0
+      },
+      {
+        "identifier": "P0DTC2_var3",
+        "category": "Variant_3",
+        "cluster": 1
+      },
+      {
+        "identifier": "P0DTC2_var4",
+        "category": "Variant_4",
+        "cluster": 1
+      }
+    ],
+    "top_features": {
+      "aa_P_pct": 0.1368,
+      "aa_R_pct": 0.1117,
+      "polar_uncharged_pct": 0.094,
+      "helix_fraction": 0.0767,
+      "instability_index": 0.0717,
+      "isoelectric_point": 0.061,
+      "molecular_weight": 0.0575,
+      "nonpolar_total_pct": 0.0557,
+      "hydrophobic_pct": 0.04,
+      "aa_S_pct": 0.04,
+      "tiny_pct": 0.0368,
+      "gravy": 0.0367,
+      "aa_V_pct": 0.0264,
+      "turn_fraction": 0.0245,
+      "sheet_fraction": 0.0245
+    }
+  },
+  "ngs_summary": {
+    "ngs_data_detected": false,
+    "input_directory": "./input/ngs",
+    "fastq_files": [],
+    "bam_files": [],
+    "vcf_files": []
+  },
+  "run_metadata": {
+    "pipeline_version": "1.0.0",
+    "execution_duration_seconds": 29.46,
+    "output_directory": "C:\\Users\\Sree Ganesh\\Dropbox\\computational_protein_pipeline\\output\\P0DTC2"
+  },
+  "sequence": "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT",
+  "environmental_stability": {
+    "sequence_length": 1273,
+    "estimated_melting_temperature_celsius": 76.3,
+    "standard_conditions": {
+      "physiological_37c_ph74": {
+        "status_code": "native",
+        "state": "NATIVE",
+        "badge_label": "Native Folded State",
+        "badge_color": "#10b981",
+        "temperature_celsius": 37.0,
+        "ph": 7.4,
+        "net_charge": -12.16,
+        "salt_bridge_retention_percent": 99.9,
+        "fraction_folded_percent": 100.0,
+        "delta_g_folding_kcal_mol": -29.81,
+        "is_degraded": false,
+        "degradation_reasons": [],
+        "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -29.8 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+        "thresholds": {
+          "tm_celsius": 76.3,
+          "temp_min_stable": 15.0,
+          "temp_max_stable": 68.3,
+          "temp_degradation": 86.3,
+          "ph_min_stable": 5.5,
+          "ph_max_stable": 8.5,
+          "ph_acid_degradation": 3.0,
+          "ph_alkaline_degradation": 11.5
+        }
+      },
+      "invitro_25c_ph70": {
+        "status_code": "native",
+        "state": "NATIVE",
+        "badge_label": "Native Folded State",
+        "badge_color": "#10b981",
+        "temperature_celsius": 25.0,
+        "ph": 7.0,
+        "net_charge": -7.89,
+        "salt_bridge_retention_percent": 99.9,
+        "fraction_folded_percent": 100.0,
+        "delta_g_folding_kcal_mol": -36.04,
+        "is_degraded": false,
+        "degradation_reasons": [],
+        "molecular_mechanism": "At physiological/standard conditions (25.0\u00b0C, pH 7.0), the protein resides in its thermodynamic free energy minimum (\u0394G = -36.0 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+        "thresholds": {
+          "tm_celsius": 76.3,
+          "temp_min_stable": 15.0,
+          "temp_max_stable": 68.3,
+          "temp_degradation": 86.3,
+          "ph_min_stable": 5.5,
+          "ph_max_stable": 8.5,
+          "ph_acid_degradation": 3.0,
+          "ph_alkaline_degradation": 11.5
+        }
+      }
+    },
+    "active_evaluation": {
+      "status_code": "native",
+      "state": "NATIVE",
+      "badge_label": "Native Folded State",
+      "badge_color": "#10b981",
+      "temperature_celsius": 37.0,
+      "ph": 7.4,
+      "net_charge": -12.16,
+      "salt_bridge_retention_percent": 99.9,
+      "fraction_folded_percent": 100.0,
+      "delta_g_folding_kcal_mol": -29.81,
+      "is_degraded": false,
+      "degradation_reasons": [],
+      "molecular_mechanism": "At physiological/standard conditions (37.0\u00b0C, pH 7.4), the protein resides in its thermodynamic free energy minimum (\u0394G = -29.8 kcal/mol). Noncovalent bonds\u2014including backbone hydrogen bonds (C=O\u00b7\u00b7\u00b7H-N), buried hydrophobic van der Waals contacts, and electrostatic salt bridges (99.9% intact)\u2014fully stabilize the functional 3D conformation.",
+      "thresholds": {
+        "tm_celsius": 76.3,
+        "temp_min_stable": 15.0,
+        "temp_max_stable": 68.3,
+        "temp_degradation": 86.3,
+        "ph_min_stable": 5.5,
+        "ph_max_stable": 8.5,
+        "ph_acid_degradation": 3.0,
+        "ph_alkaline_degradation": 11.5
+      }
+    },
+    "titration_profile": [
+      {
+        "ph": 0.0,
+        "net_charge": 120.98
+      },
+      {
+        "ph": 0.5,
+        "net_charge": 120.93
+      },
+      {
+        "ph": 1.0,
+        "net_charge": 120.79
+      },
+      {
+        "ph": 1.5,
+        "net_charge": 120.35
+      },
+      {
+        "ph": 2.0,
+        "net_charge": 119.06
+      },
+      {
+        "ph": 2.5,
+        "net_charge": 115.47
+      },
+      {
+        "ph": 3.0,
+        "net_charge": 106.27
+      },
+      {
+        "ph": 3.5,
+        "net_charge": 87.06
+      },
+      {
+        "ph": 4.0,
+        "net_charge": 59.72
+      },
+      {
+        "ph": 4.5,
+        "net_charge": 34.43
+      },
+      {
+        "ph": 5.0,
+        "net_charge": 18.33
+      },
+      {
+        "ph": 5.5,
+        "net_charge": 9.25
+      },
+      {
+        "ph": 6.0,
+        "net_charge": 2.35
+      },
+      {
+        "ph": 6.5,
+        "net_charge": -3.4
+      },
+      {
+        "ph": 7.0,
+        "net_charge": -7.89
+      },
+      {
+        "ph": 7.5,
+        "net_charge": -13.56
+      },
+      {
+        "ph": 8.0,
+        "net_charge": -23.39
+      },
+      {
+        "ph": 8.5,
+        "net_charge": -36.04
+      },
+      {
+        "ph": 9.0,
+        "net_charge": -47.89
+      },
+      {
+        "ph": 9.5,
+        "net_charge": -62.26
+      },
+      {
+        "ph": 10.0,
+        "net_charge": -85.94
+      },
+      {
+        "ph": 10.5,
+        "net_charge": -116.93
+      },
+      {
+        "ph": 11.0,
+        "net_charge": -143.12
+      },
+      {
+        "ph": 11.5,
+        "net_charge": -159.11
+      },
+      {
+        "ph": 12.0,
+        "net_charge": -170.81
+      },
+      {
+        "ph": 12.5,
+        "net_charge": -183.63
+      },
+      {
+        "ph": 13.0,
+        "net_charge": -194.99
+      },
+      {
+        "ph": 13.5,
+        "net_charge": -201.25
+      },
+      {
+        "ph": 14.0,
+        "net_charge": -203.74
+      }
+    ],
+    "biophysical_reference": "Alberts et al., Molecular Biology of the Cell (4th ed.), Chapter 3: NBK26830"
+  }
+}

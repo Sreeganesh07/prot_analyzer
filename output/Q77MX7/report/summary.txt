@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : Q77MX7
+Protein Name    : Capsid protein
+Organism        : Hepatitis B virus
+Sequence Length : 183 amino acids
+Execution Time  : 16.08 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 20998.75 Da
+  Isoelectric Point (pI): 9.93
+  Instability Index     : 92.73 (Unstable)
+  GRAVY Hydropathicity  : -0.462
+  Aromaticity           : 0.0874
+  Secondary Structure   : Helix: 25.7%, Sheet: 35.5%, Turn: 30.0%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : SWISS-MODEL Homology
+  Ramachandran Favored  : 99.12%
+  Ramachandran Allowed  : 0.88%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 97.48%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 57.3°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : 7.54 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -18.6 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 3
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 1
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\Q77MX7
+======================================================================

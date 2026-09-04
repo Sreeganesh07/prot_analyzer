@@ -1,0 +1,8 @@
+[2026-08-26 23:55:12] [INFO] [ProteinScope.P00734] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:55:12] [INFO] [ProteinScope.P00734] ============================================================
+[2026-08-26 23:55:12] [INFO] [ProteinScope.P00734] Starting ProteinScope Pipeline for accession: P00734
+[2026-08-26 23:55:12] [INFO] [ProteinScope.P00734] ============================================================
+[2026-08-26 23:55:12] [INFO] [ProteinScope.P00734] Stage 0 passed: Accession format validated and output directories created at ./output\P00734
+[2026-08-26 23:55:29] [INFO] [ProteinScope.P00734] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:55:29] [INFO] [ProteinScope.P00734] Final reports saved: ./output\P00734\report\report.json and ./output\P00734\report\summary.txt
+[2026-08-26 23:55:29] [INFO] [ProteinScope.P00734] Interactive 3D HTML Report generated at: ./output\P00734\report\protein_viewer.html

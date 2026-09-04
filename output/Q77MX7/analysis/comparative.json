@@ -1,0 +1,28 @@
+{
+  "accession": "Q77MX7",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\Q77MX7\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "155",
+      "residue": "S",
+      "description": "Phosphoserine; by host"
+    },
+    {
+      "type": "modified residue",
+      "position": "162",
+      "residue": "S",
+      "description": "Phosphoserine; by host"
+    },
+    {
+      "type": "modified residue",
+      "position": "170",
+      "residue": "S",
+      "description": "Phosphoserine; by host"
+    }
+  ],
+  "ptm_count": 3,
+  "ppi_interactions": [],
+  "ppi_partner_count": 0
+}

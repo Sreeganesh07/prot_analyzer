@@ -1,0 +1,256 @@
+{
+  "accession": "P0DTC2",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P0DTC2\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "glycosylation site",
+      "position": "17",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "61",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "74",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "122",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "149",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "165",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "234",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (high mannose) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "282",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "323",
+      "residue": "T",
+      "description": "O-linked (GalNAc) threonine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "325",
+      "residue": "S",
+      "description": "O-linked (HexNAc...) serine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "331",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "343",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "603",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "616",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "657",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "676",
+      "residue": "T",
+      "description": "O-linked (GlcNAc...) threonine; by host GALNT1"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "678",
+      "residue": "T",
+      "description": "O-linked (GlcNAc...) threonine; by host GALNT1"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "709",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (high mannose) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "717",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "801",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1074",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (hybrid) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1098",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1134",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1158",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1173",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1194",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) (complex) asparagine; by host"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "15-136",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "131-166",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "291-301",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "336-361",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "379-432",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "391-525",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "480-488",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "538-590",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "617-649",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "662-671",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "738-760",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "743-749",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "840-851",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1032-1043",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1082-1126",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ptm_count": 41,
+  "ppi_interactions": [],
+  "ppi_partner_count": 0
+}

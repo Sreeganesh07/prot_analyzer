@@ -1,0 +1,86 @@
+{
+  "accession": "P11021",
+  "header": "sp|P11021|BIP_HUMAN Endoplasmic reticulum chaperone BiP OS=Homo sapiens OX=9606 GN=HSPA5 PE=1 SV=2",
+  "sequence_length": 654,
+  "physicochemical_properties": {
+    "sequence_length": 654,
+    "analyzed_length": 654,
+    "molecular_weight": 72332.06,
+    "isoelectric_point": 5.07,
+    "aromaticity": 0.0581,
+    "instability_index": 32.1,
+    "is_stable": true,
+    "gravy": -0.487,
+    "secondary_structure_fraction": {
+      "helix": 0.3578,
+      "turn": 0.2752,
+      "sheet": 0.3547
+    },
+    "amino_acid_percentages": {
+      "A": 7.034,
+      "C": 0.306,
+      "D": 7.187,
+      "E": 9.786,
+      "F": 3.517,
+      "G": 7.645,
+      "H": 0.917,
+      "I": 6.422,
+      "K": 9.327,
+      "L": 7.951,
+      "M": 1.682,
+      "N": 4.281,
+      "P": 4.128,
+      "Q": 3.67,
+      "R": 4.281,
+      "S": 4.281,
+      "T": 7.492,
+      "V": 7.798,
+      "W": 0.306,
+      "Y": 1.988
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 14.53,
+      "negatively_charged_percent": 16.97,
+      "hydrophobic_percent": 34.71,
+      "aromatic_percent": 5.81
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 86,
+        "end": 89,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SNPE"
+      },
+      {
+        "start": 311,
+        "end": 314,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SFYE"
+      },
+      {
+        "start": 534,
+        "end": 537,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TPEE"
+      },
+      {
+        "start": 561,
+        "end": 564,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRNE"
+      },
+      {
+        "start": 643,
+        "end": 646,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TGEE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

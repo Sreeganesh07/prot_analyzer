@@ -1,0 +1,287 @@
+{
+  "accession": "P02769",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P02769\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "29",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "82",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "89",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "107",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "228",
+      "residue": "K",
+      "description": "N6-succinyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "296",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "442",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "443",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "445",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "512",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "557",
+      "residue": "K",
+      "description": "N6-methyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "569",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "587",
+      "residue": "K",
+      "description": "N6-succinyllysine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "151",
+      "residue": "K",
+      "description": "N-linked (Glc) (glycation) lysine; in vitro"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "77-86",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "99-115",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "114-125",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "147-192",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "191-200",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "223-269",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "268-276",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "288-302",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "301-312",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "339-384",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "383-392",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "415-461",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "460-471",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "484-500",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "499-510",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "537-582",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "581-590",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ptm_count": 31,
+  "ppi_interactions": [
+    {
+      "partner_a": "LALBA",
+      "partner_b": "PAEP",
+      "preferred_partner_name": "LALBA",
+      "combined_score": 0.999,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "LTF",
+      "partner_b": "PAEP",
+      "preferred_partner_name": "LTF",
+      "combined_score": 0.998,
+      "escore_experiments": 0.045,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "LTF",
+      "partner_b": "LALBA",
+      "preferred_partner_name": "LTF",
+      "combined_score": 0.998,
+      "escore_experiments": 0.052,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "ALB",
+      "partner_b": "PAEP",
+      "preferred_partner_name": "ALB",
+      "combined_score": 0.998,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "ALB",
+      "partner_b": "LALBA",
+      "preferred_partner_name": "ALB",
+      "combined_score": 0.997,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.997
+    },
+    {
+      "partner_a": "LTF",
+      "partner_b": "ALB",
+      "preferred_partner_name": "LTF",
+      "combined_score": 0.995,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.995
+    },
+    {
+      "partner_a": "MB",
+      "partner_b": "CYCS",
+      "preferred_partner_name": "MB",
+      "combined_score": 0.995,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.995
+    },
+    {
+      "partner_a": "ALB",
+      "partner_b": "INS",
+      "preferred_partner_name": "ALB",
+      "combined_score": 0.994,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.994
+    },
+    {
+      "partner_a": "MB",
+      "partner_b": "ALB",
+      "preferred_partner_name": "MB",
+      "combined_score": 0.99,
+      "escore_experiments": 0.048,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.99
+    },
+    {
+      "partner_a": "ALB",
+      "partner_b": "SPARC",
+      "preferred_partner_name": "ALB",
+      "combined_score": 0.99,
+      "escore_experiments": 0.0,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.989
+    }
+  ],
+  "ppi_partner_count": 10
+}

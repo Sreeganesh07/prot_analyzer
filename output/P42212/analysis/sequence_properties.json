@@ -1,0 +1,68 @@
+{
+  "accession": "P42212",
+  "header": "sp|P42212|GFP_AEQVI Green fluorescent protein OS=Aequorea victoria OX=6100 GN=GFP PE=1 SV=1",
+  "sequence_length": 238,
+  "physicochemical_properties": {
+    "sequence_length": 238,
+    "analyzed_length": 238,
+    "molecular_weight": 26885.99,
+    "isoelectric_point": 5.67,
+    "aromaticity": 0.105,
+    "instability_index": 31.06,
+    "is_stable": true,
+    "gravy": -0.521,
+    "secondary_structure_fraction": {
+      "helix": 0.2899,
+      "turn": 0.3109,
+      "sheet": 0.3697
+    },
+    "amino_acid_percentages": {
+      "A": 3.361,
+      "C": 0.84,
+      "D": 7.563,
+      "E": 6.723,
+      "F": 5.462,
+      "G": 9.244,
+      "H": 4.202,
+      "I": 5.042,
+      "K": 8.403,
+      "L": 7.983,
+      "M": 2.521,
+      "N": 5.462,
+      "P": 4.202,
+      "Q": 3.361,
+      "R": 2.521,
+      "S": 4.622,
+      "T": 6.303,
+      "V": 7.143,
+      "W": 0.42,
+      "Y": 4.622
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 15.13,
+      "negatively_charged_percent": 14.29,
+      "hydrophobic_percent": 31.93,
+      "aromatic_percent": 10.5
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 2,
+        "end": 5,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SKGE"
+      },
+      {
+        "start": 108,
+        "end": 111,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRAE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

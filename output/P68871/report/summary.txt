@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P68871
+Protein Name    : Hemoglobin subunit beta
+Organism        : Homo sapiens
+Sequence Length : 147 amino acids
+Execution Time  : 47.70 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 15998.21 Da
+  Isoelectric Point (pI): 6.74
+  Instability Index     : 6.16 (Stable)
+  GRAVY Hydropathicity  : 0.014
+  Aromaticity           : 0.0884
+  Secondary Structure   : Helix: 36.7%, Sheet: 38.1%, Turn: 25.9%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.82%
+  Ramachandran Allowed  : 0.18%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 99.25%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 66.9°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -0.95 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -25.45 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 17
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 0
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P68871
+======================================================================

@@ -1,0 +1,22 @@
+{
+  "accession": "P42212",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P42212\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "66",
+      "residue": "Y",
+      "description": "(Z)-2,3-didehydrotyrosine"
+    },
+    {
+      "type": "cross-link",
+      "position": "65-67",
+      "residue": null,
+      "description": "5-imidazolinone (Ser-Gly)"
+    }
+  ],
+  "ptm_count": 2,
+  "ppi_interactions": [],
+  "ppi_partner_count": 0
+}

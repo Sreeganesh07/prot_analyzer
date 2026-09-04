@@ -1,0 +1,94 @@
+# ProteinScope Pipeline Configuration
+pipeline:
+  name: "ProteinScope"
+  version: "1.0.0"
+  default_output_dir: "./output"
+  log_level: "INFO"
+  timeout_seconds: 15
+
+# Stage 0 & 1: UniProt Ingestion
+uniprot:
+  base_url: "https://rest.uniprot.org/uniprotkb"
+  max_retries: 3
+  retry_delay: 2
+
+# Stage 2: Sequence Analysis
+sequence_analysis:
+  interpro_url: "https://www.ebi.ac.uk/interpro/api/protein/UniProt"
+  motifs:
+    n_glycosylation: "N[^P][ST]"
+    signal_peptide: "M[^P]{15,30}[LIVMF]{4,6}"
+    pkc_phosphorylation: "[ST]..E"
+
+# Stage 3: BLAST Similarity Search
+blast:
+  program: "blastp"
+  database: "nr"
+  max_hits: 10
+  matrix: "BLOSUM62"
+  query_max_length: 500
+  evalue_threshold_high: 1e-10
+  evalue_threshold_moderate: 1e-3
+  identity_threshold_homology: 30.0
+
+# Stage 4: Structure Retrieval
+structures:
+  rcsb_search_url: "https://search.rcsb.org/rcsbsearch/v2/query"
+  rcsb_download_url: "https://files.rcsb.org/download"
+  alphafold_model_url: "https://alphafold.ebi.ac.uk/files"
+  alphafold_api_url: "https://alphafold.ebi.ac.uk/api/prediction"
+  swissmodel_url: "https://swissmodel.expasy.org/repository/uniprot"
+
+# Stage 5: Structure Validation
+validation:
+  ca_cb_bond_standard: 1.52
+  ca_cb_bond_tolerance: 0.05
+  burial_contact_radius: 8.0
+  burial_buried_threshold: 15
+  burial_partial_threshold: 8
+
+# Stage 7: Comparative & PPI
+comparative:
+  top_homologs: 5
+  string_db_url: "https://string-db.org/api/json/network"
+  default_species_taxid: 9606
+  string_score_threshold: 400
+
+# Stage 8: Machine Learning
+ml:
+  n_clusters: 3
+  random_state: 42
+  rf_n_estimators: 100
+
+# Stage 9: NGS Defaults
+ngs:
+  input_dir: "./input/ngs"
+
+# ClinVar Data (for pathogenicity prediction)
+clinvar:
+  ftp_url: "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz"
+  cache_dir: "./data/clinvar"
+  gene_symbol: "TP53"
+  min_review_stars: 1
+
+# Pathogenicity Classifier
+pathogenicity:
+  model_path: "./data/models/tp53_pathogenicity_rf.joblib"
+  n_estimators: 200
+  test_size: 0.2
+  random_state: 42
+  confidence_threshold: 0.5
+
+# Environmental Stability & Degradation (Alberts NBK26830)
+environmental_stability:
+  standard_physiological_temperature: 37.0
+  standard_physiological_ph: 7.4
+  standard_invitro_temperature: 25.0
+  standard_invitro_ph: 7.0
+  default_temp_stable_min: 15.0
+  default_temp_stable_max: 45.0
+  default_ph_stable_min: 6.0
+  default_ph_stable_max: 8.5
+  acid_degradation_threshold_ph: 3.0
+  alkaline_degradation_threshold_ph: 11.5
+  pka_scale: "Lehninger"

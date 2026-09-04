@@ -1,0 +1,33 @@
+# Virtual environments
+bioinfo_env/
+env/
+venv/
+.venv/
+
+# Node modules & build artifacts
+node_modules/
+.npm/
+
+# Android Gradle build artifacts
+.gradle/
+android/app/build/
+android/.gradle/
+android/build/
+local.properties
+
+# Python cache & compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Large dataset dumps (> 50MB)
+data/clinvar/variant_summary*
+data/clinvar/*.gz
+*.tar.gz
+*.zip

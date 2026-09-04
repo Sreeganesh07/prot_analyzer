@@ -1,0 +1,100 @@
+{
+  "accession": "Q01959",
+  "header": "sp|Q01959|SC6A3_HUMAN Sodium-dependent dopamine transporter OS=Homo sapiens OX=9606 GN=SLC6A3 PE=1 SV=1",
+  "sequence_length": 620,
+  "physicochemical_properties": {
+    "sequence_length": 620,
+    "analyzed_length": 620,
+    "molecular_weight": 68494.07,
+    "isoelectric_point": 6.46,
+    "aromaticity": 0.1371,
+    "instability_index": 30.85,
+    "is_stable": true,
+    "gravy": 0.499,
+    "secondary_structure_fraction": {
+      "helix": 0.2823,
+      "turn": 0.2726,
+      "sheet": 0.4645
+    },
+    "amino_acid_percentages": {
+      "A": 7.742,
+      "C": 2.097,
+      "D": 3.71,
+      "E": 3.387,
+      "F": 7.097,
+      "G": 8.226,
+      "H": 1.935,
+      "I": 6.452,
+      "K": 3.387,
+      "L": 11.613,
+      "M": 2.097,
+      "N": 2.903,
+      "P": 4.677,
+      "Q": 2.419,
+      "R": 3.226,
+      "S": 7.742,
+      "T": 5.323,
+      "V": 9.355,
+      "W": 2.742,
+      "Y": 3.871
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 8.55,
+      "negatively_charged_percent": 7.1,
+      "hydrophobic_percent": 47.1,
+      "aromatic_percent": 13.71
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 181,
+        "end": 183,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNS"
+      },
+      {
+        "start": 188,
+        "end": 190,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NCS"
+      },
+      {
+        "start": 205,
+        "end": 207,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NDT"
+      }
+    ],
+    "signal_peptide": [
+      {
+        "start": 424,
+        "end": 454,
+        "pattern": "M[^P]{15,30}[LIVMF]{4,6}",
+        "matched_sequence": "MGGMESVITGLIDEFQLLHRHRELFTLFIVL"
+      },
+      {
+        "start": 427,
+        "end": 454,
+        "pattern": "M[^P]{15,30}[LIVMF]{4,6}",
+        "matched_sequence": "MESVITGLIDEFQLLHRHRELFTLFIVL"
+      }
+    ],
+    "pkc_phosphorylation": [
+      {
+        "start": 53,
+        "end": 56,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SPVE"
+      },
+      {
+        "start": 586,
+        "end": 589,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SFRE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

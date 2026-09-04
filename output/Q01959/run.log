@@ -1,0 +1,8 @@
+[2026-08-26 21:51:11] [INFO] [ProteinScope.Q01959] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 21:51:11] [INFO] [ProteinScope.Q01959] ============================================================
+[2026-08-26 21:51:11] [INFO] [ProteinScope.Q01959] Starting ProteinScope Pipeline for accession: Q01959
+[2026-08-26 21:51:11] [INFO] [ProteinScope.Q01959] ============================================================
+[2026-08-26 21:51:11] [INFO] [ProteinScope.Q01959] Stage 0 passed: Accession format validated and output directories created at ./output\Q01959
+[2026-08-26 21:52:18] [INFO] [ProteinScope.Q01959] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 21:52:18] [INFO] [ProteinScope.Q01959] Final reports saved: ./output\Q01959\report\report.json and ./output\Q01959\report\summary.txt
+[2026-08-26 21:52:18] [INFO] [ProteinScope.Q01959] Interactive 3D HTML Report generated at: ./output\Q01959\report\protein_viewer.html

@@ -1,0 +1,75 @@
+{
+  "accession": "Q77MX7",
+  "header": "tr|Q77MX7|Q77MX7_HBV Capsid protein OS=Hepatitis B virus OX=10407 GN=core PE=3 SV=1",
+  "sequence_length": 183,
+  "physicochemical_properties": {
+    "sequence_length": 183,
+    "analyzed_length": 183,
+    "molecular_weight": 20998.75,
+    "isoelectric_point": 9.93,
+    "aromaticity": 0.0874,
+    "instability_index": 92.73,
+    "is_stable": false,
+    "gravy": -0.462,
+    "secondary_structure_fraction": {
+      "helix": 0.2568,
+      "turn": 0.3005,
+      "sheet": 0.3552
+    },
+    "amino_acid_percentages": {
+      "A": 6.011,
+      "C": 2.186,
+      "D": 3.279,
+      "E": 6.011,
+      "F": 3.825,
+      "G": 3.825,
+      "H": 1.639,
+      "I": 3.279,
+      "K": 1.093,
+      "L": 10.929,
+      "M": 1.639,
+      "N": 3.825,
+      "P": 9.29,
+      "Q": 3.279,
+      "R": 12.568,
+      "S": 9.836,
+      "T": 6.557,
+      "V": 6.011,
+      "W": 2.186,
+      "Y": 2.732
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 15.3,
+      "negatively_charged_percent": 9.29,
+      "hydrophobic_percent": 33.88,
+      "aromatic_percent": 8.74
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 51,
+        "end": 53,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NHT"
+      }
+    ],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 114,
+        "end": 117,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TVLE"
+      },
+      {
+        "start": 142,
+        "end": 145,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLPE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

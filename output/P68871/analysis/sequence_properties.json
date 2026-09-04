@@ -1,0 +1,68 @@
+{
+  "accession": "P68871",
+  "header": "sp|P68871|HBB_HUMAN Hemoglobin subunit beta OS=Homo sapiens OX=9606 GN=HBB PE=1 SV=2",
+  "sequence_length": 147,
+  "physicochemical_properties": {
+    "sequence_length": 147,
+    "analyzed_length": 147,
+    "molecular_weight": 15998.21,
+    "isoelectric_point": 6.74,
+    "aromaticity": 0.0884,
+    "instability_index": 6.16,
+    "is_stable": true,
+    "gravy": 0.014,
+    "secondary_structure_fraction": {
+      "helix": 0.3673,
+      "turn": 0.2585,
+      "sheet": 0.381
+    },
+    "amino_acid_percentages": {
+      "A": 10.204,
+      "C": 1.361,
+      "D": 4.762,
+      "E": 5.442,
+      "F": 5.442,
+      "G": 8.844,
+      "H": 6.122,
+      "I": 0.0,
+      "K": 7.483,
+      "L": 12.245,
+      "M": 1.361,
+      "N": 4.082,
+      "P": 4.762,
+      "Q": 2.041,
+      "R": 2.041,
+      "S": 3.401,
+      "T": 4.762,
+      "V": 12.245,
+      "W": 1.361,
+      "Y": 2.041
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 15.65,
+      "negatively_charged_percent": 10.2,
+      "hydrophobic_percent": 42.86,
+      "aromatic_percent": 8.84
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 5,
+        "end": 8,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TPEE"
+      },
+      {
+        "start": 88,
+        "end": 91,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLSE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

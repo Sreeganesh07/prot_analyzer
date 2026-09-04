@@ -1,0 +1,40 @@
+{
+  "accession": "Q01959",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\Q01959\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "glycosylation site",
+      "position": "181",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "188",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "205",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "180-189",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "306",
+      "residue": "C",
+      "description": "Interchain"
+    }
+  ],
+  "ptm_count": 5,
+  "ppi_interactions": [],
+  "ppi_partner_count": 0
+}

@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : Q01959
+Protein Name    : Sodium-dependent dopamine transporter
+Organism        : Homo sapiens
+Sequence Length : 620 amino acids
+Execution Time  : 66.41 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 68494.07 Da
+  Isoelectric Point (pI): 6.46
+  Instability Index     : 30.85 (Stable)
+  GRAVY Hydropathicity  : 0.499
+  Aromaticity           : 0.1371
+  Secondary Structure   : Helix: 28.2%, Sheet: 46.5%, Turn: 27.3%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.63%
+  Ramachandran Allowed  : 0.37%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 68.1°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -4.44 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -26.06 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 5
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 1
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\Q01959
+======================================================================

@@ -1,0 +1,160 @@
+{
+  "accession": "P27909",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P27909\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "1864",
+      "residue": "K",
+      "description": "N6-acetyllysine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "183",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "347",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "433",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "905",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "982",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "1190",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "2303",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "2307",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "glycosylation site",
+      "position": "2459",
+      "residue": "N",
+      "description": "N-linked (GlcNAc...) asparagine; by host"
+    },
+    {
+      "type": "disulfide bond",
+      "position": "148-182",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "159-194",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "167-180",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "283-310",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "340-401",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "354-385",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "372-396",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "465-565",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "582-613",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "779-790",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "830-918",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "954-998",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1055-1104",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1066-1087",
+      "residue": null,
+      "description": ""
+    },
+    {
+      "type": "disulfide bond",
+      "position": "1088-1091",
+      "residue": null,
+      "description": ""
+    }
+  ],
+  "ptm_count": 25,
+  "ppi_interactions": [],
+  "ppi_partner_count": 0
+}

@@ -1,0 +1,21 @@
+{
+  "accession": "Q77MX7",
+  "experimental": null,
+  "alphafold": null,
+  "homology": {
+    "source": "SWISS-MODEL Homology",
+    "template": "3j2v.1.A",
+    "gmqe_score": 0.705,
+    "qmean_score": null,
+    "file_path": "./output\\Q77MX7\\structures\\homology\\Q77MX7_model.pdb",
+    "file_size": 382100
+  },
+  "best_structure": {
+    "source": "SWISS-MODEL Homology",
+    "template": "3j2v.1.A",
+    "gmqe_score": 0.705,
+    "qmean_score": null,
+    "file_path": "./output\\Q77MX7\\structures\\homology\\Q77MX7_model.pdb",
+    "file_size": 382100
+  }
+}

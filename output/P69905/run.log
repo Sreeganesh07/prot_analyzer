@@ -1,0 +1,8 @@
+[2026-08-26 23:51:40] [INFO] [ProteinScope.P69905] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:51:40] [INFO] [ProteinScope.P69905] ============================================================
+[2026-08-26 23:51:40] [INFO] [ProteinScope.P69905] Starting ProteinScope Pipeline for accession: P69905
+[2026-08-26 23:51:40] [INFO] [ProteinScope.P69905] ============================================================
+[2026-08-26 23:51:40] [INFO] [ProteinScope.P69905] Stage 0 passed: Accession format validated and output directories created at ./output\P69905
+[2026-08-26 23:52:19] [INFO] [ProteinScope.P69905] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:52:19] [INFO] [ProteinScope.P69905] Final reports saved: ./output\P69905\report\report.json and ./output\P69905\report\summary.txt
+[2026-08-26 23:52:19] [INFO] [ProteinScope.P69905] Interactive 3D HTML Report generated at: ./output\P69905\report\protein_viewer.html

@@ -1,0 +1,7 @@
+{
+  "ngs_data_detected": false,
+  "input_directory": "./input/ngs",
+  "fastq_files": [],
+  "bam_files": [],
+  "vcf_files": []
+}

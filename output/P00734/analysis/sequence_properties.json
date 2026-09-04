@@ -1,0 +1,141 @@
+{
+  "accession": "P00734",
+  "header": "sp|P00734|THRB_HUMAN Prothrombin OS=Homo sapiens OX=9606 GN=F2 PE=1 SV=2",
+  "sequence_length": 622,
+  "physicochemical_properties": {
+    "sequence_length": 622,
+    "analyzed_length": 622,
+    "molecular_weight": 70036.11,
+    "isoelectric_point": 5.64,
+    "aromaticity": 0.09,
+    "instability_index": 40.88,
+    "is_stable": false,
+    "gravy": -0.539,
+    "secondary_structure_fraction": {
+      "helix": 0.2926,
+      "turn": 0.2894,
+      "sheet": 0.3248
+    },
+    "amino_acid_percentages": {
+      "A": 6.752,
+      "C": 4.18,
+      "D": 5.627,
+      "E": 8.199,
+      "F": 3.376,
+      "G": 7.878,
+      "H": 2.09,
+      "I": 3.537,
+      "K": 4.662,
+      "L": 8.199,
+      "M": 1.447,
+      "N": 4.019,
+      "P": 5.305,
+      "Q": 4.18,
+      "R": 7.074,
+      "S": 6.109,
+      "T": 5.788,
+      "V": 5.949,
+      "W": 2.251,
+      "Y": 3.376
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 13.83,
+      "negatively_charged_percent": 13.83,
+      "hydrophobic_percent": 31.51,
+      "aromatic_percent": 9.0
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 121,
+        "end": 123,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIT"
+      },
+      {
+        "start": 143,
+        "end": 145,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NST"
+      },
+      {
+        "start": 205,
+        "end": 207,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NLS"
+      },
+      {
+        "start": 416,
+        "end": 418,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NFT"
+      }
+    ],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 46,
+        "end": 49,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TFLE"
+      },
+      {
+        "start": 66,
+        "end": 69,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SYEE"
+      },
+      {
+        "start": 88,
+        "end": 91,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TACE"
+      },
+      {
+        "start": 125,
+        "end": 128,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SGIE"
+      },
+      {
+        "start": 351,
+        "end": 354,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TERE"
+      },
+      {
+        "start": 368,
+        "end": 371,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SDAE"
+      },
+      {
+        "start": 385,
+        "end": 388,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SPQE"
+      },
+      {
+        "start": 432,
+        "end": 435,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRYE"
+      },
+      {
+        "start": 442,
+        "end": 445,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SMLE"
+      },
+      {
+        "start": 589,
+        "end": 592,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SWGE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

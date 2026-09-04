@@ -1,0 +1,52 @@
+{
+  "accession": "P27909",
+  "feature_count": 42,
+  "total_samples": 5,
+  "features_csv": "./output\\P27909\\ml\\feature_matrix.csv",
+  "n_clusters_used": 3,
+  "clusters": [
+    {
+      "identifier": "P27909",
+      "category": "Query",
+      "cluster": 2
+    },
+    {
+      "identifier": "P27909_var1",
+      "category": "Variant_1",
+      "cluster": 0
+    },
+    {
+      "identifier": "P27909_var2",
+      "category": "Variant_2",
+      "cluster": 0
+    },
+    {
+      "identifier": "P27909_var3",
+      "category": "Variant_3",
+      "cluster": 0
+    },
+    {
+      "identifier": "P27909_var4",
+      "category": "Variant_4",
+      "cluster": 1
+    }
+  ],
+  "top_discriminative_features": {
+    "hydrophobic_pct": 0.0984,
+    "aa_G_pct": 0.0803,
+    "instability_index": 0.0752,
+    "small_pct": 0.0714,
+    "gravy": 0.0686,
+    "aliphatic_pct": 0.0537,
+    "sheet_fraction": 0.0524,
+    "tiny_pct": 0.0474,
+    "turn_fraction": 0.0461,
+    "basic_total_pct": 0.0451,
+    "polar_uncharged_pct": 0.0436,
+    "isoelectric_point": 0.035,
+    "aa_L_pct": 0.035,
+    "helix_fraction": 0.0331,
+    "molecular_weight": 0.0301
+  },
+  "deep_learning_hook": "esm module not installed (torch/fair-esm2 optional)"
+}

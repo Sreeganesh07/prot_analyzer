@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P27909
+Protein Name    : Genome polyprotein
+Organism        : Dengue virus type 1 (strain Brazil/97-11/1997)
+Sequence Length : 3392 amino acids
+Execution Time  : 13.90 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 378900.89 Da
+  Isoelectric Point (pI): 8.6
+  Instability Index     : 33.76 (Stable)
+  GRAVY Hydropathicity  : -0.201
+  Aromaticity           : 0.0811
+  Secondary Structure   : Helix: 32.7%, Sheet: 37.8%, Turn: 26.3%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.38%
+  Ramachandran Allowed  : 0.0%
+  Ramachandran Outliers : 0.62%
+  CA-CB Bond Pass Rate  : 99.66%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 76.1°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : 22.19 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -28.31 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 25
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P27909
+======================================================================

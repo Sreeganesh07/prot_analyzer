@@ -1,0 +1,34 @@
+{
+  "accession": "P00533",
+  "experimental": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "8A27",
+    "file_path": "./output\\P00533\\structures\\experimental\\8a27.pdb",
+    "resolution": 1.07,
+    "method": "X-ray",
+    "file_size": 494505
+  },
+  "alphafold": {
+    "source": "AlphaFold DB",
+    "model_id": "AF-P00533-F1",
+    "file_path": "./output\\P00533\\structures\\alphafold\\AF-P00533.pdb",
+    "plddt_url": null,
+    "file_size": 772334
+  },
+  "homology": {
+    "source": "SWISS-MODEL Homology",
+    "template": "7syd.1.C",
+    "gmqe_score": 0.621,
+    "qmean_score": null,
+    "file_path": "./output\\P00533\\structures\\homology\\P00533_model.pdb",
+    "file_size": 392373
+  },
+  "best_structure": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "8A27",
+    "file_path": "./output\\P00533\\structures\\experimental\\8a27.pdb",
+    "resolution": 1.07,
+    "method": "X-ray",
+    "file_size": 494505
+  }
+}

@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P02769
+Protein Name    : Albumin
+Organism        : Bos taurus
+Sequence Length : 607 amino acids
+Execution Time  : 14.35 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 69292.68 Da
+  Isoelectric Point (pI): 5.82
+  Instability Index     : 40.28 (Unstable)
+  GRAVY Hydropathicity  : -0.429
+  Aromaticity           : 0.089
+  Secondary Structure   : Helix: 39.0%, Sheet: 33.9%, Turn: 21.6%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 98.36%
+  Ramachandran Allowed  : 1.64%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 97.09%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 74.3°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -17.38 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -28.19 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 31
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P02769
+======================================================================

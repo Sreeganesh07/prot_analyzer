@@ -1,0 +1,215 @@
+{
+  "accession": "P11021",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P11021\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "86",
+      "residue": "S",
+      "description": "Phosphoserine"
+    },
+    {
+      "type": "modified residue",
+      "position": "125",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "160",
+      "residue": "Y",
+      "description": "3'-nitrotyrosine"
+    },
+    {
+      "type": "modified residue",
+      "position": "213",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "271",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "326",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "353",
+      "residue": "K",
+      "description": "N6-acetyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "447",
+      "residue": "K",
+      "description": "N6-succinyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "492",
+      "residue": "R",
+      "description": "Omega-N-methylarginine"
+    },
+    {
+      "type": "modified residue",
+      "position": "518",
+      "residue": "T",
+      "description": "O-AMP-threonine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "518",
+      "residue": "T",
+      "description": "Phosphothreonine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "585",
+      "residue": "K",
+      "description": "N6,N6,N6-trimethyllysine; by METTL21A; in vitro"
+    },
+    {
+      "type": "modified residue",
+      "position": "585",
+      "residue": "K",
+      "description": "N6,N6-dimethyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "585",
+      "residue": "K",
+      "description": "N6-methyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "591",
+      "residue": "K",
+      "description": "N6-methyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "643",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "modified residue",
+      "position": "648",
+      "residue": "T",
+      "description": "Phosphothreonine"
+    },
+    {
+      "type": "cross-link",
+      "position": "352",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in SUMO2)"
+    },
+    {
+      "type": "cross-link",
+      "position": "353",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in SUMO1); alternate"
+    }
+  ],
+  "ptm_count": 19,
+  "ppi_interactions": [
+    {
+      "partner_a": "CANX",
+      "partner_b": "PDIA3",
+      "preferred_partner_name": "CANX",
+      "combined_score": 0.999,
+      "escore_experiments": 0.626,
+      "dscore_database": 0.7,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "HSP90B1",
+      "partner_b": "DNAJB11",
+      "preferred_partner_name": "HSP90B1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.31,
+      "dscore_database": 0.36,
+      "tscore_textmining": 0.989
+    },
+    {
+      "partner_a": "HSP90B1",
+      "partner_b": "HYOU1",
+      "preferred_partner_name": "HSP90B1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.272,
+      "dscore_database": 0.36,
+      "tscore_textmining": 0.994
+    },
+    {
+      "partner_a": "HSP90B1",
+      "partner_b": "HSPA5",
+      "preferred_partner_name": "HSP90B1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.716,
+      "dscore_database": 0.36,
+      "tscore_textmining": 0.997
+    },
+    {
+      "partner_a": "PDIA3",
+      "partner_b": "HSPA5",
+      "preferred_partner_name": "PDIA3",
+      "combined_score": 0.999,
+      "escore_experiments": 0.538,
+      "dscore_database": 0.5,
+      "tscore_textmining": 0.985
+    },
+    {
+      "partner_a": "EIF2AK3",
+      "partner_b": "HSPA5",
+      "preferred_partner_name": "EIF2AK3",
+      "combined_score": 0.999,
+      "escore_experiments": 0.823,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "HSPA5",
+      "partner_b": "ATF6",
+      "preferred_partner_name": "HSPA5",
+      "combined_score": 0.999,
+      "escore_experiments": 0.301,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "HSPA5",
+      "partner_b": "ERN1",
+      "preferred_partner_name": "HSPA5",
+      "combined_score": 0.999,
+      "escore_experiments": 0.912,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "HSPA5",
+      "partner_b": "HYOU1",
+      "preferred_partner_name": "HSPA5",
+      "combined_score": 0.999,
+      "escore_experiments": 0.922,
+      "dscore_database": 0.54,
+      "tscore_textmining": 0.912
+    },
+    {
+      "partner_a": "CANX",
+      "partner_b": "HSPA5",
+      "preferred_partner_name": "CANX",
+      "combined_score": 0.998,
+      "escore_experiments": 0.69,
+      "dscore_database": 0.5,
+      "tscore_textmining": 0.981
+    }
+  ],
+  "ppi_partner_count": 10
+}

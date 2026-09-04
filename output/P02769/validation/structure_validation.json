@@ -1,0 +1,189 @@
+{
+  "pdb_file": "4f5s.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 1162,
+    "favored_count": 1143,
+    "favored_percent": 98.36,
+    "allowed_count": 19,
+    "allowed_percent": 1.64,
+    "outlier_count": 0,
+    "outlier_percent": 0.0
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 1134,
+    "violations_count": 33,
+    "pass_rate_percent": 97.09,
+    "violations": [
+      {
+        "chain": "A",
+        "resname": "THR",
+        "resid": 2,
+        "bond_length": 1.6,
+        "deviation": 0.08,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 43,
+        "bond_length": 1.593,
+        "deviation": 0.073,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 54,
+        "bond_length": 1.574,
+        "deviation": 0.054,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ASP",
+        "resid": 111,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ALA",
+        "resid": 150,
+        "bond_length": 1.444,
+        "deviation": 0.076,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 240,
+        "bond_length": 1.61,
+        "deviation": 0.09,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ALA",
+        "resid": 253,
+        "bond_length": 1.464,
+        "deviation": 0.056,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ILE",
+        "resid": 263,
+        "bond_length": 1.583,
+        "deviation": 0.063,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 314,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ALA",
+        "resid": 341,
+        "bond_length": 1.581,
+        "deviation": 0.061,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "THR",
+        "resid": 355,
+        "bond_length": 1.59,
+        "deviation": 0.07,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 423,
+        "bond_length": 1.609,
+        "deviation": 0.089,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "THR",
+        "resid": 434,
+        "bond_length": 1.582,
+        "deviation": 0.062,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "THR",
+        "resid": 448,
+        "bond_length": 1.591,
+        "deviation": 0.071,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 468,
+        "bond_length": 1.572,
+        "deviation": 0.052,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 529,
+        "bond_length": 1.597,
+        "deviation": 0.077,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 551,
+        "bond_length": 1.59,
+        "deviation": 0.07,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "ALA",
+        "resid": 552,
+        "bond_length": 1.57,
+        "deviation": 0.05,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 576,
+        "bond_length": 1.573,
+        "deviation": 0.053,
+        "standard": 1.52
+      },
+      {
+        "chain": "B",
+        "resname": "ILE",
+        "resid": 25,
+        "bond_length": 1.585,
+        "deviation": 0.065,
+        "standard": 1.52
+      }
+    ]
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 1166,
+    "buried_count": 2,
+    "buried_percent": 0.17,
+    "partial_count": 911,
+    "partial_percent": 78.13,
+    "surface_count": 253,
+    "surface_percent": 21.7
+  },
+  "ramachandran_plot_path": "./output\\P02769\\figures\\ramachandran.png"
+}

@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P0DTC2
+Protein Name    : Spike glycoprotein
+Organism        : Severe acute respiratory syndrome coronavirus 2
+Sequence Length : 1273 amino acids
+Execution Time  : 29.46 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 141176.82 Da
+  Isoelectric Point (pI): 6.24
+  Instability Index     : 33.01 (Stable)
+  GRAVY Hydropathicity  : -0.079
+  Aromaticity           : 0.1123
+  Secondary Structure   : Helix: 24.3%, Sheet: 40.9%, Turn: 30.6%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.49%
+  Ramachandran Allowed  : 0.51%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 76.3°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -12.16 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -29.81 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 41
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P0DTC2
+======================================================================

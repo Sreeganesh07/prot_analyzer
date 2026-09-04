@@ -1,0 +1,28 @@
+{
+  "accession": "Q01959",
+  "experimental": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "9EO4",
+    "file_path": "./output\\Q01959\\structures\\experimental\\9eo4.pdb",
+    "resolution": 2.66,
+    "method": "EM",
+    "file_size": 782541
+  },
+  "alphafold": null,
+  "homology": {
+    "source": "SWISS-MODEL Homology",
+    "template": "9eo4.1.A",
+    "gmqe_score": 0.809,
+    "qmean_score": null,
+    "file_path": "./output\\Q01959\\structures\\homology\\Q01959_model.pdb",
+    "file_size": 389961
+  },
+  "best_structure": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "9EO4",
+    "file_path": "./output\\Q01959\\structures\\experimental\\9eo4.pdb",
+    "resolution": 2.66,
+    "method": "EM",
+    "file_size": 782541
+  }
+}

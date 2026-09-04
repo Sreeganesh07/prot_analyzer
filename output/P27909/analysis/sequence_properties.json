@@ -1,0 +1,376 @@
+{
+  "accession": "P27909",
+  "header": "sp|P27909|POLG_DEN1B Genome polyprotein OS=Dengue virus type 1 (strain Brazil/97-11/1997) OX=408685 PE=1 SV=2",
+  "sequence_length": 3392,
+  "physicochemical_properties": {
+    "sequence_length": 3392,
+    "analyzed_length": 3392,
+    "molecular_weight": 378900.89,
+    "isoelectric_point": 8.6,
+    "aromaticity": 0.0811,
+    "instability_index": 33.76,
+    "is_stable": true,
+    "gravy": -0.201,
+    "secondary_structure_fraction": {
+      "helix": 0.3269,
+      "turn": 0.263,
+      "sheet": 0.3777
+    },
+    "amino_acid_percentages": {
+      "A": 6.928,
+      "C": 1.739,
+      "D": 4.245,
+      "E": 6.574,
+      "F": 3.154,
+      "G": 8.255,
+      "H": 2.093,
+      "I": 5.808,
+      "K": 6.014,
+      "L": 9.463,
+      "M": 3.715,
+      "N": 3.685,
+      "P": 4.127,
+      "Q": 3.243,
+      "R": 5.631,
+      "S": 5.985,
+      "T": 7.695,
+      "V": 6.692,
+      "W": 2.83,
+      "Y": 2.123
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 13.74,
+      "negatively_charged_percent": 10.82,
+      "hydrophobic_percent": 38.59,
+      "aromatic_percent": 8.11
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 183,
+        "end": 185,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAT"
+      },
+      {
+        "start": 347,
+        "end": 349,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTT"
+      },
+      {
+        "start": 433,
+        "end": 435,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NET"
+      },
+      {
+        "start": 905,
+        "end": 907,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTT"
+      },
+      {
+        "start": 982,
+        "end": 984,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NET"
+      },
+      {
+        "start": 1190,
+        "end": 1192,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAS"
+      },
+      {
+        "start": 1663,
+        "end": 1665,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NLT"
+      },
+      {
+        "start": 2303,
+        "end": 2305,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTT"
+      },
+      {
+        "start": 2307,
+        "end": 2309,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIS"
+      },
+      {
+        "start": 2459,
+        "end": 2461,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTT"
+      },
+      {
+        "start": 2705,
+        "end": 2707,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NST"
+      },
+      {
+        "start": 2725,
+        "end": 2727,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NMT"
+      },
+      {
+        "start": 3078,
+        "end": 3080,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NGT"
+      },
+      {
+        "start": 3383,
+        "end": 3385,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NES"
+      }
+    ],
+    "signal_peptide": [
+      {
+        "start": 1145,
+        "end": 1172,
+        "pattern": "M[^P]{15,30}[LIVMF]{4,6}",
+        "matched_sequence": "MIEEVMRSRWSRKMLMTGTLAVFLLLIM"
+      },
+      {
+        "start": 1150,
+        "end": 1172,
+        "pattern": "M[^P]{15,30}[LIVMF]{4,6}",
+        "matched_sequence": "MRSRWSRKMLMTGTLAVFLLLIM"
+      },
+      {
+        "start": 2609,
+        "end": 2628,
+        "pattern": "M[^P]{15,30}[LIVMF]{4,6}",
+        "matched_sequence": "MATYGWNLVKLHSGKDVFFM"
+      }
+    ],
+    "pkc_phosphorylation": [
+      {
+        "start": 129,
+        "end": 132,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SKQE"
+      },
+      {
+        "start": 171,
+        "end": 174,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TEAE"
+      },
+      {
+        "start": 219,
+        "end": 222,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRTE"
+      },
+      {
+        "start": 356,
+        "end": 359,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TQGE"
+      },
+      {
+        "start": 361,
+        "end": 364,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLVE"
+      },
+      {
+        "start": 403,
+        "end": 406,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TKLE"
+      },
+      {
+        "start": 480,
+        "end": 483,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TMKE"
+      },
+      {
+        "start": 506,
+        "end": 509,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TSQE"
+      },
+      {
+        "start": 619,
+        "end": 622,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TQDE"
+      },
+      {
+        "start": 639,
+        "end": 642,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TDKE"
+      },
+      {
+        "start": 802,
+        "end": 805,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TWTE"
+      },
+      {
+        "start": 836,
+        "end": 839,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TRLE"
+      },
+      {
+        "start": 991,
+        "end": 994,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SFIE"
+      },
+      {
+        "start": 1224,
+        "end": 1227,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TSRE"
+      },
+      {
+        "start": 1246,
+        "end": 1249,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SLEE"
+      },
+      {
+        "start": 1337,
+        "end": 1340,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TENE"
+      },
+      {
+        "start": 1405,
+        "end": 1408,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SWEE"
+      },
+      {
+        "start": 1484,
+        "end": 1487,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SPPE"
+      },
+      {
+        "start": 1566,
+        "end": 1569,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TGEE"
+      },
+      {
+        "start": 1728,
+        "end": 1731,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TGRE"
+      },
+      {
+        "start": 2008,
+        "end": 2011,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TFVE"
+      },
+      {
+        "start": 2448,
+        "end": 2451,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLWE"
+      },
+      {
+        "start": 2501,
+        "end": 2504,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLGE"
+      },
+      {
+        "start": 2514,
+        "end": 2517,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SKSE"
+      },
+      {
+        "start": 2648,
+        "end": 2651,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TIEE"
+      },
+      {
+        "start": 2681,
+        "end": 2684,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SVVE"
+      },
+      {
+        "start": 2706,
+        "end": 2709,
+        "pattern": "[ST]..E",
+        "matched_sequence": "STHE"
+      },
+      {
+        "start": 2887,
+        "end": 2890,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TREE"
+      },
+      {
+        "start": 2913,
+        "end": 2916,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SAKE"
+      },
+      {
+        "start": 2997,
+        "end": 3000,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SGVE"
+      },
+      {
+        "start": 3105,
+        "end": 3108,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TNME"
+      },
+      {
+        "start": 3124,
+        "end": 3127,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SELE"
+      },
+      {
+        "start": 3239,
+        "end": 3242,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SLRE"
+      },
+      {
+        "start": 3323,
+        "end": 3326,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SSWE"
+      },
+      {
+        "start": 3324,
+        "end": 3327,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SWEE"
+      },
+      {
+        "start": 3385,
+        "end": 3388,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SDPE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

@@ -1,0 +1,81 @@
+{
+  "accession": "P04637",
+  "header": "sp|P04637|P53_HUMAN Cellular tumor antigen p53 OS=Homo sapiens OX=9606 GN=TP53 PE=1 SV=4",
+  "sequence_length": 393,
+  "physicochemical_properties": {
+    "sequence_length": 393,
+    "analyzed_length": 393,
+    "molecular_weight": 43652.71,
+    "isoelectric_point": 6.33,
+    "aromaticity": 0.0611,
+    "instability_index": 73.59,
+    "is_stable": false,
+    "gravy": -0.756,
+    "secondary_structure_fraction": {
+      "helix": 0.3003,
+      "turn": 0.3562,
+      "sheet": 0.2646
+    },
+    "amino_acid_percentages": {
+      "A": 6.107,
+      "C": 2.545,
+      "D": 5.089,
+      "E": 7.634,
+      "F": 2.799,
+      "G": 5.852,
+      "H": 3.053,
+      "I": 2.036,
+      "K": 5.089,
+      "L": 8.142,
+      "M": 3.053,
+      "N": 3.562,
+      "P": 11.45,
+      "Q": 3.817,
+      "R": 6.616,
+      "S": 9.669,
+      "T": 5.598,
+      "V": 4.58,
+      "W": 1.018,
+      "Y": 2.29
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 14.76,
+      "negatively_charged_percent": 12.72,
+      "hydrophobic_percent": 27.73,
+      "aromatic_percent": 6.11
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 239,
+        "end": 241,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NSS"
+      },
+      {
+        "start": 310,
+        "end": 312,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNT"
+      },
+      {
+        "start": 311,
+        "end": 313,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTS"
+      }
+    ],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 284,
+        "end": 287,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TEEE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

@@ -1,0 +1,53 @@
+{
+  "pdb_file": "5f0x.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 756,
+    "favored_count": 750,
+    "favored_percent": 99.21,
+    "allowed_count": 6,
+    "allowed_percent": 0.79,
+    "outlier_count": 0,
+    "outlier_percent": 0.0
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 698,
+    "violations_count": 3,
+    "pass_rate_percent": 99.57,
+    "violations": [
+      {
+        "chain": "B",
+        "resname": "VAL",
+        "resid": 42,
+        "bond_length": 1.575,
+        "deviation": 0.055,
+        "standard": 1.52
+      },
+      {
+        "chain": "B",
+        "resname": "THR",
+        "resid": 124,
+        "bond_length": 1.578,
+        "deviation": 0.058,
+        "standard": 1.52
+      },
+      {
+        "chain": "B",
+        "resname": "VAL",
+        "resid": 362,
+        "bond_length": 1.578,
+        "deviation": 0.058,
+        "standard": 1.52
+      }
+    ]
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 762,
+    "buried_count": 44,
+    "buried_percent": 5.77,
+    "partial_count": 609,
+    "partial_percent": 79.92,
+    "surface_count": 109,
+    "surface_percent": 14.3
+  },
+  "ramachandran_plot_path": "./output\\P11021\\figures\\ramachandran.png"
+}

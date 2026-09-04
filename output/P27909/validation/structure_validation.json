@@ -1,0 +1,37 @@
+{
+  "pdb_file": "3uzq.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 323,
+    "favored_count": 321,
+    "favored_percent": 99.38,
+    "allowed_count": 0,
+    "allowed_percent": 0.0,
+    "outlier_count": 2,
+    "outlier_percent": 0.62
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 294,
+    "violations_count": 1,
+    "pass_rate_percent": 99.66,
+    "violations": [
+      {
+        "chain": "B",
+        "resname": "ILE",
+        "resid": 357,
+        "bond_length": 1.572,
+        "deviation": 0.052,
+        "standard": 1.52
+      }
+    ]
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 329,
+    "buried_count": 2,
+    "buried_percent": 0.61,
+    "partial_count": 267,
+    "partial_percent": 81.16,
+    "surface_count": 60,
+    "surface_percent": 18.24
+  },
+  "ramachandran_plot_path": "./output\\P27909\\figures\\ramachandran.png"
+}

@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P69905
+Protein Name    : Hemoglobin subunit alpha
+Organism        : Homo sapiens
+Sequence Length : 142 amino acids
+Execution Time  : 38.97 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 15257.36 Da
+  Isoelectric Point (pI): 8.72
+  Instability Index     : 6.97 (Stable)
+  GRAVY Hydropathicity  : 0.048
+  Aromaticity           : 0.0775
+  Secondary Structure   : Helix: 40.1%, Sheet: 35.9%, Turn: 26.1%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.82%
+  Ramachandran Allowed  : 0.18%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 99.25%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 63.0°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : 2.23 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -22.93 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 21
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P69905
+======================================================================

@@ -1,0 +1,32 @@
+[2026-08-26 19:07:50] [INFO] [ProteinScope.P0DTC2] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 19:07:50] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 19:07:50] [INFO] [ProteinScope.P0DTC2] Starting ProteinScope Pipeline for accession: P0DTC2
+[2026-08-26 19:07:50] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 19:07:50] [INFO] [ProteinScope.P0DTC2] Stage 0 passed: Accession format validated and output directories created at ./output\P0DTC2
+[2026-08-26 19:08:30] [INFO] [ProteinScope.P0DTC2] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 19:08:30] [INFO] [ProteinScope.P0DTC2] Final reports saved: ./output\P0DTC2\report\report.json and ./output\P0DTC2\report\summary.txt
+[2026-08-26 21:05:28] [INFO] [ProteinScope.P0DTC2] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 21:05:28] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:05:28] [INFO] [ProteinScope.P0DTC2] Starting ProteinScope Pipeline for accession: P0DTC2
+[2026-08-26 21:05:28] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:05:28] [INFO] [ProteinScope.P0DTC2] Stage 0 passed: Accession format validated and output directories created at ./output\P0DTC2
+[2026-08-26 21:08:31] [INFO] [ProteinScope.P0DTC2] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 21:08:31] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:08:31] [INFO] [ProteinScope.P0DTC2] Starting ProteinScope Pipeline for accession: P0DTC2
+[2026-08-26 21:08:31] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:08:31] [INFO] [ProteinScope.P0DTC2] Stage 0 passed: Accession format validated and output directories created at ./output\P0DTC2
+[2026-08-26 21:10:54] [INFO] [ProteinScope.P0DTC2] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 21:10:54] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:10:54] [INFO] [ProteinScope.P0DTC2] Starting ProteinScope Pipeline for accession: P0DTC2
+[2026-08-26 21:10:54] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 21:10:54] [INFO] [ProteinScope.P0DTC2] Stage 0 passed: Accession format validated and output directories created at ./output\P0DTC2
+[2026-08-26 21:11:38] [INFO] [ProteinScope.P0DTC2] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 21:11:38] [INFO] [ProteinScope.P0DTC2] Final reports saved: ./output\P0DTC2\report\report.json and ./output\P0DTC2\report\summary.txt
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P0DTC2] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P0DTC2] Starting ProteinScope Pipeline for accession: P0DTC2
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P0DTC2] ============================================================
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P0DTC2] Stage 0 passed: Accession format validated and output directories created at ./output\P0DTC2
+[2026-08-26 23:54:34] [INFO] [ProteinScope.P0DTC2] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:54:34] [INFO] [ProteinScope.P0DTC2] Final reports saved: ./output\P0DTC2\report\report.json and ./output\P0DTC2\report\summary.txt
+[2026-08-26 23:54:34] [INFO] [ProteinScope.P0DTC2] Interactive 3D HTML Report generated at: ./output\P0DTC2\report\protein_viewer.html

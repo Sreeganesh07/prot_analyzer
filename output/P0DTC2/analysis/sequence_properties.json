@@ -1,0 +1,213 @@
+{
+  "accession": "P0DTC2",
+  "header": "sp|P0DTC2|SPIKE_SARS2 Spike glycoprotein OS=Severe acute respiratory syndrome coronavirus 2 OX=2697049 GN=S PE=1 SV=1",
+  "sequence_length": 1273,
+  "physicochemical_properties": {
+    "sequence_length": 1273,
+    "analyzed_length": 1273,
+    "molecular_weight": 141176.82,
+    "isoelectric_point": 6.24,
+    "aromaticity": 0.1123,
+    "instability_index": 33.01,
+    "is_stable": true,
+    "gravy": -0.079,
+    "secondary_structure_fraction": {
+      "helix": 0.2435,
+      "turn": 0.3056,
+      "sheet": 0.4093
+    },
+    "amino_acid_percentages": {
+      "A": 6.206,
+      "C": 3.142,
+      "D": 4.87,
+      "E": 3.771,
+      "F": 6.049,
+      "G": 6.441,
+      "H": 1.335,
+      "I": 5.97,
+      "K": 4.792,
+      "L": 8.484,
+      "M": 1.1,
+      "N": 6.913,
+      "P": 4.556,
+      "Q": 4.87,
+      "R": 3.299,
+      "S": 7.777,
+      "T": 7.62,
+      "V": 7.62,
+      "W": 0.943,
+      "Y": 4.242
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 9.43,
+      "negatively_charged_percent": 8.64,
+      "hydrophobic_percent": 36.37,
+      "aromatic_percent": 11.23
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [
+      {
+        "start": 17,
+        "end": 19,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NLT"
+      },
+      {
+        "start": 61,
+        "end": 63,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NVT"
+      },
+      {
+        "start": 74,
+        "end": 76,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NGT"
+      },
+      {
+        "start": 122,
+        "end": 124,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAT"
+      },
+      {
+        "start": 149,
+        "end": 151,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NKS"
+      },
+      {
+        "start": 165,
+        "end": 167,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NCT"
+      },
+      {
+        "start": 234,
+        "end": 236,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIT"
+      },
+      {
+        "start": 282,
+        "end": 284,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NGT"
+      },
+      {
+        "start": 331,
+        "end": 333,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NIT"
+      },
+      {
+        "start": 343,
+        "end": 345,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAT"
+      },
+      {
+        "start": 603,
+        "end": 605,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NTS"
+      },
+      {
+        "start": 616,
+        "end": 618,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NCT"
+      },
+      {
+        "start": 657,
+        "end": 659,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNS"
+      },
+      {
+        "start": 709,
+        "end": 711,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNS"
+      },
+      {
+        "start": 717,
+        "end": 719,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NFT"
+      },
+      {
+        "start": 801,
+        "end": 803,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NFS"
+      },
+      {
+        "start": 1074,
+        "end": 1076,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NFT"
+      },
+      {
+        "start": 1098,
+        "end": 1100,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NGT"
+      },
+      {
+        "start": 1134,
+        "end": 1136,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NNT"
+      },
+      {
+        "start": 1158,
+        "end": 1160,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NHT"
+      },
+      {
+        "start": 1173,
+        "end": 1175,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NAS"
+      },
+      {
+        "start": 1194,
+        "end": 1196,
+        "pattern": "N[^P][ST]",
+        "matched_sequence": "NES"
+      }
+    ],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 151,
+        "end": 154,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SWME"
+      },
+      {
+        "start": 221,
+        "end": 224,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SALE"
+      },
+      {
+        "start": 816,
+        "end": 819,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SFIE"
+      },
+      {
+        "start": 1147,
+        "end": 1150,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SFKE"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

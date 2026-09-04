@@ -1,0 +1,317 @@
+{
+  "accession": "P04637",
+  "pairwise_alignments_top5": [],
+  "distance_matrix_csv": "./output\\P04637\\analysis\\distance_matrix.csv",
+  "ptm_sites": [
+    {
+      "type": "modified residue",
+      "position": "9",
+      "residue": "S",
+      "description": "Phosphoserine; by HIPK4"
+    },
+    {
+      "type": "modified residue",
+      "position": "15",
+      "residue": "S",
+      "description": "Phosphoserine; by CDK5, PRPK, AMPK, NUAK1 and ATM"
+    },
+    {
+      "type": "modified residue",
+      "position": "18",
+      "residue": "T",
+      "description": "Phosphothreonine; by CK1, VRK1 and VRK2"
+    },
+    {
+      "type": "modified residue",
+      "position": "20",
+      "residue": "S",
+      "description": "Phosphoserine; by CHEK2, CK1 and PLK3"
+    },
+    {
+      "type": "modified residue",
+      "position": "33",
+      "residue": "S",
+      "description": "Phosphoserine; by CDK5 and CDK7"
+    },
+    {
+      "type": "modified residue",
+      "position": "37",
+      "residue": "S",
+      "description": "Phosphoserine; by MAPKAPK5"
+    },
+    {
+      "type": "modified residue",
+      "position": "46",
+      "residue": "S",
+      "description": "Phosphoserine; by CDK5, DYRK2, HIPK2 and PKC/PRKCG"
+    },
+    {
+      "type": "modified residue",
+      "position": "55",
+      "residue": "T",
+      "description": "Phosphothreonine; by TAF1 and GRK5"
+    },
+    {
+      "type": "modified residue",
+      "position": "120",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "120",
+      "residue": "K",
+      "description": "N6-lactoyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "139",
+      "residue": "K",
+      "description": "N6-lactoyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "183",
+      "residue": "S",
+      "description": "Phosphoserine; by AURKB"
+    },
+    {
+      "type": "modified residue",
+      "position": "269",
+      "residue": "S",
+      "description": "Phosphoserine; by AURKB"
+    },
+    {
+      "type": "modified residue",
+      "position": "284",
+      "residue": "T",
+      "description": "Phosphothreonine; by AURKB"
+    },
+    {
+      "type": "modified residue",
+      "position": "305",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "315",
+      "residue": "S",
+      "description": "Phosphoserine; by AURKA, CDK1 and CDK2"
+    },
+    {
+      "type": "modified residue",
+      "position": "321",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "333",
+      "residue": "R",
+      "description": "Omega-N-methylarginine; by PRMT5"
+    },
+    {
+      "type": "modified residue",
+      "position": "335",
+      "residue": "R",
+      "description": "Symmetric dimethylarginine; by PRMT5"
+    },
+    {
+      "type": "modified residue",
+      "position": "337",
+      "residue": "R",
+      "description": "Symmetric dimethylarginine; by PRMT5"
+    },
+    {
+      "type": "modified residue",
+      "position": "370",
+      "residue": "K",
+      "description": "N6,N6-dimethyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "370",
+      "residue": "K",
+      "description": "N6-methyllysine; by SMYD2; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "372",
+      "residue": "K",
+      "description": "N6-methyllysine; by SETD7"
+    },
+    {
+      "type": "modified residue",
+      "position": "373",
+      "residue": "K",
+      "description": "N6,N6-dimethyllysine; by EHMT1 and EHMT2; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "373",
+      "residue": "K",
+      "description": "N6-acetyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "381",
+      "residue": "K",
+      "description": "N6-acetyllysine"
+    },
+    {
+      "type": "modified residue",
+      "position": "382",
+      "residue": "K",
+      "description": "N6,N6-dimethyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "382",
+      "residue": "K",
+      "description": "N6-acetyllysine; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "382",
+      "residue": "K",
+      "description": "N6-methyllysine; by KMT5A; alternate"
+    },
+    {
+      "type": "modified residue",
+      "position": "392",
+      "residue": "S",
+      "description": "Phosphoserine; by CK2, CDK2 and NUAK1"
+    },
+    {
+      "type": "cross-link",
+      "position": "24",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "291",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "292",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "351",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "357",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in ubiquitin)"
+    },
+    {
+      "type": "cross-link",
+      "position": "386",
+      "residue": "K",
+      "description": "Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in SUMO)"
+    }
+  ],
+  "ptm_count": 36,
+  "ppi_interactions": [
+    {
+      "partner_a": "SIRT1",
+      "partner_b": "TP53",
+      "preferred_partner_name": "SIRT1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.886,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.99
+    },
+    {
+      "partner_a": "RPA1",
+      "partner_b": "TP53",
+      "preferred_partner_name": "RPA1",
+      "combined_score": 0.999,
+      "escore_experiments": 0.982,
+      "dscore_database": 0.4,
+      "tscore_textmining": 0.932
+    },
+    {
+      "partner_a": "MDM2",
+      "partner_b": "EP300",
+      "preferred_partner_name": "MDM2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.82,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.994
+    },
+    {
+      "partner_a": "MDM2",
+      "partner_b": "TP53",
+      "preferred_partner_name": "MDM2",
+      "combined_score": 0.999,
+      "escore_experiments": 0.999,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.999
+    },
+    {
+      "partner_a": "CREBBP",
+      "partner_b": "TP53",
+      "preferred_partner_name": "CREBBP",
+      "combined_score": 0.999,
+      "escore_experiments": 0.998,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.996
+    },
+    {
+      "partner_a": "CREBBP",
+      "partner_b": "EP300",
+      "preferred_partner_name": "CREBBP",
+      "combined_score": 0.999,
+      "escore_experiments": 0.782,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.983
+    },
+    {
+      "partner_a": "EP300",
+      "partner_b": "TP53",
+      "preferred_partner_name": "EP300",
+      "combined_score": 0.999,
+      "escore_experiments": 0.999,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.998
+    },
+    {
+      "partner_a": "DAXX",
+      "partner_b": "TP53",
+      "preferred_partner_name": "DAXX",
+      "combined_score": 0.999,
+      "escore_experiments": 0.895,
+      "dscore_database": 0.9,
+      "tscore_textmining": 0.952
+    },
+    {
+      "partner_a": "TP53",
+      "partner_b": "SFN",
+      "preferred_partner_name": "TP53",
+      "combined_score": 0.999,
+      "escore_experiments": 0.981,
+      "dscore_database": 0.75,
+      "tscore_textmining": 0.859
+    },
+    {
+      "partner_a": "TP53",
+      "partner_b": "HSP90AA1",
+      "preferred_partner_name": "TP53",
+      "combined_score": 0.999,
+      "escore_experiments": 0.903,
+      "dscore_database": 0.0,
+      "tscore_textmining": 0.995
+    }
+  ],
+  "ppi_partner_count": 10
+}

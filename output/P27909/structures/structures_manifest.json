@@ -1,0 +1,28 @@
+{
+  "accession": "P27909",
+  "experimental": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "3UZQ",
+    "file_path": "./output\\P27909\\structures\\experimental\\3uzq.pdb",
+    "resolution": 1.6,
+    "method": "X-ray",
+    "file_size": 495153
+  },
+  "alphafold": null,
+  "homology": {
+    "source": "SWISS-MODEL Homology",
+    "template": "8cxg.1.H",
+    "gmqe_score": 0.43,
+    "qmean_score": null,
+    "file_path": "./output\\P27909\\structures\\homology\\P27909_model.pdb",
+    "file_size": 62617
+  },
+  "best_structure": {
+    "source": "Experimental (RCSB PDB)",
+    "pdb_id": "3UZQ",
+    "file_path": "./output\\P27909\\structures\\experimental\\3uzq.pdb",
+    "resolution": 1.6,
+    "method": "X-ray",
+    "file_size": 495153
+  }
+}

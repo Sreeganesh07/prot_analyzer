@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="100" fill="#07090e" />
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="#1a2234" stroke-width="8" />
+  <!-- Reticle markings -->
+  <line x1="40" y1="60" x2="60" y2="60" stroke="#0284c7" stroke-width="4" />
+  <line x1="60" y1="40" x2="60" y2="60" stroke="#0284c7" stroke-width="4" />
+  <line x1="472" y1="60" x2="452" y2="60" stroke="#0284c7" stroke-width="4" />
+  <line x1="452" y1="40" x2="452" y2="60" stroke="#0284c7" stroke-width="4" />
+  <!-- Helix & Reticle Core -->
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#0284c7" stroke-width="6" stroke-dasharray="16 10" />
+  <circle cx="256" cy="256" r="90" fill="none" stroke="#10b981" stroke-width="4" />
+  <!-- Ribbon glyph -->
+  <path d="M 180 340 C 180 200, 332 312, 332 172 C 332 120, 290 100, 256 100 C 222 100, 180 120, 180 172 C 180 312, 332 200, 332 340" fill="none" stroke="#38bdf8" stroke-width="22" stroke-linecap="round" />
+  <!-- Central node -->
+  <circle cx="256" cy="256" r="16" fill="#f59e0b" />
+  <!-- Monospace Typography -->
+  <text x="256" y="440" font-family="'JetBrains Mono', monospace" font-size="36" font-weight="900" fill="#f8fafc" text-anchor="middle" letter-spacing="4">PROTEINSCOPE</text>
+  <text x="256" y="470" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#526077" text-anchor="middle" letter-spacing="2">BIOPHYSICS WORKSTATION</text>
+</svg>

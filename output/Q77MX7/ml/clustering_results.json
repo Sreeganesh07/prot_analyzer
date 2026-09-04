@@ -1,0 +1,52 @@
+{
+  "accession": "Q77MX7",
+  "feature_count": 42,
+  "total_samples": 5,
+  "features_csv": "./output\\Q77MX7\\ml\\feature_matrix.csv",
+  "n_clusters_used": 3,
+  "clusters": [
+    {
+      "identifier": "Q77MX7",
+      "category": "Query",
+      "cluster": 1
+    },
+    {
+      "identifier": "Q77MX7_var1",
+      "category": "Variant_1",
+      "cluster": 1
+    },
+    {
+      "identifier": "Q77MX7_var2",
+      "category": "Variant_2",
+      "cluster": 1
+    },
+    {
+      "identifier": "Q77MX7_var3",
+      "category": "Variant_3",
+      "cluster": 2
+    },
+    {
+      "identifier": "Q77MX7_var4",
+      "category": "Variant_4",
+      "cluster": 0
+    }
+  ],
+  "top_discriminative_features": {
+    "isoelectric_point": 0.1515,
+    "molecular_weight": 0.1041,
+    "acidic_total_pct": 0.0899,
+    "instability_index": 0.0828,
+    "nonpolar_total_pct": 0.0762,
+    "aa_N_pct": 0.0502,
+    "tiny_pct": 0.0486,
+    "small_pct": 0.0486,
+    "hydrophobic_pct": 0.0453,
+    "polar_uncharged_pct": 0.0444,
+    "charged_neg_pct": 0.0426,
+    "gravy": 0.0289,
+    "turn_fraction": 0.0289,
+    "aa_E_pct": 0.0274,
+    "helix_fraction": 0.0248
+  },
+  "deep_learning_hook": "esm module not installed (torch/fair-esm2 optional)"
+}

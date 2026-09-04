@@ -1,0 +1,9 @@
+{
+  "program": "blastp",
+  "database": "nr",
+  "matrix": "BLOSUM62",
+  "query_length_submitted": 110,
+  "total_hits_found": 0,
+  "xml_path": null,
+  "hits": []
+}

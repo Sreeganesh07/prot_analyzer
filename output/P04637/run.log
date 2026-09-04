@@ -1,0 +1,61 @@
+[2026-08-26 23:52:38] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:52:38] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-26 23:52:38] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-08-26 23:52:38] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-26 23:52:38] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-08-26 23:53:02] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:53:02] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-08-26 23:53:02] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope Pipeline Workflow
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] Mutation mode: analyzing R175H
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-29 20:17:26] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-08-29 20:18:13] [INFO] [ProteinScope.P04637] Running pathogenicity prediction for R175H
+[2026-08-29 20:18:13] [INFO] [ProteinScope.P04637] Training pathogenicity classifier...
+[2026-08-29 20:18:13] [INFO] [ProteinScope.P04637] Loading ClinVar variants for gene: TP53
+[2026-08-29 20:23:54] [ERROR] [ProteinScope.P04637] No ClinVar data available for training
+[2026-08-29 20:23:54] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-08-29 20:23:54] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-08-29 20:23:54] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html
+[2026-08-29 21:19:28] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope Pipeline Workflow
+[2026-08-29 21:19:29] [INFO] [ProteinScope.P04637] Mutation mode: analyzing R175H
+[2026-08-29 21:19:29] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-29 21:19:29] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-08-29 21:19:29] [INFO] [ProteinScope.P04637] ============================================================
+[2026-08-29 21:19:29] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-08-29 21:20:11] [INFO] [ProteinScope.P04637] Running pathogenicity prediction for R175H
+[2026-08-29 21:20:11] [INFO] [ProteinScope.P04637] Training pathogenicity classifier...
+[2026-08-29 21:20:11] [INFO] [ProteinScope.P04637] Loading ClinVar variants for gene: TP53
+[2026-08-29 21:24:21] [INFO] [ProteinScope.P04637] Extracting features for 283 ClinVar variants...
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Saved training metrics to ./output\P04637\benchmark\metrics.json
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Extracting features for variant R175H
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Pathogenicity prediction for R175H: PATHOGENIC (confidence: 70.82%)
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-08-29 21:24:26] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html
+[2026-09-04 22:05:23] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope Pipeline Workflow
+[2026-09-04 22:05:23] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:05:23] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-09-04 22:05:23] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:05:23] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-09-04 22:05:49] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-09-04 22:05:49] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-09-04 22:05:49] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html
+[2026-09-04 22:06:06] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope Pipeline Workflow
+[2026-09-04 22:06:06] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:06:06] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-09-04 22:06:06] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:06:06] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-09-04 22:06:29] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-09-04 22:06:29] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-09-04 22:06:29] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html
+[2026-09-04 22:07:06] [INFO] [ProteinScope.P04637] Executing Complete ProteinScope Pipeline Workflow
+[2026-09-04 22:07:06] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:07:06] [INFO] [ProteinScope.P04637] Starting ProteinScope Pipeline for accession: P04637
+[2026-09-04 22:07:06] [INFO] [ProteinScope.P04637] ============================================================
+[2026-09-04 22:07:06] [INFO] [ProteinScope.P04637] Stage 0 passed: Accession format validated and output directories created at ./output\P04637
+[2026-09-04 22:07:27] [INFO] [ProteinScope.P04637] Starting Stage 11: Compiling final multi-stage report
+[2026-09-04 22:07:27] [INFO] [ProteinScope.P04637] Final reports saved: ./output\P04637\report\report.json and ./output\P04637\report\summary.txt
+[2026-09-04 22:07:27] [INFO] [ProteinScope.P04637] Interactive 3D HTML Report generated at: ./output\P04637\report\protein_viewer.html

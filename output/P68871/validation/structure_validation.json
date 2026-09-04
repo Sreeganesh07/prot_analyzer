@@ -1,0 +1,61 @@
+{
+  "pdb_file": "2w72.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 566,
+    "favored_count": 565,
+    "favored_percent": 99.82,
+    "allowed_count": 1,
+    "allowed_percent": 0.18,
+    "outlier_count": 0,
+    "outlier_percent": 0.0
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 534,
+    "violations_count": 4,
+    "pass_rate_percent": 99.25,
+    "violations": [
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 1,
+        "bond_length": 1.576,
+        "deviation": 0.056,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "VAL",
+        "resid": 96,
+        "bond_length": 1.572,
+        "deviation": 0.052,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "ASP",
+        "resid": 79,
+        "bond_length": 1.578,
+        "deviation": 0.058,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "VAL",
+        "resid": 134,
+        "bond_length": 1.573,
+        "deviation": 0.053,
+        "standard": 1.52
+      }
+    ]
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 574,
+    "buried_count": 4,
+    "buried_percent": 0.7,
+    "partial_count": 455,
+    "partial_percent": 79.27,
+    "surface_count": 115,
+    "surface_percent": 20.03
+  },
+  "ramachandran_plot_path": "./output\\P68871\\figures\\ramachandran.png"
+}

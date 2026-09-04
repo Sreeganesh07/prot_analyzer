@@ -1,0 +1,141 @@
+{
+  "pdb_file": "Q77MX7_model.pdb",
+  "ramachandran_statistics": {
+    "total_evaluated_residues": 571,
+    "favored_count": 566,
+    "favored_percent": 99.12,
+    "allowed_count": 5,
+    "allowed_percent": 0.88,
+    "outlier_count": 0,
+    "outlier_percent": 0.0
+  },
+  "geometry_ca_cb": {
+    "total_bonds_checked": 555,
+    "violations_count": 14,
+    "pass_rate_percent": 97.48,
+    "violations": [
+      {
+        "chain": "A",
+        "resname": "ASP",
+        "resid": 2,
+        "bond_length": 1.57,
+        "deviation": 0.05,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "SER",
+        "resid": 26,
+        "bond_length": 1.575,
+        "deviation": 0.055,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "GLU",
+        "resid": 43,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "SER",
+        "resid": 49,
+        "bond_length": 1.573,
+        "deviation": 0.053,
+        "standard": 1.52
+      },
+      {
+        "chain": "A",
+        "resname": "TRP",
+        "resid": 125,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "B",
+        "resname": "SER",
+        "resid": 26,
+        "bond_length": 1.578,
+        "deviation": 0.058,
+        "standard": 1.52
+      },
+      {
+        "chain": "B",
+        "resname": "SER",
+        "resid": 49,
+        "bond_length": 1.57,
+        "deviation": 0.05,
+        "standard": 1.52
+      },
+      {
+        "chain": "C",
+        "resname": "SER",
+        "resid": 17,
+        "bond_length": 1.575,
+        "deviation": 0.055,
+        "standard": 1.52
+      },
+      {
+        "chain": "C",
+        "resname": "ASP",
+        "resid": 22,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "C",
+        "resname": "TRP",
+        "resid": 125,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "GLU",
+        "resid": 8,
+        "bond_length": 1.574,
+        "deviation": 0.054,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "SER",
+        "resid": 35,
+        "bond_length": 1.575,
+        "deviation": 0.055,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "SER",
+        "resid": 49,
+        "bond_length": 1.574,
+        "deviation": 0.054,
+        "standard": 1.52
+      },
+      {
+        "chain": "D",
+        "resname": "TRP",
+        "resid": 125,
+        "bond_length": 1.571,
+        "deviation": 0.051,
+        "standard": 1.52
+      }
+    ]
+  },
+  "burial_environment": {
+    "total_ca_evaluated": 579,
+    "buried_count": 0,
+    "buried_percent": 0.0,
+    "partial_count": 436,
+    "partial_percent": 75.3,
+    "surface_count": 143,
+    "surface_percent": 24.7
+  },
+  "ramachandran_plot_path": "./output\\Q77MX7\\figures\\ramachandran.png"
+}

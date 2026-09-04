@@ -1,0 +1,98 @@
+{
+  "accession": "P02769",
+  "header": "sp|P02769|ALBU_BOVIN Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",
+  "sequence_length": 607,
+  "physicochemical_properties": {
+    "sequence_length": 607,
+    "analyzed_length": 607,
+    "molecular_weight": 69292.68,
+    "isoelectric_point": 5.82,
+    "aromaticity": 0.089,
+    "instability_index": 40.28,
+    "is_stable": false,
+    "gravy": -0.429,
+    "secondary_structure_fraction": {
+      "helix": 0.3904,
+      "turn": 0.2158,
+      "sheet": 0.3394
+    },
+    "amino_acid_percentages": {
+      "A": 7.908,
+      "C": 5.766,
+      "D": 6.59,
+      "E": 9.72,
+      "F": 4.942,
+      "G": 2.801,
+      "H": 2.801,
+      "I": 2.471,
+      "K": 9.885,
+      "L": 10.708,
+      "M": 0.824,
+      "N": 2.306,
+      "P": 4.613,
+      "Q": 3.295,
+      "R": 4.283,
+      "S": 5.272,
+      "T": 5.601,
+      "V": 6.26,
+      "W": 0.494,
+      "Y": 3.46
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 16.97,
+      "negatively_charged_percent": 16.31,
+      "hydrophobic_percent": 33.61,
+      "aromatic_percent": 8.9
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": [
+      {
+        "start": 103,
+        "end": 106,
+        "pattern": "[ST]..E",
+        "matched_sequence": "SLRE"
+      },
+      {
+        "start": 207,
+        "end": 210,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TMRE"
+      },
+      {
+        "start": 379,
+        "end": 382,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLEE"
+      },
+      {
+        "start": 445,
+        "end": 448,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TLVE"
+      },
+      {
+        "start": 462,
+        "end": 465,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TKPE"
+      },
+      {
+        "start": 515,
+        "end": 518,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TPDE"
+      },
+      {
+        "start": 569,
+        "end": 572,
+        "pattern": "[ST]..E",
+        "matched_sequence": "TVME"
+      }
+    ]
+  },
+  "domains": [],
+  "domain_count": 0
+}

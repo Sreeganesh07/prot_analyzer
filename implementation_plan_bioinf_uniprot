@@ -1,0 +1,268 @@
+# Implementation Plan: ProteinScope Bioinformatics Pipeline
+
+A full-stack, automated end-to-end protein bioinformatics and missense variant pathogenicity analysis system (**ProteinScope**). It accepts a UniProt accession code (e.g., `P04637`, `P0DTC2`) and optional missense mutation (e.g., `R175H`), executing multi-pathway data ingestion, sequence analysis, BLAST homology, 3D structure retrieval & validation, PyMOL scripting, interactive WebGL 3D dashboard generation, evolutionary & PPI comparative analysis, unsupervised ML feature clustering, NGS variant mapping, ClinVar supervised pathogenicity classification, multi-protein benchmarking, and multi-format report generation.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Environment & Dependency Architecture**:
+> - Biopython, pandas, numpy, scikit-learn, matplotlib, scipy, PyYAML, python-docx, and fpdf are configured in the virtual environment (`bioinfo_env`).
+> - **Dual Operational Modes**: Full Online Mode (queries UniProt, NCBI QBLAST, RCSB PDB, AlphaFold DB, SWISS-MODEL, InterPro, and STRING DB) and Full Offline Mode (reuses cached JSON/XML/PDB fixtures and local ClinVar models).
+> - **3D Visualization & Web Dashboard**: Produces standard PyMOL `.pml`/`.pse` scripts, high-resolution Matplotlib 3D figures, and a standalone, zero-dependency interactive WebGL dashboard (`protein_viewer.html`) powered by `3Dmol.js`.
+> - **Variant Pathogenicity ML**: Integrates ClinVar-trained Random Forest models with 15+ structural, physicochemical, and evolutionary features to predict mutation impact with SHAP-like biological justifications.
+
+---
+
+## Complete System Architecture & Pipeline Workflow
+
+```mermaid
+graph TD
+    S0["Stage 0: Input Validation & Setup"] --> S1["Stage 1: Ingest (UniProt FASTA / XML / JSON)"]
+    S1 --> S2["Stage 2: Sequence Analysis (ProtParam + InterPro + Motifs)"]
+    S1 --> S3["Stage 3: BLAST Homology (BLASTp / PSI-BLAST / nr)"]
+    S1 --> S4["Stage 4: 3D Structure Retrieval (PDB / AlphaFold / SWISS-MODEL)"]
+    S4 --> S5["Stage 5: Structure Validation (Ramachandran / Geometry / Burial)"]
+    S4 & S2 --> S6["Stage 6: PyMOL Scripting & WebGL 3D Dashboard (3Dmol.js / PML / RMSD)"]
+    S3 & S1 --> S7["Stage 7: Comparative & Evolutionary (Alignments / Distance Matrix / PTMs / STRING PPI)"]
+    S1 & S2 --> S8["Stage 8: ML Feature Engineering & Clustering (40+ Descriptors / KMeans / RF)"]
+    S0 --> S9["Stage 9: NGS Sequencing Integration (FASTQ / BAM / VCF Codon Mapping)"]
+    
+    %% Variant Pathogenicity Sub-Pipeline
+    S0 -. Optional Mutation .-> S10["Stage 10: ClinVar Ingestion & Labeling (Pathogenic vs Benign)"]
+    S10 & S1 & S4 & S5 & S7 --> S11["Stage 11: Variant Structural & Evolutionary Feature Matrix (15+ Features)"]
+    S11 --> S12["Stage 12: Supervised Pathogenicity Prediction (Random Forest / CV / Justifications)"]
+    
+    %% Final Synthesis & Benchmarking
+    S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8 & S9 & S12 --> S13["Stage 13: Final Report Generation (JSON / TXT / HTML / Figures)"]
+    S0 -.-> S14["Workflow Automation (Snakemake DAG & Rules)"]
+    S0 -.-> S15["Benchmark Suite (10 Proteins / Runtime & Memory Profiling / DOCX & PDF)"]
+```
+
+---
+
+## Detailed Pipeline Stages & Module Specifications
+
+### 1. Ingestion & Preprocessing (`proteinscope/stages/ingest.py`)
+- **Accession Format Validation**: Validates UniProt alphanumeric format (`[A-Z][0-9][A-Z0-9]{3}[0-9]` with 6 or 10 characters).
+- **Multi-Format Ingestion**: Fetches raw FASTA, XML, and JSON from UniProt REST API (`https://rest.uniprot.org/uniprotkb/{accession}`) with automatic retries and configurable timeout.
+- **Metadata Extraction**: Extracts organism name, NCBI Taxonomy ID, full protein name, gene names, functional descriptions, PTM annotations, isoform details, and cross-referenced PDB entries.
+- **Persistence**: Writes raw data to `output/{accession}/raw_data/` and cleaned sequence to `output/{accession}/sequences/{accession}.fasta`.
+
+### 2. Sequence Analysis (`proteinscope/stages/sequence.py`)
+- **Physicochemical Profiling**: Utilizes Biopython `ProteinAnalysis` to compute Molecular Weight (MW), Isoelectric Point (pI), Instability Index (threshold 40.0 for stability), GRAVY hydropathicity index, aromaticity fraction, and predicted secondary structure fractions ($\alpha$-helix, $\beta$-sheet, turn/coil).
+- **Amino Acid Composition**: Calculates 20 individual amino acid percentages and grouped chemical compositions (positively charged, negatively charged, hydrophobic, aromatic, polar).
+- **Functional Motif Scanning**: Regex pattern scanning for:
+  - N-glycosylation: `N[^P][ST]`
+  - Signal peptide: `M[^P]{15,30}[LIVMF]{4,6}`
+  - PKC phosphorylation: `[ST]..E`
+- **InterPro Domain Mapping**: Integrates with InterPro REST API (`https://www.ebi.ac.uk/interpro/api/protein/UniProt/{accession}`) to fetch domain coordinates, families, and functional signatures.
+- **Persistence**: Writes structured results to `output/{accession}/analysis/sequence_properties.json`.
+
+### 3. Homology Search (`proteinscope/stages/blast.py`)
+- **NCBI QBLAST Integration**: Queries online NCBI BLAST service (`blastp`, database `nr`, matrix `BLOSUM62`, query prefix up to 500 residues).
+- **Offline & Fallback Mode**: Detects local cached XML fixtures or offline flags to operate in air-gapped environments without network dependencies.
+- **Hit Analysis & Zone Classification**: Parses top 10 homologous hits with hit ID, accession, definition, bit score, e-value, % identity, positives, alignment length, and query coverage.
+- **Biological Confidence**:
+  - *Safe Homology Zone*: Identity > 30%
+  - *Twilight Zone*: Identity 20% – 30%
+  - *Midnight Zone*: Identity < 20%
+- **Persistence**: Outputs `output/{accession}/analysis/blast_results.json` and `blast_results.xml`.
+
+### 4. 3D Structure Retrieval (`proteinscope/stages/structure.py`)
+- **Tri-Pathway Retrieval Engine**:
+  - **Path A (RCSB PDB Experimental)**: Searches experimental PDB structures via PDB cross-references or RCSB Search API, prioritizes highest-resolution X-ray/Cryo-EM models, and downloads coordinates to `structures/experimental/{pdb_id}.pdb`.
+  - **Path B (AlphaFold Predicted)**: Fetches computed structure coordinates from AlphaFold DB (`https://alphafold.ebi.ac.uk/files/AF-{accession}-F1-model_v4.pdb`) into `structures/alphafold/AF-{accession}.pdb`.
+  - **Path C (SWISS-MODEL Homology)**: Queries SWISS-MODEL Repository API for homology models, records GMQE and QMEAN quality scores, and saves to `structures/homology/{accession}_model.pdb`.
+- **Structure Prioritization**: Evaluates and selects the highest-confidence structure (Experimental > AlphaFold > Homology).
+- **Manifest**: Generates `output/{accession}/structures/structures_manifest.json`.
+
+### 5. Structure Validation (`proteinscope/stages/validate.py`)
+- **Ramachandran Dihedral Angles**: Computes standard backbone torsion angles ($\phi, \psi$) from C$\alpha$-C-N atomic coordinates using Biopython `Bio.PDB`.
+- **Conformational Zone Classification**: Classifies each residue into Favored ($\ge 85\%$), Allowed ($10-15\%$), or Outlier ($<2\%$) regions.
+- **Ramachandran Plot Generation**: Exports 300 DPI publication-quality Ramachandran scatter plot to `figures/ramachandran.png`.
+- **C$\alpha$–C$\beta$ Bond Length Geometry**: Checks against ideal $1.52 \pm 0.05$ Å standard and calculates overall pass rate percentage.
+- **Residue Burial / Microenvironment**: Computes C$\alpha$ atomic neighbor counts within an 8.0 Å radius (Buried: $>15$ neighbors, Partially Buried: $8-15$, Surface-Exposed: $<8$).
+- **Persistence**: Writes validation metrics to `output/{accession}/validation/structure_validation.json`.
+
+### 6. 3D Visualization, PyMOL Scripting & Interactive WebGL Dashboard (`proteinscope/stages/visualize.py`)
+- **PyMOL Script Generator**: Creates fully automated PyMOL scripts (`structures/render_script.pml`) and session files (`structures/session.pse`) with custom secondary structure color palettes (Cyan helices, Yellow sheets, White loops) and InterPro domain highlights.
+- **Structural Superimposition**: Performs C$\alpha$ backbone coordinate alignment between experimental and predicted models using Biopython `Superimposer`, calculating exact RMSD (Å).
+- **Matplotlib 3D Fallback**: Renders 3D backbone representations for headless and server environments (`figures/structure_full.png`, `figures/structure_surface.png`, `figures/structure_domains.png`).
+- **Interactive 3D WebGL Dashboard (`protein_viewer.html`)**:
+  - Compiles an interactive browser dashboard powered by `3Dmol.js`.
+  - Embeds full PDB coordinate models directly for zero-latency, offline-capable viewing.
+  - Multi-structure source switching (Experimental PDB vs. AlphaFold DB vs. SWISS-MODEL).
+  - Interactive render modes: Cartoon, Stick, Sphere, and Surface representations.
+  - Color palettes: Rainbow Spectrum, Chain ID, and Secondary Structure.
+  - Dynamic KPI cards: Physicochemical properties table, animated secondary structure progress bars, Ramachandran validation donut charts, and interactive PTM badges.
+
+### 7. Comparative & Evolutionary Analysis (`proteinscope/stages/comparative.py`)
+- **Multiple Sequence Pairwise Alignments**: Aligns query sequence against top homolog hits using Biopython `PairwiseAligner`.
+- **Phylogenetic Distance Matrix**: Computes pairwise evolutionary distance matrix ($1.0 - \text{identity}$) and exports to `analysis/distance_matrix.csv`.
+- **PTM Site Validation**: Verifies modified residue coordinates (glycosylation, phosphorylation, ubiquitination, disulfide bonds) against sequence positions.
+- **STRING PPI Network**: Interrogates STRING DB REST API (`https://string-db.org/api/json/network`) for top 10 functional protein-protein interaction partners with experimental, text-mining, database, and combined confidence scores.
+- **Persistence**: Writes structured results to `output/{accession}/analysis/comparative.json`.
+
+### 8. Unsupervised ML Feature Clustering (`proteinscope/stages/ml.py`)
+- **40+ Descriptor Feature Vector**: Extracts length, MW, pI, instability, GRAVY, secondary structure fractions, grouped charges, polarity compositions, and individual 20 amino acid frequencies.
+- **DataFrame Feature Matrix**: Exports compiled numerical features to `ml/feature_matrix.csv`.
+- **Unsupervised Clustering**: Executes Scikit-Learn KMeans clustering ($k=3$) to cluster protein sequences against benchmark reference spaces.
+- **Feature Importance**: Fits Random Forest to identify and rank primary variance-driving features.
+- **Deep Learning Hook**: Provides integration hook for ESM-2 sequence embeddings.
+- **Persistence**: Writes clustering metrics to `output/{accession}/ml/clustering_results.json`.
+
+### 9. NGS Sequencing Integration (`proteinscope/stages/ngs.py`)
+- **Input Directory Scanner**: Scans `./input/ngs/` for sequencing data files.
+- **FASTQ Quality Profiling**: Computes total read counts, mean Phred quality score distribution, average read length, and GC content.
+- **BAM Alignment Metrics**: Inspects header and alignment statistics (`samtools flagstat` / internal parser).
+- **VCF Codon Mapping**: Reads variant call format (VCF) files, maps genomic SNVs to protein codon reading frames, and predicts amino acid substitutions using the standard genetic code.
+- **Graceful Fallback**: Safely handles absence of NGS data without halting pipeline execution.
+- **Persistence**: Outputs `output/{accession}/ngs/ngs_summary.json`.
+
+### 10. ClinVar Variant Data Ingestion (`proteinscope/stages/clinvar.py`)
+- **Curated Dataset Loading**: Ingests ClinVar missense variants for target proteins (e.g., TP53 / P04637) with clinical significance annotations.
+- **Binary Target Labeling**: Filters and standardizes classifications into binary labels (Pathogenic vs. Benign), filtering out ambiguous variants of uncertain significance (VUS).
+- **Position & Substitution Parsing**: Parses HGVS and legacy mutation nomenclatures into `(ref_aa, position, alt_aa)` tuples.
+
+### 11. Variant Structural & Evolutionary Feature Matrix (`proteinscope/stages/variant_features.py`)
+- **15+ Mutation-Specific Features**:
+  - *Physicochemical shifts*: $\Delta\text{MW}$, $\Delta\text{pI}$, $\Delta\text{Hydropathy}$ (Kyte-Doolittle), $\Delta\text{Charge}$, Grantham chemical distance.
+  - *Substitution matrix scores*: BLOSUM62 score for wild-type $\to$ mutant transition.
+  - *Structural context*: Wild-type Ramachandran zone, local secondary structure ($\alpha$-helix, $\beta$-sheet, coil), solvent accessibility (C$\alpha$ neighbor burial count).
+  - *Evolutionary conservation*: Position-specific conservation score computed across aligned homolog sequences.
+  - *Functional proximity*: Distance to annotated active sites, DNA-binding domains, and PTM positions.
+- **Persistence**: Exports training feature matrix to `output/{accession}/ml/variant_feature_matrix.csv`.
+
+### 12. Supervised Pathogenicity Classifier (`proteinscope/stages/pathogenicity.py`)
+- **Machine Learning Architecture**: Trains Random Forest classifier optimized with 5-fold cross-validation.
+- **Evaluation & Diagnostics**: Generates ROC-AUC curves, classification metrics (precision, recall, F1-score), feature importance bar plots (`figures/feature_importance.png`), and confusion matrices (`figures/confusion_matrix.png`).
+- **Prediction Pipeline**: Infers pathogenicity probability for single missense mutations (e.g., `R175H`), classifying as PATHOGENIC or BENIGN with confidence scores.
+- **Automated Structural Justification Engine**: Generates human-readable biological rationale detailing burial impact, charge alteration, chemical severity, and conservation impact.
+
+### 13. Pipeline Orchestrator & Multi-Format Reporting (`proteinscope/protein_analyzer.py`)
+- **Central Coordinator**: Coordinates all 13 stages, enforces configuration thresholds, handles logging, manages execution timing, and aggregates stage outputs into a cohesive state.
+- **Report Generation**:
+  - `report/report.json`: Comprehensive machine-readable report containing all raw and computed data.
+  - `report/summary.txt`: Publication-ready human-readable summary.
+  - `report/protein_viewer.html`: Interactive 3D WebGL dashboard with embedded 3Dmol.js viewer.
+  - `report/figures/`: Consolidated archive of all generated 300 DPI plots.
+
+---
+
+## Automation, Benchmarking & Testing
+
+### 1. Snakemake Automation (`Snakefile`)
+- Declarative workflow containing rules for each individual stage (`validate_input`, `fetch_data`, `sequence_analysis`, `blast_search`, `fetch_structures`, `validate_structure`, `visualize`, `comparative`, `ml_features`, `ngs`, `compile_report`).
+- Supports distributed execution, parallel job execution, and dependency caching.
+
+### 2. Multi-Protein Benchmark Suite (`benchmark.py`)
+- **10 Benchmark Proteins Across Diverse Taxa & Functions**:
+  - `P04637`: Human Cellular tumor antigen p53 (Homo sapiens)
+  - `P0DTC2`: SARS-CoV-2 Spike glycoprotein (Viral)
+  - `P01308`: Human Insulin (Hormone)
+  - `P68871`: Human Hemoglobin subunit beta (Transport)
+  - `P00533`: Human Epidermal growth factor receptor (Kinase / Receptor)
+  - `P69905`: Human Hemoglobin subunit alpha (Transport)
+  - `P11021`: Human 78 kDa glucose-regulated protein / BiP (Chaperone)
+  - `P27909`: E. coli DNA-directed RNA polymerase beta subunit (Bacterial)
+  - `P42212`: Aequorea victoria Green fluorescent protein / GFP (Fluorescent)
+  - `Q01959`: Human Dystrophin (Structural)
+- **Profiling & Reporting**: Measures stage runtimes, peak memory usage, success rates, and generates structured JSON summaries, Microsoft Word (`ProteinScope_Benchmark_Report.docx`), and PDF reports (`ProteinScope_Benchmark_Report.pdf`).
+
+### 3. Unit Test Suite (`tests/`)
+- `test_ingest.py`: Tests accession validation, XML/JSON parsing, and mocked REST API responses.
+- `test_sequence.py`: Tests ProtParam calculations, composition sums, and regex motif patterns.
+- `test_blast.py`: Tests BLAST XML parser, identity calculations, and zone interpretations.
+- `test_validate.py`: Tests Ramachandran angle math, geometry checks, and ML feature dimensions.
+
+---
+
+## CLI Usage & Hosting Guide
+
+### CLI Commands
+
+```powershell
+# Standard sequence & structure analysis
+.\bioinfo_env\Scripts\python.exe main.py P0DTC2
+
+# Pathogenicity prediction for specific missense mutation (auto-trains classifier if needed)
+.\bioinfo_env\Scripts\python.exe main.py P04637 --mutation R175H
+
+# Offline mode with cached data
+.\bioinfo_env\Scripts\python.exe main.py P04637 --mutation R175H --offline-blast --offline
+
+# Run full multi-protein benchmark suite
+.\bioinfo_env\Scripts\python.exe benchmark.py
+
+# Run unit tests
+.\bioinfo_env\Scripts\python.exe -m unittest discover tests
+```
+
+### Hosting & Viewing the Interactive Website
+
+The pipeline outputs an interactive 3D WebGL dashboard to `output/<ACCESSION>/report/protein_viewer.html`.
+
+1. **Local HTTP Server (Recommended)**:
+   ```powershell
+   .\bioinfo_env\Scripts\python.exe -m http.server 8080 --directory output
+   ```
+   Open in browser: `http://localhost:8080/P04637/report/protein_viewer.html` or `http://localhost:8080/P0DTC2/report/protein_viewer.html`
+
+2. **Direct Browser Launch**:
+   ```powershell
+   Start-Process "output\P04637\report\protein_viewer.html"
+   ```
+
+3. **Public Deployment**:
+   - Drag & drop the `output/` directory directly onto [Netlify Drop](https://app.netlify.com/drop) or [Vercel](https://vercel.com).
+   - Or commit the `output/` folder into a GitHub repository and enable **GitHub Pages** in repository settings.
+
+---
+
+## Output Directory Architecture
+
+```
+output/{ACCESSION}/
+├── sequences/
+│   └── {ACCESSION}.fasta
+├── raw_data/
+│   ├── {ACCESSION}.xml
+│   ├── {ACCESSION}.json
+│   └── {ACCESSION}.fasta
+├── structures/
+│   ├── experimental/{PDB_ID}.pdb
+│   ├── alphafold/AF-{ACCESSION}.pdb
+│   ├── homology/{ACCESSION}_model.pdb
+│   ├── structures_manifest.json
+│   ├── render_script.pml
+│   └── session.pse
+├── analysis/
+│   ├── sequence_properties.json
+│   ├── blast_results.json
+│   ├── blast_results.xml
+│   ├── comparative.json
+│   └── distance_matrix.csv
+├── validation/
+│   └── structure_validation.json
+├── figures/
+│   ├── ramachandran.png
+│   ├── structure_full.png
+│   ├── structure_surface.png
+│   ├── structure_domains.png
+│   ├── confusion_matrix.png
+│   └── feature_importance.png
+├── ml/
+│   ├── feature_matrix.csv
+│   ├── variant_feature_matrix.csv
+│   └── clustering_results.json
+├── ngs/
+│   └── ngs_summary.json
+├── report/
+│   ├── report.json
+│   ├── summary.txt
+│   ├── protein_viewer.html          <-- Interactive 3D WebGL Dashboard
+│   └── figures/
+└── run.log
+```

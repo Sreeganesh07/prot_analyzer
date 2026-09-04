@@ -1,0 +1,8 @@
+[2026-08-26 23:45:08] [INFO] [ProteinScope.P27909] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:45:08] [INFO] [ProteinScope.P27909] ============================================================
+[2026-08-26 23:45:08] [INFO] [ProteinScope.P27909] Starting ProteinScope Pipeline for accession: P27909
+[2026-08-26 23:45:08] [INFO] [ProteinScope.P27909] ============================================================
+[2026-08-26 23:45:08] [INFO] [ProteinScope.P27909] Stage 0 passed: Accession format validated and output directories created at ./output\P27909
+[2026-08-26 23:45:22] [INFO] [ProteinScope.P27909] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:45:22] [INFO] [ProteinScope.P27909] Final reports saved: ./output\P27909\report\report.json and ./output\P27909\report\summary.txt
+[2026-08-26 23:45:22] [INFO] [ProteinScope.P27909] Interactive 3D HTML Report generated at: ./output\P27909\report\protein_viewer.html

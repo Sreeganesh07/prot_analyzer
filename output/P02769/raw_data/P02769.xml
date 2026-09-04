@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="no" ?>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/docs/uniprot.xsd">
+<entry dataset="Swiss-Prot" created="1986-07-21" modified="2026-06-10" version="200" xmlns="http://uniprot.org/uniprot">
+  <accession>P02769</accession>
+  <accession>A5PJX3</accession>
+  <accession>O02787</accession>
+  <accession>P04277</accession>
+  <accession>Q3SZR2</accession>
+  <name>ALBU_BOVIN</name>
+  <protein>
+    <recommendedName>
+      <fullName>Albumin</fullName>
+    </recommendedName>
+    <alternativeName>
+      <fullName>BSA</fullName>
+    </alternativeName>
+    <allergenName>Bos d 6</allergenName>
+  </protein>
+  <gene>
+    <name type="primary">ALB</name>
+  </gene>
+  <organism>
+    <name type="scientific">Bos taurus</name>
+    <name type="common">Bovine</name>
+    <dbReference type="NCBI Taxonomy" id="9913"/>
+    <lineage>
+      <taxon>Eukaryota</taxon>
+      <taxon>Metazoa</taxon>
+      <taxon>Chordata</taxon>
+      <taxon>Craniata</taxon>
+      <taxon>Vertebrata</taxon>
+      <taxon>Euteleostomi</taxon>
+      <taxon>Mammalia</taxon>
+      <taxon>Eutheria</taxon>
+      <taxon>Laurasiatheria</taxon>
+      <taxon>Artiodactyla</taxon>
+      <taxon>Ruminantia</taxon>
+      <taxon>Pecora</taxon>
+      <taxon>Bovidae</taxon>
+      <taxon>Bovinae</taxon>
+      <taxon>Bos</taxon>
+    </lineage>
+  </organism>
+  <reference key="1">
+    <citation type="submission" date="1991-08" db="EMBL/GenBank/DDBJ databases">
+      <title>Bovine serum albumin: cDNA sequence and expression.</title>
+      <authorList>
+        <person name="Holowachuk E.W."/>
+        <person name="Stoltenborg J.K."/>
+        <person name="Reed R.G."/>
+        <person name="Peters T. Jr."/>
+      </authorList>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+  </reference>
+  <reference key="2">
+    <citation type="submission" date="1994-07" db="EMBL/GenBank/DDBJ databases">
+      <title>The bovine serum albumin mRNA.</title>
+      <authorList>
+        <person name="Barry T."/>
+        <person name="Power S."/>
+        <person name="Gannon F."/>
+      </authorList>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+    <scope>VARIANT THR-214</scope>
+    <source>
+      <tissue>Liver</tissue>
+    </source>
+  </reference>
+  <reference key="3">
+    <citation type="journal article" date="2001" name="Clin. Exp. Immunol." volume="123" first="387" last="394">
+      <title>Differential binding of IgG and IgA antibodies to antigenic determinants of bovine serum albumin.</title>
+      <authorList>
+        <person name="Hilger C."/>
+        <person name="Grigioni F."/>
+        <person name="De Beaufort C."/>
+        <person name="Michel G."/>
+        <person name="Freilinger J."/>
+        <person name="Hentges F."/>
+      </authorList>
+      <dbReference type="PubMed" id="11298124"/>
+      <dbReference type="DOI" id="10.1046/j.1365-2249.2001.01451.x"/>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+    <source>
+      <tissue>Liver</tissue>
+    </source>
+  </reference>
+  <reference key="4">
+    <citation type="submission" date="2002-08" db="EMBL/GenBank/DDBJ databases">
+      <title>The complete cDNA sequence of bovine serum albumin.</title>
+      <authorList>
+        <person name="Wu H.T."/>
+        <person name="Huang M.C."/>
+      </authorList>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [MRNA]</scope>
+    <scope>VARIANT THR-214</scope>
+  </reference>
+  <reference key="5">
+    <citation type="submission" date="2007-06" db="EMBL/GenBank/DDBJ databases">
+      <authorList>
+        <consortium name="NIH - Mammalian Gene Collection (MGC) project"/>
+      </authorList>
+    </citation>
+    <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]</scope>
+    <scope>VARIANT THR-214</scope>
+    <source>
+      <strain>Hereford</strain>
+      <tissue>Fetal liver</tissue>
+      <tissue>Testis</tissue>
+    </source>
+  </reference>
+  <reference key="6">
+    <citation type="journal article" date="1979" name="Eur. J. Biochem." volume="98" first="477" last="485">
+      <title>Biosynthesis of bovine plasma proteins in a cell-free system. Amino-terminal sequence of preproalbumin.</title>
+      <authorList>
+        <person name="McGillivray R.T.A."/>
+        <person name="Chung D.W."/>
+        <person name="Davie E.W."/>
+      </authorList>
+      <dbReference type="PubMed" id="488109"/>
+      <dbReference type="DOI" id="10.1111/j.1432-1033.1979.tb13209.x"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 1-32 (PRECURSOR PROTEIN)</scope>
+  </reference>
+  <reference key="7">
+    <citation type="journal article" date="1977" name="Biochem. Biophys. Res. Commun." volume="74" first="1220" last="1226">
+      <title>Bovine microsomal albumin: amino terminal sequence of bovine proalbumin.</title>
+      <authorList>
+        <person name="Patterson J.E."/>
+        <person name="Geller D.M."/>
+      </authorList>
+      <dbReference type="PubMed" id="843354"/>
+      <dbReference type="DOI" id="10.1016/0006-291x(77)91648-5"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 19-28</scope>
+  </reference>
+  <reference key="8">
+    <citation type="journal article" date="1990" name="Biochem. Biophys. Res. Commun." volume="173" first="639" last="646">
+      <title>Rapid confirmation and revision of the primary structure of bovine serum albumin by ESIMS and Frit-FAB LC/MS.</title>
+      <authorList>
+        <person name="Hirayama K."/>
+        <person name="Akashi S."/>
+        <person name="Furuya M."/>
+        <person name="Fukuhara K."/>
+      </authorList>
+      <dbReference type="PubMed" id="2260975"/>
+      <dbReference type="DOI" id="10.1016/s0006-291x(05)80083-x"/>
+    </citation>
+    <scope>PARTIAL PROTEIN SEQUENCE</scope>
+    <scope>SEQUENCE REVISION TO 118-119 AND 180</scope>
+  </reference>
+  <reference key="9">
+    <citation type="journal article" date="1975" name="Fed. Proc." volume="34" first="591" last="591">
+      <title>Structure of bovine serum albumin.</title>
+      <authorList>
+        <person name="Brown J.R."/>
+      </authorList>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 25-424 AND 429-607</scope>
+    <scope>VARIANT THR-214</scope>
+  </reference>
+  <reference key="10">
+    <citation type="submission" date="1975-04" db="PIR data bank">
+      <authorList>
+        <person name="Brown J.R."/>
+      </authorList>
+    </citation>
+    <scope>SEQUENCE REVISION TO 190-195</scope>
+  </reference>
+  <reference key="11">
+    <citation type="journal article" date="1990" name="Eur. J. Biochem." volume="191" first="47" last="56">
+      <title>Tooth 'enamelins' identified mainly as serum proteins. Major 'enamelin' is albumin.</title>
+      <authorList>
+        <person name="Strawich E."/>
+        <person name="Glimcher M.J."/>
+      </authorList>
+      <dbReference type="PubMed" id="2379503"/>
+      <dbReference type="DOI" id="10.1111/j.1432-1033.1990.tb19092.x"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 25-64</scope>
+  </reference>
+  <reference key="12">
+    <citation type="journal article" date="1988" name="Anal. Biochem." volume="170" first="1" last="8">
+      <title>Electroblotting onto glass-fiber filter from an analytical isoelectrofocusing gel: a preparative method for isolating proteins for N-terminal microsequencing.</title>
+      <authorList>
+        <person name="Hsieh J.C."/>
+        <person name="Lin F.P."/>
+        <person name="Tam M.F."/>
+      </authorList>
+      <dbReference type="PubMed" id="3389500"/>
+      <dbReference type="DOI" id="10.1016/0003-2697(88)90082-6"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 25-41</scope>
+  </reference>
+  <reference key="13">
+    <citation type="journal article" date="1989" name="J. Immunol." volume="143" first="1680" last="1684">
+      <title>Structures of histamine-releasing peptides formed by the action of acid proteases on mammalian albumin(s).</title>
+      <authorList>
+        <person name="Carraway R.E."/>
+        <person name="Cochrane D.E."/>
+        <person name="Boucher W."/>
+        <person name="Mitra S.P."/>
+      </authorList>
+      <dbReference type="PubMed" id="2474609"/>
+      <dbReference type="DOI" id="10.4049/jimmunol.143.5.1680"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 163-172</scope>
+  </reference>
+  <reference key="14">
+    <citation type="journal article" date="1987" name="J. Biol. Chem." volume="262" first="5968" last="5973">
+      <title>Structure of a biologically active neurotensin-related peptide obtained from pepsin-treated albumin(s).</title>
+      <authorList>
+        <person name="Carraway R.E."/>
+        <person name="Mitra S.P."/>
+        <person name="Cochrane D.E."/>
+      </authorList>
+      <dbReference type="PubMed" id="2437111"/>
+      <dbReference type="DOI" id="10.1016/s0021-9258(18)45523-8"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 165-173</scope>
+    <source>
+      <tissue>Plasma</tissue>
+    </source>
+  </reference>
+  <reference key="15">
+    <citation type="journal article" date="1980" name="Biochem. J." volume="191" first="867" last="868">
+      <title>Sequence of residues 400-403 of bovine serum albumin.</title>
+      <authorList>
+        <person name="Reed R.G."/>
+        <person name="Putnam F.W."/>
+        <person name="Peters T. Jr."/>
+      </authorList>
+      <dbReference type="PubMed" id="7283978"/>
+      <dbReference type="DOI" id="10.1042/bj1910867"/>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 402-433</scope>
+  </reference>
+  <reference key="16">
+    <citation type="submission" date="1998-08" db="UniProtKB">
+      <authorList>
+        <person name="Vilbois F."/>
+      </authorList>
+    </citation>
+    <scope>PROTEIN SEQUENCE OF 437-451</scope>
+  </reference>
+  <reference key="17">
+    <citation type="journal article" date="1974" name="Fed. Proc." volume="33" first="1389" last="1389">
+      <title>Structure of serum albumin: disulfide bridges.</title>
+      <authorList>
+        <person name="Brown J.R."/>
+      </authorList>
+    </citation>
+    <scope>DISULFIDE BONDS</scope>
+  </reference>
+  <reference key="18">
+    <citation type="journal article" date="1984" name="Biochemistry" volume="23" first="2122" last="2127">
+      <title>Effect of serum albumin on siderophore-mediated utilization of transferrin iron.</title>
+      <authorList>
+        <person name="Konopka K."/>
+        <person name="Neilands J.B."/>
+      </authorList>
+      <dbReference type="PubMed" id="6234017"/>
+      <dbReference type="DOI" id="10.1021/bi00305a003"/>
+    </citation>
+    <scope>FUNCTION</scope>
+  </reference>
+  <reference evidence="19" key="19">
+    <citation type="journal article" date="2011" name="Structure" volume="19" first="722" last="732">
+      <title>Advanced glycation end product recognition by the receptor for AGEs.</title>
+      <authorList>
+        <person name="Xue J."/>
+        <person name="Rai V."/>
+        <person name="Singer D."/>
+        <person name="Chabierski S."/>
+        <person name="Xie J."/>
+        <person name="Reverdatto S."/>
+        <person name="Burz D.S."/>
+        <person name="Schmidt A.M."/>
+        <person name="Hoffmann R."/>
+        <person name="Shekhtman A."/>
+      </authorList>
+      <dbReference type="PubMed" id="21565706"/>
+      <dbReference type="DOI" id="10.1016/j.str.2011.02.013"/>
+    </citation>
+    <scope>STRUCTURE BY NMR OF 148-154</scope>
+    <scope>GLYCATION AT LYS-151</scope>
+  </reference>
+  <reference evidence="21" key="20">
+    <citation type="journal article" date="2012" name="Acta Crystallogr. D" volume="68" first="1278" last="1289">
+      <title>Structures of bovine, equine and leporine serum albumin.</title>
+      <authorList>
+        <person name="Bujacz A."/>
+      </authorList>
+      <dbReference type="PubMed" id="22993082"/>
+      <dbReference type="DOI" id="10.1107/s0907444912027047"/>
+    </citation>
+    <scope>X-RAY CRYSTALLOGRAPHY (2.47 ANGSTROMS) OF 25-607</scope>
+    <scope>DISULFIDE BONDS</scope>
+    <scope>VARIANT THR-214</scope>
+  </reference>
+  <reference evidence="20" key="21">
+    <citation type="journal article" date="2012" name="Mol. Immunol." volume="52" first="174" last="182">
+      <title>Structural and immunologic characterization of bovine, horse, and rabbit serum albumins.</title>
+      <authorList>
+        <person name="Majorek K.A."/>
+        <person name="Porebski P.J."/>
+        <person name="Dayal A."/>
+        <person name="Zimmerman M.D."/>
+        <person name="Jablonska K."/>
+        <person name="Stewart A.J."/>
+        <person name="Chruszcz M."/>
+        <person name="Minor W."/>
+      </authorList>
+      <dbReference type="PubMed" id="22677715"/>
+      <dbReference type="DOI" id="10.1016/j.molimm.2012.05.011"/>
+    </citation>
+    <scope>X-RAY CRYSTALLOGRAPHY (2.70 ANGSTROMS) OF 25-607 IN COMPLEX WITH CALCIUM</scope>
+    <scope>FUNCTION</scope>
+    <scope>DISULFIDE BONDS</scope>
+  </reference>
+  <reference evidence="22" key="22">
+    <citation type="journal article" date="2013" name="Int. J. Biol. Macromol." volume="60" first="316" last="324">
+      <title>Crystallographic studies of the complexes of bovine and equine serum albumin with 3,5-diiodosalicylic acid.</title>
+      <authorList>
+        <person name="Sekula B."/>
+        <person name="Zielinski K."/>
+        <person name="Bujacz A."/>
+      </authorList>
+      <dbReference type="PubMed" id="23769932"/>
+      <dbReference type="DOI" id="10.1016/j.ijbiomac.2013.06.004"/>
+    </citation>
+    <scope>X-RAY CRYSTALLOGRAPHY (2.65 ANGSTROMS) OF 25-607 IN COMPLEX WITH CALCIUM</scope>
+    <scope>DISULFIDE BONDS</scope>
+  </reference>
+  <reference evidence="23" key="23">
+    <citation type="journal article" date="2014" name="Proteins" volume="82" first="2199" last="2208">
+      <title>Structural studies of bovine, equine, and leporine serum albumin complexes with naproxen.</title>
+      <authorList>
+        <person name="Bujacz A."/>
+        <person name="Zielinski K."/>
+        <person name="Sekula B."/>
+      </authorList>
+      <dbReference type="PubMed" id="24753230"/>
+      <dbReference type="DOI" id="10.1002/prot.24583"/>
+    </citation>
+    <scope>X-RAY CRYSTALLOGRAPHY (2.58 ANGSTROMS) OF 25-607</scope>
+    <scope>DISULFIDE BONDS</scope>
+  </reference>
+  <comment type="function">
+    <text evidence="1 6 9 17">Binds water, Ca(2+), Na(+), K(+), fatty acids, hormones, bilirubin and drugs. Its main function is the regulation of the colloidal osmotic pressure of blood. Major zinc transporter in plasma, typically binds about 80% of all plasma zinc (By similarity). Major calcium and magnesium transporter in plasma, binds approximately 45% of circulating calcium and magnesium in plasma (Probable). Potentially has more than two calcium-binding sites and might additionally bind calcium in a non-specific manner (PubMed:22677715). The shared binding site between zinc and calcium at residue Asp-272 suggests a crosstalk between zinc and calcium transport in the blood (Probable). The rank order of affinity is zinc &gt; calcium &gt; magnesium (Probable). Binds to the bacterial siderophore enterobactin and inhibits enterobactin-mediated iron uptake of E.coli, and may thereby limit the utilization of iron and growth of enteric bacteria such as E.coli (PubMed:6234017). Does not prevent iron uptake by the bacterial siderophore aerobactin (PubMed:6234017).</text>
+  </comment>
+  <comment type="subunit">
+    <text evidence="1">Interacts with FCGRT; this interaction regulates ALB homeostasis (By similarity). In plasma, occurs in a covalently-linked complex with chromophore-bound alpha-1-microglobulin; this interaction does not prevent fatty acid binding to ALB.</text>
+  </comment>
+  <comment type="interaction">
+    <interactant intactId="EBI-2296927">
+      <id>P02769</id>
+    </interactant>
+    <interactant intactId="EBI-27104631">
+      <id>Q9BXI9-2</id>
+      <label>C1QTNF6</label>
+    </interactant>
+    <organismsDiffer>true</organismsDiffer>
+    <experiments>4</experiments>
+  </comment>
+  <comment type="interaction">
+    <interactant intactId="EBI-2296927">
+      <id>P02769</id>
+    </interactant>
+    <interactant intactId="EBI-1223708">
+      <id>P08603</id>
+      <label>CFH</label>
+    </interactant>
+    <organismsDiffer>true</organismsDiffer>
+    <experiments>10</experiments>
+  </comment>
+  <comment type="interaction">
+    <interactant intactId="EBI-2296927">
+      <id>P02769</id>
+    </interactant>
+    <interactant intactId="EBI-11784425">
+      <id>PRO_0000009136</id>
+      <label>FCN1</label>
+      <dbReference type="UniProtKB" id="O00602"/>
+    </interactant>
+    <organismsDiffer>true</organismsDiffer>
+    <experiments>2</experiments>
+  </comment>
+  <comment type="subcellular location">
+    <subcellularLocation>
+      <location>Secreted</location>
+    </subcellularLocation>
+  </comment>
+  <comment type="tissue specificity">
+    <text>Plasma.</text>
+  </comment>
+  <comment type="PTM">
+    <text evidence="1">Phosphorylated by FAM20C in the extracellular medium.</text>
+  </comment>
+  <comment type="allergen">
+    <text>Can cause allergic reactions in humans.</text>
+  </comment>
+  <comment type="similarity">
+    <text evidence="4">Belongs to the ALB/AFP/VDB family.</text>
+  </comment>
+  <comment type="caution">
+    <text evidence="18">A peptide arising from positions 165 to 173 was originally termed neurotensin-related peptide (NRP) and was thought to regulate fat digestion, lipid absorption, and blood flow.</text>
+  </comment>
+  <dbReference type="EMBL" id="M73993">
+    <property type="protein sequence ID" value="AAA51411.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="X58989">
+    <property type="protein sequence ID" value="CAA41735.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="Y17769">
+    <property type="protein sequence ID" value="CAA76847.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="AF542068">
+    <property type="protein sequence ID" value="AAN17824.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="BC102742">
+    <property type="protein sequence ID" value="AAI02743.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="EMBL" id="BC142272">
+    <property type="protein sequence ID" value="AAI42273.1"/>
+    <property type="molecule type" value="mRNA"/>
+  </dbReference>
+  <dbReference type="PIR" id="A38885">
+    <property type="entry name" value="ABBOS"/>
+  </dbReference>
+  <dbReference type="RefSeq" id="NP_851335.1">
+    <property type="nucleotide sequence ID" value="NM_180992.2"/>
+  </dbReference>
+  <dbReference type="PDB" id="2L7U">
+    <property type="method" value="NMR"/>
+    <property type="chains" value="B=148-154"/>
+  </dbReference>
+  <dbReference type="PDB" id="3V03">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="2.70 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="4F5S">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="2.47 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="4JK4">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="2.65 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="4OR0">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="2.58 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="6QS9">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="2.80 A"/>
+    <property type="chains" value="A/B=1-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="6RJV">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="3.21 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="8KFO">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="3.60 A"/>
+    <property type="chains" value="A/B=1-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="8WDD">
+    <property type="method" value="X-ray"/>
+    <property type="resolution" value="3.90 A"/>
+    <property type="chains" value="A/B=25-607"/>
+  </dbReference>
+  <dbReference type="PDB" id="9QQD">
+    <property type="method" value="EM"/>
+    <property type="resolution" value="3.10 A"/>
+    <property type="chains" value="A=28-605"/>
+  </dbReference>
+  <dbReference type="PDBsum" id="2L7U"/>
+  <dbReference type="PDBsum" id="3V03"/>
+  <dbReference type="PDBsum" id="4F5S"/>
+  <dbReference type="PDBsum" id="4JK4"/>
+  <dbReference type="PDBsum" id="4OR0"/>
+  <dbReference type="PDBsum" id="6QS9"/>
+  <dbReference type="PDBsum" id="6RJV"/>
+  <dbReference type="PDBsum" id="8KFO"/>
+  <dbReference type="PDBsum" id="8WDD"/>
+  <dbReference type="PDBsum" id="9QQD"/>
+  <dbReference type="AlphaFoldDB" id="P02769"/>
+  <dbReference type="BMRB" id="P02769"/>
+  <dbReference type="EMDB" id="EMD-10794"/>
+  <dbReference type="EMDB" id="EMD-53298"/>
+  <dbReference type="SASBDB" id="P02769"/>
+  <dbReference type="SMR" id="P02769"/>
+  <dbReference type="BioGRID" id="158123">
+    <property type="interactions" value="5"/>
+  </dbReference>
+  <dbReference type="FunCoup" id="P02769">
+    <property type="interactions" value="275"/>
+  </dbReference>
+  <dbReference type="IntAct" id="P02769">
+    <property type="interactions" value="15"/>
+  </dbReference>
+  <dbReference type="STRING" id="9913.ENSBTAP00000022763"/>
+  <dbReference type="BindingDB" id="P02769"/>
+  <dbReference type="ChEMBL" id="CHEMBL3728"/>
+  <dbReference type="DrugCentral" id="P02769"/>
+  <dbReference type="Allergome" id="165">
+    <property type="allergen name" value="Bos d 6"/>
+  </dbReference>
+  <dbReference type="Allergome" id="3166">
+    <property type="allergen name" value="Bos d 6.0101"/>
+  </dbReference>
+  <dbReference type="CarbonylDB" id="P02769"/>
+  <dbReference type="GlyCosmos" id="P02769">
+    <property type="glycosylation" value="1 site, No reported glycans"/>
+  </dbReference>
+  <dbReference type="GlyGen" id="P02769">
+    <property type="glycosylation" value="1 site, 1 O-linked glycan (1 site)"/>
+  </dbReference>
+  <dbReference type="PaxDb" id="9913-ENSBTAP00000022763"/>
+  <dbReference type="PeptideAtlas" id="P02769"/>
+  <dbReference type="PRIDE" id="P02769"/>
+  <dbReference type="ABCD" id="P02769">
+    <property type="antibodies" value="3 sequenced antibodies"/>
+  </dbReference>
+  <dbReference type="GeneID" id="280717"/>
+  <dbReference type="KEGG" id="bta:280717"/>
+  <dbReference type="CTD" id="213"/>
+  <dbReference type="eggNOG" id="ENOG502R7EA">
+    <property type="taxonomic scope" value="Eukaryota"/>
+  </dbReference>
+  <dbReference type="HOGENOM" id="CLU_030161_0_0_1"/>
+  <dbReference type="InParanoid" id="P02769"/>
+  <dbReference type="OrthoDB" id="9875082at2759"/>
+  <dbReference type="SABIO-RK" id="P02769"/>
+  <dbReference type="EvolutionaryTrace" id="P02769"/>
+  <dbReference type="PRO" id="PR:P02769"/>
+  <dbReference type="Proteomes" id="UP000009136">
+    <property type="component" value="Unplaced"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0005576">
+    <property type="term" value="C:extracellular region"/>
+    <property type="evidence" value="ECO:0000304"/>
+    <property type="project" value="Reactome"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0005615">
+    <property type="term" value="C:extracellular space"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="InterPro"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0032991">
+    <property type="term" value="C:protein-containing complex"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0003677">
+    <property type="term" value="F:DNA binding"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:1903981">
+    <property type="term" value="F:enterobactin binding"/>
+    <property type="evidence" value="ECO:0000314"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0005504">
+    <property type="term" value="F:fatty acid binding"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0046872">
+    <property type="term" value="F:metal ion binding"/>
+    <property type="evidence" value="ECO:0000501"/>
+    <property type="project" value="UniProtKB-KW"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0030170">
+    <property type="term" value="F:pyridoxal phosphate binding"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0015643">
+    <property type="term" value="F:toxic substance binding"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0072732">
+    <property type="term" value="P:cellular response to calcium ion starvation"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0009267">
+    <property type="term" value="P:cellular response to starvation"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0051902">
+    <property type="term" value="P:negative regulation of mitochondrial depolarization"/>
+    <property type="evidence" value="ECO:0000250"/>
+    <property type="project" value="UniProtKB"/>
+  </dbReference>
+  <dbReference type="GO" id="GO:0031667">
+    <property type="term" value="P:response to nutrient levels"/>
+    <property type="evidence" value="ECO:0000318"/>
+    <property type="project" value="GO_Central"/>
+  </dbReference>
+  <dbReference type="CDD" id="cd00015">
+    <property type="entry name" value="ALBUMIN"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <dbReference type="FunFam" id="1.10.246.10:FF:000001">
+    <property type="entry name" value="Serum albumin"/>
+    <property type="match status" value="2"/>
+  </dbReference>
+  <dbReference type="FunFam" id="1.10.246.10:FF:000002">
+    <property type="entry name" value="Serum albumin"/>
+    <property type="match status" value="2"/>
+  </dbReference>
+  <dbReference type="FunFam" id="1.10.246.10:FF:000003">
+    <property type="entry name" value="Serum albumin"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="Gene3D" id="1.10.246.10">
+    <property type="match status" value="6"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR000264">
+    <property type="entry name" value="ALB/AFP/VDB"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR020858">
+    <property type="entry name" value="Serum_albumin-like"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR021177">
+    <property type="entry name" value="Serum_albumin/AFP/Afamin"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR020857">
+    <property type="entry name" value="Serum_albumin_CS"/>
+  </dbReference>
+  <dbReference type="InterPro" id="IPR014760">
+    <property type="entry name" value="Serum_albumin_N"/>
+  </dbReference>
+  <dbReference type="PANTHER" id="PTHR11385:SF15">
+    <property type="entry name" value="ALBUMIN"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="PANTHER" id="PTHR11385">
+    <property type="entry name" value="SERUM ALBUMIN-RELATED"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="Pfam" id="PF00273">
+    <property type="entry name" value="Serum_albumin"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <dbReference type="PIRSF" id="PIRSF002520">
+    <property type="entry name" value="Serum_albumin_subgroup"/>
+    <property type="match status" value="1"/>
+  </dbReference>
+  <dbReference type="PRINTS" id="PR00803">
+    <property type="entry name" value="AFETOPROTEIN"/>
+  </dbReference>
+  <dbReference type="PRINTS" id="PR00802">
+    <property type="entry name" value="SERUMALBUMIN"/>
+  </dbReference>
+  <dbReference type="SMART" id="SM00103">
+    <property type="entry name" value="ALBUMIN"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <dbReference type="SUPFAM" id="SSF48552">
+    <property type="entry name" value="Serum albumin-like"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <dbReference type="PROSITE" id="PS00212">
+    <property type="entry name" value="ALBUMIN_1"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <dbReference type="PROSITE" id="PS51438">
+    <property type="entry name" value="ALBUMIN_2"/>
+    <property type="match status" value="3"/>
+  </dbReference>
+  <proteinExistence type="evidence at protein level"/>
+  <keyword id="KW-0002">3D-structure</keyword>
+  <keyword id="KW-0020">Allergen</keyword>
+  <keyword id="KW-0106">Calcium</keyword>
+  <keyword id="KW-0165">Cleavage on pair of basic residues</keyword>
+  <keyword id="KW-0186">Copper</keyword>
+  <keyword id="KW-0903">Direct protein sequencing</keyword>
+  <keyword id="KW-1015">Disulfide bond</keyword>
+  <keyword id="KW-0971">Glycation</keyword>
+  <keyword id="KW-0325">Glycoprotein</keyword>
+  <keyword id="KW-0446">Lipid-binding</keyword>
+  <keyword id="KW-0479">Metal-binding</keyword>
+  <keyword id="KW-0488">Methylation</keyword>
+  <keyword id="KW-0597">Phosphoprotein</keyword>
+  <keyword id="KW-1185">Reference proteome</keyword>
+  <keyword id="KW-0677">Repeat</keyword>
+  <keyword id="KW-0964">Secreted</keyword>
+  <keyword id="KW-0732">Signal</keyword>
+  <keyword id="KW-0862">Zinc</keyword>
+  <feature type="signal peptide" evidence="10">
+    <location>
+      <begin position="1"/>
+      <end position="18"/>
+    </location>
+  </feature>
+  <feature type="propeptide" id="PRO_0000001057">
+    <location>
+      <begin position="19"/>
+      <end position="24"/>
+    </location>
+  </feature>
+  <feature type="chain" id="PRO_0000001058" description="Albumin">
+    <location>
+      <begin position="25"/>
+      <end position="607"/>
+    </location>
+  </feature>
+  <feature type="domain" description="Albumin 1" evidence="4">
+    <location>
+      <begin position="19"/>
+      <end position="209"/>
+    </location>
+  </feature>
+  <feature type="domain" description="Albumin 2" evidence="4">
+    <location>
+      <begin position="210"/>
+      <end position="402"/>
+    </location>
+  </feature>
+  <feature type="domain" description="Albumin 3" evidence="4">
+    <location>
+      <begin position="403"/>
+      <end position="600"/>
+    </location>
+  </feature>
+  <feature type="binding site" evidence="2">
+    <location>
+      <position position="27"/>
+    </location>
+    <ligand>
+      <name>Cu cation</name>
+      <dbReference type="ChEBI" id="CHEBI:23378"/>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 20">
+    <location>
+      <position position="30"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>1</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 8 20 22">
+    <location>
+      <position position="37"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>2</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="1">
+    <location>
+      <position position="91"/>
+    </location>
+    <ligand>
+      <name>Zn(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29105"/>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 8 20 22">
+    <location>
+      <position position="267"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>1</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="1">
+    <location>
+      <position position="270"/>
+    </location>
+    <ligand>
+      <name>Zn(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29105"/>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 20">
+    <location>
+      <position position="272"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>1</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="1">
+    <location>
+      <position position="272"/>
+    </location>
+    <ligand>
+      <name>Zn(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29105"/>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 8 20 22">
+    <location>
+      <position position="275"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>1</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 8 20 22">
+    <location>
+      <position position="278"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>2</label>
+    </ligand>
+  </feature>
+  <feature type="binding site" evidence="6 8 20 22">
+    <location>
+      <position position="282"/>
+    </location>
+    <ligand>
+      <name>Ca(2+)</name>
+      <dbReference type="ChEBI" id="CHEBI:29108"/>
+      <label>2</label>
+    </ligand>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="1">
+    <location>
+      <position position="29"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="1">
+    <location>
+      <position position="82"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="1">
+    <location>
+      <position position="89"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphothreonine" evidence="1">
+    <location>
+      <position position="107"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="N6-succinyllysine" evidence="3">
+    <location>
+      <position position="228"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="3">
+    <location>
+      <position position="296"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="1">
+    <location>
+      <position position="442"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphothreonine" evidence="1">
+    <location>
+      <position position="443"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphothreonine" evidence="1">
+    <location>
+      <position position="445"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphoserine" evidence="1">
+    <location>
+      <position position="512"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="N6-methyllysine" evidence="1">
+    <location>
+      <position position="557"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="Phosphothreonine" evidence="2">
+    <location>
+      <position position="569"/>
+    </location>
+  </feature>
+  <feature type="modified residue" description="N6-succinyllysine" evidence="3">
+    <location>
+      <position position="587"/>
+    </location>
+  </feature>
+  <feature type="glycosylation site" description="N-linked (Glc) (glycation) lysine; in vitro" evidence="5">
+    <location>
+      <position position="151"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="77"/>
+      <end position="86"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="99"/>
+      <end position="115"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="114"/>
+      <end position="125"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="147"/>
+      <end position="192"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="191"/>
+      <end position="200"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="223"/>
+      <end position="269"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="268"/>
+      <end position="276"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="288"/>
+      <end position="302"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="301"/>
+      <end position="312"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="339"/>
+      <end position="384"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="383"/>
+      <end position="392"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="415"/>
+      <end position="461"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="460"/>
+      <end position="471"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="484"/>
+      <end position="500"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="499"/>
+      <end position="510"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="537"/>
+      <end position="582"/>
+    </location>
+  </feature>
+  <feature type="disulfide bond" evidence="4 6 7 8 11 20 21 22 23">
+    <location>
+      <begin position="581"/>
+      <end position="590"/>
+    </location>
+  </feature>
+  <feature type="sequence variant" evidence="7 12 13 14 15">
+    <original>A</original>
+    <variation>T</variation>
+    <location>
+      <position position="214"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 11; AA sequence." evidence="16" ref="11">
+    <location>
+      <position position="58"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 5; AAI02743." evidence="16" ref="5">
+    <original>E</original>
+    <variation>A</variation>
+    <location>
+      <position position="116"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 14; AA sequence." evidence="16" ref="14">
+    <original>Y</original>
+    <variation>L</variation>
+    <location>
+      <position position="173"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 9; AA sequence." evidence="16" ref="9">
+    <original>C</original>
+    <variation>K</variation>
+    <location>
+      <position position="302"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 9; AA sequence." evidence="16" ref="9">
+    <original>KP</original>
+    <variation>PC</variation>
+    <location>
+      <begin position="304"/>
+      <end position="305"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 9; AA sequence." evidence="16" ref="9">
+    <original>N</original>
+    <variation>D</variation>
+    <location>
+      <position position="324"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 9; AA sequence." evidence="16" ref="9">
+    <original>ST</original>
+    <variation>TS</variation>
+    <location>
+      <begin position="394"/>
+      <end position="395"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 5; AAI02743." evidence="16" ref="5">
+    <original>A</original>
+    <variation>E</variation>
+    <location>
+      <position position="429"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 16; AA sequence." evidence="16" ref="16">
+    <original>K</original>
+    <variation>R</variation>
+    <location>
+      <position position="437"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 5; AAI02743." evidence="16" ref="5">
+    <original>T</original>
+    <variation>A</variation>
+    <location>
+      <position position="472"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 9; AA sequence." evidence="16" ref="9">
+    <original>SE</original>
+    <variation>ES</variation>
+    <location>
+      <begin position="493"/>
+      <end position="494"/>
+    </location>
+  </feature>
+  <feature type="sequence conflict" description="In Ref. 5; AAI02743." evidence="16" ref="5">
+    <original>D</original>
+    <variation>G</variation>
+    <location>
+      <position position="579"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="30"/>
+      <end position="38"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="40"/>
+      <end position="54"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="25">
+    <location>
+      <begin position="56"/>
+      <end position="58"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="60"/>
+      <end position="79"/>
+    </location>
+  </feature>
+  <feature type="turn" evidence="25">
+    <location>
+      <begin position="84"/>
+      <end position="87"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="90"/>
+      <end position="99"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="104"/>
+      <end position="108"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="109"/>
+      <end position="116"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="121"/>
+      <end position="127"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="24">
+    <location>
+      <begin position="136"/>
+      <end position="139"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="143"/>
+      <end position="152"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="154"/>
+      <end position="168"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="28">
+    <location>
+      <begin position="169"/>
+      <end position="171"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="174"/>
+      <end position="191"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="27">
+    <location>
+      <begin position="194"/>
+      <end position="196"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="197"/>
+      <end position="229"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="231"/>
+      <end position="245"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="28">
+    <location>
+      <begin position="247"/>
+      <end position="249"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="251"/>
+      <end position="269"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="273"/>
+      <end position="288"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="291"/>
+      <end position="294"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="26">
+    <location>
+      <begin position="296"/>
+      <end position="298"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="301"/>
+      <end position="303"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="306"/>
+      <end position="315"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="316"/>
+      <end position="322"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="325"/>
+      <end position="327"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="329"/>
+      <end position="332"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="338"/>
+      <end position="344"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="346"/>
+      <end position="360"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="366"/>
+      <end position="385"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="26">
+    <location>
+      <begin position="386"/>
+      <end position="388"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="389"/>
+      <end position="393"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="396"/>
+      <end position="403"/>
+    </location>
+  </feature>
+  <feature type="turn" evidence="25">
+    <location>
+      <begin position="404"/>
+      <end position="407"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="408"/>
+      <end position="437"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="443"/>
+      <end position="460"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="25">
+    <location>
+      <begin position="461"/>
+      <end position="463"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="465"/>
+      <end position="489"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="494"/>
+      <end position="502"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="507"/>
+      <end position="512"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="26">
+    <location>
+      <begin position="518"/>
+      <end position="520"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="521"/>
+      <end position="525"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="527"/>
+      <end position="530"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="534"/>
+      <end position="537"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="541"/>
+      <end position="558"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="564"/>
+      <end position="583"/>
+    </location>
+  </feature>
+  <feature type="strand" evidence="27">
+    <location>
+      <begin position="584"/>
+      <end position="586"/>
+    </location>
+  </feature>
+  <feature type="helix" evidence="25">
+    <location>
+      <begin position="587"/>
+      <end position="606"/>
+    </location>
+  </feature>
+  <evidence type="ECO:0000250" key="1">
+    <source>
+      <dbReference type="UniProtKB" id="P02768"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000250" key="2">
+    <source>
+      <dbReference type="UniProtKB" id="P02770"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000250" key="3">
+    <source>
+      <dbReference type="UniProtKB" id="P07724"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000255" key="4">
+    <source>
+      <dbReference type="PROSITE-ProRule" id="PRU00769"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="5">
+    <source>
+      <dbReference type="PubMed" id="21565706"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="6">
+    <source>
+      <dbReference type="PubMed" id="22677715"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="7">
+    <source>
+      <dbReference type="PubMed" id="22993082"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="8">
+    <source>
+      <dbReference type="PubMed" id="23769932"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="9">
+    <source>
+      <dbReference type="PubMed" id="6234017"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="10">
+    <source>
+      <dbReference type="PubMed" id="843354"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000269" key="11">
+    <source ref="17"/>
+  </evidence>
+  <evidence type="ECO:0000269" key="12">
+    <source ref="2"/>
+  </evidence>
+  <evidence type="ECO:0000269" key="13">
+    <source ref="4"/>
+  </evidence>
+  <evidence type="ECO:0000269" key="14">
+    <source ref="5"/>
+  </evidence>
+  <evidence type="ECO:0000269" key="15">
+    <source ref="9"/>
+  </evidence>
+  <evidence type="ECO:0000305" key="16"/>
+  <evidence type="ECO:0000305" key="17">
+    <source>
+      <dbReference type="PubMed" id="22677715"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0000305" key="18">
+    <source>
+      <dbReference type="PubMed" id="2437111"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007744" key="19">
+    <source>
+      <dbReference type="PDB" id="2L7U"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007744" key="20">
+    <source>
+      <dbReference type="PDB" id="3V03"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007744" key="21">
+    <source>
+      <dbReference type="PDB" id="4F5S"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007744" key="22">
+    <source>
+      <dbReference type="PDB" id="4JK4"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007744" key="23">
+    <source>
+      <dbReference type="PDB" id="4OR0"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007829" key="24">
+    <source>
+      <dbReference type="PDB" id="3V03"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007829" key="25">
+    <source>
+      <dbReference type="PDB" id="4F5S"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007829" key="26">
+    <source>
+      <dbReference type="PDB" id="4JK4"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007829" key="27">
+    <source>
+      <dbReference type="PDB" id="4OR0"/>
+    </source>
+  </evidence>
+  <evidence type="ECO:0007829" key="28">
+    <source>
+      <dbReference type="PDB" id="9QQD"/>
+    </source>
+  </evidence>
+  <sequence length="607" mass="69293" checksum="39167DFE768585D4" modified="1996-02-01" version="4" precursor="true">MKWVTFISLLLLFSSAYSRGVFRRDTHKSEIAHRFKDLGEEHFKGLVLIAFSQYLQQCPFDEHVKLVNELTEFAKTCVADESHAGCEKSLHTLFGDELCKVASLRETYGDMADCCEKQEPERNECFLSHKDDSPDLPKLKPDPNTLCDEFKADEKKFWGKYLYEIARRHPYFYAPELLYYANKYNGVFQECCQAEDKGACLLPKIETMREKVLASSARQRLRCASIQKFGERALKAWSVARLSQKFPKAEFVEVTKLVTDLTKVHKECCHGDLLECADDRADLAKYICDNQDTISSKLKECCDKPLLEKSHCIAEVEKDAIPENLPPLTADFAEDKDVCKNYQEAKDAFLGSFLYEYSRRHPEYAVSVLLRLAKEYEATLEECCAKDDPHACYSTVFDKLKHLVDEPQNLIKQNCDQFEKLGEYGFQNALIVRYTRKVPQVSTPTLVEVSRSLGKVGTRCCTKPESERMPCTEDYLSLILNRLCVLHEKTPVSEKVTKCCTESLVNRRPCFSALTPDETYVPKAFDEKLFTFHADICTLPDTEKQIKKQTALVELLKHKPKATEEQLKTVMENFVAFVDKCCAADDKEACFAVEGPKLVVSTQTALA</sequence>
+</entry>
+<copyright>
+Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms Distributed under the Creative Commons Attribution (CC BY 4.0) License
+</copyright>
+</uniprot>

@@ -1,0 +1,55 @@
+{
+  "accession": "P69905",
+  "header": "sp|P69905|HBA_HUMAN Hemoglobin subunit alpha OS=Homo sapiens OX=9606 GN=HBA1 PE=1 SV=2",
+  "sequence_length": 142,
+  "physicochemical_properties": {
+    "sequence_length": 142,
+    "analyzed_length": 142,
+    "molecular_weight": 15257.36,
+    "isoelectric_point": 8.72,
+    "aromaticity": 0.0775,
+    "instability_index": 6.97,
+    "is_stable": true,
+    "gravy": 0.048,
+    "secondary_structure_fraction": {
+      "helix": 0.4014,
+      "turn": 0.2606,
+      "sheet": 0.3592
+    },
+    "amino_acid_percentages": {
+      "A": 14.789,
+      "C": 0.704,
+      "D": 5.634,
+      "E": 2.817,
+      "F": 4.93,
+      "G": 4.93,
+      "H": 7.042,
+      "I": 0.0,
+      "K": 7.746,
+      "L": 12.676,
+      "M": 2.113,
+      "N": 2.817,
+      "P": 4.93,
+      "Q": 0.704,
+      "R": 2.113,
+      "S": 7.746,
+      "T": 6.338,
+      "V": 9.155,
+      "W": 0.704,
+      "Y": 2.113
+    },
+    "grouped_composition": {
+      "positively_charged_percent": 16.9,
+      "negatively_charged_percent": 8.45,
+      "hydrophobic_percent": 44.37,
+      "aromatic_percent": 7.75
+    }
+  },
+  "motifs": {
+    "n_glycosylation": [],
+    "signal_peptide": [],
+    "pkc_phosphorylation": []
+  },
+  "domains": [],
+  "domain_count": 0
+}

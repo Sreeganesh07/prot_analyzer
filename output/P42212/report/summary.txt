@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P42212
+Protein Name    : Green fluorescent protein
+Organism        : Aequorea victoria
+Sequence Length : 238 amino acids
+Execution Time  : 23.90 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 26885.99 Da
+  Isoelectric Point (pI): 5.67
+  Instability Index     : 31.06 (Stable)
+  GRAVY Hydropathicity  : -0.521
+  Aromaticity           : 0.105
+  Secondary Structure   : Helix: 29.0%, Sheet: 37.0%, Turn: 31.1%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 99.1%
+  Ramachandran Allowed  : 0.0%
+  Ramachandran Outliers : 0.9%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 60.7°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -7.93 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -21.06 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 2
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 1
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P42212
+======================================================================

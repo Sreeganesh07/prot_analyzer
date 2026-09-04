@@ -1,0 +1,49 @@
+======================================================================
+              PROTEINSCOPE AUTOMATED ANALYSIS REPORT
+======================================================================
+
+Accession       : P00533
+Protein Name    : Epidermal growth factor receptor
+Organism        : Homo sapiens
+Sequence Length : 1210 amino acids
+Execution Time  : 18.48 seconds
+
+── SUPPORTING PIPELINE DATA ─── SUPPORTING PIPELINE DATA ───────────────────────
+
+  1. PHYSICOCHEMICAL PROPERTIES
+  Molecular Weight      : 134276.04 Da
+  Isoelectric Point (pI): 6.26
+  Instability Index     : 44.59 (Unstable)
+  GRAVY Hydropathicity  : -0.316
+  Aromaticity           : 0.0702
+  Secondary Structure   : Helix: 29.0%, Sheet: 33.0%, Turn: 30.7%
+
+  2. STRUCTURE & VALIDATION
+  Best Structure Source : Experimental (RCSB PDB)
+  Ramachandran Favored  : 98.87%
+  Ramachandran Allowed  : 1.13%
+  Ramachandran Outliers : 0.0%
+  CA-CB Bond Pass Rate  : 100.0%
+
+  2b. ENVIRONMENTAL STABILITY & DEGRADATION (Alberts NBK26830)
+  Condition Evaluated   : 37.0°C, pH 7.4
+  Conformation State    : NATIVE (Native Folded State)
+  Estimated Tm (Melting): 74.6°C
+  Fraction Folded       : 100.0%
+  Net Charge Q(pH)      : -19.42 e
+  Salt Bridge Retention : 99.9%
+  Folding Free Energy dG: -28.04 kcal/mol
+
+  3. HOMOLOGY & EVOLUTIONARY (BLAST + PPI)
+  BLAST Homologs Found  : 0
+  STRING PPI Interactors: 10
+  Identified PTM Sites  : 71
+
+  4. MACHINE LEARNING & NGS
+  ML Features Extracted : 42 numeric descriptors
+  KMeans Cluster Group  : Cluster 2
+  NGS Integration Status: No NGS datasets supplied (skipped)
+
+======================================================================
+Outputs generated at: C:\Users\Sree Ganesh\Dropbox\computational_protein_pipeline\output\P00533
+======================================================================

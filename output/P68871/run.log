@@ -1,0 +1,8 @@
+[2026-08-26 23:53:16] [INFO] [ProteinScope.P68871] Executing Complete ProteinScope 11-Stage Workflow
+[2026-08-26 23:53:16] [INFO] [ProteinScope.P68871] ============================================================
+[2026-08-26 23:53:16] [INFO] [ProteinScope.P68871] Starting ProteinScope Pipeline for accession: P68871
+[2026-08-26 23:53:16] [INFO] [ProteinScope.P68871] ============================================================
+[2026-08-26 23:53:16] [INFO] [ProteinScope.P68871] Stage 0 passed: Accession format validated and output directories created at ./output\P68871
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P68871] Starting Stage 11: Compiling final multi-stage report
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P68871] Final reports saved: ./output\P68871\report\report.json and ./output\P68871\report\summary.txt
+[2026-08-26 23:54:04] [INFO] [ProteinScope.P68871] Interactive 3D HTML Report generated at: ./output\P68871\report\protein_viewer.html
