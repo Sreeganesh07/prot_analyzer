@@ -1,19 +1,18 @@
 /**
  * ProteinScope Mobile Service Worker
- * Provides offline caching for all mobile assets, 3Dmol library, and 9 cached proteins.
+ * Provides 100% offline caching for all mobile assets, local 3Dmol library, and 9 cached proteins.
  */
 
-const CACHE_NAME = 'proteinscope-mobile-v1';
+const CACHE_NAME = 'proteinscope-mobile-v2';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
     './manifest.json',
     './icons/icon.svg',
+    './js/3Dmol-min.js',
     './js/cached_data.js',
     './js/biophysics_engine.js',
-    './js/app.js',
-    'https://3Dmol.org/build/3Dmol-min.js',
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap'
+    './js/app.js'
 ];
 
 self.addEventListener('install', (e) => {
@@ -45,11 +44,16 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    // For NCBI Entrez live requests, try network first, fallback to offline notice
-    if (e.request.url.includes('ncbi.nlm.nih.gov') || e.request.url.includes('alphafold.ebi.ac.uk')) {
+    // For online API requests (PDB, UniProt, NCBI, AlphaFold), try network first
+    if (
+        e.request.url.includes('ncbi.nlm.nih.gov') || 
+        e.request.url.includes('alphafold.ebi.ac.uk') ||
+        e.request.url.includes('rcsb.org') ||
+        e.request.url.includes('uniprot.org')
+    ) {
         e.respondWith(
             fetch(e.request).catch(() => {
-                return new Response(JSON.stringify({ error: 'Device is currently offline.' }), {
+                return new Response(JSON.stringify({ error: 'Device is currently offline. Online retrieval requires an internet connection.' }), {
                     headers: { 'Content-Type': 'application/json' }
                 });
             })

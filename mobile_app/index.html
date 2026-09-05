@@ -4,431 +4,1267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>ProteinScope Mobile // Biophysics Workstation</title>
-    <meta name="description" content="Computational Protein Biophysics, Environmental Stability & Thermal/pH Degradation Workstation (Alberts NBK26830)">
-    <meta name="theme-color" content="#07090e">
+    <meta name="description" content="Computational Protein Biophysics, 3D Structure & Stability Simulator (Alberts NBK26830)">
+    <meta name="theme-color" content="#050811">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
     <link rel="apple-touch-icon" href="icons/icon.svg">
 
-    <!-- 3Dmol.js for WebGL GPU molecular visualization -->
-    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Standalone Bundled 3Dmol.js (100% Offline WebGL Molecular Visualization) -->
+    <script src="js/3Dmol-min.js"></script>
 
     <style>
         :root {
-            --bg-canvas: #07090e;
-            --bg-surface: #0d1117;
-            --bg-card: #121722;
-            --bg-cell: #0a0e14;
-            --border-technical: #1a2234;
-            --border-active: #0284c7;
+            --bg-canvas: #050811;
+            --bg-surface: #0b1120;
+            --bg-card: #111a2e;
+            --bg-glass: rgba(17, 26, 46, 0.78);
+            --bg-glass-card: rgba(20, 30, 54, 0.85);
+            --border-technical: #1e293b;
+            --border-subtle: rgba(56, 189, 248, 0.15);
+            --border-active: #38bdf8;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --text-muted: #526077;
+            --text-muted: #64748b;
             --accent-cyan: #38bdf8;
-            --accent-cobalt: #0284c7;
+            --accent-blue: #0ea5e9;
+            --accent-indigo: #6366f1;
             --accent-emerald: #10b981;
             --accent-amber: #f59e0b;
             --accent-crimson: #ef4444;
-            --font-mono: 'JetBrains Mono', monospace;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --radius: 4px;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, sans-serif;
+            --font-mono: 'SF Mono', 'JetBrains Mono', Consolas, Menlo, monospace;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --bottom-nav-height: 64px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
         body {
             font-family: var(--font-sans);
-            background: var(--bg-canvas);
-            background-image: radial-gradient(#151d2c 1px, transparent 1px);
-            background-size: 20px 20px;
+            background-color: var(--bg-canvas);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.05) 0%, transparent 40%);
             color: var(--text-secondary);
             min-height: 100vh;
-            padding: 12px 12px 32px 12px;
+            min-height: -webkit-fill-available;
+            padding: 0;
+            margin: 0;
             overflow-x: hidden;
+            padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 16px));
         }
 
-        .container { max-width: 1100px; margin: 0 auto; }
-        .font-mono { font-family: var(--font-mono); }
-        .tm-accent { color: var(--accent-amber); font-weight: 700; }
-
-        /* ── WORKSTATION MOBILE TOP BAR ── */
-        .mobile-topbar {
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid var(--border-technical); padding-bottom: 10px; margin-bottom: 12px;
-            flex-wrap: wrap; gap: 8px;
-        }
-        .brand-cluster { display: flex; align-items: center; gap: 10px; }
-        .brand-badge {
-            width: 32px; height: 32px; background: var(--accent-cobalt); color: #fff;
-            font-family: var(--font-mono); font-size: 13px; font-weight: 800;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: var(--radius);
-        }
-        .brand-titles { display: flex; flex-direction: column; }
-        .brand-main {
-            font-size: 13px; font-weight: 800; color: var(--text-primary);
-            letter-spacing: 0.5px; font-family: var(--font-mono);
-        }
-        .brand-sub {
-            font-size: 9px; color: var(--text-muted); font-family: var(--font-mono);
-            text-transform: uppercase; letter-spacing: 0.5px;
+        /* ── INSTAGRAM / YOUTUBE STYLE SPLASH SCREEN ── */
+        #splash-screen {
+            position: fixed;
+            inset: 0;
+            background: #050811;
+            background: radial-gradient(circle at 50% 45%, #0f1c3a 0%, #050811 80%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
         }
 
-        .telemetry-pills { display: flex; gap: 8px; font-family: var(--font-mono); font-size: 10px; }
-        .tele-pill {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            padding: 4px 10px; border-radius: var(--radius); display: flex; align-items: center; gap: 6px;
+        #splash-screen.splash-hidden {
+            opacity: 0;
+            transform: scale(1.08);
+            visibility: hidden;
+            pointer-events: none;
         }
-        .tele-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-emerald); }
-        .tele-dot.offline { background: var(--accent-amber); }
 
-        /* ── SPECIMEN CANISTER RACK (OFFLINE 9 PROTEINS) ── */
-        .canister-scroll-track {
-            display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 14px;
-            scrollbar-width: thin; scrollbar-color: var(--border-technical) transparent;
+        .splash-logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            animation: splash-pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .splash-glow-ring {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(99, 102, 241, 0) 70%);
+            animation: splash-pulse 2s infinite ease-in-out;
+        }
+
+        .splash-svg-emblem {
+            width: 88px;
+            height: 88px;
+            filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6));
+        }
+
+        .splash-brand-text {
+            margin-top: 24px;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+            font-family: var(--font-mono);
+            text-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+            animation: splash-fade-up 0.8s ease 0.2s both;
+        }
+
+        .splash-tagline {
+            font-size: 11px;
+            color: var(--accent-cyan);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 6px;
+            font-family: var(--font-mono);
+            opacity: 0.85;
+            animation: splash-fade-up 0.8s ease 0.35s both;
+        }
+
+        .splash-loader {
+            width: 48px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 36px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .splash-loader-bar {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            border-radius: 3px;
+            animation: splash-load 1.2s infinite ease-in-out;
+        }
+
+        @keyframes splash-pop {
+            0% { transform: scale(0.6); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes splash-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 0.85; }
+        }
+        @keyframes splash-fade-up {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes splash-load {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* ── HEADER BAR ── */
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 8, 17, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-technical);
+            padding: env(safe-area-inset-top, 10px) 14px 10px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon-box {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #0284c7, #6366f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(2, 132, 199, 0.35);
+        }
+
+        .brand-icon-box svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
+        }
+
+        .header-title-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-app-name {
+            font-size: 14px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            font-family: var(--font-mono);
+        }
+
+        .header-subtitle {
+            font-size: 9px;
+            color: var(--accent-cyan);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .net-status-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 9px;
+            border-radius: 20px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--accent-emerald);
+            font-weight: 600;
+        }
+
+        .net-status-badge.offline-mode {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+            color: var(--accent-amber);
+        }
+
+        .net-status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 6px currentColor;
+        }
+
+        .search-trigger-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--text-primary);
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .search-trigger-btn:active {
+            transform: scale(0.92);
+            border-color: var(--accent-cyan);
+        }
+
+        /* ── HORIZONTAL SPECIMEN CAROUSEL ── */
+        .canister-container {
+            padding: 10px 14px 4px 14px;
+        }
+
+        .canister-label {
+            font-size: 10px;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .canister-track {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             -webkit-overflow-scrolling: touch;
         }
-        .canister-btn {
-            flex: 0 0 auto; background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 8px 12px; cursor: pointer; text-align: left;
-            display: flex; flex-direction: column; gap: 2px; transition: all 0.15s ease;
-        }
-        .canister-btn.active {
-            border-color: var(--accent-cyan); background: var(--bg-card);
-            box-shadow: 0 0 10px rgba(56,189,248,0.15);
-        }
-        .can-acc { font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--accent-cyan); }
-        .can-name { font-size: 10px; font-weight: 600; color: var(--text-primary); max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .can-tm { font-family: var(--font-mono); font-size: 9px; color: var(--accent-amber); }
 
-        .canister-btn.ncbi-tab-btn {
-            border-style: dashed; border-color: var(--accent-cobalt);
-        }
-        .canister-btn.ncbi-tab-btn .can-acc { color: var(--accent-cobalt); }
-
-        /* ── NCBI LIVE RETRIEVAL DOCK ── */
-        .ncbi-dock {
-            display: none; background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px;
-        }
-        .ncbi-dock.active { display: block; }
-        .ncbi-dock-title {
-            font-size: 11px; font-family: var(--font-mono); font-weight: 700; color: var(--accent-cyan);
-            text-transform: uppercase; margin-bottom: 8px; display: flex; justify-content: space-between;
-        }
-        .ncbi-input-row { display: flex; gap: 8px; }
-        .ncbi-search-input {
-            flex: 1; background: var(--bg-cell); border: 1px solid var(--border-technical);
-            padding: 8px 12px; font-family: var(--font-mono); font-size: 12px; color: var(--text-primary);
-            border-radius: var(--radius); outline: none;
-        }
-        .ncbi-search-input:focus { border-color: var(--border-active); }
-        .ncbi-fetch-btn {
-            background: var(--accent-cobalt); border: none; color: #fff; font-family: var(--font-mono);
-            font-size: 11px; font-weight: 700; padding: 8px 14px; border-radius: var(--radius);
-            cursor: pointer; text-transform: uppercase;
+        .canister-track::-webkit-scrollbar {
+            display: none;
         }
 
-        /* ── CURRENT SPECIMEN HEADER ── */
-        .specimen-header {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 12px 14px; margin-bottom: 12px;
-            display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;
+        .can-card {
+            flex: 0 0 auto;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            padding: 7px 11px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 96px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .spec-titles { display: flex; flex-direction: column; gap: 2px; }
-        .spec-acc-badge {
-            font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-            color: var(--accent-cyan); background: var(--bg-cell); border: 1px solid var(--border-technical);
-            padding: 2px 6px; border-radius: 2px; display: inline-block; width: fit-content;
-        }
-        .spec-title { font-size: 15px; font-weight: 700; color: var(--text-primary); }
-        .spec-org { font-size: 11px; color: var(--text-muted); font-style: italic; }
 
-        .spec-state-badge {
-            display: flex; align-items: center; gap: 6px; font-family: var(--font-mono);
-            font-size: 11px; font-weight: 700; text-transform: uppercase;
-            padding: 4px 10px; border-radius: var(--radius); border: 1px solid var(--border-technical);
-            background: var(--bg-cell);
+        .can-card.active {
+            background: linear-gradient(145deg, rgba(2, 132, 199, 0.2), rgba(17, 26, 46, 0.9));
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
+            transform: translateY(-1px);
         }
-        .badge-dot { width: 6px; height: 6px; border-radius: 50%; }
 
-        /* ── 3D MOLECULAR VIEWER CANVAS ── */
-        .viewer-container {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; position: relative;
-            transition: border-color 0.25s ease;
+        .can-acc {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-cyan);
         }
-        .viewer-container.degraded-glow { border-color: var(--accent-crimson) !important; }
-        .viewer-toolbar {
-            display: flex; justify-content: space-between; align-items: center;
-            background: var(--bg-cell); border-bottom: 1px solid var(--border-technical);
-            padding: 6px 10px; font-family: var(--font-mono); font-size: 10px;
+
+        .can-name {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 105px;
         }
-        .tool-group { display: flex; gap: 6px; }
-        .tool-btn {
-            background: var(--bg-surface); border: 1px solid var(--border-technical); color: var(--text-secondary);
-            padding: 3px 8px; border-radius: 2px; font-family: var(--font-mono); font-size: 10px; cursor: pointer;
+
+        .can-tm {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--accent-amber);
         }
-        .tool-btn.active { background: var(--border-technical); color: #fff; }
+
+        /* ── CURRENT SPECIMEN HERO BAR ── */
+        .specimen-hero {
+            padding: 6px 14px 10px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            max-width: 68%;
+        }
+
+        .hero-name-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-acc-badge {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .hero-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .hero-org {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .hero-state-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            font-size: 11px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            letter-spacing: 0.3px;
+        }
+
+        .hero-state-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 6px currentColor;
+        }
+
+        /* ── TAB VIEWS CONTAINER ── */
+        .tab-view {
+            display: none;
+            padding: 0 14px;
+            animation: tab-fade 0.25s ease forwards;
+        }
+
+        .tab-view.active-tab {
+            display: block;
+        }
+
+        @keyframes tab-fade {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── TAB 1: 3D MOLECULAR WORKSTATION ── */
+        .viewer-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+        }
+
+        .viewer-card.degraded-glow {
+            border-color: var(--accent-crimson) !important;
+            box-shadow: 0 0 24px rgba(239, 68, 68, 0.35) !important;
+        }
 
         #mol-canvas {
-            width: 100%; height: 260px; min-height: 240px; position: relative;
-            background: #000; touch-action: none;
+            width: 100%;
+            height: 340px;
+            background: #050811;
+            position: relative;
+            touch-action: none;
         }
 
-        /* ── DEGRADATION ALARM BANNER ── */
-        .degradation-banner {
-            display: none; background: rgba(239,68,68,0.12); border: 1px solid var(--accent-crimson);
-            border-radius: var(--radius); padding: 10px 14px; margin-bottom: 12px;
-            animation: pulse-border 1.5s infinite;
-        }
-        @keyframes pulse-border {
-            0%, 100% { border-color: var(--accent-crimson); }
-            50% { border-color: rgba(239,68,68,0.3); }
-        }
-        .deg-title {
-            color: var(--accent-crimson); font-family: var(--font-mono); font-size: 11px;
-            font-weight: 700; text-transform: uppercase; margin-bottom: 4px; display: flex; gap: 6px; align-items: center;
-        }
-        .deg-desc { font-size: 11px; color: #fca5a5; line-height: 1.4; }
-
-        /* ── REAL-TIME TELEMETRY BAR ── */
-        .telemetry-strip {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px;
-        }
-        @media (min-width: 600px) {
-            .telemetry-strip { grid-template-columns: repeat(5, 1fr); }
-        }
-        .tele-cell {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 8px 10px; display: flex; flex-direction: column; gap: 2px;
-        }
-        .tele-lbl { font-size: 9px; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .tele-val { font-size: 13px; font-family: var(--font-mono); color: var(--text-primary); font-weight: 700; }
-
-        /* ── CONTROLS & SLIDERS CARD ── */
-        .controls-card {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 14px; margin-bottom: 12px;
-        }
-        .control-block { margin-bottom: 14px; }
-        .control-block:last-child { margin-bottom: 0; }
-        .ctrl-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-        .ctrl-title { font-size: 11px; font-family: var(--font-mono); font-weight: 700; color: var(--text-primary); text-transform: uppercase; }
-        .ctrl-val { font-size: 13px; font-family: var(--font-mono); font-weight: 700; }
-
-        .range-slider {
-            width: 100%; height: 6px; -webkit-appearance: none; appearance: none;
-            background: var(--bg-cell); border: 1px solid var(--border-technical);
-            border-radius: 4px; outline: none; margin-bottom: 8px;
-        }
-        .range-slider::-webkit-slider-thumb {
-            -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
-            border-radius: 50%; background: var(--accent-cyan); cursor: pointer;
-            border: 2px solid #fff; box-shadow: 0 0 6px rgba(0,0,0,0.5);
+        /* Floating 3D Controls Overlay */
+        .viewer-controls-overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none;
         }
 
-        .preset-row { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
-        .preset-btn {
-            background: var(--bg-cell); border: 1px solid var(--border-technical);
-            color: var(--text-secondary); font-family: var(--font-mono); font-size: 9px; font-weight: 600;
-            padding: 4px 8px; border-radius: 2px; cursor: pointer; white-space: nowrap;
-        }
-        .preset-btn:hover, .preset-btn:active {
-            border-color: var(--accent-cobalt); color: #fff;
+        .style-pill-group {
+            display: flex;
+            background: rgba(11, 17, 32, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 3px;
+            pointer-events: auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
         }
 
-        /* ── HENDERSON-HASSELBALCH TITRATION CHART ── */
-        .chart-card {
-            background: var(--bg-surface); border: 1px solid var(--border-technical);
-            border-radius: var(--radius); padding: 12px 14px; margin-bottom: 12px;
+        .style-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 11px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.15s;
         }
-        .chart-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-        .chart-title { font-size: 11px; font-family: var(--font-mono); font-weight: 700; color: var(--text-primary); text-transform: uppercase; }
-        .chart-box { width: 100%; height: 110px; background: var(--bg-cell); border: 1px solid var(--border-technical); border-radius: var(--radius); }
 
-        /* ── FOOTER ── */
-        .mobile-footer {
-            border-top: 1px solid var(--border-technical); padding-top: 14px; text-align: center;
-            font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+        .style-btn.active {
+            background: var(--accent-blue);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
+        }
+
+        .action-btn-group {
+            display: flex;
+            gap: 6px;
+            pointer-events: auto;
+        }
+
+        .viewer-action-btn {
+            background: rgba(11, 17, 32, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-primary);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            transition: all 0.15s;
+        }
+
+        .viewer-action-btn:active {
+            transform: scale(0.9);
+        }
+
+        .viewer-action-btn.active-toggle {
+            background: var(--accent-cyan);
+            color: #050811;
+            border-color: var(--accent-cyan);
+        }
+
+        .viewer-top-info {
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            background: rgba(5, 8, 17, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            pointer-events: none;
+        }
+
+        /* Quick Stat Badges Under 3D Viewer */
+        .viewer-quick-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-stat-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quick-stat-lbl {
+            font-size: 9px;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .quick-stat-val {
+            font-size: 15px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            margin-top: 2px;
+        }
+
+        /* ── TAB 2: BIOPHYSICS LAB ── */
+        .lab-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .lab-card-title {
+            font-size: 12px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .control-row {
+            margin-bottom: 16px;
+        }
+        .control-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .slider-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .slider-readout {
+            font-size: 14px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        .mobile-slider {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            border-radius: 6px;
+            outline: none;
+            margin-bottom: 8px;
+        }
+
+        .mobile-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .presets-row {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+            scrollbar-width: none;
+        }
+        .presets-row::-webkit-scrollbar { display: none; }
+
+        .preset-chip {
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--text-secondary);
+            font-size: 10px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            padding: 5px 9px;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.15s;
+        }
+
+        .preset-chip:active {
+            border-color: var(--accent-cyan);
+            color: #ffffff;
+            background: var(--border-technical);
+        }
+
+        .preset-chip.stress-danger {
+            color: var(--accent-crimson);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        /* Degradation Alert Banner */
+        .deg-alarm-banner {
+            display: none;
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid var(--accent-crimson);
+            border-radius: var(--radius-sm);
+            padding: 10px 12px;
+            margin-bottom: 12px;
+            animation: alarm-pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes alarm-pulse {
+            0%, 100% { border-color: var(--accent-crimson); box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); }
+            50% { border-color: rgba(239, 68, 68, 0.4); box-shadow: none; }
+        }
+
+        .alarm-head {
+            color: var(--accent-crimson);
+            font-size: 11px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .alarm-body {
+            font-size: 11px;
+            color: #fca5a5;
+            line-height: 1.4;
+        }
+
+        /* ── TAB 3: TITRATION & SEQUENCE PROPERTIES ── */
+        .chart-box-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .chart-svg-view {
+            width: 100%;
+            height: 120px;
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            margin-top: 8px;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .prop-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prop-label {
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .prop-value {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        /* ── SEARCH & EXPLORE MODAL ── */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 500;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .modal-backdrop.modal-open {
+            display: flex;
+            animation: modal-fade 0.2s ease forwards;
+        }
+
+        @keyframes modal-fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .search-sheet {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            width: 100%;
+            max-width: 500px;
+            padding: 16px 18px calc(24px + env(safe-area-inset-bottom, 16px)) 18px;
+            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
+            animation: sheet-slide 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes sheet-slide {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .sheet-handle {
+            width: 36px;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--border-technical);
+            margin: 0 auto 14px auto;
+        }
+
+        .sheet-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .sheet-subtitle {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .search-input-field {
+            flex: 1;
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            padding: 11px 14px;
+            font-size: 13px;
+            font-family: var(--font-mono);
+            color: #ffffff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input-field:focus {
+            border-color: var(--accent-cyan);
+        }
+
+        .search-submit-btn {
+            background: linear-gradient(135deg, #0284c7, #0ea5e9);
+            border: none;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            padding: 0 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(2, 132, 199, 0.3);
+        }
+
+        .search-submit-btn:active {
+            transform: scale(0.96);
+        }
+
+        .quick-chips-title {
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .quick-chips-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .search-chip {
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--accent-cyan);
+            font-size: 11px;
+            font-family: var(--font-mono);
+            padding: 5px 10px;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+
+        .search-chip:active {
+            background: var(--accent-cyan);
+            color: #050811;
+        }
+
+        .search-feedback-box {
+            font-size: 11px;
+            font-family: var(--font-mono);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            display: none;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* ── FIXED BOTTOM NAVIGATION BAR ── */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            background: rgba(5, 8, 17, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-top: 1px solid var(--border-technical);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 300;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 10px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            padding: 6px 14px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .nav-item svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: transform 0.15s ease;
+        }
+
+        .nav-item.nav-active {
+            color: var(--accent-cyan);
+        }
+
+        .nav-item.nav-active svg {
+            transform: scale(1.12);
+            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- TOP BAR -->
-        <header class="mobile-topbar">
-            <div class="brand-cluster">
-                <div class="brand-badge">PS</div>
-                <div class="brand-titles">
-                    <div class="brand-main">PROTEINSCOPE // MOBILE</div>
-                    <div class="brand-sub">BIOPHYSICS & DEGRADATION SIMULATOR</div>
-                </div>
-            </div>
 
-            <div class="telemetry-pills">
-                <div class="tele-pill">
-                    <span class="tele-dot" id="sync-dot"></span>
-                    <span id="sync-status">OFFLINE READY (9)</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- CANISTER CAROUSEL (9 CORE PROTEINS + NCBI SEARCH) -->
-        <div class="canister-scroll-track" id="canister-track">
-            <!-- Populated dynamically from cached_data.js -->
+    <!-- ── 1. INSTAGRAM / YOUTUBE STYLE SPLASH SCREEN ── -->
+    <div id="splash-screen">
+        <div class="splash-logo-container">
+            <div class="splash-glow-ring"></div>
+            <!-- Futuristic Molecular Helix SVG -->
+            <svg class="splash-svg-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="42" stroke="url(#splash-grad1)" stroke-width="3" stroke-dasharray="6 4" opacity="0.6"/>
+                <path d="M28 32 C38 18, 62 18, 72 32 C82 46, 82 54, 72 68 C62 82, 38 82, 28 68 C18 54, 18 46, 28 32 Z" 
+                      stroke="url(#splash-grad2)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="14" fill="url(#splash-grad1)"/>
+                <circle cx="28" cy="32" r="5" fill="#38bdf8"/>
+                <circle cx="72" cy="32" r="5" fill="#818cf8"/>
+                <circle cx="72" cy="68" r="5" fill="#38bdf8"/>
+                <circle cx="28" cy="68" r="5" fill="#818cf8"/>
+                <defs>
+                    <linearGradient id="splash-grad1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#38bdf8"/>
+                        <stop offset="1" stop-color="#818cf8"/>
+                    </linearGradient>
+                    <linearGradient id="splash-grad2" x1="0" y1="50" x2="100" y2="50" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0ea5e9"/>
+                        <stop offset="0.5" stop-color="#6366f1"/>
+                        <stop offset="1" stop-color="#38bdf8"/>
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
-
-        <!-- NCBI QUERY EXPANDABLE DOCK -->
-        <div class="ncbi-dock" id="ncbi-dock">
-            <div class="ncbi-dock-title">
-                <span>NCBI Entrez Protein Database Retrieval</span>
-                <span style="font-size:9px; color:var(--text-muted);">db=protein</span>
-            </div>
-            <div class="ncbi-input-row">
-                <input type="text" id="ncbi-input" class="ncbi-search-input" placeholder="NCBI RefSeq (e.g. NP_000537, NP_001099) or Gene...">
-                <button class="ncbi-fetch-btn" id="ncbi-fetch-btn">FETCH</button>
-            </div>
-            <div id="ncbi-feedback" style="font-size:10px; font-family:var(--font-mono); color:var(--text-muted); margin-top:6px; display:none;"></div>
+        <div class="splash-brand-text">PROTEINSCOPE</div>
+        <div class="splash-tagline">Biophysics & 3D Workstation</div>
+        <div class="splash-loader">
+            <div class="splash-loader-bar"></div>
         </div>
+    </div>
 
-        <!-- CURRENT SPECIMEN BANNER -->
-        <div class="specimen-header">
-            <div class="spec-titles">
-                <span class="spec-acc-badge" id="disp-acc">P04637</span>
-                <div class="spec-title" id="disp-name">Cellular tumor antigen p53</div>
-                <div class="spec-org" id="disp-org">Homo sapiens</div>
+    <!-- ── 2. TOP APP HEADER ── -->
+    <header class="app-header">
+        <div class="header-brand">
+            <div class="brand-icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
             </div>
-            <div class="spec-state-badge" id="disp-state-badge" style="color:var(--accent-emerald);">
-                <span class="badge-dot" id="disp-state-dot" style="background:var(--accent-emerald);"></span>
-                <span id="disp-state-text">NATIVE FOLDED</span>
+            <div class="header-title-block">
+                <span class="header-app-name">PROTEINSCOPE</span>
+                <span class="header-subtitle">Alberts Biophysics</span>
             </div>
         </div>
-
-        <!-- 3D MOLECULAR VIEWER CANVAS -->
-        <div class="viewer-container" id="viewer-container">
-            <div class="viewer-toolbar">
-                <span id="viewer-status-text">3DMOL WEBGL // GPU ACCELERATED</span>
-                <div class="tool-group">
-                    <button class="tool-btn active" onclick="setRenderMode('cartoon')">Cartoon</button>
-                    <button class="tool-btn" onclick="setRenderMode('surface')">Surface</button>
-                    <button class="tool-btn" onclick="reset3DView()">Reset</button>
-                </div>
+        <div class="header-actions">
+            <div class="net-status-badge" id="net-status-badge">
+                <span class="net-status-dot"></span>
+                <span id="net-status-text">OFFLINE READY</span>
             </div>
+            <button class="search-trigger-btn" id="header-search-btn" title="Search Online Proteins">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ── 3. SPECIMEN CAROUSEL (9 CORE TARGETS) ── -->
+    <div class="canister-container">
+        <div class="canister-label">
+            <span>Offline Curated Targets</span>
+            <span style="color:var(--accent-cyan);" id="canister-count">9 Cached</span>
+        </div>
+        <div class="canister-track" id="canister-track">
+            <!-- Populated dynamically via app.js -->
+        </div>
+    </div>
+
+    <!-- ── 4. CURRENT SPECIMEN HERO BAR ── -->
+    <div class="specimen-hero">
+        <div class="hero-left">
+            <div class="hero-name-row">
+                <span class="hero-acc-badge" id="hero-acc">P04637</span>
+                <span class="hero-title" id="hero-name">Tumor antigen p53</span>
+            </div>
+            <div class="hero-org" id="hero-org">Homo sapiens</div>
+        </div>
+        <div class="hero-state-pill" id="hero-state-pill" style="color:var(--accent-emerald);">
+            <span class="hero-state-dot"></span>
+            <span id="hero-state-text">NATIVE</span>
+        </div>
+    </div>
+
+    <!-- ═══════════ TAB 1: 3D STRUCTURE WORKSTATION ═══════════ -->
+    <main class="tab-view active-tab" id="tab-structure">
+        <div class="viewer-card" id="viewer-card">
+            <div class="viewer-top-info" id="viewer-info-chip">3DMOL // WEBGL READY</div>
             <div id="mol-canvas"></div>
+            
+            <!-- Floating Overlay Toolbar -->
+            <div class="viewer-controls-overlay">
+                <div class="style-pill-group">
+                    <button class="style-btn active" onclick="setRenderMode('cartoon')">Cartoon</button>
+                    <button class="style-btn" onclick="setRenderMode('surface')">Surface</button>
+                    <button class="style-btn" onclick="setRenderMode('spheres')">Spheres</button>
+                </div>
+                <div class="action-btn-group">
+                    <button class="viewer-action-btn" id="spin-btn" onclick="toggleSpin()" title="Toggle Auto-Spin">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                        </svg>
+                    </button>
+                    <button class="viewer-action-btn" onclick="reset3DCamera()" title="Reset Camera">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M3 12h3m12 0h3M12 3v3m0 12v3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <!-- DEGRADATION ALARM BANNER (ALBERTS NBK26830) -->
-        <div class="degradation-banner" id="deg-banner">
-            <div class="deg-title">
-                <span>[CRITICAL ALARM]</span>
-                <span id="deg-badge">IRREVERSIBLE DEGRADATION</span>
+        <!-- Quick Telemetry Under 3D Viewer -->
+        <div class="viewer-quick-stats">
+            <div class="quick-stat-box">
+                <span class="quick-stat-lbl">Folded %</span>
+                <span class="quick-stat-val" id="stat-folded" style="color:var(--accent-emerald);">100%</span>
             </div>
-            <div class="deg-desc" id="deg-desc">
+            <div class="quick-stat-box">
+                <span class="quick-stat-lbl">Net Charge</span>
+                <span class="quick-stat-val" id="stat-charge" style="color:var(--accent-cyan);">-4.98 e</span>
+            </div>
+            <div class="quick-stat-box">
+                <span class="quick-stat-lbl">Estimated Tm</span>
+                <span class="quick-stat-val" id="stat-tm" style="color:var(--accent-amber);">69.0°C</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════ TAB 2: BIOPHYSICS & STRESS LAB ═══════════ -->
+    <section class="tab-view" id="tab-biophysics">
+        <!-- Critical Degradation Banner -->
+        <div class="deg-alarm-banner" id="deg-banner">
+            <div class="alarm-head">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                </svg>
+                <span id="alarm-title">IRREVERSIBLE DEGRADATION</span>
+            </div>
+            <div class="alarm-body" id="alarm-desc">
                 Environmental parameters exceed functional stability thresholds.
             </div>
         </div>
 
-        <!-- TELEMETRY STRIP -->
-        <div class="telemetry-strip">
-            <div class="tele-cell">
-                <span class="tele-lbl">Fraction Folded</span>
-                <span class="tele-val" id="tele-folded" style="color:var(--accent-emerald);">100.0%</span>
+        <!-- Temperature Card -->
+        <div class="lab-card">
+            <div class="lab-card-title">
+                <span>Thermal Stress</span>
+                <span style="color:var(--accent-amber);" id="val-temp">37.0°C <span style="font-size:10px; color:var(--text-muted);">(310.15 K)</span></span>
             </div>
-            <div class="tele-cell">
-                <span class="tele-lbl">Net Charge Q</span>
-                <span class="tele-val" id="tele-charge">-4.98 e</span>
-            </div>
-            <div class="tele-cell">
-                <span class="tele-lbl">Salt Bridges</span>
-                <span class="tele-val" id="tele-salt">99.9%</span>
-            </div>
-            <div class="tele-cell">
-                <span class="tele-lbl">ΔG Folding</span>
-                <span class="tele-val" id="tele-dg">-26.6 kcal</span>
-            </div>
-            <div class="tele-cell">
-                <span class="tele-lbl">Estimated Tm</span>
-                <span class="tele-val tm-accent" id="tele-tm">69.0°C</span>
+            <input type="range" class="mobile-slider" id="slider-temp" min="0" max="100" step="0.5" value="37.0">
+            <div class="presets-row">
+                <button class="preset-chip" onclick="setTemp(4.0)">4°C Cold</button>
+                <button class="preset-chip" onclick="setTemp(25.0)">25°C Room</button>
+                <button class="preset-chip" onclick="setTemp(37.0)">37°C Standard</button>
+                <button class="preset-chip" onclick="setTemp(60.0)">60°C Stress</button>
+                <button class="preset-chip stress-danger" onclick="setTemp(85.0)">85°C Denature</button>
             </div>
         </div>
 
-        <!-- CONTROLS & PRESETS -->
-        <div class="controls-card">
-            <!-- TEMPERATURE SLIDER -->
-            <div class="control-block">
-                <div class="ctrl-head">
-                    <span class="ctrl-title">Temperature Control</span>
-                    <span class="ctrl-val" id="val-temp" style="color:var(--accent-amber);">37.0°C <span style="font-size:10px; color:var(--text-muted);">(310.15 K)</span></span>
-                </div>
-                <input type="range" class="range-slider" id="slider-temp" min="0" max="100" step="0.5" value="37.0">
-                <div class="preset-row">
-                    <button class="preset-btn" onclick="setTemp(37.0)">37°C Standard</button>
-                    <button class="preset-btn" onclick="setTemp(25.0)">25°C In-Vitro</button>
-                    <button class="preset-btn" onclick="setTemp(4.0)">4°C Cold</button>
-                    <button class="preset-btn" onclick="setTemp(60.0)">60°C Stress</button>
-                    <button class="preset-btn" onclick="setTemp(85.0)" style="border-color:var(--accent-crimson); color:var(--accent-crimson);">85°C Degrade</button>
-                </div>
+        <!-- pH Titration Card -->
+        <div class="lab-card">
+            <div class="lab-card-title">
+                <span>pH Microenvironment</span>
+                <span style="color:var(--accent-cyan);" id="val-ph">pH 7.40</span>
             </div>
-
-            <!-- pH SLIDER -->
-            <div class="control-block">
-                <div class="ctrl-head">
-                    <span class="ctrl-title">pH Titration Control</span>
-                    <span class="ctrl-val" id="val-ph" style="color:var(--accent-cyan);">pH 7.40</span>
-                </div>
-                <input type="range" class="range-slider" id="slider-ph" min="0" max="14" step="0.1" value="7.4">
-                <div class="preset-row">
-                    <button class="preset-btn" onclick="setPH(7.4)">pH 7.4 Standard</button>
-                    <button class="preset-btn" onclick="setPH(7.0)">pH 7.0 Neutral</button>
-                    <button class="preset-btn" onclick="setPH(5.0)">pH 5.0 Endosomal</button>
-                    <button class="preset-btn" onclick="setPH(2.0)" style="border-color:var(--accent-crimson); color:var(--accent-crimson);">pH 2.0 Acid Degrade</button>
-                    <button class="preset-btn" onclick="setPH(12.5)" style="border-color:var(--accent-crimson); color:var(--accent-crimson);">pH 12.5 Alkaline Degrade</button>
-                </div>
+            <input type="range" class="mobile-slider" id="slider-ph" min="0" max="14" step="0.1" value="7.4">
+            <div class="presets-row">
+                <button class="preset-chip stress-danger" onclick="setPH(2.0)">pH 2.0 Gastric</button>
+                <button class="preset-chip" onclick="setPH(5.0)">pH 5.0 Endosome</button>
+                <button class="preset-chip" onclick="setPH(7.0)">pH 7.0 Neutral</button>
+                <button class="preset-chip" onclick="setPH(7.4)">pH 7.4 Blood</button>
+                <button class="preset-chip stress-danger" onclick="setPH(12.0)">pH 12.0 Alkaline</button>
             </div>
         </div>
 
-        <!-- HENDERSON-HASSELBALCH CHARGE TITRATION SVG -->
-        <div class="chart-card">
-            <div class="chart-head">
-                <span class="chart-title">Henderson-Hasselbalch Charge Titration Q(pH)</span>
-                <span class="font-mono" style="font-size:10px; color:var(--accent-cyan);" id="disp-pi">pI: 6.33</span>
+        <!-- Thermodynamic State Metrics -->
+        <div class="props-grid">
+            <div class="prop-item">
+                <span class="prop-label">ΔG Folding</span>
+                <span class="prop-value" id="stat-dg" style="color:var(--accent-emerald);">-26.6 kcal</span>
             </div>
-            <svg class="chart-box" id="titration-svg" viewBox="0 0 320 100" preserveAspectRatio="none">
-                <!-- Grid & Zero line -->
-                <line x1="0" y1="50" x2="320" y2="50" stroke="#1f293d" stroke-dasharray="4" stroke-width="1"/>
-                <!-- Path -->
-                <path id="svg-curve" d="" fill="none" stroke="#0284c7" stroke-width="2"/>
-                <!-- Current point -->
-                <circle id="svg-dot" cx="160" cy="50" r="4" fill="#38bdf8" stroke="#fff" stroke-width="1.5"/>
+            <div class="prop-item">
+                <span class="prop-label">Salt Bridges</span>
+                <span class="prop-value" id="stat-salt" style="color:var(--accent-cyan);">99.9%</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TAB 3: TITRATION & SEQUENCE PROPERTIES ═══════════ -->
+    <section class="tab-view" id="tab-properties">
+        <div class="chart-box-card">
+            <div class="lab-card-title">
+                <span>Henderson-Hasselbalch Q(pH)</span>
+                <span style="color:var(--accent-cyan);" id="disp-pi">pI: 6.33</span>
+            </div>
+            <svg class="chart-svg-view" id="titration-svg" viewBox="0 0 320 100" preserveAspectRatio="none">
+                <line x1="0" y1="50" x2="320" y2="50" stroke="#1e293b" stroke-dasharray="4" stroke-width="1"/>
+                <path id="svg-curve" d="" fill="none" stroke="#0ea5e9" stroke-width="2.5"/>
+                <circle id="svg-dot" cx="160" cy="50" r="4.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.8"/>
             </svg>
         </div>
 
-        <!-- FOOTER -->
-        <footer class="mobile-footer">
-            PROTEINSCOPE BIOPHYSICS // ALBERTS NBK26830 // WORKS OFFLINE & ONLINE
-        </footer>
+        <div class="props-grid">
+            <div class="prop-item">
+                <span class="prop-label">Sequence Length</span>
+                <span class="prop-value" id="stat-len">393 aa</span>
+            </div>
+            <div class="prop-item">
+                <span class="prop-label">Molecular Weight</span>
+                <span class="prop-value" id="stat-mw">43.7 kDa</span>
+            </div>
+            <div class="prop-item">
+                <span class="prop-label">Isoelectric Point</span>
+                <span class="prop-value" id="stat-pi-val">6.33</span>
+            </div>
+            <div class="prop-item">
+                <span class="prop-label">Threshold Tm</span>
+                <span class="prop-value" id="stat-thresh-tm" style="color:var(--accent-amber);">69.0°C</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 5. SEARCH & EXPLORE MODAL SHEET ── -->
+    <div class="modal-backdrop" id="search-modal">
+        <div class="search-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-title">Search & Retrieve Protein</div>
+            <div class="sheet-subtitle">Enter PDB ID (e.g. 1TUP), UniProt code, or Gene name</div>
+
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="search-input" placeholder="e.g. 1TUP, P04637, Spike, Insulin" autocomplete="off" autocapitalize="off">
+                <button class="search-submit-btn" id="search-submit-btn">FETCH</button>
+            </div>
+
+            <div class="quick-chips-title">Suggested Targets</div>
+            <div class="quick-chips-row">
+                <button class="search-chip" onclick="quickSearch('1TUP')">1TUP (p53-DNA)</button>
+                <button class="search-chip" onclick="quickSearch('6VXX')">6VXX (Spike)</button>
+                <button class="search-chip" onclick="quickSearch('1MBN')">1MBN (Myoglobin)</button>
+                <button class="search-chip" onclick="quickSearch('4HHB')">4HHB (Hemoglobin)</button>
+                <button class="search-chip" onclick="quickSearch('1UBQ')">1UBQ (Ubiquitin)</button>
+            </div>
+
+            <div class="search-feedback-box" id="search-feedback"></div>
+        </div>
     </div>
 
-    <!-- Cached Offline Database (9 Core Proteins) -->
+    <!-- ── 6. FIXED BOTTOM NAVIGATION BAR ── -->
+    <nav class="bottom-nav">
+        <button class="nav-item nav-active" id="nav-structure" onclick="switchTab('structure')">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>3D View</span>
+        </button>
+        <button class="nav-item" id="nav-biophysics" onclick="switchTab('biophysics')">
+            <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            <span>Biophysics</span>
+        </button>
+        <button class="nav-item" id="nav-properties" onclick="switchTab('properties')">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+            <span>Properties</span>
+        </button>
+        <button class="nav-item" id="nav-search" onclick="openSearchModal()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <span>Search</span>
+        </button>
+    </nav>
+
+    <!-- App JavaScript Scripts -->
     <script src="js/cached_data.js"></script>
+    <script src="js/biophysics_engine.js?v=2.1"></script>
+    <script src="js/app.js?v=2.1"></script>
 
-    <!-- Client-Side Biophysics & NCBI Entrez Engine -->
-    <script src="js/biophysics_engine.js"></script>
-    <script src="js/app.js"></script>
-
-    <!-- Service Worker Registration for Offline Cache -->
+    <!-- Service Worker Cache Management -->
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(reg => {
-                    console.log('ProteinScope PWA Service Worker Registered:', reg.scope);
-                }).catch(err => {
-                    console.warn('Service Worker registration skipped:', err);
-                });
+            navigator.serviceWorker.getRegistrations().then(regs => {
+                for (let r of regs) r.unregister();
             });
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    for (let n of names) caches.delete(n);
+                });
+            }
         }
     </script>
 </body>

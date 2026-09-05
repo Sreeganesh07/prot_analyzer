@@ -194,87 +194,33 @@ class BiophysicsEngine {
     }
 
     /**
-     * Live NCBI Entrez Protein database search and sequence retrieval.
+     * Helper to extract titratable residues and properties from sequence
      */
-    static async fetchNCBIProtein(query) {
-        const cleanQuery = query.trim();
-        if (!cleanQuery) throw new Error("Query cannot be empty.");
-
-        // 1. Search NCBI Protein DB
-        const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=protein&term=${encodeURIComponent(cleanQuery)}&retmode=json&retmax=1`;
-        const searchRes = await fetch(searchUrl);
-        if (!searchRes.ok) throw new Error(`NCBI Search failed (HTTP ${searchRes.status})`);
-
-        const searchData = await searchRes.json();
-        const idList = searchData?.esearchresult?.idlist || [];
-        if (idList.length === 0) {
-            throw new Error(`No NCBI protein records found for '${cleanQuery}'`);
-        }
-        const ncbiId = idList[0];
-
-        // 2. Fetch FASTA
-        const fetchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=${ncbiId}&rettype=fasta&retmode=text`;
-        const fastaRes = await fetch(fetchUrl);
-        if (!fastaRes.ok) throw new Error("Failed to fetch FASTA sequence from NCBI.");
-
-        const fastaText = (await fastaRes.text()).trim();
-        const lines = fastaText.split("\n");
-        const header = lines[0] || "";
-        const sequence = lines.slice(1).join("").replace(/\s+/g, "").toUpperCase();
-
-        // 3. Fetch Summary for title/organism
-        let proteinName = cleanQuery;
-        let organism = "Unknown";
-        try {
-            const sumUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&id=${ncbiId}&retmode=json`;
-            const sumRes = await fetch(sumUrl);
-            if (sumRes.ok) {
-                const sumData = await sumRes.json();
-                const obj = sumData?.result?.[ncbiId];
-                if (obj && obj.title) {
-                    proteinName = obj.title.split("[")[0].trim();
-                    if (obj.title.includes("[") && obj.title.includes("]")) {
-                        organism = obj.title.split("[").pop().split("]")[0].trim();
-                    }
-                }
-            }
-        } catch (e) {
-            console.warn("Could not fetch NCBI summary:", e);
-        }
-
-        // Count titratable residues
+    static analyzeSequenceProperties(sequence, defaultName = "Unknown Protein", org = "Homo sapiens", accession = "QUERY", pdb = "") {
+        const seq = (sequence || "").toUpperCase().replace(/[^A-Z]/g, '');
         const titratableCounts = {
-            D: (sequence.match(/D/g) || []).length,
-            E: (sequence.match(/E/g) || []).length,
-            H: (sequence.match(/H/g) || []).length,
-            C: (sequence.match(/C/g) || []).length,
-            Y: (sequence.match(/Y/g) || []).length,
-            K: (sequence.match(/K/g) || []).length,
-            R: (sequence.match(/R/g) || []).length,
-            len: sequence.length
+            D: (seq.match(/D/g) || []).length,
+            E: (seq.match(/E/g) || []).length,
+            H: (seq.match(/H/g) || []).length,
+            C: (seq.match(/C/g) || []).length,
+            Y: (seq.match(/Y/g) || []).length,
+            K: (seq.match(/K/g) || []).length,
+            R: (seq.match(/R/g) || []).length,
+            len: seq.length
         };
 
-        const tmEst = this.estimateMeltingTemperature(sequence, {});
+        // Approximate MW (avg 110 Da per amino acid)
+        const mw = seq.length > 0 ? Number((seq.length * 110.0 / 1000.0).toFixed(1)) : 0;
+        const tmEst = this.estimateMeltingTemperature(seq, {});
         const piEst = this.calculateIsoelectricPoint(titratableCounts);
 
-        // Check if AlphaFold model exists for query
-        let pdbContent = "";
-        try {
-            const afUrl = `https://alphafold.ebi.ac.uk/files/AF-${cleanQuery.toUpperCase()}-F1-model_v4.pdb`;
-            const afRes = await fetch(afUrl);
-            if (afRes.ok) {
-                pdbContent = await afRes.text();
-            }
-        } catch (e) {
-            console.debug("AlphaFold DB check skipped:", e);
-        }
-
         return {
-            accession: cleanQuery.toUpperCase(),
-            name: proteinName,
-            organism: organism,
-            sequence: sequence,
-            sequence_length: sequence.length,
+            accession: accession.toUpperCase(),
+            name: defaultName,
+            organism: org,
+            sequence: seq,
+            sequence_length: seq.length,
+            molecular_weight_kda: mw,
             titratable_counts: titratableCounts,
             isoelectric_point: piEst,
             estimated_tm: tmEst,
@@ -288,8 +234,184 @@ class BiophysicsEngine {
                 ph_acid_degradation: 3.0,
                 ph_alkaline_degradation: 11.5
             },
-            pdb_content: pdbContent
+            pdb_content: pdb
         };
+    }
+
+    /**
+     * Unified Online Protein Retrieval Engine:
+     * 1. 4-letter RCSB PDB ID (e.g. 1TUP, 6VXX, 1MBN, 4HHB, 1UBQ)
+     * 2. UniProt Accession (e.g. P04637, P0DTC2, P38398)
+     * 3. Gene Name / Keyword (e.g. TP53, Myoglobin, Insulin)
+     * 4. NCBI Entrez Fallback
+     */
+    static async fetchOnlineProtein(query) {
+        if (!navigator.onLine) {
+            throw new Error("Device is offline. Please enable Wi-Fi or Mobile Data to search online.");
+        }
+
+        const cleanQuery = query.trim();
+        if (!cleanQuery) throw new Error("Please enter a PDB ID, UniProt accession, or protein name.");
+
+        // Check 1: 4-character PDB code
+        if (/^[0-9][A-Za-z0-9]{3}$/i.test(cleanQuery)) {
+            const pdbId = cleanQuery.toUpperCase();
+            try {
+                const [pdbRes, metaRes] = await Promise.all([
+                    fetch(`https://files.rcsb.org/download/${pdbId}.pdb`),
+                    fetch(`https://data.rcsb.org/rest/v1/core/entry/${pdbId}`).catch(() => null)
+                ]);
+
+                if (pdbRes.ok) {
+                    const pdbText = await pdbRes.text();
+                    let title = `PDB ${pdbId} Macromolecule`;
+                    let organism = "Biological Specimen";
+
+                    if (metaRes && metaRes.ok) {
+                        try {
+                            const meta = await metaRes.json();
+                            title = meta?.struct?.title || meta?.rcsb_entry_info?.structure_determination_methodology || title;
+                            organism = meta?.rcsb_entry_container_identifiers?.entry_organism_scientific_name?.[0] || organism;
+                        } catch (e) {}
+                    }
+
+                    // Extract sequence from SEQRES or ATOM 3-letter codes
+                    const threeToOne = {
+                        ALA:'A', ARG:'R', ASN:'N', ASP:'D', CYS:'C', GLU:'E', GLN:'Q', GLY:'G',
+                        HIS:'H', ILE:'I', LEU:'L', LYS:'K', MET:'M', PHE:'F', PRO:'P', SER:'S',
+                        THR:'T', TRP:'W', TYR:'Y', VAL:'V'
+                    };
+                    let extractedSeq = "";
+                    const lines = pdbText.split("\n");
+                    for (const line of lines) {
+                        if (line.startsWith("SEQRES")) {
+                            const parts = line.substring(19).trim().split(/\s+/);
+                            for (const p of parts) {
+                                if (threeToOne[p]) extractedSeq += threeToOne[p];
+                            }
+                        }
+                    }
+
+                    // Fallback to ATOM residues if SEQRES not present
+                    if (extractedSeq.length === 0) {
+                        let lastResNum = null;
+                        for (const line of lines) {
+                            if (line.startsWith("ATOM  ") && line.substring(12, 16).trim() === "CA") {
+                                const resName = line.substring(17, 20).trim();
+                                const resNum = line.substring(22, 26).trim();
+                                if (resNum !== lastResNum && threeToOne[resName]) {
+                                    extractedSeq += threeToOne[resName];
+                                    lastResNum = resNum;
+                                }
+                            }
+                        }
+                    }
+
+                    if (extractedSeq.length === 0) extractedSeq = "M" + "A".repeat(150);
+
+                    return this.analyzeSequenceProperties(extractedSeq, title, organism, pdbId, pdbText);
+                }
+            } catch (err) {
+                console.warn(`RCSB PDB lookup failed for ${pdbId}:`, err);
+            }
+        }
+
+        // Check 2: UniProt Accession or Keyword Search via UniProt REST API
+        try {
+            let uniData = null;
+            let acc = cleanQuery.toUpperCase();
+
+            // Direct UniProt Accession test (e.g. P04637, Q9BYF1, P0DTC2)
+            if (/^[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2}$/i.test(cleanQuery)) {
+                const uRes = await fetch(`https://rest.uniprot.org/uniprotkb/${acc}.json`);
+                if (uRes.ok) {
+                    uniData = await uRes.json();
+                }
+            }
+
+            // Keyword Search if not direct accession
+            if (!uniData) {
+                const sRes = await fetch(`https://rest.uniprot.org/uniprotkb/search?query=${encodeURIComponent(cleanQuery)}&size=1&format=json`);
+                if (sRes.ok) {
+                    const searchResults = await sRes.json();
+                    if (searchResults.results && searchResults.results.length > 0) {
+                        uniData = searchResults.results[0];
+                        acc = uniData.primaryAccession || acc;
+                    }
+                }
+            }
+
+            if (uniData) {
+                const name = uniData?.proteinDescription?.recommendedName?.fullName?.value ||
+                             uniData?.proteinDescription?.submissionNames?.[0]?.fullName?.value ||
+                             uniData?.genes?.[0]?.geneName?.value || cleanQuery;
+                const organism = uniData?.organism?.scientificName || "Homo sapiens";
+                const sequence = uniData?.sequence?.value || "";
+
+                // Fetch AlphaFold predicted PDB coordinates
+                let pdbContent = "";
+                try {
+                    const afRes = await fetch(`https://alphafold.ebi.ac.uk/files/AF-${acc}-F1-model_v4.pdb`);
+                    if (afRes.ok) {
+                        pdbContent = await afRes.text();
+                    }
+                } catch (e) {
+                    console.debug("AlphaFold DB download skipped:", e);
+                }
+
+                return this.analyzeSequenceProperties(sequence, name, organism, acc, pdbContent);
+            }
+        } catch (err) {
+            console.warn("UniProt REST API search failed:", err);
+        }
+
+        // Check 3: Fallback to NCBI Entrez E-Utilities
+        try {
+            const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=protein&term=${encodeURIComponent(cleanQuery)}&retmode=json&retmax=1`;
+            const searchRes = await fetch(searchUrl);
+            if (searchRes.ok) {
+                const searchData = await searchRes.json();
+                const idList = searchData?.esearchresult?.idlist || [];
+                if (idList.length > 0) {
+                    const ncbiId = idList[0];
+                    const fastaRes = await fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=${ncbiId}&rettype=fasta&retmode=text`);
+                    if (fastaRes.ok) {
+                        const fastaText = (await fastaRes.text()).trim();
+                        const lines = fastaText.split("\n");
+                        const sequence = lines.slice(1).join("").replace(/\s+/g, "").toUpperCase();
+                        let title = cleanQuery;
+                        let organism = "NCBI Specimen";
+
+                        try {
+                            const sumRes = await fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&id=${ncbiId}&retmode=json`);
+                            if (sumRes.ok) {
+                                const sumData = await sumRes.json();
+                                const obj = sumData?.result?.[ncbiId];
+                                if (obj?.title) {
+                                    title = obj.title.split("[")[0].trim();
+                                    if (obj.title.includes("[") && obj.title.includes("]")) {
+                                        organism = obj.title.split("[").pop().split("]")[0].trim();
+                                    }
+                                }
+                            }
+                        } catch (e) {}
+
+                        return this.analyzeSequenceProperties(sequence, title, organism, cleanQuery.toUpperCase(), "");
+                    }
+                }
+            }
+        } catch (err) {
+            console.warn("NCBI fetch failed:", err);
+        }
+
+        throw new Error(`Could not find protein matching '${cleanQuery}'. Try a PDB ID (e.g., 1TUP, 6VXX), UniProt ID (e.g., P04637), or gene name.`);
+    }
+
+    /**
+     * Legacy alias for fetchOnlineProtein
+     */
+    static async fetchNCBIProtein(query) {
+        return this.fetchOnlineProtein(query);
     }
 }
 
