@@ -490,8 +490,9 @@ async function handleSearch() {
     try {
         const fetchedData = await BiophysicsEngine.fetchOnlineProtein(query);
         feedback.style.background = 'rgba(16, 185, 129, 0.15)';
-        feedback.style.color = 'var(--accent-emerald)';
-        feedback.textContent = `✓ Retrieved: ${fetchedData.name} (${fetchedData.sequence_length} aa). Estimated Tm: ${fetchedData.estimated_tm}°C`;
+        const has3D = fetchedData.pdb_content && fetchedData.pdb_content.length > 0;
+        const structNote = has3D ? ` • 3D Structure Ready (${(fetchedData.pdb_content.length / 1024).toFixed(0)} KB)` : '';
+        feedback.textContent = `✓ Retrieved: ${fetchedData.name} (${fetchedData.sequence_length} aa)${structNote}`;
 
         // Cache in memory database
         window.PROTEINSCOPE_CACHED_DB[fetchedData.accession] = fetchedData;

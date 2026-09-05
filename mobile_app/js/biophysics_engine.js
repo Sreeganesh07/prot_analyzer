@@ -240,10 +240,10 @@ class BiophysicsEngine {
 
     /**
      * Unified Online Protein Retrieval Engine:
-     * 1. 4-letter RCSB PDB ID (e.g. 1TUP, 6VXX, 1MBN, 4HHB, 1UBQ)
-     * 2. UniProt Accession (e.g. P04637, P0DTC2, P38398)
-     * 3. Gene Name / Keyword (e.g. TP53, Myoglobin, Insulin)
-     * 4. NCBI Entrez Fallback
+     * 1. 4-letter RCSB PDB ID (e.g. 1TUP, 6VXX, 1MBN, 4HHB, 1UBQ, 3EU7)
+     * 2. UniProt Accession (e.g. P04637, Q86YC2, P0DTC2, P38398)
+     * 3. Gene Name / Keyword (e.g. PALB2, BRCA2, TP53, Myoglobin, Insulin)
+     * 4. Multi-tier 3D coordinate retrieval via AlphaFold DB API & RCSB PDB Experimental Archive
      */
     static async fetchOnlineProtein(query) {
         if (!navigator.onLine) {
@@ -253,7 +253,7 @@ class BiophysicsEngine {
         const cleanQuery = query.trim();
         if (!cleanQuery) throw new Error("Please enter a PDB ID, UniProt accession, or protein name.");
 
-        // Check 1: 4-character PDB code
+        // Check 1: 4-character PDB code (e.g. 1TUP, 6VXX, 3EU7)
         if (/^[0-9][A-Za-z0-9]{3}$/i.test(cleanQuery)) {
             const pdbId = cleanQuery.toUpperCase();
             try {
@@ -312,24 +312,26 @@ class BiophysicsEngine {
                     return this.analyzeSequenceProperties(extractedSeq, title, organism, pdbId, pdbText);
                 }
             } catch (err) {
-                console.warn(`RCSB PDB lookup failed for ${pdbId}:`, err);
+                console.warn(`RCSB PDB direct lookup failed for ${pdbId}:`, err);
             }
         }
 
-        // Check 2: UniProt Accession or Keyword Search via UniProt REST API
+        // Check 2: UniProt Accession or Gene Keyword Search
         try {
             let uniData = null;
             let acc = cleanQuery.toUpperCase();
 
-            // Direct UniProt Accession test (e.g. P04637, Q9BYF1, P0DTC2)
+            // Direct UniProt Accession pattern (e.g. P04637, Q86YC2, P0DTC2, P38398)
             if (/^[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2}$/i.test(cleanQuery)) {
-                const uRes = await fetch(`https://rest.uniprot.org/uniprotkb/${acc}.json`);
-                if (uRes.ok) {
-                    uniData = await uRes.json();
-                }
+                try {
+                    const uRes = await fetch(`https://rest.uniprot.org/uniprotkb/${acc}.json`);
+                    if (uRes.ok) {
+                        uniData = await uRes.json();
+                    }
+                } catch (e) {}
             }
 
-            // Keyword Search if not direct accession
+            // Keyword Search if not direct accession or accession lookup failed
             if (!uniData) {
                 const sRes = await fetch(`https://rest.uniprot.org/uniprotkb/search?query=${encodeURIComponent(cleanQuery)}&size=1&format=json`);
                 if (sRes.ok) {
@@ -348,21 +350,64 @@ class BiophysicsEngine {
                 const organism = uniData?.organism?.scientificName || "Homo sapiens";
                 const sequence = uniData?.sequence?.value || "";
 
-                // Fetch AlphaFold predicted PDB coordinates
+                // ── MULTI-TIER 3D COORDINATE RETRIEVAL PIPELINE ──
                 let pdbContent = "";
+
+                // Tier 1: Query AlphaFold Official Prediction API for exact model URL
                 try {
-                    const afRes = await fetch(`https://alphafold.ebi.ac.uk/files/AF-${acc}-F1-model_v4.pdb`);
-                    if (afRes.ok) {
-                        pdbContent = await afRes.text();
+                    const afApiUrl = `https://alphafold.ebi.ac.uk/api/prediction/${acc}`;
+                    const afApiRes = await fetch(afApiUrl);
+                    if (afApiRes.ok) {
+                        const afData = await afApiRes.json();
+                        if (Array.isArray(afData) && afData.length > 0 && afData[0].pdbUrl) {
+                            const pRes = await fetch(afData[0].pdbUrl);
+                            if (pRes.ok) {
+                                pdbContent = await pRes.text();
+                                console.log(`✓ 3D coordinates loaded via AlphaFold API for ${acc}: ${pdbContent.length} chars`);
+                            }
+                        }
                     }
                 } catch (e) {
-                    console.debug("AlphaFold DB download skipped:", e);
+                    console.debug("AlphaFold API check skipped or failed:", e);
+                }
+
+                // Tier 2: Direct AlphaFold Versioned PDB fallback (v6, v4)
+                if (!pdbContent || pdbContent.trim().length === 0) {
+                    for (const v of ['v6', 'v4']) {
+                        try {
+                            const directUrl = `https://alphafold.ebi.ac.uk/files/AF-${acc}-F1-model_${v}.pdb`;
+                            const directRes = await fetch(directUrl);
+                            if (directRes.ok) {
+                                pdbContent = await directRes.text();
+                                console.log(`✓ 3D coordinates loaded via AlphaFold ${v} direct for ${acc}: ${pdbContent.length} chars`);
+                                break;
+                            }
+                        } catch (e) {}
+                    }
+                }
+
+                // Tier 3: Fetch Experimental Structures from UniProt PDB Cross-References (RCSB PDB)
+                if (!pdbContent || pdbContent.trim().length === 0) {
+                    const pdbRefs = (uniData.uniProtKBCrossReferences || [])
+                        .filter(x => x.database === 'PDB' && x.id)
+                        .map(x => x.id);
+                    for (const pid of pdbRefs.slice(0, 3)) {
+                        try {
+                            const rcsbUrl = `https://files.rcsb.org/download/${pid}.pdb`;
+                            const rcsbRes = await fetch(rcsbUrl);
+                            if (rcsbRes.ok) {
+                                pdbContent = await rcsbRes.text();
+                                console.log(`✓ 3D coordinates loaded via RCSB PDB experimental cross-reference (${pid}) for ${acc}`);
+                                break;
+                            }
+                        } catch (e) {}
+                    }
                 }
 
                 return this.analyzeSequenceProperties(sequence, name, organism, acc, pdbContent);
             }
         } catch (err) {
-            console.warn("UniProt REST API search failed:", err);
+            console.warn("UniProt retrieval pipeline failed:", err);
         }
 
         // Check 3: Fallback to NCBI Entrez E-Utilities
