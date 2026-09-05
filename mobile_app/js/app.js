@@ -171,7 +171,7 @@ window.setPH = function(ph) {
 window.setRenderMode = function(mode) {
     renderMode = mode;
     document.querySelectorAll('.style-btn').forEach(btn => {
-        if (btn.textContent.toLowerCase() === mode.toLowerCase()) {
+        if (btn.textContent.toLowerCase().trim() === mode.toLowerCase().trim()) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
@@ -188,7 +188,7 @@ window.toggleSpin = function() {
         spinBtn.classList.toggle('active-toggle', isSpinning);
     }
     if (isSpinning) {
-        viewer3D.spin('y', 1.0);
+        viewer3D.spin('y', 0.8);
     } else {
         viewer3D.spin(false);
     }
@@ -196,8 +196,65 @@ window.toggleSpin = function() {
 
 window.reset3DCamera = function() {
     if (viewer3D) {
+        apply3DStyle();
         viewer3D.zoomTo();
         viewer3D.render();
+    }
+};
+
+window.highlightDomainIn3D = function(domainIdx) {
+    if (!viewer3D || !currentProtein || !currentProtein.domains || !currentProtein.domains[domainIdx]) return;
+    const dom = currentProtein.domains[domainIdx];
+    
+    // Switch to 3D viewer tab so user immediately sees the visual focus
+    switchTab('structure');
+
+    // Remove any surface meshes and reset
+    viewer3D.removeAllSurfaces();
+    viewer3D.removeAllShapes();
+
+    // Mute non-domain residues into translucent ghost slate
+    viewer3D.setStyle({}, {
+        cartoon: { color: '#334155', opacity: 0.28, thickness: 0.40 }
+    });
+
+    // Highlight selected domain with bold glowing color
+    const resiRange = Array.from({ length: dom.end - dom.start + 1 }, (_, i) => dom.start + i);
+    viewer3D.setStyle(
+        { resi: resiRange },
+        { cartoon: { color: dom.color, thickness: 0.85, opacity: 1.0 } }
+    );
+
+    // Zoom and center directly onto this domain
+    viewer3D.zoomTo({ resi: resiRange }, 600);
+    viewer3D.render();
+
+    const infoChip = document.getElementById('viewer-info-chip');
+    if (infoChip) {
+        infoChip.textContent = `FOCUS // ${dom.name.toUpperCase()} (${dom.start}-${dom.end})`;
+    }
+};
+
+window.toggleStructureComparison = async function(mode) {
+    if (!currentProtein) return;
+    const infoChip = document.getElementById('viewer-info-chip');
+    const comp = currentProtein.structural_comparison;
+
+    if (mode === 'experimental') {
+        const expId = comp?.experimental_id || (currentProtein.pdb_cross_references && currentProtein.pdb_cross_references[0]);
+        if (expId && expId !== "None Solved") {
+            await loadExperimentalPDB(expId);
+        } else {
+            alert("No solved experimental co-crystal registered for this sequence. Rendering comparative predicted model.");
+        }
+    } else if (mode === 'predicted') {
+        if (currentProtein.pdb_content) {
+            init3DViewer(currentProtein.pdb_content);
+            switchTab('structure');
+            if (infoChip) {
+                infoChip.textContent = `PREDICTED MODEL // ${comp?.predicted_model || 'AlphaFold AI'}`;
+            }
+        }
     }
 };
 
@@ -312,6 +369,87 @@ function loadProtein(acc) {
         }
     }
 
+    // ── POPULATE PROTEIN DOMAINS & ARCHITECTURE ──
+    const domainsBar = document.getElementById('bio-domains-bar');
+    const domainsList = document.getElementById('bio-domains-list');
+    const domainsCountEl = document.getElementById('bio-domains-count');
+    const doms = p.domains || [];
+
+    if (domainsCountEl) {
+        domainsCountEl.textContent = `${doms.length} Functional Modules`;
+    }
+
+    if (domainsBar) {
+        domainsBar.innerHTML = '';
+        if (doms.length > 0 && len > 0) {
+            doms.forEach((dom, idx) => {
+                const span = dom.end - dom.start + 1;
+                const pct = Math.max(3, (span / len) * 100);
+                const seg = document.createElement('div');
+                seg.className = 'domain-bar-segment';
+                seg.style.width = `${pct}%`;
+                seg.style.backgroundColor = dom.color;
+                seg.title = `${dom.name} (${dom.start}-${dom.end}): ${dom.purpose}`;
+                seg.onclick = () => highlightDomainIn3D(idx);
+                domainsBar.appendChild(seg);
+            });
+        } else {
+            domainsBar.innerHTML = '<div style="width:100%; height:100%; background:var(--accent-primary); opacity:0.5; border-radius:4px;"></div>';
+        }
+    }
+
+    if (domainsList) {
+        domainsList.innerHTML = '';
+        if (doms.length > 0) {
+            doms.forEach((dom, idx) => {
+                const card = document.createElement('div');
+                card.className = 'domain-detail-card';
+                card.innerHTML = `
+                    <div class="domain-card-header">
+                        <div class="domain-title-group">
+                            <span class="domain-color-dot" style="background-color: ${dom.color}; box-shadow: 0 0 8px ${dom.color}88;"></span>
+                            <span class="domain-card-name">${dom.name}</span>
+                        </div>
+                        <span class="domain-coords-badge">[${dom.start} – ${dom.end}]</span>
+                    </div>
+                    <div class="domain-purpose-text">${dom.purpose}</div>
+                    <button class="domain-inspect-btn" onclick="highlightDomainIn3D(${idx})">
+                        <span>🔍</span> Highlight in 3D
+                    </button>
+                `;
+                domainsList.appendChild(card);
+            });
+        } else {
+            domainsList.innerHTML = '<div style="font-size:11px; color:var(--text-muted); font-style:italic; padding:8px 0;">No segmented functional domains identified for this primary sequence.</div>';
+        }
+    }
+
+    // ── POPULATE COMPARATIVE STRUCTURE PREDICTION & DELTA ANALYSIS ──
+    const compBadge = document.getElementById('bio-comp-badge');
+    const compModel = document.getElementById('bio-comp-model');
+    const compRmsd = document.getElementById('bio-comp-rmsd');
+    const compIdentity = document.getElementById('bio-comp-identity');
+    const compNotes = document.getElementById('bio-comp-notes');
+    const compLoops = document.getElementById('bio-comp-loops');
+    const comp = p.structural_comparison;
+
+    if (compBadge) {
+        const isPred = p.is_predicted || (p.accession.length !== 4 && !comp?.has_experimental);
+        if (isPred) {
+            compBadge.className = 'comp-badge comp-badge-pred';
+            compBadge.innerHTML = '<span>🔮</span> PREDICTED STRUCTURE';
+        } else {
+            compBadge.className = 'comp-badge comp-badge-exp';
+            compBadge.innerHTML = '<span>🏛️</span> EXPERIMENTAL CO-CRYSTAL';
+        }
+    }
+
+    if (compModel && comp) compModel.textContent = comp.predicted_model || 'AlphaFold AI v4';
+    if (compRmsd && comp) compRmsd.textContent = `${comp.rmsd_angstroms.toFixed(2)} Å`;
+    if (compIdentity && comp) compIdentity.textContent = `${comp.sequence_identity_percent.toFixed(1)}%`;
+    if (compNotes && comp) compNotes.textContent = comp.conformational_deltas || 'Core tertiary fold exhibits high structural concordance.';
+    if (compLoops && comp) compLoops.textContent = comp.flexible_loops || 'Terminal disordered tails';
+
     // External DB Links
     const linkUni = document.getElementById('link-uniprot');
     if (linkUni) linkUni.href = `https://www.uniprot.org/uniprotkb/${p.accession}`;
@@ -348,7 +486,7 @@ window.loadExperimentalPDB = async function(pdbId) {
     }
 };
 
-// ── INITIALIZE 3D VIEWER (OFFLINE LOCAL 3DMOL) ──
+// ── INITIALIZE 3D VIEWER (OFFLINE LOCAL 3DMOL WITH MOBILE GPU OPTIMIZATION) ──
 function init3DViewer(pdbText) {
     const container = document.getElementById('mol-canvas');
     const infoChip = document.getElementById('viewer-info-chip');
@@ -365,10 +503,34 @@ function init3DViewer(pdbText) {
     }
 
     try {
+        // antialias: false eliminates severe GPU fill-rate bottlenecks on high-DPI mobile devices
         viewer3D = $3Dmol.createViewer(container, {
             backgroundColor: '#050811',
-            defaultcolors: $3Dmol.rasmolElementColors
+            defaultcolors: $3Dmol.rasmolElementColors,
+            antialias: false,
+            id: 'viewer3D_canvas'
         });
+
+        // ── TOUCH ROTATION OPTIMIZATION ──
+        // Pausing auto-spin during user touch prevents RAF spin loop and touch events from colliding
+        let isTouching = false;
+        container.addEventListener('touchstart', () => {
+            isTouching = true;
+            if (viewer3D && isSpinning) {
+                viewer3D.spin(false);
+            }
+        }, { passive: true });
+
+        container.addEventListener('touchend', () => {
+            isTouching = false;
+            if (viewer3D && isSpinning) {
+                setTimeout(() => {
+                    if (!isTouching && isSpinning && viewer3D) {
+                        viewer3D.spin('y', 0.8);
+                    }
+                }, 400);
+            }
+        }, { passive: true });
 
         if (pdbText && pdbText.trim().length > 0) {
             viewer3D.addModel(pdbText, 'pdb');
@@ -377,7 +539,8 @@ function init3DViewer(pdbText) {
             viewer3D.render();
 
             if (infoChip) {
-                infoChip.textContent = `3DMOL // ${currentProtein.accession} PDB ACTIVE`;
+                const badge = currentProtein.is_predicted ? 'PREDICTED' : 'ACTIVE';
+                infoChip.textContent = `3DMOL // ${currentProtein.accession} ${badge}`;
             }
         } else {
             container.innerHTML = `
@@ -393,7 +556,7 @@ function init3DViewer(pdbText) {
 
         // Maintain auto-rotation state
         if (isSpinning) {
-            viewer3D.spin('y', 1.0);
+            viewer3D.spin('y', 0.8);
         }
     } catch (e) {
         console.error('Error in 3D viewer initialization:', e);
@@ -404,10 +567,14 @@ function init3DViewer(pdbText) {
     }
 }
 
-// ── APPLY 3D VISUAL STYLES ──
+// ── APPLY 3D VISUAL STYLES (WITH CRITICAL SURFACE REMOVAL FIX) ──
 function apply3DStyle() {
     if (!viewer3D) return;
-    viewer3D.setStyle({}, {}); // Clear previous styles
+
+    // CRITICAL: Must purge surface meshes and shapes so switching to cartoon/spheres removes them
+    viewer3D.removeAllSurfaces();
+    viewer3D.removeAllShapes();
+    viewer3D.setStyle({}, {}); // Clear previous atom styles
 
     if (isDegradedVisual) {
         // Disorganized, aggregated appearance in red/crimson
@@ -417,21 +584,36 @@ function apply3DStyle() {
         });
     } else if (renderMode === 'surface') {
         viewer3D.setStyle({}, {
-            cartoon: { color: 'spectrum', opacity: 0.35 }
+            cartoon: { color: 'spectrum', opacity: 0.35, thickness: 0.45 }
         });
         viewer3D.addSurface($3Dmol.SurfaceType.VDW, {
-            opacity: 0.65,
+            opacity: 0.62,
             colorscheme: 'hydrophobicity'
         });
+    } else if (renderMode === 'domains') {
+        // Color-code distinct functional regions and domains
+        const doms = currentProtein?.domains || [];
+        if (doms.length > 0) {
+            viewer3D.setStyle({}, { cartoon: { color: '#475569', opacity: 0.30, thickness: 0.40 } });
+            doms.forEach(d => {
+                const resiArr = Array.from({ length: d.end - d.start + 1 }, (_, i) => d.start + i);
+                viewer3D.setStyle(
+                    { resi: resiArr },
+                    { cartoon: { color: d.color, thickness: 0.65 } }
+                );
+            });
+        } else {
+            viewer3D.setStyle({}, { cartoon: { color: 'spectrum', thickness: 0.55 } });
+        }
     } else if (renderMode === 'spheres') {
         viewer3D.setStyle({}, {
-            sphere: { colorscheme: 'amino', scale: 0.32 }
+            sphere: { colorscheme: 'amino', scale: 0.28 }
         });
     } else {
         // Default: High-contrast Secondary Structure Cartoon Ribbon
-        viewer3D.setStyle({ ss: 'h' }, { cartoon: { color: '#0ea5e9', thickness: 0.65 } }); // Helices (Cyan/Blue)
-        viewer3D.setStyle({ ss: 's' }, { cartoon: { color: '#f59e0b', thickness: 0.65 } }); // Sheets (Gold)
-        viewer3D.setStyle({ ss: 'c' }, { cartoon: { color: '#64748b', thickness: 0.40 } }); // Coils (Slate)
+        viewer3D.setStyle({ ss: 'h' }, { cartoon: { color: '#0ea5e9', thickness: 0.55 } }); // Helices (Cyan)
+        viewer3D.setStyle({ ss: 's' }, { cartoon: { color: '#f59e0b', thickness: 0.55 } }); // Sheets (Gold)
+        viewer3D.setStyle({ ss: 'c' }, { cartoon: { color: '#64748b', thickness: 0.35 } }); // Coils (Slate)
     }
 
     viewer3D.render();
