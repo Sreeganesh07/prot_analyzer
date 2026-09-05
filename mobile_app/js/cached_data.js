@@ -4,6 +4,26 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P04637",
     "name": "Cellular tumor antigen p53",
     "organism": "Homo sapiens",
+    "gene_name": "TP53",
+    "gene_synonyms": [
+      "P53",
+      "BCC7",
+      "LFS1"
+    ],
+    "subcellular_location": [
+      "Nucleus",
+      "Cytoplasm",
+      "Mitochondrion"
+    ],
+    "function_summary": "Master cellular tumor suppressor. Induces cell cycle arrest, DNA repair, senescence, or apoptosis in response to diverse cellular stresses. Acts as a tetrameric sequence-specific transcription factor regulating hundreds of stress-response genes.",
+    "disease_associations": "Li-Fraumeni syndrome (LFS), Adrenocortical carcinoma, Choroid plexus papilloma, and over 50% of all human somatic cancers.",
+    "pdb_cross_references": [
+      "1TUP",
+      "1OLG",
+      "2OCJ",
+      "3KMD"
+    ],
+    "extinction_coefficient": 36660,
     "sequence": "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD",
     "sequence_length": 393,
     "titratable_counts": {
@@ -179,6 +199,25 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P0DTC2",
     "name": "Spike glycoprotein",
     "organism": "Severe acute respiratory syndrome coronavirus 2",
+    "gene_name": "S",
+    "gene_synonyms": [
+      "Spike",
+      "Surface Glycoprotein"
+    ],
+    "subcellular_location": [
+      "Virion membrane",
+      "Host cell surface",
+      "Endoplasmic reticulum-Golgi intermediate compartment"
+    ],
+    "function_summary": "Trimeric class I viral fusion glycoprotein. Binds host ACE2 receptor via its Receptor-Binding Domain (RBD) and undergoes proteolytic cleavage at S1/S2 to drive viral-host membrane fusion and cellular entry.",
+    "disease_associations": "Coronavirus disease 2019 (COVID-19), severe acute respiratory distress syndrome.",
+    "pdb_cross_references": [
+      "6VXX",
+      "6VYB",
+      "7KRR",
+      "7C2L"
+    ],
+    "extinction_coefficient": 151460,
     "sequence": "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT",
     "sequence_length": 1273,
     "titratable_counts": {
@@ -354,6 +393,24 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P01308",
     "name": "Insulin",
     "organism": "Homo sapiens",
+    "gene_name": "INS",
+    "gene_synonyms": [
+      "Insulin",
+      "IRDN",
+      "IDDM2"
+    ],
+    "subcellular_location": [
+      "Secreted extracellular space"
+    ],
+    "function_summary": "Essential anabolic peptide hormone regulating carbohydrate, lipid, and protein metabolism. Promotes cellular glucose uptake via GLUT4 translocation, stimulates glycogenesis and lipogenesis, and inhibits hepatic gluconeogenesis.",
+    "disease_associations": "Diabetes mellitus type 1 (IDDM), Permanent neonatal diabetes mellitus (PNDM), Hyperproinsulinemia.",
+    "pdb_cross_references": [
+      "4INS",
+      "1TRZ",
+      "2KQP",
+      "3I40"
+    ],
+    "extinction_coefficient": 17710,
     "sequence": "MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN",
     "sequence_length": 110,
     "titratable_counts": {
@@ -529,6 +586,23 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P68871",
     "name": "Hemoglobin subunit beta",
     "organism": "Homo sapiens",
+    "gene_name": "HBB",
+    "gene_synonyms": [
+      "Beta-Globin",
+      "CD113t-C"
+    ],
+    "subcellular_location": [
+      "Erythrocyte cytoplasm"
+    ],
+    "function_summary": "Forms the beta-subunit of heterotetrameric adult hemoglobin (alpha-2, beta-2). Binds four heme iron cofactors to cooperatively bind and transport oxygen from lungs to peripheral tissues, modulated by allosteric effectors like 2,3-BPG, pH (Bohr effect), and CO2.",
+    "disease_associations": "Sickle cell anemia (Glu6Val mutation causing polymerization), Beta-thalassemia, Erythrocytosis.",
+    "pdb_cross_references": [
+      "4HHB",
+      "1HHO",
+      "2HHB",
+      "1A3N"
+    ],
+    "extinction_coefficient": 15720,
     "sequence": "MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH",
     "sequence_length": 147,
     "titratable_counts": {
@@ -704,6 +778,26 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P00533",
     "name": "Epidermal growth factor receptor",
     "organism": "Homo sapiens",
+    "gene_name": "EGFR",
+    "gene_synonyms": [
+      "ERBB",
+      "ERBB1",
+      "HER1"
+    ],
+    "subcellular_location": [
+      "Cell membrane",
+      "Endosome",
+      "Nucleus"
+    ],
+    "function_summary": "Transmembrane receptor tyrosine kinase. Ligand binding (EGF, TGF-alpha) induces receptor homodimerization and autophosphorylation, activating Ras-Raf-MEK-ERK and PI3K-Akt cascades governing cell proliferation, survival, and differentiation.",
+    "disease_associations": "Non-small cell lung cancer (NSCLC), Glioblastoma multiforme, Colorectal carcinoma, Squamous cell carcinoma.",
+    "pdb_cross_references": [
+      "1IVO",
+      "2GS6",
+      "3VJO",
+      "4I22"
+    ],
+    "extinction_coefficient": 132640,
     "sequence": "MRPSGTAGAALLALLAALCPASRALEEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQKCDPSCPNGSCWGAGEENCQKLTKIICAQQCSGRCRGKSPSDCCHNQCAAGCTGPRESDCLVCRKFRDEATCKDTCPPLMLYNPTTYQMDVNPEGKYSFGATCVKKCPRNYVVTDHGSCVRACGADSYEMEEDGVRKCKKCEGPCRKVCNGIGIGEFKDSLSINATNIKHFKNCTSISGDLHILPVAFRGDSFTHTPPLDPQELDILKTVKEITGFLLIQAWPENRTDLHAFENLEIIRGRTKQHGQFSLAVVSLNITSLGLRSLKEISDGDVIISGNKNLCYANTINWKKLFGTSGQKTKIISNRGENSCKATGQVCHALCSPEGCWGPEPRDCVSCRNVSRGRECVDKCNLLEGEPREFVENSECIQCHPECLPQAMNITCTGRGPDNCIQCAHYIDGPHCVKTCPAGVMGENNTLVWKYADAGHVCHLCHPNCTYGCTGPGLEGCPTNGPKIPSIATGMVGALLLLLVVALGIGLFMRRRHIVRKRTLRRLLQERELVEPLTPSGEAPNQALLRILKETEFKKIKVLGSGAFGTVYKGLWIPEGEKVKIPVAIKELREATSPKANKEILDEAYVMASVDNPHVCRLLGICLTSTVQLITQLMPFGCLLDYVREHKDNIGSQYLLNWCVQIAKGMNYLEDRRLVHRDLAARNVLVKTPQHVKITDFGLAKLLGAEEKEYHAEGGKVPIKWMALESILHRIYTHQSDVWSYGVTVWELMTFGSKPYDGIPASEISSILEKGERLPQPPICTIDVYMIMVKCWMIDADSRPKFRELIIEFSKMARDPQRYLVIQGDERMHLPSPTDSNFYRALMDEEDMDDVVDADEYLIPQQGFFSSPSTSRTPLLSSLSATSNNSTVACIDRNGLQSCPIKEDSFLQRYSSDPTGALTEDSIDDTFLPVPEYINQSVPKRPAGSVQNPVYHNQPLNPAPSRDPHYQDPHSTAVGNPEYLNTVQPTCVNSTFDSPAHWAQKGSHQISLDNPDYQQDFFPKEAKPNGIFKGSTAENAEYLRVAPQSSEFIGA",
     "sequence_length": 1210,
     "titratable_counts": {
@@ -879,6 +973,24 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P00734",
     "name": "Prothrombin",
     "organism": "Homo sapiens",
+    "gene_name": "F2",
+    "gene_synonyms": [
+      "Prothrombin",
+      "Coagulation Factor II",
+      "Thrombin"
+    ],
+    "subcellular_location": [
+      "Secreted blood plasma"
+    ],
+    "function_summary": "Central vitamin K-dependent serine protease of the blood coagulation cascade. Cleaved by Factor Xa into active thrombin, which proteolytically converts soluble fibrinogen into insoluble fibrin mesh and activates platelets via PAR receptors.",
+    "disease_associations": "Prothrombin G20210A thrombophilia, Deep vein thrombosis, Dysprothrombinemia.",
+    "pdb_cross_references": [
+      "1HAP",
+      "1PPB",
+      "2HGT",
+      "3KCG"
+    ],
+    "extinction_coefficient": 111540,
     "sequence": "MAHVRGLQLPGCLALAALCSLVHSQHVFLAPQQARSLLQRVRRANTFLEEVRKGNLERECVEETCSYEEAFEALESSTATDVFWAKYTACETARTPRDKLAACLEGNCAEGLGTNYRGHVNITRSGIECQLWRSRYPHKPEINSTTHPGADLQENFCRNPDSSTTGPWCYTTDPTVRRQECSIPVCGQDQVTVAMTPRSEGSSVNLSPPLEQCVPDRGQQYQGRLAVTTHGLPCLAWASAQAKALSKHQDFNSAVQLVENFCRNPDGDEEGVWCYVAGKPGDFGYCDLNYCEEAVEEETGDGLDEDSDRAIEGRTATSEYQTFFNPRTFGSGEADCGLRPLFEKKSLEDKTERELLESYIDGRIVEGSDAEIGMSPWQVMLFRKSPQELLCGASLISDRWVLTAAHCLLYPPWDKNFTENDLLVRIGKHSRTRYERNIEKISMLEKIYIHPRYNWRENLDRDIALMKLKKPVAFSDYIHPVCLPDRETAASLLQAGYKGRVTGWGNLKETWTANVGKGQPSVLQVVNLPIVERPVCKDSTRIRITDNMFCAGYKPDEGKRGDACEGDSGGPFVMKSPFNNRWYQMGIVSWGEGCDRDGKYGFYTHVFRLKKWIQKVIDQFGE",
     "sequence_length": 622,
     "titratable_counts": {
@@ -1054,6 +1166,22 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P42212",
     "name": "Green fluorescent protein",
     "organism": "Aequorea victoria",
+    "gene_name": "GFP",
+    "gene_synonyms": [
+      "Green Fluorescent Protein"
+    ],
+    "subcellular_location": [
+      "Cytoplasm"
+    ],
+    "function_summary": "11-stranded beta-barrel fluorophore from Aequorea victoria. The internal Ser65-Tyr66-Gly67 tripeptide undergoes spontaneous post-translational cyclization and oxidation to yield an intensely fluorescent chromophore (excitation 395/475 nm, emission 509 nm).",
+    "disease_associations": "Widely utilized biological reporter and biosensor in molecular medicine and protein dynamics research.",
+    "pdb_cross_references": [
+      "1EMA",
+      "1GFL",
+      "2B3P",
+      "1QY3"
+    ],
+    "extinction_coefficient": 22140,
     "sequence": "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK",
     "sequence_length": 238,
     "titratable_counts": {
@@ -1229,6 +1357,24 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P11021",
     "name": "Endoplasmic reticulum chaperone BiP",
     "organism": "Homo sapiens",
+    "gene_name": "HSPA5",
+    "gene_synonyms": [
+      "BiP",
+      "GRP78",
+      "MIF2"
+    ],
+    "subcellular_location": [
+      "Endoplasmic reticulum lumen"
+    ],
+    "function_summary": "Major Hsp70-family molecular chaperone in the ER lumen. Binds hydrophobic patches of nascent polypeptides to facilitate folding, prevent misfolded aggregation, and acts as the master sensor controlling IRE1, PERK, and ATF6 in the Unfolded Protein Response (UPR).",
+    "disease_associations": "ER stress neurodegeneration, Tumor chemotherapeutic resistance adaptation, Neurodevelopmental disorders.",
+    "pdb_cross_references": [
+      "5E84",
+      "3LDN",
+      "6ASY",
+      "3QFD"
+    ],
+    "extinction_coefficient": 30620,
     "sequence": "MKLSLVAAMLLLLSAARAEEEDKKEDVGTVVGIDLGTTYSCVGVFKNGRVEIIANDQGNRITPSYVAFTPEGERLIGDAAKNQLTSNPENTVFDAKRLIGRTWNDPSVQQDIKFLPFKVVEKKTKPYIQVDIGGGQTKTFAPEEISAMVLTKMKETAEAYLGKKVTHAVVTVPAYFNDAQRQATKDAGTIAGLNVMRIINEPTAAAIAYGLDKREGEKNILVFDLGGGTFDVSLLTIDNGVFEVVATNGDTHLGGEDFDQRVMEHFIKLYKKKTGKDVRKDNRAVQKLRREVEKAKRALSSQHQARIEIESFYEGEDFSETLTRAKFEELNMDLFRSTMKPVQKVLEDSDLKKSDIDEIVLVGGSTRIPKIQQLVKEFFNGKEPSRGINPDEAVAYGAAVQAGVLSGDQDTGDLVLLDVCPLTLGIETVGGVMTKLIPRNTVVPTKKSQIFSTASDNQPTVTIKVYEGERPLTKDNHLLGTFDLTGIPPAPRGVPQIEVTFEIDVNGILRVTAEDKGTGNKNKITITNDQNRLTPEEIERMVNDAEKFAEEDKKLKERIDTRNELESYAYSLKNQIGDKEKLGGKLSSEDKETMEKAVEEKIEWLESHQDADIEDFKAKKKELEEIVQPIISKLYGSAGPPPTGEEDTAEKDEL",
     "sequence_length": 654,
     "titratable_counts": {
@@ -1404,6 +1550,23 @@ window.PROTEINSCOPE_CACHED_DB = {
     "accession": "P02769",
     "name": "Albumin",
     "organism": "Bos taurus",
+    "gene_name": "ALB",
+    "gene_synonyms": [
+      "Albumin",
+      "Serum Albumin"
+    ],
+    "subcellular_location": [
+      "Secreted blood plasma"
+    ],
+    "function_summary": "Most abundant globular protein in human blood plasma (~50 g/L). Provides 80% of colloidal intravascular osmotic oncotic pressure and serves as the primary transport vehicle for non-esterified fatty acids, bilirubin, calcium, steroid hormones, and therapeutic drugs.",
+    "disease_associations": "Analbuminemia, Familial dysalbuminemic hyperthyroxinemia, Hypoalbuminemia in liver failure.",
+    "pdb_cross_references": [
+      "1AO6",
+      "1E78",
+      "4F5S",
+      "1UOR"
+    ],
+    "extinction_coefficient": 52165,
     "sequence": "MKWVTFISLLLLFSSAYSRGVFRRDTHKSEIAHRFKDLGEEHFKGLVLIAFSQYLQQCPFDEHVKLVNELTEFAKTCVADESHAGCEKSLHTLFGDELCKVASLRETYGDMADCCEKQEPERNECFLSHKDDSPDLPKLKPDPNTLCDEFKADEKKFWGKYLYEIARRHPYFYAPELLYYANKYNGVFQECCQAEDKGACLLPKIETMREKVLASSARQRLRCASIQKFGERALKAWSVARLSQKFPKAEFVEVTKLVTDLTKVHKECCHGDLLECADDRADLAKYICDNQDTISSKLKECCDKPLLEKSHCIAEVEKDAIPENLPPLTADFAEDKDVCKNYQEAKDAFLGSFLYEYSRRHPEYAVSVLLRLAKEYEATLEECCAKDDPHACYSTVFDKLKHLVDEPQNLIKQNCDQFEKLGEYGFQNALIVRYTRKVPQVSTPTLVEVSRSLGKVGTRCCTKPESERMPCTEDYLSLILNRLCVLHEKTPVSEKVTKCCTESLVNRRPCFSALTPDETYVPKAFDEKLFTFHADICTLPDTEKQIKKQTALVELLKHKPKATEEQLKTVMENFVAFVDKCCAADDKEACFAVEGPKLVVSTQTALA",
     "sequence_length": 607,
     "titratable_counts": {

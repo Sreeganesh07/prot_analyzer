@@ -194,9 +194,9 @@ class BiophysicsEngine {
     }
 
     /**
-     * Helper to extract titratable residues and properties from sequence
+     * Helper to extract titratable residues, biophysical metrics, and biological annotations
      */
-    static analyzeSequenceProperties(sequence, defaultName = "Unknown Protein", org = "Homo sapiens", accession = "QUERY", pdb = "") {
+    static analyzeSequenceProperties(sequence, defaultName = "Unknown Protein", org = "Homo sapiens", accession = "QUERY", pdb = "", extraInfo = {}) {
         const seq = (sequence || "").toUpperCase().replace(/[^A-Z]/g, '');
         const titratableCounts = {
             D: (seq.match(/D/g) || []).length,
@@ -209,6 +209,24 @@ class BiophysicsEngine {
             len: seq.length
         };
 
+        // Kyte-Doolittle Hydropathy Index
+        const KD_SCALE = {
+            I: 4.5, V: 4.2, L: 3.8, F: 2.8, C: 2.5, M: 1.9, A: 1.8, G: -0.4,
+            T: -0.7, S: -0.8, W: -0.9, Y: -1.3, P: -1.6, H: -3.2, E: -3.5,
+            Q: -3.5, D: -3.5, N: -3.5, K: -3.9, R: -4.5
+        };
+        let hydroSum = 0;
+        for (let i = 0; i < seq.length; i++) {
+            hydroSum += KD_SCALE[seq[i]] || 0;
+        }
+        const gravy = seq.length > 0 ? Number((hydroSum / seq.length).toFixed(3)) : 0;
+
+        // Pace et al. Extinction Coefficient (M^-1 cm^-1)
+        const wCount = (seq.match(/W/g) || []).length;
+        const yCount = titratableCounts.Y;
+        const cCount = titratableCounts.C;
+        const extCoeff = (wCount * 5500) + (yCount * 1490) + (cCount * 125);
+
         // Approximate MW (avg 110 Da per amino acid)
         const mw = seq.length > 0 ? Number((seq.length * 110.0 / 1000.0).toFixed(1)) : 0;
         const tmEst = this.estimateMeltingTemperature(seq, {});
@@ -218,9 +236,17 @@ class BiophysicsEngine {
             accession: accession.toUpperCase(),
             name: defaultName,
             organism: org,
+            gene_name: extraInfo.gene_name || "UNKNOWN",
+            gene_synonyms: extraInfo.gene_synonyms || [],
+            subcellular_location: extraInfo.subcellular_location || ["Intracellular"],
+            function_summary: extraInfo.function_summary || "Biological macromolecule investigated under physiological and thermal stress.",
+            disease_associations: extraInfo.disease_associations || "No clinical pathology registered.",
+            pdb_cross_references: extraInfo.pdb_cross_references || [],
             sequence: seq,
             sequence_length: seq.length,
             molecular_weight_kda: mw,
+            gravy_score: gravy,
+            extinction_coefficient: extCoeff,
             titratable_counts: titratableCounts,
             isoelectric_point: piEst,
             estimated_tm: tmEst,
@@ -350,6 +376,38 @@ class BiophysicsEngine {
                 const organism = uniData?.organism?.scientificName || "Homo sapiens";
                 const sequence = uniData?.sequence?.value || "";
 
+                // Extract Gene and Synonyms
+                let geneName = cleanQuery.toUpperCase();
+                let geneSynonyms = [];
+                if (uniData.genes && uniData.genes.length > 0) {
+                    geneName = uniData.genes[0]?.geneName?.value || geneName;
+                    geneSynonyms = (uniData.genes[0]?.synonyms || []).map(s => s.value).filter(Boolean);
+                }
+
+                // Extract Functional and Clinical Annotations
+                let functionSummary = "Biological macromolecule investigated under physiological and thermal stress.";
+                let subcellularLocation = ["Intracellular"];
+                let diseaseAssociations = "No direct clinical pathology registered.";
+
+                if (Array.isArray(uniData.comments)) {
+                    for (const c of uniData.comments) {
+                        if (c.commentType === 'FUNCTION' && c.texts && c.texts[0]?.value) {
+                            functionSummary = c.texts[0].value;
+                        } else if (c.commentType === 'SUBCELLULAR LOCATION' && Array.isArray(c.subcellularLocations)) {
+                            const locs = c.subcellularLocations.map(l => l.location?.value).filter(Boolean);
+                            if (locs.length > 0) subcellularLocation = locs;
+                        } else if (c.commentType === 'DISEASE' && c.disease?.diseaseId) {
+                            const desc = c.disease?.description?.value || '';
+                            diseaseAssociations = `${c.disease.diseaseId}${desc ? ': ' + desc : ''}`;
+                        }
+                    }
+                }
+
+                // Extract PDB Cross-References
+                const pdbRefs = (uniData.uniProtKBCrossReferences || [])
+                    .filter(x => x.database === 'PDB' && x.id)
+                    .map(x => x.id);
+
                 // ── MULTI-TIER 3D COORDINATE RETRIEVAL PIPELINE ──
                 let pdbContent = "";
 
@@ -388,9 +446,6 @@ class BiophysicsEngine {
 
                 // Tier 3: Fetch Experimental Structures from UniProt PDB Cross-References (RCSB PDB)
                 if (!pdbContent || pdbContent.trim().length === 0) {
-                    const pdbRefs = (uniData.uniProtKBCrossReferences || [])
-                        .filter(x => x.database === 'PDB' && x.id)
-                        .map(x => x.id);
                     for (const pid of pdbRefs.slice(0, 3)) {
                         try {
                             const rcsbUrl = `https://files.rcsb.org/download/${pid}.pdb`;
@@ -404,7 +459,14 @@ class BiophysicsEngine {
                     }
                 }
 
-                return this.analyzeSequenceProperties(sequence, name, organism, acc, pdbContent);
+                return this.analyzeSequenceProperties(sequence, name, organism, acc, pdbContent, {
+                    gene_name: geneName,
+                    gene_synonyms: geneSynonyms,
+                    function_summary: functionSummary,
+                    subcellular_location: subcellularLocation,
+                    disease_associations: diseaseAssociations,
+                    pdb_cross_references: pdbRefs
+                });
             }
         } catch (err) {
             console.warn("UniProt retrieval pipeline failed:", err);

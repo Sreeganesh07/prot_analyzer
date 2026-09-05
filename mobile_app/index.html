@@ -773,6 +773,157 @@
             margin-top: 2px;
         }
 
+        /* ── BIOLOGICAL INFORMATION CARDS (TAB 3) ── */
+        .bio-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .bio-card-head {
+            font-size: 12px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bio-gene-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .bio-gene-badge {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(99, 102, 241, 0.2));
+            color: var(--accent-cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            font-size: 11px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .bio-syn-text {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .subcell-pills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .subcell-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--accent-emerald);
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .disease-banner {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: var(--radius-sm);
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 11px;
+            color: #fca5a5;
+            line-height: 1.4;
+        }
+
+        .bio-function-box {
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .bio-xrefs-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .pdb-chip-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 11px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.15s;
+        }
+
+        .pdb-chip-btn:active {
+            background: var(--accent-cyan);
+            color: #050811;
+            transform: scale(0.96);
+        }
+
+        .db-links-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .db-link-btn {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border-technical);
+            color: var(--text-primary);
+            font-size: 11px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            padding: 8px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all 0.15s;
+        }
+
+        .db-link-btn:active {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
         /* ── SEARCH & EXPLORE MODAL ── */
         .modal-backdrop {
             display: none;
@@ -973,23 +1124,32 @@
     <div id="splash-screen">
         <div class="splash-logo-container">
             <div class="splash-glow-ring"></div>
-            <!-- Futuristic Molecular Helix SVG -->
+            <!-- Futuristic Molecular Helix Emblem SVG -->
             <svg class="splash-svg-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="42" stroke="url(#splash-grad1)" stroke-width="3" stroke-dasharray="6 4" opacity="0.6"/>
-                <path d="M28 32 C38 18, 62 18, 72 32 C82 46, 82 54, 72 68 C62 82, 38 82, 28 68 C18 54, 18 46, 28 32 Z" 
-                      stroke="url(#splash-grad2)" stroke-width="4" stroke-linecap="round"/>
-                <circle cx="50" cy="50" r="14" fill="url(#splash-grad1)"/>
-                <circle cx="28" cy="32" r="5" fill="#38bdf8"/>
-                <circle cx="72" cy="32" r="5" fill="#818cf8"/>
-                <circle cx="72" cy="68" r="5" fill="#38bdf8"/>
-                <circle cx="28" cy="68" r="5" fill="#818cf8"/>
+                <circle cx="50" cy="50" r="44" stroke="rgba(56, 189, 248, 0.35)" stroke-width="2" stroke-dasharray="4 6"/>
+                <circle cx="50" cy="50" r="34" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1.5"/>
+                <!-- Interlocking Infinity Helix Ribbon -->
+                <path d="M28 38 C18 54, 28 70, 44 72 C60 74, 76 58, 82 44" stroke="url(#splash-grad2)" stroke-width="6.5" stroke-linecap="round"/>
+                <line x1="38" y1="40" x2="44" y2="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="1 2"/>
+                <line x1="50" y1="34" x2="50" y2="66" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="1 2"/>
+                <line x1="62" y1="40" x2="56" y2="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="1 2"/>
+                <path d="M72 62 C82 46, 72 30, 56 28 C40 26, 24 42, 18 56" stroke="url(#splash-grad1)" stroke-width="6.5" stroke-linecap="round"/>
+                <!-- Atomic Nodes -->
+                <circle cx="18" cy="56" r="4" fill="#38bdf8"/>
+                <circle cx="18" cy="56" r="1.5" fill="#ffffff"/>
+                <circle cx="82" cy="44" r="4" fill="#a855f7"/>
+                <circle cx="82" cy="44" r="1.5" fill="#ffffff"/>
+                <!-- Central Radiant Core -->
+                <circle cx="50" cy="50" r="5.5" fill="#f59e0b"/>
+                <circle cx="50" cy="50" r="2" fill="#ffffff"/>
                 <defs>
                     <linearGradient id="splash-grad1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#38bdf8"/>
-                        <stop offset="1" stop-color="#818cf8"/>
+                        <stop offset="0.6" stop-color="#0284c7"/>
+                        <stop offset="1" stop-color="#0ea5e9"/>
                     </linearGradient>
-                    <linearGradient id="splash-grad2" x1="0" y1="50" x2="100" y2="50" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0ea5e9"/>
+                    <linearGradient id="splash-grad2" x1="100" y1="100" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#a855f7"/>
                         <stop offset="0.5" stop-color="#6366f1"/>
                         <stop offset="1" stop-color="#38bdf8"/>
                     </linearGradient>
@@ -1007,8 +1167,12 @@
     <header class="app-header">
         <div class="header-brand">
             <div class="brand-icon-box">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.4)" stroke-width="4" stroke-dasharray="6 8"/>
+                    <path d="M28 38 C18 54, 28 70, 44 72 C60 74, 76 58, 82 44" stroke="#c084fc" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M72 62 C82 46, 72 30, 56 28 C40 26, 24 42, 18 56" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="6" fill="#f59e0b"/>
+                    <circle cx="50" cy="50" r="2.5" fill="#ffffff"/>
                 </svg>
             </div>
             <div class="header-title-block">
@@ -1162,8 +1326,74 @@
         </div>
     </section>
 
-    <!-- ═══════════ TAB 3: TITRATION & SEQUENCE PROPERTIES ═══════════ -->
+    <!-- ═══════════ TAB 3: BIOLOGY & DETAILED INFORMATION ═══════════ -->
     <section class="tab-view" id="tab-properties">
+        <!-- Card 1: Biological Role & Genetics -->
+        <div class="bio-card">
+            <div class="bio-card-head">
+                <span>Biological Role & Genetics</span>
+                <span style="color:var(--accent-cyan); font-size:10px;" id="bio-org-chip">Homo sapiens</span>
+            </div>
+
+            <div class="bio-gene-header">
+                <span class="bio-gene-badge" id="bio-gene">GENE: TP53</span>
+                <span class="bio-syn-text" id="bio-synonyms">(P53, BCC7)</span>
+            </div>
+
+            <!-- Subcellular Localization Pills -->
+            <div class="subcell-pills-row" id="bio-subcell-row">
+                <span class="subcell-pill">📍 Nucleus</span>
+                <span class="subcell-pill">📍 Cytoplasm</span>
+            </div>
+
+            <!-- Disease Associations Banner -->
+            <div class="disease-banner" id="bio-disease-banner">
+                <span>⚠️</span>
+                <span id="bio-disease-text">Li-Fraumeni syndrome (LFS), Adrenocortical carcinoma</span>
+            </div>
+
+            <!-- Functional Summary -->
+            <div class="bio-function-box" id="bio-function-text">
+                Master cellular tumor suppressor. Induces growth arrest, DNA repair, senescence, or apoptosis depending on the physiological circumstances and cell type.
+            </div>
+        </div>
+
+        <!-- Card 2: Biochemical & Biophysical Profile -->
+        <div class="bio-card">
+            <div class="bio-card-head">
+                <span>Biochemical Parameters</span>
+                <span style="font-size:10px; color:var(--text-muted);">In Silico Physics</span>
+            </div>
+
+            <div class="props-grid">
+                <div class="prop-item">
+                    <span class="prop-label">Sequence Length</span>
+                    <span class="prop-value" id="stat-len">393 aa</span>
+                </div>
+                <div class="prop-item">
+                    <span class="prop-label">Molecular Weight</span>
+                    <span class="prop-value" id="stat-mw">43.7 kDa</span>
+                </div>
+                <div class="prop-item">
+                    <span class="prop-label">Isoelectric Point</span>
+                    <span class="prop-value" id="stat-pi-val">6.33</span>
+                </div>
+                <div class="prop-item">
+                    <span class="prop-label">Threshold Tm</span>
+                    <span class="prop-value" id="stat-thresh-tm" style="color:var(--accent-amber);">69.0°C</span>
+                </div>
+                <div class="prop-item">
+                    <span class="prop-label">GRAVY Hydropathy</span>
+                    <span class="prop-value" id="stat-gravy">-0.420</span>
+                </div>
+                <div class="prop-item">
+                    <span class="prop-label">Extinction Coeff</span>
+                    <span class="prop-value" id="stat-extcoeff">35,870</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Charge Titration Curve -->
         <div class="chart-box-card">
             <div class="lab-card-title">
                 <span>Henderson-Hasselbalch Q(pH)</span>
@@ -1176,22 +1406,24 @@
             </svg>
         </div>
 
-        <div class="props-grid">
-            <div class="prop-item">
-                <span class="prop-label">Sequence Length</span>
-                <span class="prop-value" id="stat-len">393 aa</span>
+        <!-- Card 4: Structure Archive & Experimental Co-Crystals -->
+        <div class="bio-card">
+            <div class="bio-card-head">
+                <span>Structural Coordinates</span>
+                <span class="hero-acc-badge" id="bio-struct-type">PDB / AlphaFold</span>
             </div>
-            <div class="prop-item">
-                <span class="prop-label">Molecular Weight</span>
-                <span class="prop-value" id="stat-mw">43.7 kDa</span>
+
+            <div style="font-size:11px; color:var(--text-muted); margin-bottom:6px;">
+                Experimental PDB Co-Crystals (Tap to load into 3D viewer):
             </div>
-            <div class="prop-item">
-                <span class="prop-label">Isoelectric Point</span>
-                <span class="prop-value" id="stat-pi-val">6.33</span>
+            <div class="bio-xrefs-row" id="bio-pdb-chips">
+                <!-- Populated dynamically via app.js -->
             </div>
-            <div class="prop-item">
-                <span class="prop-label">Threshold Tm</span>
-                <span class="prop-value" id="stat-thresh-tm" style="color:var(--accent-amber);">69.0°C</span>
+
+            <div class="db-links-row">
+                <a class="db-link-btn" id="link-uniprot" target="_blank" href="https://www.uniprot.org">UniProt ↗</a>
+                <a class="db-link-btn" id="link-rcsb" target="_blank" href="https://www.rcsb.org">RCSB PDB ↗</a>
+                <a class="db-link-btn" id="link-alphafold" target="_blank" href="https://alphafold.ebi.ac.uk">AlphaFold ↗</a>
             </div>
         </div>
     </section>

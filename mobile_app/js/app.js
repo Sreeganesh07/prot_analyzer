@@ -222,7 +222,7 @@ function loadProtein(acc) {
     document.getElementById('hero-name').textContent = p.name;
     document.getElementById('hero-org').textContent = p.organism;
 
-    // Update Properties Tab Values
+    // Update Properties & Biology Tab Values
     const len = p.sequence_length || (p.sequence ? p.sequence.length : 300);
     const mw = p.molecular_weight_kda || (p.molecular_weight ? (p.molecular_weight / 1000).toFixed(1) : (len * 0.11).toFixed(1));
     const pi = p.isoelectric_point ? p.isoelectric_point.toFixed(2) : '6.50';
@@ -235,12 +235,118 @@ function loadProtein(acc) {
     document.getElementById('stat-thresh-tm').textContent = `${tm}°C`;
     document.getElementById('stat-tm').textContent = `${tm}°C`;
 
+    // Populate Rich Biological Fields
+    const bioOrg = document.getElementById('bio-org-chip');
+    if (bioOrg) bioOrg.textContent = p.organism || 'Biological Specimen';
+
+    const bioGene = document.getElementById('bio-gene');
+    if (bioGene) bioGene.textContent = `GENE: ${p.gene_name || p.accession}`;
+
+    const bioSyn = document.getElementById('bio-synonyms');
+    if (bioSyn) {
+        const synList = p.gene_synonyms || [];
+        bioSyn.textContent = synList.length > 0 ? `(${synList.slice(0, 3).join(', ')})` : '';
+    }
+
+    const subcellRow = document.getElementById('bio-subcell-row');
+    if (subcellRow) {
+        subcellRow.innerHTML = '';
+        const locs = p.subcellular_location || ['Intracellular'];
+        locs.forEach(loc => {
+            const pill = document.createElement('span');
+            pill.className = 'subcell-pill';
+            pill.innerHTML = `📍 ${loc}`;
+            subcellRow.appendChild(pill);
+        });
+    }
+
+    const diseaseBanner = document.getElementById('bio-disease-banner');
+    const diseaseText = document.getElementById('bio-disease-text');
+    if (diseaseBanner && diseaseText) {
+        if (p.disease_associations && p.disease_associations !== 'No direct clinical pathology registered.') {
+            diseaseBanner.style.display = 'flex';
+            diseaseText.textContent = p.disease_associations;
+        } else {
+            diseaseBanner.style.display = 'none';
+        }
+    }
+
+    const functionText = document.getElementById('bio-function-text');
+    if (functionText) {
+        functionText.textContent = p.function_summary || 'Biological macromolecule investigated under physiological and thermal stress.';
+    }
+
+    // GRAVY & Extinction Coefficient
+    const gravyEl = document.getElementById('stat-gravy');
+    if (gravyEl) {
+        gravyEl.textContent = p.gravy_score !== undefined ? (p.gravy_score > 0 ? '+' : '') + p.gravy_score.toFixed(3) : '-0.420';
+    }
+
+    const extEl = document.getElementById('stat-extcoeff');
+    if (extEl) {
+        extEl.textContent = p.extinction_coefficient ? p.extinction_coefficient.toLocaleString() : '35,870';
+    }
+
+    // Structure source chip
+    const structType = document.getElementById('bio-struct-type');
+    if (structType) {
+        structType.textContent = p.pdb_content ? (p.accession.length === 4 ? 'RCSB PDB Experimental' : 'AlphaFold AI Structure') : 'Sequence Only';
+    }
+
+    // Populate Clickable Experimental PDB Cross-References
+    const pdbRow = document.getElementById('bio-pdb-chips');
+    if (pdbRow) {
+        pdbRow.innerHTML = '';
+        const xrefs = p.pdb_cross_references || [];
+        if (xrefs.length > 0) {
+            xrefs.forEach(pid => {
+                const btn = document.createElement('button');
+                btn.className = 'pdb-chip-btn';
+                btn.innerHTML = `<span>🏛️</span><span>${pid}</span>`;
+                btn.title = `Load experimental crystal ${pid}`;
+                btn.onclick = () => loadExperimentalPDB(pid);
+                pdbRow.appendChild(btn);
+            });
+        } else {
+            pdbRow.innerHTML = '<span style="font-size:11px; color:var(--text-muted); font-style:italic;">No experimental PDB co-crystals cataloged for this entry.</span>';
+        }
+    }
+
+    // External DB Links
+    const linkUni = document.getElementById('link-uniprot');
+    if (linkUni) linkUni.href = `https://www.uniprot.org/uniprotkb/${p.accession}`;
+
+    const linkRcsb = document.getElementById('link-rcsb');
+    if (linkRcsb) {
+        const firstPdb = (p.pdb_cross_references && p.pdb_cross_references[0]) || (p.accession.length === 4 ? p.accession : '');
+        linkRcsb.href = firstPdb ? `https://www.rcsb.org/structure/${firstPdb}` : `https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22value%22%3A%22${p.accession}%22%7D%7D%7D`;
+    }
+
+    const linkAf = document.getElementById('link-alphafold');
+    if (linkAf) linkAf.href = `https://alphafold.ebi.ac.uk/entry/${p.accession}`;
+
     // Render 3D molecular structure
     init3DViewer(p.pdb_content);
 
     // Recalculate biophysics stability
     recalculateStability();
 }
+
+window.loadExperimentalPDB = async function(pdbId) {
+    const infoChip = document.getElementById('viewer-info-chip');
+    if (infoChip) infoChip.textContent = `FETCHING RCSB PDB // ${pdbId}...`;
+
+    try {
+        const res = await fetch(`https://files.rcsb.org/download/${pdbId}.pdb`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const pdbText = await res.text();
+        init3DViewer(pdbText);
+        switchTab('structure');
+        if (infoChip) infoChip.textContent = `RCSB PDB // ${pdbId} CO-CRYSTAL ACTIVE`;
+    } catch (e) {
+        alert(`Could not download experimental crystal ${pdbId}: ${e.message}`);
+    }
+};
 
 // ── INITIALIZE 3D VIEWER (OFFLINE LOCAL 3DMOL) ──
 function init3DViewer(pdbText) {
