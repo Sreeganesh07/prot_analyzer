@@ -1228,14 +1228,15 @@
 
         /* ── STRUCTURAL PERCENTAGE CONCORDANCE CARD ── */
         .concordance-card {
-            background: linear-gradient(135deg, rgba(8, 13, 26, 0.9), rgba(15, 23, 42, 0.9));
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, rgba(8, 15, 30, 0.95), rgba(15, 27, 48, 0.95));
+            border: 1px solid rgba(16, 185, 129, 0.35);
             border-radius: var(--radius-md);
             padding: 14px;
-            margin-bottom: 12px;
+            margin: 12px 0;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
         }
 
         .concordance-header {
@@ -1251,6 +1252,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            font-family: var(--font-sans);
         }
 
         .concordance-percentage-box {
@@ -1260,7 +1262,7 @@
         }
 
         .concordance-pct-value {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
             color: #10b981;
             font-family: var(--font-mono);
@@ -1271,12 +1273,14 @@
             font-size: 10px;
             color: var(--text-muted);
             font-family: var(--font-mono);
+            text-transform: uppercase;
         }
 
         .concordance-progress-track {
             width: 100%;
-            height: 7px;
-            background: #0f172a;
+            height: 8px;
+            background: #090e1a;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 4px;
             overflow: hidden;
         }
@@ -1292,35 +1296,194 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 8px;
-            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-sm);
+            padding: 10px 8px;
         }
 
-        /* ── 5-PILLAR SUMMARY ACCORDION ── */
+        .single-res-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 3px;
+        }
+
+        .single-res-lbl {
+            font-size: 9px;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .single-res-val {
+            font-size: 12px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            color: #ffffff;
+        }
+
+        /* ── SUMMARY SECTION HUB & SEGMENTED CONTROLLER ── */
+        .summary-section-hub {
+            margin-top: 14px;
+            margin-bottom: 8px;
+        }
+
+        .summary-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 0 2px;
+        }
+
+        .summary-header-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: var(--font-mono);
+        }
+
+        .summary-collapse-all-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-secondary);
+            font-size: 10px;
+            font-family: var(--font-mono);
+            padding: 4px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .summary-collapse-all-btn:active {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            transform: scale(0.96);
+        }
+
+        .pillar-segmented-bar {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pillar-segmented-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .pillar-tab-btn {
+            flex-shrink: 0;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            padding: 6px 12px;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pillar-tab-btn:active {
+            transform: scale(0.96);
+        }
+
+        .pillar-tab-btn.active {
+            background: var(--accent-cyan);
+            color: #050811;
+            border-color: var(--accent-cyan);
+            font-weight: 700;
+            box-shadow: 0 2px 10px rgba(56, 189, 248, 0.35);
+        }
+
+        /* ── 4-PILLAR MODERN ACCORDION CARDS ── */
         .summary-pillar-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-technical);
+            background: linear-gradient(180deg, rgba(14, 23, 42, 0.95), rgba(9, 14, 28, 0.95));
+            border: 1px solid rgba(56, 189, 248, 0.18);
             border-radius: var(--radius-md);
             padding: 14px;
             margin-bottom: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .summary-pillar-card:hover {
+            border-color: rgba(56, 189, 248, 0.32);
+        }
+
+        .summary-pillar-card.collapsed .pillar-body {
+            display: none;
+        }
+
+        .summary-pillar-card.collapsed .pillar-chevron {
+            transform: rotate(-90deg);
         }
 
         .pillar-head {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 8px;
+            cursor: pointer;
+            user-select: none;
+            padding: 2px 0;
+        }
+
+        .pillar-head-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-icon-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(14, 165, 233, 0.14);
+            border: 1px solid rgba(14, 165, 233, 0.28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .pillar-title-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
 
         .pillar-title {
             font-size: 13px;
             font-weight: 700;
             color: #ffffff;
+            letter-spacing: 0.2px;
+        }
+
+        .pillar-subtitle {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .pillar-head-right {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -1331,56 +1494,99 @@
             font-family: var(--font-mono);
             color: var(--accent-cyan);
             background: rgba(14, 165, 233, 0.12);
-            padding: 2px 7px;
+            padding: 3px 8px;
             border-radius: 10px;
             border: 1px solid rgba(14, 165, 233, 0.25);
+            font-weight: 600;
         }
 
-        .sub-prop-group {
+        .pillar-chevron {
+            font-size: 10px;
+            color: var(--text-muted);
+            transition: transform 0.2s ease;
+        }
+
+        .pillar-body {
+            margin-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 10px;
             display: flex;
             flex-direction: column;
-            gap: 3px;
-            padding: 6px 0;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+            gap: 10px;
         }
 
-        .sub-prop-group:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        /* ── SUB-PROPERTY MICRO-MODULES ── */
+        .sub-prop-group {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 6px;
+            background: rgba(7, 11, 22, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-sm);
+            padding: 11px 13px;
+            transition: border-color 0.15s ease;
+        }
+
+        .sub-prop-group:hover {
+            border-color: rgba(255, 255, 255, 0.14);
+        }
+
+        .sub-prop-head-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
         }
 
         .sub-prop-lbl {
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 700;
             color: var(--accent-amber);
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            letter-spacing: 0.2px;
+        }
+
+        .sub-prop-badge {
+            font-size: 9.5px;
+            font-family: var(--font-mono);
+            padding: 2px 7px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
         }
 
         .sub-prop-desc {
-            font-size: 11px;
-            color: var(--text-secondary);
-            line-height: 1.45;
+            font-size: 11.5px;
+            color: #cbd5e1;
+            line-height: 1.55;
+            letter-spacing: 0.15px;
         }
 
+        /* Secondary Structure Visual Meter */
         .sec-bars-flex {
             display: flex;
             gap: 8px;
-            margin: 6px 0;
+            margin: 6px 0 8px 0;
         }
 
         .sec-bar-box {
             flex: 1;
-            background: #080d1a;
+            background: #060a14;
             border: 1px solid var(--border-technical);
             border-radius: 6px;
-            padding: 6px 8px;
+            padding: 8px 6px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
 
         .sec-bar-val {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             font-family: var(--font-mono);
         }
@@ -1389,6 +1595,40 @@
             font-size: 9px;
             color: var(--text-muted);
             text-transform: uppercase;
+            font-family: var(--font-mono);
+        }
+
+        .sec-bar-track {
+            width: 100%;
+            height: 4px;
+            background: #0f172a;
+            border-radius: 2px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+
+        .sec-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+
+        /* Chips flex row */
+        .prop-chips-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 4px;
+        }
+
+        .prop-feature-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 9.5px;
+            padding: 2px 7px;
+            border-radius: 10px;
         }
 
         /* ── SEARCH & EXPLORE MODAL ── */
@@ -1791,133 +2031,239 @@
             </div>
         </div>
 
-        <!-- ── 3. COMPREHENSIVE 5-PILLAR PROTEIN ARCHITECTURE SUMMARY ── -->
+        <!-- ── 3. COMPREHENSIVE 4-PILLAR PROTEIN ARCHITECTURE SUMMARY ── -->
+        <div class="summary-section-hub">
+            <div class="summary-section-header">
+                <div class="summary-header-title">
+                    <span>🔬</span>
+                    <span>Biophysical Architecture & Properties</span>
+                </div>
+                <button class="summary-collapse-all-btn" id="btn-toggle-all-pillars" onclick="toggleAllPillars()">Collapse All</button>
+            </div>
+            <div class="pillar-segmented-bar">
+                <button class="pillar-tab-btn active" data-pillar="all" onclick="switchPillarTab('all')">All Pillars</button>
+                <button class="pillar-tab-btn" data-pillar="structure" onclick="switchPillarTab('structure')"><span>🏛️</span> 1. Structure</button>
+                <button class="pillar-tab-btn" data-pillar="physicochemical" onclick="switchPillarTab('physicochemical')"><span>⚗️</span> 2. Biophysics</button>
+                <button class="pillar-tab-btn" data-pillar="functional" onclick="switchPillarTab('functional')"><span>⚡</span> 3. Mechanism</button>
+                <button class="pillar-tab-btn" data-pillar="buffering" onclick="switchPillarTab('buffering')"><span>🛡️</span> 4. Buffering</button>
+            </div>
+        </div>
+
         <!-- Pillar 1: Structural Properties (Levels of Organization) -->
-        <div class="summary-pillar-card">
-            <div class="pillar-head">
-                <span class="pillar-title"><span>🏛️</span> 1. Structural Properties (Levels of Organization)</span>
-                <span class="pillar-tag">Folding</span>
-            </div>
-
-            <div class="sub-prop-group" id="row-sum-primary">
-                <span class="sub-prop-lbl">Primary Structure</span>
-                <div class="sub-prop-desc" id="sum-primary-desc">
-                    Linear polypeptide sequence linked by covalent peptide bonds. Encoded directly by the genome, this primary sequence autonomously dictates tertiary folding (Anfinsen's Dogma).
-                </div>
-            </div>
-
-            <div class="sub-prop-group" id="row-sum-secondary">
-                <span class="sub-prop-lbl">Secondary Structure</span>
-                <div class="sec-bars-flex">
-                    <div class="sec-bar-box">
-                        <div class="sec-bar-val" style="color:#0ea5e9;" id="sum-sec-helix">24.5%</div>
-                        <div class="sec-bar-lbl">α-Helix</div>
-                    </div>
-                    <div class="sec-bar-box">
-                        <div class="sec-bar-val" style="color:#f59e0b;" id="sum-sec-sheet">31.2%</div>
-                        <div class="sec-bar-lbl">β-Sheet</div>
-                    </div>
-                    <div class="sec-bar-box">
-                        <div class="sec-bar-val" style="color:#64748b;" id="sum-sec-loops">44.3%</div>
-                        <div class="sec-bar-lbl">Turns & Loops</div>
+        <div class="summary-pillar-card" id="pillar-card-structure" data-pillar="structure">
+            <div class="pillar-head" onclick="togglePillarCard(this)">
+                <div class="pillar-head-left">
+                    <div class="pillar-icon-badge">🏛️</div>
+                    <div class="pillar-title-block">
+                        <span class="pillar-title">1. Structural Properties</span>
+                        <span class="pillar-subtitle">Levels of Organization • Folding</span>
                     </div>
                 </div>
-                <div class="sub-prop-desc" id="sum-sec-desc">
-                    Local folding patterns stabilized by backbone hydrogen bonds between carbonyl oxygens and amide nitrogens.
+                <div class="pillar-head-right">
+                    <span class="pillar-tag">Conformation</span>
+                    <span class="pillar-chevron">▼</span>
                 </div>
             </div>
 
-            <div class="sub-prop-group" id="row-sum-tertiary">
-                <span class="sub-prop-lbl">Tertiary Structure</span>
-                <div class="sub-prop-desc" id="sum-tertiary-desc">
-                    Overall 3D compact conformation driven by nonpolar sidechain hydrophobic collapse, electrostatic salt bridges, hydrogen bonds, and covalent disulfide bonds between cysteine pairs.
+            <div class="pillar-body">
+                <div class="sub-prop-group" id="row-sum-primary">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🧬</span> Primary Structure</span>
+                        <span class="sub-prop-badge">Anfinsen's Dogma</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-primary-desc">
+                        Linear polypeptide sequence linked by covalent peptide bonds. Encoded directly by the genome, this primary sequence autonomously dictates tertiary folding (Anfinsen's Dogma).
+                    </div>
                 </div>
-            </div>
 
-            <div class="sub-prop-group" id="row-sum-quaternary">
-                <span class="sub-prop-lbl">Quaternary Structure</span>
-                <div class="sub-prop-desc" id="sum-quaternary-desc">
-                    Homotetrameric assembly (dimer-of-dimers) mediated by an intertwining four-helix bundle.
+                <div class="sub-prop-group" id="row-sum-secondary">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🌀</span> Secondary Structure</span>
+                        <span class="sub-prop-badge">Backbone H-Bonds</span>
+                    </div>
+                    <div class="sec-bars-flex">
+                        <div class="sec-bar-box">
+                            <div class="sec-bar-val" style="color:#0ea5e9;" id="sum-sec-helix">24.5%</div>
+                            <div class="sec-bar-lbl">α-Helix</div>
+                            <div class="sec-bar-track"><div class="sec-bar-fill" id="sum-sec-bar-helix" style="width: 24.5%; background: #0ea5e9;"></div></div>
+                        </div>
+                        <div class="sec-bar-box">
+                            <div class="sec-bar-val" style="color:#f59e0b;" id="sum-sec-sheet">31.2%</div>
+                            <div class="sec-bar-lbl">β-Sheet</div>
+                            <div class="sec-bar-track"><div class="sec-bar-fill" id="sum-sec-bar-sheet" style="width: 31.2%; background: #f59e0b;"></div></div>
+                        </div>
+                        <div class="sec-bar-box">
+                            <div class="sec-bar-val" style="color:#818cf8;" id="sum-sec-loops">44.3%</div>
+                            <div class="sec-bar-lbl">Turns & Loops</div>
+                            <div class="sec-bar-track"><div class="sec-bar-fill" id="sum-sec-bar-loops" style="width: 44.3%; background: #818cf8;"></div></div>
+                        </div>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-sec-desc">
+                        Local folding patterns stabilized by backbone hydrogen bonds between carbonyl oxygens and amide nitrogens.
+                    </div>
+                </div>
+
+                <div class="sub-prop-group" id="row-sum-tertiary">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🌐</span> Tertiary Conformation</span>
+                        <span class="sub-prop-badge">Core Stability</span>
+                    </div>
+                    <div class="prop-chips-row">
+                        <span class="prop-feature-chip">Hydrophobic Collapse</span>
+                        <span class="prop-feature-chip">Salt Bridges</span>
+                        <span class="prop-feature-chip">Disulfide Bonds</span>
+                        <span class="prop-feature-chip">Hydrogen Bonds</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-tertiary-desc">
+                        Overall 3D compact conformation driven by nonpolar sidechain hydrophobic collapse, electrostatic salt bridges, hydrogen bonds, and covalent disulfide bonds between cysteine pairs.
+                    </div>
+                </div>
+
+                <div class="sub-prop-group" id="row-sum-quaternary">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🔗</span> Quaternary Assembly</span>
+                        <span class="sub-prop-badge" id="sum-quat-badge" style="color:var(--accent-cyan);">OLIGOMER</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-quaternary-desc">
+                        Homotetrameric assembly (dimer-of-dimers) mediated by an intertwining four-helix bundle.
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Pillar 2: Physicochemical Properties -->
-        <div class="summary-pillar-card" id="pillar-physicochemical">
-            <div class="pillar-head">
-                <span class="pillar-title"><span>⚗️</span> 2. Physicochemical Properties</span>
-                <span class="pillar-tag">Thermodynamics</span>
-            </div>
-
-            <div class="sub-prop-group" id="row-sum-ampho">
-                <span class="sub-prop-lbl">Amphoteric Nature & Net Charge</span>
-                <div class="sub-prop-desc" id="sum-ampho-desc">
-                    Zwitterionic macromolecule with both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains. Net electrical charge switches sign across the pH spectrum.
+        <div class="summary-pillar-card" id="pillar-card-physicochemical" data-pillar="physicochemical">
+            <div class="pillar-head" onclick="togglePillarCard(this)">
+                <div class="pillar-head-left">
+                    <div class="pillar-icon-badge" style="background:rgba(245, 158, 11, 0.14); border-color:rgba(245, 158, 11, 0.28);">⚗️</div>
+                    <div class="pillar-title-block">
+                        <span class="pillar-title">2. Physicochemical Properties</span>
+                        <span class="pillar-subtitle">Thermodynamics • Ionization</span>
+                    </div>
+                </div>
+                <div class="pillar-head-right">
+                    <span class="pillar-tag" style="color:var(--accent-amber); background:rgba(245, 158, 11, 0.12); border-color:rgba(245, 158, 11, 0.25);">Biophysics</span>
+                    <span class="pillar-chevron">▼</span>
                 </div>
             </div>
 
-            <div class="sub-prop-group" id="row-sum-solubility">
-                <span class="sub-prop-lbl">Isoelectric Point (pI) & Solubility</span>
-                <div class="sub-prop-desc" id="sum-solubility-desc">
-                    Minimal electrostatic repulsion occurs at the isoelectric point (pI), where net charge is zero, causing minimum solubility and isoelectric precipitation.
+            <div class="pillar-body">
+                <div class="sub-prop-group" id="row-sum-ampho">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>⚖️</span> Amphoteric Nature & Net Charge</span>
+                        <span class="sub-prop-badge">Zwitterionic</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-ampho-desc">
+                        Zwitterionic macromolecule with both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains. Net electrical charge switches sign across the pH spectrum.
+                    </div>
                 </div>
-            </div>
 
-            <div class="sub-prop-group" id="row-sum-denat">
-                <span class="sub-prop-lbl">Thermal & Chemical Denaturation</span>
-                <div class="sub-prop-desc" id="sum-denat-desc">
-                    Cooperative unfolding of tertiary noncovalent networks induced by heat or pH extremes, preserving primary peptide bonds; capable of renaturation under permissive physiological conditions.
+                <div class="sub-prop-group" id="row-sum-solubility">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>💧</span> Isoelectric Point (pI) & Solubility</span>
+                        <span class="sub-prop-badge">Hydration Shell</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-solubility-desc">
+                        Minimal electrostatic repulsion occurs at the isoelectric point (pI), where net charge is zero, causing minimum solubility and isoelectric precipitation.
+                    </div>
+                </div>
+
+                <div class="sub-prop-group" id="row-sum-denat">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🔥</span> Thermal & Chemical Denaturation</span>
+                        <span class="sub-prop-badge">Cooperativity</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-denat-desc">
+                        Cooperative unfolding of tertiary noncovalent networks induced by heat or pH extremes, preserving primary peptide bonds; capable of renaturation under permissive physiological conditions.
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Pillar 3: Functional Properties -->
-        <div class="summary-pillar-card" id="pillar-functional">
-            <div class="pillar-head">
-                <span class="pillar-title"><span>⚡</span> 3. Functional Properties</span>
-                <span class="pillar-tag">Mechanisms</span>
-            </div>
-
-            <div class="sub-prop-group" id="row-sum-spec">
-                <span class="sub-prop-lbl">Specificity & Recognition</span>
-                <div class="sub-prop-desc" id="sum-spec-desc">
-                    High-affinity sequence-specific binding guided by geometric shape complementarity and electrostatic docking.
+        <div class="summary-pillar-card" id="pillar-card-functional" data-pillar="functional">
+            <div class="pillar-head" onclick="togglePillarCard(this)">
+                <div class="pillar-head-left">
+                    <div class="pillar-icon-badge" style="background:rgba(168, 85, 247, 0.14); border-color:rgba(168, 85, 247, 0.28);">⚡</div>
+                    <div class="pillar-title-block">
+                        <span class="pillar-title">3. Functional Mechanisms</span>
+                        <span class="pillar-subtitle">Specificity • Catalysis • Cooperativity</span>
+                    </div>
+                </div>
+                <div class="pillar-head-right">
+                    <span class="pillar-tag" style="color:#c084fc; background:rgba(168, 85, 247, 0.12); border-color:rgba(168, 85, 247, 0.25);">Biochemistry</span>
+                    <span class="pillar-chevron">▼</span>
                 </div>
             </div>
 
-            <div class="sub-prop-group" id="row-sum-catalysis">
-                <span class="sub-prop-lbl">Catalytic Activity</span>
-                <div class="sub-prop-desc" id="sum-catalysis-desc">
-                    Catalytic active site lowers chemical activation energy for substrate transformation.
+            <div class="pillar-body">
+                <div class="sub-prop-group" id="row-sum-spec">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🎯</span> Specificity & Recognition</span>
+                        <span class="sub-prop-badge">Docking</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-spec-desc">
+                        High-affinity sequence-specific binding guided by geometric shape complementarity and electrostatic docking.
+                    </div>
                 </div>
-            </div>
 
-            <div class="sub-prop-group" id="row-sum-allostery">
-                <span class="sub-prop-lbl">Allostery & Cooperativity</span>
-                <div class="sub-prop-desc" id="sum-allostery-desc">
-                    Exhibits long-range allosteric conformational coupling where effector binding transmits conformational changes to distal functional surfaces.
+                <div class="sub-prop-group" id="row-sum-catalysis">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>⚔️</span> Catalytic Activity</span>
+                        <span class="sub-prop-badge" style="color:var(--accent-emerald);">Active Site</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-catalysis-desc">
+                        Catalytic active site lowers chemical activation energy for substrate transformation.
+                    </div>
                 </div>
-            </div>
 
-            <div class="sub-prop-group" id="row-sum-ptm">
-                <span class="sub-prop-lbl">Post-Translational Modifications (PTMs) & Flexibility</span>
-                <div class="sub-prop-desc" id="sum-ptm-desc">
-                    Multiple serine/threonine phosphorylation and lysine ubiquitination sites regulate degradation and cellular activity.
+                <div class="sub-prop-group" id="row-sum-allostery">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🔄</span> Allostery & Cooperativity</span>
+                        <span class="sub-prop-badge" style="color:#a855f7;">Quaternary Coupling</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-allostery-desc">
+                        Exhibits long-range allosteric conformational coupling where effector binding transmits conformational changes to distal functional surfaces.
+                    </div>
+                </div>
+
+                <div class="sub-prop-group" id="row-sum-ptm">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>✨</span> PTM Regulation & Dynamics</span>
+                        <span class="sub-prop-badge">Conformational Plasticity</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-ptm-desc">
+                        Multiple serine/threonine phosphorylation and lysine ubiquitination sites regulate degradation and cellular activity.
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Pillar 4: Buffering Capacity -->
-        <div class="summary-pillar-card" id="pillar-buffering">
-            <div class="pillar-head">
-                <span class="pillar-title"><span>🛡️</span> 4. Buffering Capacity</span>
-                <span class="pillar-tag">Physiology</span>
+        <div class="summary-pillar-card" id="pillar-card-buffering" data-pillar="buffering">
+            <div class="pillar-head" onclick="togglePillarCard(this)">
+                <div class="pillar-head-left">
+                    <div class="pillar-icon-badge" style="background:rgba(16, 185, 129, 0.14); border-color:rgba(16, 185, 129, 0.28);">🛡️</div>
+                    <div class="pillar-title-block">
+                        <span class="pillar-title">4. Buffering Capacity</span>
+                        <span class="pillar-subtitle">Histidine Imidazole • Homeostasis</span>
+                    </div>
+                </div>
+                <div class="pillar-head-right">
+                    <span class="pillar-tag" style="color:var(--accent-emerald); background:rgba(16, 185, 129, 0.12); border-color:rgba(16, 185, 129, 0.25);">Physiology</span>
+                    <span class="pillar-chevron">▼</span>
+                </div>
             </div>
 
-            <div class="sub-prop-group" id="row-sum-buffer">
-                <span class="sub-prop-lbl">Histidine Imidazole Buffer</span>
-                <div class="sub-prop-desc" id="sum-buffer-desc">
-                    Because of its ionizable imidazole side chain (pKa ~6.0–6.8), Histidine residues act as critical physiological buffers against pH fluctuations in cellular fluids.
+            <div class="pillar-body">
+                <div class="sub-prop-group" id="row-sum-buffer">
+                    <div class="sub-prop-head-row">
+                        <span class="sub-prop-lbl"><span>🛡️</span> Histidine Imidazole Buffer (pH 6.0–6.8)</span>
+                        <span class="sub-prop-badge" style="color:var(--accent-emerald);">Homeostasis</span>
+                    </div>
+                    <div class="sub-prop-desc" id="sum-buffer-desc">
+                        Because of its ionizable imidazole side chain (pKa ~6.0–6.8), Histidine residues act as critical physiological buffers against pH fluctuations in cellular fluids.
+                    </div>
                 </div>
             </div>
         </div>
@@ -2204,8 +2550,8 @@
 
     <!-- App JavaScript Scripts -->
     <script src="js/cached_data.js"></script>
-    <script src="js/biophysics_engine.js?v=2.2"></script>
-    <script src="js/app.js?v=2.2"></script>
+    <script src="js/biophysics_engine.js?v=2.3"></script>
+    <script src="js/app.js?v=2.3"></script>
 
     <!-- Service Worker Cache Management -->
     <script>

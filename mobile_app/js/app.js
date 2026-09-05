@@ -1090,6 +1090,13 @@ function renderProteinSummary(protein) {
         if (sheetVal) sheetVal.textContent = `${sheetValNum.toFixed(1)}%`;
         const loopsVal = document.getElementById('sum-sec-loops');
         if (loopsVal) loopsVal.textContent = `${(loopValNum || 0).toFixed(1)}%`;
+        const helixBar = document.getElementById('sum-sec-bar-helix');
+        if (helixBar) helixBar.style.width = `${Math.min(100, Math.max(0, helixValNum))}%`;
+        const sheetBar = document.getElementById('sum-sec-bar-sheet');
+        if (sheetBar) sheetBar.style.width = `${Math.min(100, Math.max(0, sheetValNum))}%`;
+        const loopsBar = document.getElementById('sum-sec-bar-loops');
+        if (loopsBar) loopsBar.style.width = `${Math.min(100, Math.max(0, loopValNum || 0))}%`;
+
         const secDesc = document.getElementById('sum-sec-desc');
         if (secDesc && secData.summary) secDesc.textContent = secData.summary;
     } else if (rowSecondary) {
@@ -1111,11 +1118,13 @@ function renderProteinSummary(protein) {
     const quatData = s.quaternary || (s.structural_pillar && s.structural_pillar.quaternary_structure) || {};
     const rowQuat = document.getElementById('row-sum-quaternary');
     const quatDesc = document.getElementById('sum-quaternary-desc');
+    const quatBadge = document.getElementById('sum-quat-badge');
     const oligState = quatData.oligomer_state || quatData.oligomeric_state;
     const assemblyMech = quatData.assembly_mechanism || quatData.subunits;
 
     if (quatDesc && oligState && oligState !== 'Unknown' && oligState !== 'N/A') {
         quatDesc.textContent = assemblyMech ? `${oligState}: ${assemblyMech}` : oligState;
+        if (quatBadge) quatBadge.textContent = oligState.toUpperCase();
         if (rowQuat) rowQuat.style.display = 'flex';
     } else if (rowQuat) {
         rowQuat.style.display = 'none';
@@ -1217,6 +1226,46 @@ function renderProteinSummary(protein) {
         rowBuf.style.display = 'none';
     }
 }
+
+// ── 8. PILLAR ACCORDION & SEGMENTED SWITCHER CONTROLS ──
+function switchPillarTab(pillarId) {
+    const buttons = document.querySelectorAll('.pillar-tab-btn');
+    buttons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-pillar') === pillarId;
+        btn.classList.toggle('active', isMatch);
+    });
+
+    const cards = document.querySelectorAll('.summary-pillar-card');
+    cards.forEach(card => {
+        if (pillarId === 'all') {
+            card.style.display = '';
+        } else {
+            const isMatch = card.getAttribute('data-pillar') === pillarId;
+            card.style.display = isMatch ? '' : 'none';
+        }
+    });
+}
+
+function togglePillarCard(headerEl) {
+    const card = headerEl.closest('.summary-pillar-card');
+    if (!card) return;
+    card.classList.toggle('collapsed');
+}
+
+function toggleAllPillars() {
+    const cards = document.querySelectorAll('.summary-pillar-card');
+    const anyOpen = Array.from(cards).some(c => !c.classList.contains('collapsed'));
+    cards.forEach(c => {
+        c.classList.toggle('collapsed', anyOpen);
+    });
+    const btn = document.getElementById('btn-toggle-all-pillars');
+    if (btn) btn.textContent = anyOpen ? 'Expand All' : 'Collapse All';
+}
+
+window.switchPillarTab = switchPillarTab;
+window.togglePillarCard = togglePillarCard;
+window.toggleAllPillars = toggleAllPillars;
+
 
 
 
