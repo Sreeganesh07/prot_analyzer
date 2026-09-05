@@ -83,6 +83,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "The core DNA-binding domain (102-292) exhibits high structural concordance (< 0.6 \u00c5 RMSD). Disordered transactivation (1-92) and C-terminal regulatory domains (363-393) show high conformational mobility in the predicted model that are unresolved in crystallographic electron density.",
       "flexible_loops": "Residues 1-95, 360-393"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 393,
+        "gene": "TP53",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 42.9,
+        "sheet_percent": 19.4,
+        "loop_percent": 37.7,
+        "summary": "42.9% \u03b1-Helix, 19.4% \u03b2-Sheet, 37.7% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 21.6,
+        "salt_bridges_potential": 46,
+        "cysteine_count": 10,
+        "disulfide_bonds_potential": 5,
+        "summary": "21.6% buried hydrophobic core, ~46 electrostatic salt bridges, and 10 Cys residues (5 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Homotetramer (Dimer of Dimers)",
+        "stoichiometry": "A4",
+        "assembly_mechanism": "Four identical p53 chains associate via C-terminal tetramerization helices (residues 325-356) to bind palindromic DNA response elements."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 69.0\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Master cellular tumor suppressor. Induces cell cycle arrest, DNA repair, senescence, or apoptosis in response to diverse cellular stresses. Acts as a tetrameric sequence-specific transcription factor regulating hundreds of stress-response genes.",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 12,
+        "histidine_percent": 3.05,
+        "summary": "Contains 12 Histidine residues (3.05% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 90.3,
+        "rmsd_angstroms": 0.82,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "1TUP"
+      }
+    },
     "extinction_coefficient": 36660,
     "sequence": "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD",
     "sequence_length": 393,
@@ -330,6 +379,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "High structural concordance across the trimeric S2 stalk. The RBD exhibits dynamic rigid-body displacement between the 'up' open conformer and 'down' locked crystallographic state.",
       "flexible_loops": "Residues 675-690 (Furin loop), 828-854"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 1273,
+        "gene": "S",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 34.0,
+        "sheet_percent": 34.0,
+        "loop_percent": 32.0,
+        "summary": "34.0% \u03b1-Helix, 34.0% \u03b2-Sheet, 32.0% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 30.2,
+        "salt_bridges_potential": 103,
+        "cysteine_count": 40,
+        "disulfide_bonds_potential": 20,
+        "summary": "30.2% buried hydrophobic core, ~103 electrostatic salt bridges, and 40 Cys residues (20 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Homotrimer (Class I Fusion Glycoprotein)",
+        "stoichiometry": "A3",
+        "assembly_mechanism": "Three S protomers assemble into an intertwined pre-fusion spike anchored via trimeric S2 coiled-coils."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 76.3\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Trimeric class I viral fusion glycoprotein. Binds host ACE2 receptor via its Receptor-Binding Domain (RBD) and undergoes proteolytic cleavage at S1/S2 to drive viral-host membrane fusion and cellular entry.",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 17,
+        "histidine_percent": 1.34,
+        "summary": "Contains 17 Histidine residues (1.34% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 74.8,
+        "rmsd_angstroms": 1.45,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "6VXX"
+      }
+    },
     "extinction_coefficient": 151460,
     "sequence": "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT",
     "sequence_length": 1273,
@@ -562,6 +660,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "Mature chains A and B show near-perfect superposition with classical 2-zinc insulin hexamers (< 0.7 \u00c5). The proinsulin C-peptide displays high predicted loop flexibility.",
       "flexible_loops": "C-peptide connector (residues 55-88)"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 110,
+        "gene": "INS",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 52.9,
+        "sheet_percent": 19.6,
+        "loop_percent": 27.5,
+        "summary": "52.9% \u03b1-Helix, 19.6% \u03b2-Sheet, 27.5% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 31.8,
+        "salt_bridges_potential": 7,
+        "cysteine_count": 6,
+        "disulfide_bonds_potential": 3,
+        "summary": "31.8% buried hydrophobic core, ~7 electrostatic salt bridges, and 6 Cys residues (3 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Monomer (Active) / Hexamer (Storage)",
+        "stoichiometry": "A1 / (AB)6",
+        "assembly_mechanism": "Stored in pancreatic beta-cell granules as a 2-zinc coordinated hexamer; dissociates into active monomer in circulation."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 70.2\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Essential anabolic peptide hormone regulating carbohydrate, lipid, and protein metabolism. Promotes cellular glucose uptake via GLUT4 translocation, stimulates glycogenesis and lipogenesis, and inhibits hepatic gluconeogenesis.",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 2,
+        "histidine_percent": 1.82,
+        "summary": "Contains 2 Histidine residues (1.82% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 93.7,
+        "rmsd_angstroms": 0.65,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "4INS"
+      }
+    },
     "extinction_coefficient": 17710,
     "sequence": "MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN",
     "sequence_length": 110,
@@ -792,6 +939,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "sequence_identity_percent": 100.0,
       "conformational_deltas": "Complete globin helical bundle matches the X-ray crystallographic T-state coordinates closely (< 0.8 \u00c5). Minor differences occur in the FG corner and EF loop.",
       "flexible_loops": "Residues 45-52 (CD loop), 118-124 (GH loop)"
+    },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 147,
+        "gene": "HBB",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 44.1,
+        "sheet_percent": 27.9,
+        "loop_percent": 28.0,
+        "summary": "44.1% \u03b1-Helix, 27.9% \u03b2-Sheet, 28.0% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 32.7,
+        "salt_bridges_potential": 14,
+        "cysteine_count": 2,
+        "disulfide_bonds_potential": 1,
+        "summary": "32.7% buried hydrophobic core, ~14 electrostatic salt bridges, and 2 Cys residues (1 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Heterotetramer (Alpha2-Beta2 Adult Hemoglobin)",
+        "stoichiometry": "A2B2",
+        "assembly_mechanism": "Assembles with two alpha-globin subunits into an allosteric tetramer cooperatively binding four oxygen molecules."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 66.9\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Forms the beta-subunit of heterotetrameric adult hemoglobin (alpha-2, beta-2). Binds four heme iron cofactors to cooperatively bind and transport oxygen from lungs to peripheral tissues, modulated by allosteric effectors like 2,3-BPG, pH (Bohr effect), and CO2.",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 9,
+        "histidine_percent": 6.12,
+        "summary": "Contains 9 Histidine residues (6.12% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 91.1,
+        "rmsd_angstroms": 0.78,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "4HHB"
+      }
     },
     "extinction_coefficient": 15720,
     "sequence": "MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH",
@@ -1041,6 +1237,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "The kinase catalytic core (712-979) superimposes tightly on active-state crystals (< 0.9 \u00c5). The juxtamembrane and C-terminal tails (980-1210) display high conformational dispersion as disordered segments.",
       "flexible_loops": "Juxtamembrane hinge (669-711), C-terminal tail (980-1210)"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 1210,
+        "gene": "EGFR",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 41.1,
+        "sheet_percent": 25.7,
+        "loop_percent": 33.2,
+        "summary": "41.1% \u03b1-Helix, 25.7% \u03b2-Sheet, 33.2% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 26.8,
+        "salt_bridges_potential": 126,
+        "cysteine_count": 60,
+        "disulfide_bonds_potential": 30,
+        "summary": "26.8% buried hydrophobic core, ~126 electrostatic salt bridges, and 60 Cys residues (30 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Ligand-Induced Homodimer",
+        "stoichiometry": "A2",
+        "assembly_mechanism": "Extracellular EGF binding flips open the CR1 dimerization arm, driving receptor homodimerization and asymmetric kinase trans-activation."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 74.6\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Transmembrane receptor tyrosine kinase. Ligand binding (EGF, TGF-alpha) induces receptor homodimerization and autophosphorylation, activating Ras-Raf-MEK-ERK and PI3K-Akt cascades governing cell proliferation, survival, and differentiation.",
+        "catalytic_activity": "Enzymatic or regulatory cofactor coordination site.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 31,
+        "histidine_percent": 2.56,
+        "summary": "Contains 31 Histidine residues (2.56% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 70.4,
+        "rmsd_angstroms": 1.62,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "2GS6"
+      }
+    },
     "extinction_coefficient": 132640,
     "sequence": "MRPSGTAGAALLALLAALCPASRALEEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQKCDPSCPNGSCWGAGEENCQKLTKIICAQQCSGRCRGKSPSDCCHNQCAAGCTGPRESDCLVCRKFRDEATCKDTCPPLMLYNPTTYQMDVNPEGKYSFGATCVKKCPRNYVVTDHGSCVRACGADSYEMEEDGVRKCKKCEGPCRKVCNGIGIGEFKDSLSINATNIKHFKNCTSISGDLHILPVAFRGDSFTHTPPLDPQELDILKTVKEITGFLLIQAWPENRTDLHAFENLEIIRGRTKQHGQFSLAVVSLNITSLGLRSLKEISDGDVIISGNKNLCYANTINWKKLFGTSGQKTKIISNRGENSCKATGQVCHALCSPEGCWGPEPRDCVSCRNVSRGRECVDKCNLLEGEPREFVENSECIQCHPECLPQAMNITCTGRGPDNCIQCAHYIDGPHCVKTCPAGVMGENNTLVWKYADAGHVCHLCHPNCTYGCTGPGLEGCPTNGPKIPSIATGMVGALLLLLVVALGIGLFMRRRHIVRKRTLRRLLQERELVEPLTPSGEAPNQALLRILKETEFKKIKVLGSGAFGTVYKGLWIPEGEKVKIPVAIKELREATSPKANKEILDEAYVMASVDNPHVCRLLGICLTSTVQLITQLMPFGCLLDYVREHKDNIGSQYLLNWCVQIAKGMNYLEDRRLVHRDLAARNVLVKTPQHVKITDFGLAKLLGAEEKEYHAEGGKVPIKWMALESILHRIYTHQSDVWSYGVTVWELMTFGSKPYDGIPASEISSILEKGERLPQPPICTIDVYMIMVKCWMIDADSRPKFRELIIEFSKMARDPQRYLVIQGDERMHLPSPTDSNFYRALMDEEDMDDVVDADEYLIPQQGFFSSPSTSRTPLLSSLSATSNNSTVACIDRNGLQSCPIKEDSFLQRYSSDPTGALTEDSIDDTFLPVPEYINQSVPKRPAGSVQNPVYHNQPLNPAPSRDPHYQDPHSTAVGNPEYLNTVQPTCVNSTFDSPAHWAQKGSHQISLDNPDYQQDFFPKEAKPNGIFKGSTAENAEYLRVAPQSSEFIGA",
     "sequence_length": 1210,
@@ -1273,6 +1518,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "Thrombin catalytic core is exceptionally well aligned (< 0.7 \u00c5). The inter-domain linkers between Kringle 1 and 2 allow flexible domain rearrangements in solution relative to crystal packing.",
       "flexible_loops": "Linker 1 (90-108), Linker 2 (195-217), Linker 3 (303-327)"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 622,
+        "gene": "F2",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 43.2,
+        "sheet_percent": 25.9,
+        "loop_percent": 30.9,
+        "summary": "43.2% \u03b1-Helix, 25.9% \u03b2-Sheet, 30.9% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 24.8,
+        "salt_bridges_potential": 73,
+        "cysteine_count": 26,
+        "disulfide_bonds_potential": 13,
+        "summary": "24.8% buried hydrophobic core, ~73 electrostatic salt bridges, and 26 Cys residues (13 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Two-Chain Heterodimer (Cleaved Thrombin)",
+        "stoichiometry": "A1B1",
+        "assembly_mechanism": "Factor Xa cleavage yields a 36-residue light chain disulfide-linked to a 259-residue catalytic serine protease heavy chain."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 73.5\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Central vitamin K-dependent serine protease of the blood coagulation cascade. Cleaved by Factor Xa into active thrombin, which proteolytically converts soluble fibrinogen into insoluble fibrin mesh and activates platelets via PAR receptors.",
+        "catalytic_activity": "Enzymatic or regulatory cofactor coordination site.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 13,
+        "histidine_percent": 2.09,
+        "summary": "Contains 13 Histidine residues (2.09% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 83.3,
+        "rmsd_angstroms": 1.12,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "1PPB"
+      }
+    },
     "extinction_coefficient": 111540,
     "sequence": "MAHVRGLQLPGCLALAALCSLVHSQHVFLAPQQARSLLQRVRRANTFLEEVRKGNLERECVEETCSYEEAFEALESSTATDVFWAKYTACETARTPRDKLAACLEGNCAEGLGTNYRGHVNITRSGIECQLWRSRYPHKPEINSTTHPGADLQENFCRNPDSSTTGPWCYTTDPTVRRQECSIPVCGQDQVTVAMTPRSEGSSVNLSPPLEQCVPDRGQQYQGRLAVTTHGLPCLAWASAQAKALSKHQDFNSAVQLVENFCRNPDGDEEGVWCYVAGKPGDFGYCDLNYCEEAVEEETGDGLDEDSDRAIEGRTATSEYQTFFNPRTFGSGEADCGLRPLFEKKSLEDKTERELLESYIDGRIVEGSDAEIGMSPWQVMLFRKSPQELLCGASLISDRWVLTAAHCLLYPPWDKNFTENDLLVRIGKHSRTRYERNIEKISMLEKIYIHPRYNWRENLDRDIALMKLKKPVAFSDYIHPVCLPDRETAASLLQAGYKGRVTGWGNLKETWTANVGKGQPSVLQVVNLPIVERPVCKDSTRIRITDNMFCAGYKPDEGKRGDACEGDSGGPFVMKSPFNNRWYQMGIVSWGEGCDRDGKYGFYTHVFRLKKWIQKVIDQFGE",
     "sequence_length": 622,
@@ -1495,6 +1789,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "sequence_identity_percent": 100.0,
       "conformational_deltas": "Near-ideal superposition across all 11 beta-strands with < 0.6 \u00c5 RMSD due to the immense rigidity of the fluorophore beta-barrel scaffold.",
       "flexible_loops": "C-terminal cap (231-238)"
+    },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 238,
+        "gene": "GFP",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 36.7,
+        "sheet_percent": 30.5,
+        "loop_percent": 32.8,
+        "summary": "36.7% \u03b1-Helix, 30.5% \u03b2-Sheet, 32.8% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 28.6,
+        "salt_bridges_potential": 26,
+        "cysteine_count": 2,
+        "disulfide_bonds_potential": 1,
+        "summary": "28.6% buried hydrophobic core, ~26 electrostatic salt bridges, and 2 Cys residues (1 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Monomer (Rigid 11-Stranded Beta-Can)",
+        "stoichiometry": "A1",
+        "assembly_mechanism": "Autonomous 11-stranded anti-parallel beta-barrel enclosing an internal coaxial alpha-helix."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 60.7\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "11-stranded beta-barrel fluorophore from Aequorea victoria. The internal Ser65-Tyr66-Gly67 tripeptide undergoes spontaneous post-translational cyclization and oxidation to yield an intensely fluorescent chromophore (excitation 395/475 nm, emission 509 nm).",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 10,
+        "histidine_percent": 4.2,
+        "summary": "Contains 10 Histidine residues (4.2% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 95.9,
+        "rmsd_angstroms": 0.52,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "1EMA"
+      }
     },
     "extinction_coefficient": 22140,
     "sequence": "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK",
@@ -1735,6 +2078,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "conformational_deltas": "Individual NBD and SBD subdomains align closely (< 0.8 \u00c5). The relative inter-domain orientation between NBD and SBD shows classic Hsp70 allosteric hinge flexibility.",
       "flexible_loops": "Interdomain linker (405-416), C-terminal KDEL tail (637-654)"
     },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 654,
+        "gene": "HSPA5",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 44.3,
+        "sheet_percent": 27.9,
+        "loop_percent": 27.8,
+        "summary": "44.3% \u03b1-Helix, 27.9% \u03b2-Sheet, 27.8% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 27.7,
+        "salt_bridges_potential": 89,
+        "cysteine_count": 2,
+        "disulfide_bonds_potential": 1,
+        "summary": "27.7% buried hydrophobic core, ~89 electrostatic salt bridges, and 2 Cys residues (1 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Monomer (Allosteric Two-Domain Chaperone)",
+        "stoichiometry": "A1",
+        "assembly_mechanism": "N-terminal ATPase nucleotide-binding domain allosterically communicates with the substrate-binding domain and helical lid."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 61.9\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Major Hsp70-family molecular chaperone in the ER lumen. Binds hydrophobic patches of nascent polypeptides to facilitate folding, prevent misfolded aggregation, and acts as the master sensor controlling IRE1, PERK, and ATF6 in the Unfolded Protein Response (UPR).",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 6,
+        "histidine_percent": 0.92,
+        "summary": "Contains 6 Histidine residues (0.92% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 79.2,
+        "rmsd_angstroms": 1.28,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "5E84"
+      }
+    },
     "extinction_coefficient": 30620,
     "sequence": "MKLSLVAAMLLLLSAARAEEEDKKEDVGTVVGIDLGTTYSCVGVFKNGRVEIIANDQGNRITPSYVAFTPEGERLIGDAAKNQLTSNPENTVFDAKRLIGRTWNDPSVQQDIKFLPFKVVEKKTKPYIQVDIGGGQTKTFAPEEISAMVLTKMKETAEAYLGKKVTHAVVTVPAYFNDAQRQATKDAGTIAGLNVMRIINEPTAAAIAYGLDKREGEKNILVFDLGGGTFDVSLLTIDNGVFEVVATNGDTHLGGEDFDQRVMEHFIKLYKKKTGKDVRKDNRAVQKLRREVEKAKRALSSQHQARIEIESFYEGEDFSETLTRAKFEELNMDLFRSTMKPVQKVLEDSDLKKSDIDEIVLVGGSTRIPKIQQLVKEFFNGKEPSRGINPDEAVAYGAAVQAGVLSGDQDTGDLVLLDVCPLTLGIETVGGVMTKLIPRNTVVPTKKSQIFSTASDNQPTVTIKVYEGERPLTKDNHLLGTFDLTGIPPAPRGVPQIEVTFEIDVNGILRVTAEDKGTGNKNKITITNDQNRLTPEEIERMVNDAEKFAEEDKKLKERIDTRNELESYAYSLKNQIGDKEKLGGKLSSEDKETMEKAVEEKIEWLESHQDADIEDFKAKKKELEEIVQPIISKLYGSAGPPPTGEEDTAEKDEL",
     "sequence_length": 654,
@@ -1958,6 +2350,55 @@ window.PROTEINSCOPE_CACHED_DB = {
       "sequence_identity_percent": 100.0,
       "conformational_deltas": "Heart-shaped alpha-helical architecture is faithfully preserved throughout all three homologous domains (< 1.0 \u00c5). Minor breathing seen across inter-domain flexible hinges.",
       "flexible_loops": "Domain I-II hinge (195-215), Domain II-III hinge (385-405)"
+    },
+    "comprehensive_summary": {
+      "primary": {
+        "length": 607,
+        "gene": "ALB",
+        "anfinsen_summary": "Primary amino acid sequence encoded by the gene dictates autonomous thermodynamic folding into native 3D conformation (Anfinsen's Dogma)."
+      },
+      "secondary": {
+        "helix_percent": 51.0,
+        "sheet_percent": 25.4,
+        "loop_percent": 23.6,
+        "summary": "51.0% \u03b1-Helix, 25.4% \u03b2-Sheet, 23.6% Turns & Loops."
+      },
+      "tertiary": {
+        "hydrophobic_core_percent": 25.7,
+        "salt_bridges_potential": 86,
+        "cysteine_count": 35,
+        "disulfide_bonds_potential": 17,
+        "summary": "25.7% buried hydrophobic core, ~86 electrostatic salt bridges, and 35 Cys residues (17 potential disulfide pairs)."
+      },
+      "quaternary": {
+        "oligomer_state": "Monomer (Three-Domain Heart-Shaped Globular)",
+        "stoichiometry": "A1",
+        "assembly_mechanism": "Composed of three homologous alpha-helical domains (I, II, III), each subdivided into A and B subdomains."
+      },
+      "physicochemical": {
+        "amphoteric_nature": "Zwitterionic polypeptide possessing both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains; net charge switches sign at pI.",
+        "solubility": "Minimum solubility occurs at isoelectric point (pI) where net charge is zero; exhibits salting-in at physiological ionic strength and salting-out at high salt.",
+        "denaturation": "Undergoes cooperative unfolding at Tm = 74.3\u00b0C; tertiary bonds disrupt while primary covalent peptide backbone remains intact."
+      },
+      "functional": {
+        "specificity": "Most abundant globular protein in human blood plasma (~50 g/L). Provides 80% of colloidal intravascular osmotic oncotic pressure and serves as the primary transport vehicle for non-esterified fatty acids, bilirubin, calcium, steroid hormones, and therapeutic drugs.",
+        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
+        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
+        "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
+      },
+      "buffering": {
+        "histidine_count": 17,
+        "histidine_percent": 2.8,
+        "summary": "Contains 17 Histidine residues (2.8% of sequence). With an imidazole pKa of ~6.0\u20136.8 near physiological pH 7.4, it acts as an effective biological buffer."
+      },
+      "concordance": {
+        "similarity_percent": 87.6,
+        "rmsd_angstroms": 0.94,
+        "sequence_identity_percent": 100.0,
+        "model_type": "AlphaFold v4",
+        "experimental_ref": "1AO6"
+      }
     },
     "extinction_coefficient": 52165,
     "sequence": "MKWVTFISLLLLFSSAYSRGVFRRDTHKSEIAHRFKDLGEEHFKGLVLIAFSQYLQQCPFDEHVKLVNELTEFAKTCVADESHAGCEKSLHTLFGDELCKVASLRETYGDMADCCEKQEPERNECFLSHKDDSPDLPKLKPDPNTLCDEFKADEKKFWGKYLYEIARRHPYFYAPELLYYANKYNGVFQECCQAEDKGACLLPKIETMREKVLASSARQRLRCASIQKFGERALKAWSVARLSQKFPKAEFVEVTKLVTDLTKVHKECCHGDLLECADDRADLAKYICDNQDTISSKLKECCDKPLLEKSHCIAEVEKDAIPENLPPLTADFAEDKDVCKNYQEAKDAFLGSFLYEYSRRHPEYAVSVLLRLAKEYEATLEECCAKDDPHACYSTVFDKLKHLVDEPQNLIKQNCDQFEKLGEYGFQNALIVRYTRKVPQVSTPTLVEVSRSLGKVGTRCCTKPESERMPCTEDYLSLILNRLCVLHEKTPVSEKVTKCCTESLVNRRPCFSALTPDETYVPKAFDEKLFTFHADICTLPDTEKQIKKQTALVELLKHKPKATEEQLKTVMENFVAFVDKCCAADDKEACFAVEGPKLVVSTQTALA",

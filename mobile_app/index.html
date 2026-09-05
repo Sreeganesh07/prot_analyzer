@@ -1125,6 +1125,342 @@
             background: rgba(14, 165, 233, 0.12);
         }
 
+        /* ── COORDINATED SEQUENCE STRIP & 3D INSPECTOR ── */
+        .seq-inspector-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .seq-strip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .seq-strip-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .seq-strip-hint {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .seq-strip-scroll {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            padding: 6px 2px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .seq-residue-pill {
+            flex-shrink: 0;
+            width: 28px;
+            height: 42px;
+            background: #080d1a;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            user-select: none;
+        }
+
+        .seq-residue-pill:hover, .seq-residue-pill:active {
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        .seq-residue-pill.active-res {
+            border-color: var(--accent-cyan) !important;
+            background: rgba(14, 165, 233, 0.22) !important;
+            box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+        }
+
+        .seq-residue-pill.res-blinking {
+            animation: residue-blink 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes residue-blink {
+            0% {
+                background: #080d1a;
+                border-color: #1e293b;
+                box-shadow: none;
+                transform: scale(1);
+            }
+            100% {
+                background: #00f2fe;
+                border-color: #ffffff;
+                color: #050811;
+                box-shadow: 0 0 14px #00f2fe;
+                transform: scale(1.18);
+            }
+        }
+
+        .seq-res-letter {
+            font-size: 13px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            line-height: 1;
+        }
+
+        .seq-res-idx {
+            font-size: 8px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            margin-top: 2px;
+        }
+
+        /* Single Residue Property Card (one at a time) */
+        .single-residue-card {
+            background: #080d1a;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            animation: fadeIn 0.2s ease forwards;
+        }
+
+        .single-res-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .single-res-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+        }
+
+        .single-res-category {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+        }
+
+        .single-res-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .single-res-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .single-res-lbl {
+            font-size: 9px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+        }
+
+        .single-res-val {
+            font-size: 11px;
+            font-weight: 600;
+            color: #ffffff;
+            font-family: var(--font-mono);
+        }
+
+        .single-res-role {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* ── STRUCTURAL PERCENTAGE CONCORDANCE CARD ── */
+        .concordance-card {
+            background: linear-gradient(135deg, rgba(8, 13, 26, 0.9), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .concordance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .concordance-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .concordance-percentage-box {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .concordance-pct-value {
+            font-size: 20px;
+            font-weight: 800;
+            color: #10b981;
+            font-family: var(--font-mono);
+            text-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .concordance-pct-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .concordance-progress-track {
+            width: 100%;
+            height: 7px;
+            background: #0f172a;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .concordance-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #0ea5e9, #10b981);
+            border-radius: 4px;
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .concordance-details-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        /* ── 5-PILLAR SUMMARY ACCORDION ── */
+        .summary-pillar-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-technical);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pillar-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 8px;
+        }
+
+        .pillar-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pillar-tag {
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            background: rgba(14, 165, 233, 0.12);
+            padding: 2px 7px;
+            border-radius: 10px;
+            border: 1px solid rgba(14, 165, 233, 0.25);
+        }
+
+        .sub-prop-group {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            padding: 6px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+        }
+
+        .sub-prop-group:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .sub-prop-lbl {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-amber);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sub-prop-desc {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        .sec-bars-flex {
+            display: flex;
+            gap: 8px;
+            margin: 6px 0;
+        }
+
+        .sec-bar-box {
+            flex: 1;
+            background: #080d1a;
+            border: 1px solid var(--border-technical);
+            border-radius: 6px;
+            padding: 6px 8px;
+            text-align: center;
+        }
+
+        .sec-bar-val {
+            font-size: 13px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+        }
+
+        .sec-bar-lbl {
+            font-size: 9px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
         /* ── SEARCH & EXPLORE MODAL ── */
         .modal-backdrop {
             display: none;
@@ -1461,8 +1797,203 @@
                 <span class="quick-stat-val" id="stat-charge" style="color:var(--accent-cyan);">-4.98 e</span>
             </div>
             <div class="quick-stat-box">
-                <span class="quick-stat-lbl">Estimated Tm</span>
                 <span class="quick-stat-val" id="stat-tm" style="color:var(--accent-amber);">69.0°C</span>
+            </div>
+        </div>
+
+        <!-- ── 1. COORDINATED SEQUENCE STRIP & 3D BLINKING INSPECTOR ── -->
+        <div class="seq-inspector-card">
+            <div class="seq-strip-header">
+                <span class="seq-strip-title">
+                    <span>🧬</span> Primary Sequence & 3D Coordinate Inspector
+                </span>
+                <span class="seq-strip-hint">Tap any residue to blink in 3D</span>
+            </div>
+
+            <!-- Scrollable Sequence Strip -->
+            <div class="seq-strip-scroll" id="seq-strip-container">
+                <!-- Populated dynamically with residue pills via app.js -->
+            </div>
+
+            <!-- Single Residue Detailed Property Card (One at a time) -->
+            <div class="single-residue-card" id="single-residue-card">
+                <div class="single-res-head">
+                    <span class="single-res-name" id="sres-name">Arg248 [R]</span>
+                    <span class="single-res-category" id="sres-cat">Basic / Positively Charged</span>
+                </div>
+                <div class="single-res-grid">
+                    <div class="single-res-item">
+                        <span class="single-res-lbl">Sidechain pKa</span>
+                        <span class="single-res-val" id="sres-pka">12.48</span>
+                    </div>
+                    <div class="single-res-item">
+                        <span class="single-res-lbl">Charge (pH 7.4)</span>
+                        <span class="single-res-val" id="sres-charge">+1.0 e</span>
+                    </div>
+                    <div class="single-res-item">
+                        <span class="single-res-lbl">Hydropathy</span>
+                        <span class="single-res-val" id="sres-hydro">-4.50</span>
+                    </div>
+                </div>
+                <div class="single-res-role" id="sres-role">
+                    Critical DNA minor groove contact residue; frequent cancer hotspot mutation site.
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 2. PREDICTED VS EXPERIMENTAL CONCORDANCE IN PERCENTAGE ── -->
+        <div class="concordance-card">
+            <div class="concordance-header">
+                <span class="concordance-title">
+                    <span>🎯</span> Structure Concordance (Predicted vs Solved)
+                </span>
+                <div class="concordance-percentage-box">
+                    <span class="concordance-pct-value" id="concordance-pct-val">90.3%</span>
+                    <span class="concordance-pct-label">Match</span>
+                </div>
+            </div>
+
+            <div class="concordance-progress-track">
+                <div class="concordance-progress-bar" id="concordance-progress-fill" style="width: 90.3%;"></div>
+            </div>
+
+            <div class="concordance-details-row">
+                <div class="single-res-item">
+                    <span class="single-res-lbl">Cα Backbone RMSD</span>
+                    <span class="single-res-val" id="concordance-rmsd-val" style="color:var(--accent-emerald);">0.82 Å</span>
+                </div>
+                <div class="single-res-item">
+                    <span class="single-res-lbl">Seq Identity</span>
+                    <span class="single-res-val" id="concordance-identity-val">100.0%</span>
+                </div>
+                <div class="single-res-item">
+                    <span class="single-res-lbl">Model vs Ref</span>
+                    <span class="single-res-val" id="concordance-ref-val">AlphaFold / 1TUP</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 3. COMPREHENSIVE 5-PILLAR PROTEIN ARCHITECTURE SUMMARY ── -->
+        <!-- Pillar 1: Structural Properties (Levels of Organization) -->
+        <div class="summary-pillar-card">
+            <div class="pillar-head">
+                <span class="pillar-title"><span>🏛️</span> 1. Structural Properties (Levels of Organization)</span>
+                <span class="pillar-tag">Folding</span>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Primary Structure</span>
+                <div class="sub-prop-desc" id="sum-primary-desc">
+                    Linear polypeptide sequence linked by covalent peptide bonds. Encoded directly by the genome, this primary sequence autonomously dictates tertiary folding (Anfinsen's Dogma).
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Secondary Structure</span>
+                <div class="sec-bars-flex">
+                    <div class="sec-bar-box">
+                        <div class="sec-bar-val" style="color:#0ea5e9;" id="sum-sec-helix">24.5%</div>
+                        <div class="sec-bar-lbl">α-Helix</div>
+                    </div>
+                    <div class="sec-bar-box">
+                        <div class="sec-bar-val" style="color:#f59e0b;" id="sum-sec-sheet">31.2%</div>
+                        <div class="sec-bar-lbl">β-Sheet</div>
+                    </div>
+                    <div class="sec-bar-box">
+                        <div class="sec-bar-val" style="color:#64748b;" id="sum-sec-loops">44.3%</div>
+                        <div class="sec-bar-lbl">Turns & Loops</div>
+                    </div>
+                </div>
+                <div class="sub-prop-desc" id="sum-sec-desc">
+                    Local folding patterns stabilized by backbone hydrogen bonds between carbonyl oxygens and amide nitrogens.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Tertiary Structure</span>
+                <div class="sub-prop-desc" id="sum-tertiary-desc">
+                    Overall 3D compact conformation driven by nonpolar sidechain hydrophobic collapse, electrostatic salt bridges, hydrogen bonds, and covalent disulfide bonds between cysteine pairs.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Quaternary Structure</span>
+                <div class="sub-prop-desc" id="sum-quaternary-desc">
+                    Homotetrameric assembly (dimer-of-dimers) mediated by an intertwining four-helix bundle.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 2: Physicochemical Properties -->
+        <div class="summary-pillar-card">
+            <div class="pillar-head">
+                <span class="pillar-title"><span>⚗️</span> 2. Physicochemical Properties</span>
+                <span class="pillar-tag">Thermodynamics</span>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Amphoteric Nature & Net Charge</span>
+                <div class="sub-prop-desc" id="sum-ampho-desc">
+                    Zwitterionic macromolecule with both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains. Net electrical charge switches sign across the pH spectrum.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Isoelectric Point (pI) & Solubility</span>
+                <div class="sub-prop-desc" id="sum-solubility-desc">
+                    Minimal electrostatic repulsion occurs at the isoelectric point (pI), where net charge is zero, causing minimum solubility and isoelectric precipitation.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Thermal & Chemical Denaturation</span>
+                <div class="sub-prop-desc" id="sum-denat-desc">
+                    Cooperative unfolding of tertiary noncovalent networks induced by heat or pH extremes, preserving primary peptide bonds; capable of renaturation under permissive physiological conditions.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 3: Functional Properties -->
+        <div class="summary-pillar-card">
+            <div class="pillar-head">
+                <span class="pillar-title"><span>⚡</span> 3. Functional Properties</span>
+                <span class="pillar-tag">Mechanisms</span>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Specificity & Recognition</span>
+                <div class="sub-prop-desc" id="sum-spec-desc">
+                    High-affinity sequence-specific binding guided by geometric shape complementarity and electrostatic docking.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Catalysis & Allostery</span>
+                <div class="sub-prop-desc" id="sum-catalysis-desc">
+                    Exhibits long-range allosteric conformational coupling where effector binding transmits conformational changes to distal functional surfaces.
+                </div>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Post-Translational Modifications (PTMs) & Flexibility</span>
+                <div class="sub-prop-desc" id="sum-ptm-desc">
+                    Multiple serine/threonine phosphorylation and lysine ubiquitination sites regulate degradation and cellular activity.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 4: Buffering Capacity -->
+        <div class="summary-pillar-card">
+            <div class="pillar-head">
+                <span class="pillar-title"><span>🛡️</span> 4. Buffering Capacity</span>
+                <span class="pillar-tag">Physiology</span>
+            </div>
+
+            <div class="sub-prop-group">
+                <span class="sub-prop-lbl">Histidine Imidazole Buffer</span>
+                <div class="sub-prop-desc" id="sum-buffer-desc">
+                    Because of its ionizable imidazole side chain (pKa ~6.0–6.8), Histidine residues act as critical physiological buffers against pH fluctuations in cellular fluids.
+                </div>
             </div>
         </div>
     </main>
