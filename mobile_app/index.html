@@ -1125,175 +1125,105 @@
             background: rgba(14, 165, 233, 0.12);
         }
 
-        /* ── COORDINATED SEQUENCE STRIP & 3D INSPECTOR ── */
-        .seq-inspector-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-technical);
+        /* ── DIRECT 3D RESIDUE TOUCH INSPECTOR (ONE AT A TIME) ── */
+        .residue-inspector-card {
+            display: none;
+            background: rgba(8, 13, 26, 0.95);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
             border-radius: var(--radius-md);
-            padding: 14px;
+            padding: 12px 14px;
             margin-bottom: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            position: relative;
+            animation: card-appear 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        .seq-strip-header {
+        @keyframes card-appear {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .res-inspect-head {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 8px;
         }
 
-        .seq-strip-title {
-            font-size: 12px;
-            font-weight: 700;
-            color: #ffffff;
+        .res-inspect-title {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        .seq-strip-hint {
-            font-size: 10px;
-            color: var(--text-muted);
+        .res-inspect-badge {
+            background: rgba(14, 165, 233, 0.2);
+            color: var(--accent-cyan);
             font-family: var(--font-mono);
-        }
-
-        .seq-strip-scroll {
-            display: flex;
-            gap: 4px;
-            overflow-x: auto;
-            padding: 6px 2px;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .seq-residue-pill {
-            flex-shrink: 0;
-            width: 28px;
-            height: 42px;
-            background: #080d1a;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            user-select: none;
-        }
-
-        .seq-residue-pill:hover, .seq-residue-pill:active {
-            border-color: var(--accent-cyan);
-            transform: translateY(-2px);
-        }
-
-        .seq-residue-pill.active-res {
-            border-color: var(--accent-cyan) !important;
-            background: rgba(14, 165, 233, 0.22) !important;
-            box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
-        }
-
-        .seq-residue-pill.res-blinking {
-            animation: residue-blink 0.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes residue-blink {
-            0% {
-                background: #080d1a;
-                border-color: #1e293b;
-                box-shadow: none;
-                transform: scale(1);
-            }
-            100% {
-                background: #00f2fe;
-                border-color: #ffffff;
-                color: #050811;
-                box-shadow: 0 0 14px #00f2fe;
-                transform: scale(1.18);
-            }
-        }
-
-        .seq-res-letter {
             font-size: 13px;
-            font-weight: 700;
-            font-family: var(--font-mono);
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(14, 165, 233, 0.4);
+        }
+
+        .res-inspect-cat {
+            font-size: 11px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .res-inspect-close {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            padding: 2px 6px;
+            border-radius: 4px;
             line-height: 1;
         }
 
-        .seq-res-idx {
-            font-size: 8px;
-            color: var(--text-muted);
-            font-family: var(--font-mono);
-            margin-top: 2px;
-        }
-
-        /* Single Residue Property Card (one at a time) */
-        .single-residue-card {
-            background: #080d1a;
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            border-radius: var(--radius-sm);
-            padding: 10px 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            animation: fadeIn 0.2s ease forwards;
-        }
-
-        .single-res-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .single-res-name {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            font-family: var(--font-mono);
-        }
-
-        .single-res-category {
-            font-size: 10px;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.08);
+        .res-inspect-close:hover {
             color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .single-res-grid {
+        .res-inspect-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 6px;
-            background: rgba(0, 0, 0, 0.25);
-            padding: 8px;
-            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
         }
 
-        .single-res-item {
+        .res-inspect-stat {
             display: flex;
             flex-direction: column;
         }
 
-        .single-res-lbl {
+        .res-inspect-stat-lbl {
             font-size: 9px;
-            color: var(--text-muted);
             font-family: var(--font-mono);
+            color: var(--text-muted);
             text-transform: uppercase;
         }
 
-        .single-res-val {
-            font-size: 11px;
-            font-weight: 600;
-            color: #ffffff;
+        .res-inspect-stat-val {
+            font-size: 12px;
+            font-weight: 700;
             font-family: var(--font-mono);
+            color: #ffffff;
         }
 
-        .single-res-role {
+        .res-inspect-role {
             font-size: 11px;
             color: var(--text-secondary);
-            line-height: 1.4;
+            line-height: 1.45;
         }
 
         /* ── STRUCTURAL PERCENTAGE CONCORDANCE CARD ── */
@@ -1801,43 +1731,31 @@
             </div>
         </div>
 
-        <!-- ── 1. COORDINATED SEQUENCE STRIP & 3D BLINKING INSPECTOR ── -->
-        <div class="seq-inspector-card">
-            <div class="seq-strip-header">
-                <span class="seq-strip-title">
-                    <span>🧬</span> Primary Sequence & 3D Coordinate Inspector
-                </span>
-                <span class="seq-strip-hint">Tap any residue to blink in 3D</span>
+        <!-- ── DIRECT 3D RESIDUE TOUCH INSPECTOR (ONE AT A TIME) ── -->
+        <div class="residue-inspector-card" id="residue-inspector-card">
+            <div class="res-inspect-head">
+                <div class="res-inspect-title">
+                    <span class="res-inspect-badge" id="res-badge">ARG 248</span>
+                    <span class="res-inspect-cat" id="res-cat">Basic Positively Charged</span>
+                </div>
+                <button class="res-inspect-close" onclick="dismissResiduePropertyCard()" title="Close">✕</button>
             </div>
-
-            <!-- Scrollable Sequence Strip -->
-            <div class="seq-strip-scroll" id="seq-strip-container">
-                <!-- Populated dynamically with residue pills via app.js -->
+            <div class="res-inspect-grid">
+                <div class="res-inspect-stat">
+                    <span class="res-inspect-stat-lbl">Sidechain pKa</span>
+                    <span class="res-inspect-stat-val" id="res-pka">12.48</span>
+                </div>
+                <div class="res-inspect-stat">
+                    <span class="res-inspect-stat-lbl">Charge (pH 7.4)</span>
+                    <span class="res-inspect-stat-val" id="res-charge">+1.0 e</span>
+                </div>
+                <div class="res-inspect-stat">
+                    <span class="res-inspect-stat-lbl">Hydropathy</span>
+                    <span class="res-inspect-stat-val" id="res-hydro">-4.50</span>
+                </div>
             </div>
-
-            <!-- Single Residue Detailed Property Card (One at a time) -->
-            <div class="single-residue-card" id="single-residue-card">
-                <div class="single-res-head">
-                    <span class="single-res-name" id="sres-name">Arg248 [R]</span>
-                    <span class="single-res-category" id="sres-cat">Basic / Positively Charged</span>
-                </div>
-                <div class="single-res-grid">
-                    <div class="single-res-item">
-                        <span class="single-res-lbl">Sidechain pKa</span>
-                        <span class="single-res-val" id="sres-pka">12.48</span>
-                    </div>
-                    <div class="single-res-item">
-                        <span class="single-res-lbl">Charge (pH 7.4)</span>
-                        <span class="single-res-val" id="sres-charge">+1.0 e</span>
-                    </div>
-                    <div class="single-res-item">
-                        <span class="single-res-lbl">Hydropathy</span>
-                        <span class="single-res-val" id="sres-hydro">-4.50</span>
-                    </div>
-                </div>
-                <div class="single-res-role" id="sres-role">
-                    Critical DNA minor groove contact residue; frequent cancer hotspot mutation site.
-                </div>
+            <div class="res-inspect-role" id="res-role">
+                DNA minor groove contact residue; frequent cancer hotspot mutation site.
             </div>
         </div>
 
@@ -1881,14 +1799,14 @@
                 <span class="pillar-tag">Folding</span>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-primary">
                 <span class="sub-prop-lbl">Primary Structure</span>
                 <div class="sub-prop-desc" id="sum-primary-desc">
                     Linear polypeptide sequence linked by covalent peptide bonds. Encoded directly by the genome, this primary sequence autonomously dictates tertiary folding (Anfinsen's Dogma).
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-secondary">
                 <span class="sub-prop-lbl">Secondary Structure</span>
                 <div class="sec-bars-flex">
                     <div class="sec-bar-box">
@@ -1909,14 +1827,14 @@
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-tertiary">
                 <span class="sub-prop-lbl">Tertiary Structure</span>
                 <div class="sub-prop-desc" id="sum-tertiary-desc">
                     Overall 3D compact conformation driven by nonpolar sidechain hydrophobic collapse, electrostatic salt bridges, hydrogen bonds, and covalent disulfide bonds between cysteine pairs.
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-quaternary">
                 <span class="sub-prop-lbl">Quaternary Structure</span>
                 <div class="sub-prop-desc" id="sum-quaternary-desc">
                     Homotetrameric assembly (dimer-of-dimers) mediated by an intertwining four-helix bundle.
@@ -1925,27 +1843,27 @@
         </div>
 
         <!-- Pillar 2: Physicochemical Properties -->
-        <div class="summary-pillar-card">
+        <div class="summary-pillar-card" id="pillar-physicochemical">
             <div class="pillar-head">
                 <span class="pillar-title"><span>⚗️</span> 2. Physicochemical Properties</span>
                 <span class="pillar-tag">Thermodynamics</span>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-ampho">
                 <span class="sub-prop-lbl">Amphoteric Nature & Net Charge</span>
                 <div class="sub-prop-desc" id="sum-ampho-desc">
                     Zwitterionic macromolecule with both acidic (Asp, Glu) and basic (Lys, Arg, His) side chains. Net electrical charge switches sign across the pH spectrum.
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-solubility">
                 <span class="sub-prop-lbl">Isoelectric Point (pI) & Solubility</span>
                 <div class="sub-prop-desc" id="sum-solubility-desc">
                     Minimal electrostatic repulsion occurs at the isoelectric point (pI), where net charge is zero, causing minimum solubility and isoelectric precipitation.
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-denat">
                 <span class="sub-prop-lbl">Thermal & Chemical Denaturation</span>
                 <div class="sub-prop-desc" id="sum-denat-desc">
                     Cooperative unfolding of tertiary noncovalent networks induced by heat or pH extremes, preserving primary peptide bonds; capable of renaturation under permissive physiological conditions.
@@ -1954,27 +1872,34 @@
         </div>
 
         <!-- Pillar 3: Functional Properties -->
-        <div class="summary-pillar-card">
+        <div class="summary-pillar-card" id="pillar-functional">
             <div class="pillar-head">
                 <span class="pillar-title"><span>⚡</span> 3. Functional Properties</span>
                 <span class="pillar-tag">Mechanisms</span>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-spec">
                 <span class="sub-prop-lbl">Specificity & Recognition</span>
                 <div class="sub-prop-desc" id="sum-spec-desc">
                     High-affinity sequence-specific binding guided by geometric shape complementarity and electrostatic docking.
                 </div>
             </div>
 
-            <div class="sub-prop-group">
-                <span class="sub-prop-lbl">Catalysis & Allostery</span>
+            <div class="sub-prop-group" id="row-sum-catalysis">
+                <span class="sub-prop-lbl">Catalytic Activity</span>
                 <div class="sub-prop-desc" id="sum-catalysis-desc">
+                    Catalytic active site lowers chemical activation energy for substrate transformation.
+                </div>
+            </div>
+
+            <div class="sub-prop-group" id="row-sum-allostery">
+                <span class="sub-prop-lbl">Allostery & Cooperativity</span>
+                <div class="sub-prop-desc" id="sum-allostery-desc">
                     Exhibits long-range allosteric conformational coupling where effector binding transmits conformational changes to distal functional surfaces.
                 </div>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-ptm">
                 <span class="sub-prop-lbl">Post-Translational Modifications (PTMs) & Flexibility</span>
                 <div class="sub-prop-desc" id="sum-ptm-desc">
                     Multiple serine/threonine phosphorylation and lysine ubiquitination sites regulate degradation and cellular activity.
@@ -1983,13 +1908,13 @@
         </div>
 
         <!-- Pillar 4: Buffering Capacity -->
-        <div class="summary-pillar-card">
+        <div class="summary-pillar-card" id="pillar-buffering">
             <div class="pillar-head">
                 <span class="pillar-title"><span>🛡️</span> 4. Buffering Capacity</span>
                 <span class="pillar-tag">Physiology</span>
             </div>
 
-            <div class="sub-prop-group">
+            <div class="sub-prop-group" id="row-sum-buffer">
                 <span class="sub-prop-lbl">Histidine Imidazole Buffer</span>
                 <div class="sub-prop-desc" id="sum-buffer-desc">
                     Because of its ionizable imidazole side chain (pKa ~6.0–6.8), Histidine residues act as critical physiological buffers against pH fluctuations in cellular fluids.

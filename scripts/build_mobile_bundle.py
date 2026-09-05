@@ -274,6 +274,23 @@ def compute_comprehensive_summary(acc, seq, annot, physico, stab):
     }
     q_data = quaternary_map.get(acc, ("Monomeric Functional Macromolecule", "A1", "Operates as a single autonomous polypeptide chain."))
 
+    # Factual enzyme catalytic sites (only for genuine enzymes)
+    catalytic_map = {
+        "P00734": "Serine protease catalytic triad (His57, Asp102, Ser195) hydrolyzes peptide bonds after Arg residues to convert fibrinogen into fibrin.",
+        "P00698": "Glycoside hydrolase active site (catalytic Glu35 general acid and Asp52 nucleophile) hydrolyzes beta-1,4-glycosidic bonds in bacterial cell walls.",
+        "P00720": "Serine endopeptidase catalytic triad (His57, Asp102, Ser195) cleaves peptide chains specifically on the carboxyl side of lysine and arginine residues.",
+        "P11021": "N-terminal nucleotide-binding domain (NBD) features ATPase catalytic activity, hydrolyzing ATP to ADP to power chaperone cycles."
+    }
+    cat_activity = catalytic_map.get(acc, None)
+
+    # Factual allosteric coupling (only for documented allosteric proteins)
+    allostery_map = {
+        "P68871": "Canonical allosteric cooperativity: T (tense, low affinity) to R (relaxed, high affinity) quaternary transition with a Hill coefficient of ~2.8, regulated by 2,3-BPG and protons (Bohr effect).",
+        "P11021": "Inter-domain allosteric coupling: ATP binding in the NBD causes opening of the C-terminal helical lid in the substrate-binding domain (SBD).",
+        "P00734": "Sodium-dependent allosteric regulation: Na+ binding to the 225-loop switches thrombin from a slow anticoagulant form to a fast procoagulant conformation."
+    }
+    allostery_desc = allostery_map.get(acc, None)
+
     # Buffering capacity
     his_count = seq_u.count("H")
     his_pct = round((his_count / total_len) * 100, 2)
@@ -314,8 +331,8 @@ def compute_comprehensive_summary(acc, seq, annot, physico, stab):
         },
         "functional": {
             "specificity": annot.get("function_summary", "Specific recognition of cellular targets via 3D surface complementarity."),
-            "catalytic_activity": "Enzymatic or regulatory cofactor coordination site." if "ase" in annot.get("function_summary", "").lower() else "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-            "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+            "catalytic_activity": cat_activity,
+            "allostery": allostery_desc,
             "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
             "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
         },

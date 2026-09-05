@@ -114,8 +114,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Master cellular tumor suppressor. Induces cell cycle arrest, DNA repair, senescence, or apoptosis in response to diverse cellular stresses. Acts as a tetrameric sequence-specific transcription factor regulating hundreds of stress-response genes.",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -410,8 +410,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Trimeric class I viral fusion glycoprotein. Binds host ACE2 receptor via its Receptor-Binding Domain (RBD) and undergoes proteolytic cleavage at S1/S2 to drive viral-host membrane fusion and cellular entry.",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -691,8 +691,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Essential anabolic peptide hormone regulating carbohydrate, lipid, and protein metabolism. Promotes cellular glucose uptake via GLUT4 translocation, stimulates glycogenesis and lipogenesis, and inhibits hepatic gluconeogenesis.",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -971,8 +971,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Forms the beta-subunit of heterotetrameric adult hemoglobin (alpha-2, beta-2). Binds four heme iron cofactors to cooperatively bind and transport oxygen from lungs to peripheral tissues, modulated by allosteric effectors like 2,3-BPG, pH (Bohr effect), and CO2.",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": "Canonical allosteric cooperativity: T (tense, low affinity) to R (relaxed, high affinity) quaternary transition with a Hill coefficient of ~2.8, regulated by 2,3-BPG and protons (Bohr effect).",
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -1268,8 +1268,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Transmembrane receptor tyrosine kinase. Ligand binding (EGF, TGF-alpha) induces receptor homodimerization and autophosphorylation, activating Ras-Raf-MEK-ERK and PI3K-Akt cascades governing cell proliferation, survival, and differentiation.",
-        "catalytic_activity": "Enzymatic or regulatory cofactor coordination site.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -1549,8 +1549,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Central vitamin K-dependent serine protease of the blood coagulation cascade. Cleaved by Factor Xa into active thrombin, which proteolytically converts soluble fibrinogen into insoluble fibrin mesh and activates platelets via PAR receptors.",
-        "catalytic_activity": "Enzymatic or regulatory cofactor coordination site.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": "Serine protease catalytic triad (His57, Asp102, Ser195) hydrolyzes peptide bonds after Arg residues to convert fibrinogen into fibrin.",
+        "allostery": "Sodium-dependent allosteric regulation: Na+ binding to the 225-loop switches thrombin from a slow anticoagulant form to a fast procoagulant conformation.",
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -1821,8 +1821,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "11-stranded beta-barrel fluorophore from Aequorea victoria. The internal Ser65-Tyr66-Gly67 tripeptide undergoes spontaneous post-translational cyclization and oxidation to yield an intensely fluorescent chromophore (excitation 395/475 nm, emission 509 nm).",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -2109,8 +2109,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Major Hsp70-family molecular chaperone in the ER lumen. Binds hydrophobic patches of nascent polypeptides to facilitate folding, prevent misfolded aggregation, and acts as the master sensor controlling IRE1, PERK, and ATF6 in the Unfolded Protein Response (UPR).",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": "N-terminal nucleotide-binding domain (NBD) features ATPase catalytic activity, hydrolyzing ATP to ADP to power chaperone cycles.",
+        "allostery": "Inter-domain allosteric coupling: ATP binding in the NBD causes opening of the C-terminal helical lid in the substrate-binding domain (SBD).",
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
@@ -2382,8 +2382,8 @@ window.PROTEINSCOPE_CACHED_DB = {
       },
       "functional": {
         "specificity": "Most abundant globular protein in human blood plasma (~50 g/L). Provides 80% of colloidal intravascular osmotic oncotic pressure and serves as the primary transport vehicle for non-esterified fatty acids, bilirubin, calcium, steroid hormones, and therapeutic drugs.",
-        "catalytic_activity": "Non-enzymatic signaling, structural scaffolding, or ligand transport.",
-        "allostery": "Exhibits long-range conformational coupling between allosteric effector sites and active functional domains.",
+        "catalytic_activity": null,
+        "allostery": null,
         "ptm_capacity": "Features multiple phosphorylation, ubiquitination, and regulatory cleavage acceptor residues.",
         "conformational_flexibility": "Combines a stable structural core with dynamic disordered loops that undergo induced-fit conformational transitions."
       },
